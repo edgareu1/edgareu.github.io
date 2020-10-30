@@ -1,0 +1,26 @@
+skills > ul {
+  list-style: none;
+}
+
+skills > ul > li > .skills-title {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(220, 220, 220, 1);
+  font-family: "PT Sans", sans-serif;
+}
+
+skills > ul > li > .progress-bar-container {
+  display: block;
+  position: relative;
+  background: gray;
+  height: 10px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+skills > ul > li > .progress-bar-container > .progress-bar {
+  position: absolute;
+  height: 100%;
+  border-radius: 5px;
+}
