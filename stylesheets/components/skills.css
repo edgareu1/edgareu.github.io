@@ -1,26 +1,43 @@
+skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 650px;
+  margin: 0 auto;
+}
+
 skills > ul {
   list-style: none;
 }
 
 skills > ul > li > .skills-title {
   display: flex;
+  align-items: flex-end;
   justify-content: space-between;
   color: rgba(220, 220, 220, 1);
   font-family: "PT Sans", sans-serif;
+  padding: 0 10px 0 5px;
+  margin-top: 30px;
+}
+
+skills > ul > li > .skills-title > h3 {
+  margin: 0;
 }
 
 skills > ul > li > .progress-bar-container {
   display: block;
   position: relative;
-  background: gray;
+  background: rgba(80, 80, 80, 1);
   height: 10px;
   width: 100%;
   border-radius: 5px;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 skills > ul > li > .progress-bar-container > .progress-bar {
   position: absolute;
   height: 100%;
   border-radius: 5px;
+  transition: width 2s;
 }

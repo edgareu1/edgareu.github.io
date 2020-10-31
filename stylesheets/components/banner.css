@@ -32,12 +32,12 @@ banner > .banner-title > h1 {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 1);
-  font-size: 48px;
+  font-size: 58px;
   margin: 32px 0 20px;
 }
 
 banner > .banner-title > h2 {
   color: rgba(200, 200, 200, 1);
-  font-size: 24px;
-  width: 600px;
+  font-size: 28px;
+  width: 650px;
 }
