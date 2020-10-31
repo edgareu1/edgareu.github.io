@@ -13,11 +13,12 @@ banner > .banner-image, .banner-title {
 }
 
 banner > .banner-image {
-  background-image: url('../../images/keyboard-background.jpg');
+  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(20, 20, 20, 0.1),
+                                               rgba(20, 20, 20, 1)), url('../../images/keyboard-background.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  opacity: 0.3;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
 }
@@ -32,12 +33,12 @@ banner > .banner-title > h1 {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 1);
-  font-size: 48px;
+  font-size: 58px;
   margin: 32px 0 20px;
 }
 
 banner > .banner-title > h2 {
   color: rgba(200, 200, 200, 1);
-  font-size: 24px;
-  width: 600px;
+  font-size: 28px;
+  width: 650px;
 }
