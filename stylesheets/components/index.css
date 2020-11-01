@@ -52,29 +52,24 @@ body {
   padding: 10px 30px 60px;
   margin: 0;
   z-index: 10; }
-
-.navbar a {
-  color: #c8c8c8;
-  font-family: "PT Sans", sans-serif;
-  font-size: 20px;
-  text-decoration: none;
-  padding: 0 5px 5px;
-  transition: color 0.15s; }
-
-.navbar a:hover {
-  color: #1496ff; }
-
-.navbar > div > a {
-  font-size: 22px; }
-
-.navbar > ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0; }
-
-.navbar > ul > li {
-  margin: 0 0 0 30px; }
+  .navbar a {
+    color: #c8c8c8;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 0 5px 5px;
+    transition: color 0.15s; }
+    .navbar a:hover {
+      color: #1496ff; }
+  .navbar div > a {
+    font-size: 22px; }
+  .navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .navbar ul li {
+      margin: 0 0 0 30px; }
 
 .skills {
   display: flex;
