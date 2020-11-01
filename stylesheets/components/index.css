@@ -1,4 +1,4 @@
-/* Import the CSS components here */
+/* Import the SCSS components here */
 .banner {
   display: block;
   position: relative;
@@ -6,36 +6,31 @@
   height: 100vh;
   width: 100%;
   z-index: 5; }
-
-.banner > .banner-image, .banner-title {
-  position: absolute;
-  top: 0; }
-
-.banner > .banner-image {
-  background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(20, 20, 20, 0.1), #141414), url("../../images/keyboard-background.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-  width: 100%;
-  height: 100%; }
-
-.banner > .banner-title {
-  padding: 140px 100px 140px 50px;
-  height: calc(100% - 280px);
-  width: calc(100% - 150px); }
-
-.banner > .banner-title > h1 {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  font-size: 58px;
-  margin: 32px 0 20px; }
-
-.banner > .banner-title > h2 {
-  color: #c8c8c8;
-  font-size: 28px;
-  width: 650px; }
+  .banner .banner-image, .banner .banner-title {
+    position: absolute;
+    top: 0; }
+  .banner .banner-image {
+    background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(20, 20, 20, 0.1), #141414), url("../../images/keyboard-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%; }
+  .banner .banner-title {
+    padding: 140px 100px 140px 50px;
+    height: calc(100% - 280px);
+    width: calc(100% - 150px); }
+    .banner .banner-title h1 {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      font-size: 58px;
+      margin: 32px 0 20px; }
+    .banner .banner-title h2 {
+      color: #c8c8c8;
+      font-size: 28px;
+      width: 650px; }
 
 body {
   background-color: #141414;
