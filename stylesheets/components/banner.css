@@ -1,4 +1,4 @@
-banner {
+.banner {
   display: block;
   position: relative;
   top: 0;
@@ -7,12 +7,12 @@ banner {
   z-index: 5;
 }
 
-banner > .banner-image, .banner-title {
+.banner > .banner-image, .banner-title {
   position: absolute;
   top: 0;
 }
 
-banner > .banner-image {
+.banner > .banner-image {
   background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0), rgba(20, 20, 20, 0.1),
                                                rgba(20, 20, 20, 1)), url('../../images/keyboard-background.jpg');
   background-position: center;
@@ -23,13 +23,13 @@ banner > .banner-image {
   height: 100%;
 }
 
-banner > .banner-title {
+.banner > .banner-title {
   padding: 140px 100px 140px 50px;
   height: calc(100% - 280px);
   width: calc(100% - 150px);
 }
 
-banner > .banner-title > h1 {
+.banner > .banner-title > h1 {
   display: flex;
   flex-direction: column;
   color: rgba(255, 255, 255, 1);
@@ -37,7 +37,7 @@ banner > .banner-title > h1 {
   margin: 32px 0 20px;
 }
 
-banner > .banner-title > h2 {
+.banner > .banner-title > h2 {
   color: rgba(200, 200, 200, 1);
   font-size: 28px;
   width: 650px;

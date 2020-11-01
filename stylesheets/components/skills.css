@@ -1,4 +1,4 @@
-skills {
+.skills {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7,11 +7,11 @@ skills {
   margin: 0 auto;
 }
 
-skills > ul {
+.skills > ul {
   list-style: none;
 }
 
-skills > ul > li > .skills-title {
+.skills > ul > li > .skills-title {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -21,11 +21,11 @@ skills > ul > li > .skills-title {
   margin-top: 30px;
 }
 
-skills > ul > li > .skills-title > h3 {
+.skills > ul > li > .skills-title > h3 {
   margin: 0;
 }
 
-skills > ul > li > .progress-bar-container {
+.skills > ul > li > .progress-bar-container {
   display: block;
   position: relative;
   background: rgba(80, 80, 80, 1);
@@ -35,7 +35,7 @@ skills > ul > li > .progress-bar-container {
   margin-top: 10px;
 }
 
-skills > ul > li > .progress-bar-container > .progress-bar {
+.skills > ul > li > .progress-bar-container > .progress-bar {
   position: absolute;
   height: 100%;
   border-radius: 5px;
