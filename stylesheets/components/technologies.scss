@@ -1,4 +1,4 @@
-.skills {
+.technologies {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10,7 +10,7 @@
     list-style: none;
 
     li {
-      .skills-title {
+      .tech-title {
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
