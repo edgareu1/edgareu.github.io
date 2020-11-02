@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 5;
 
-  .banner-image, .banner-title {
+  .banner-image, .banner-title, .banner-code-container {
     position: absolute;
     top: 0;
     height: 100%;
@@ -36,6 +36,60 @@
       color: rgba(200, 200, 200, 1);
       font-size: 28px;
       max-width: 650px;
+    }
+  }
+
+  .banner-code-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 8;
+    height: fit-content;
+    max-height: calc(100vh - 200px);
+    width: 550px;
+    padding: 5px 8px;
+    margin: 100px 20px 0 750px;
+    overflow-y: scroll;
+
+    p {
+      font-size: 13px;
+      width: fit-content;
+      padding: 3px 5px;
+      margin: 0;
+
+      span {
+        margin-right: 2.5px;
+      }
+
+      .color1 {
+        color: white;
+      }
+
+      .color2 {
+        color: rgba(140, 220, 254, 1);
+      }
+
+      .color3 {
+        color: rgba(53, 80, 161, 1)
+      }
+
+      .color4 {
+        color: rgba(78, 188, 124, 1);
+      }
+
+      .color5 {
+        color: rgba(94, 138, 53, 1);
+      }
+
+      .color6 {
+        color: rgba(220, 220, 139, 1);
+      }
+
+      .color7 {
+        color: rgba(216, 128, 92, 1);
+      }
+
+      .color8 {
+        color: rgba(147, 206, 168, 1);
+      }
     }
   }
 }
