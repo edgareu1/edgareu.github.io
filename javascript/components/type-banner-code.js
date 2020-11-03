@@ -43,3 +43,5 @@ function typeBannerCode(codeContainer) {
 
   typeCode();
 }
+
+export { typeBannerCode };
