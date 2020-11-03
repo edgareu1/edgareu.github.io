@@ -32,8 +32,16 @@ function typeBannerCode() {
       }
     } else {
       typeWaitTime = (Math.random() * typeSpeed) + 20;
-      newSpan.innerHTML += codeContent[position];
-      position += 1;
+
+      if (codeContent.slice(position, position + 2) == "//") {
+        subString = codeContent.substring(position);
+        endString = subString.indexOf("<");
+        newSpan.innerHTML += subString.slice(0, endString);
+        position += endString;
+      } else {
+        newSpan.innerHTML += codeContent[position];
+        position += 1;
+      }
     }
 
     if (position < codeContent.length - 1) {
