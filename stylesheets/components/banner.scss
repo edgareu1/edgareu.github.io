@@ -95,5 +95,20 @@
         color: rgba(147, 206, 168, 1);
       }
     }
+
+    // Scrollbar width
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    // Scrollbar handle
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(80, 80, 80, 1);
+      border-radius: 5px;
+
+      &:hover {
+        background-color: rgba(110, 110, 110, 1);
+      }
+    }
   }
 }
