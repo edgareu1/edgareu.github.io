@@ -45,18 +45,22 @@
     height: fit-content;
     max-height: calc(100vh - 200px);
     width: 550px;
-    padding: 5px 8px;
+    padding: 2px 5px;
     margin: 100px 20px 0 750px;
     overflow-y: scroll;
 
     p {
       font-size: 13px;
       width: fit-content;
-      padding: 3px 5px;
-      margin: 0;
+      padding: 0;
+      margin: 8px 5px;
 
       span {
-        margin-right: 2.5px;
+        padding-right: 2.5px;
+      }
+
+      &:last-child {
+        border-right: 1px solid white;
       }
 
       .color1 {
@@ -68,7 +72,7 @@
       }
 
       .color3 {
-        color: rgba(53, 80, 161, 1)
+        color: rgba(70, 70, 225, 1);
       }
 
       .color4 {
