@@ -15,3 +15,5 @@ function smoothNavbarAnchors() {
     }
   }
 }
+
+export { smoothNavbarAnchors };
