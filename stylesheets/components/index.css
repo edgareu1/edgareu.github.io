@@ -88,15 +88,18 @@ body {
   padding: 10px 30px 60px;
   margin: 0;
   z-index: 10; }
-  #navbar a {
+  #navbar [data-target] {
     color: #c8c8c8;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
-    transition: color 0.15s; }
-    #navbar a:hover {
+    transition: color 0.15s;
+    cursor: pointer; }
+    #navbar [data-target]:hover {
       color: #1496ff; }
+  #navbar h3 {
+    margin: 0; }
   #navbar ul {
     display: flex;
     list-style: none;
