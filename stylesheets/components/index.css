@@ -1,0 +1,144 @@
+/* Import the SCSS components here */
+#banner {
+  position: relative;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 5; }
+  #banner .banner-image, #banner .banner-title, #banner .banner-code-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%; }
+  #banner .banner-image {
+    background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 0.1), #141414), url("../../images/keyboard-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.5; }
+  #banner .banner-title {
+    padding: 180px 0 0 50px; }
+    #banner .banner-title h1 {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      font-size: 58px;
+      margin: 0 0 20px; }
+    #banner .banner-title h2 {
+      color: #c8c8c8;
+      font-size: 28px;
+      max-width: 650px; }
+  #banner .banner-code-container {
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 8;
+    height: fit-content;
+    max-height: calc(100vh - 200px);
+    width: 550px;
+    padding: 2px 5px;
+    margin: 100px 20px 0 750px;
+    overflow-y: scroll; }
+    #banner .banner-code-container p {
+      font-size: 13px;
+      width: fit-content;
+      padding: 0;
+      margin: 8px 5px; }
+      #banner .banner-code-container p span {
+        padding-right: 2.5px; }
+      #banner .banner-code-container p:last-child {
+        border-right: 1px solid white; }
+      #banner .banner-code-container p .color1 {
+        color: white; }
+      #banner .banner-code-container p .color2 {
+        color: #8cdcfe; }
+      #banner .banner-code-container p .color3 {
+        color: #1e64c8; }
+      #banner .banner-code-container p .color4 {
+        color: #4ebc7c; }
+      #banner .banner-code-container p .color5 {
+        color: #5e8a35; }
+      #banner .banner-code-container p .color6 {
+        color: #dcdc8b; }
+      #banner .banner-code-container p .color7 {
+        color: #d8805c; }
+      #banner .banner-code-container p .color8 {
+        color: #93cea8; }
+    #banner .banner-code-container::-webkit-scrollbar {
+      width: 10px; }
+    #banner .banner-code-container::-webkit-scrollbar-thumb {
+      background-color: #505050;
+      border-radius: 5px; }
+      #banner .banner-code-container::-webkit-scrollbar-thumb:hover {
+        background-color: #6e6e6e; }
+
+body {
+  background-color: #141414;
+  min-height: 100%;
+  min-width: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 1; }
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(180deg, #141414 45%, rgba(20, 20, 20, 0.75) 70%, rgba(20, 20, 20, 0.5) 80%, rgba(20, 20, 20, 0.05) 100%);
+  width: 100%;
+  padding: 10px 30px 60px;
+  margin: 0;
+  z-index: 10; }
+  #navbar [data-target] {
+    color: #c8c8c8;
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+    transition: color 0.15s;
+    cursor: pointer; }
+    #navbar [data-target]:hover {
+      color: #1496ff; }
+  #navbar h3 {
+    margin: 0; }
+  #navbar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    #navbar ul li {
+      margin: 0 0 0 30px; }
+
+#technologies {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 650px;
+  margin: 0 auto; }
+  #technologies ul {
+    list-style: none; }
+    #technologies ul li .tech-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      color: gainsboro;
+      font-family: "PT Sans", sans-serif;
+      padding: 0 10px 0 5px;
+      margin-top: 30px; }
+      #technologies ul li .tech-title h3 {
+        margin: 0; }
+    #technologies ul li .progress-bar-container {
+      display: block;
+      position: relative;
+      background: #505050;
+      height: 10px;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 10px; }
+      #technologies ul li .progress-bar-container .progress-bar {
+        position: absolute;
+        height: 100%;
+        border-radius: 5px;
+        transition: width 2s; }
+
+/*# sourceMappingURL=index.css.map */
