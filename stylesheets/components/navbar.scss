@@ -10,17 +10,22 @@
   margin: 0;
   z-index: 10;
 
-  a {
+  [data-target] {
     color: rgba(200, 200, 200, 1);
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
     transition: color 0.15s;
+    cursor: pointer;
 
     &:hover {
       color: rgba(20, 150, 255, 1);
     }
+  }
+
+  h3 {
+    margin: 0;
   }
 
   ul {
