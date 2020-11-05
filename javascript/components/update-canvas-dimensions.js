@@ -13,3 +13,5 @@ function updateCanvasDimensions(canvasElement) {
   canvas.fillStyle = 'gray';
   canvas.lineWidth = 5;
 }
+
+export { updateCanvasDimensions };
