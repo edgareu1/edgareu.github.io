@@ -53,3 +53,5 @@ function techBackAnimation(canvasElement) {
 		}, 20);
 	}
 }
+
+export { techBackAnimation };
