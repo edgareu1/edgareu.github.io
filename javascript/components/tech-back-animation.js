@@ -1,28 +1,22 @@
+import { updateCanvasDimensions } from './update-canvas-dimensions.js'
+
 function techBackAnimation(canvasElement) {
 	var words = { "Ruby": 24, "Rails": 20, "JavaScript": 18, "HTML": 16, "CSS": 15, "SQL": 8, "REGEX": 7, "Canvas": 4, "Git": 11, "GitHub": 10, "Bootstrap": 8, "AJAX": 13, "jQuery": 9, "Web API": 11, "Stripe": 7, "Heroku": 5 };
   var wordsAttr = [];
 
+  updateCanvasDimensions(canvasElement);
+
 	if (canvasElement.getContext) {
-    var windowWidth = window.innerWidth,
-        windowHeight = window.innerHeight;
-
-    canvasElement.width = windowWidth;
-    canvasElement.height = windowHeight;
-
-    canvasElement.style.width = `${windowWidth}px`;
-    canvasElement.style.height = `${windowHeight}px`;
-
-    var canvas = canvasElement.getContext('2d');
-    canvas.strokeStyle = 'gray';
-    canvas.fillStyle = 'gray';
-    canvas.lineWidth = 5;
+		var canvas = canvasElement.getContext('2d'),
+        canvasWidth = canvasElement.width,
+        canvasHeight = canvasElement.height;
 
     class Tech {
       constructor(word) {
         this.text = word;
-        this.x = Math.random() * windowWidth;
-        this.y = Math.random() * windowHeight;
-        this.font = words[word] * (1 + (Math.random() * 0.35)) * 3 + 'px arial'
+        this.x = Math.random() * canvasWidth;
+        this.y = Math.random() * canvasHeight;
+        this.font = words[word] * (1 + (Math.random() * 0.35)) * 3 + 'px arial';
         this.speed = words[word] / 5;
       }
     }
