@@ -112,6 +112,24 @@ h2 {
     #navbar ul li {
       margin: 0 0 0 30px; }
 
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  width: 100%; }
+  #projects .projects-content {
+    width: 850px;
+    margin: 0 auto; }
+    #projects .projects-content .tab-inner-content {
+      display: flex;
+      width: 100%; }
+      #projects .projects-content .tab-inner-content .bd-example {
+        width: 450px;
+        height: 450px; }
+      #projects .projects-content .tab-inner-content .project-description {
+        width: 450px; }
+
 #technologies {
   position: relative;
   height: 100vh;
@@ -122,7 +140,6 @@ h2 {
     top: 0; }
   #technologies .tech-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100%;
     width: 100%; }
