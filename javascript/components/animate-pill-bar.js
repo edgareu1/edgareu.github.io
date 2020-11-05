@@ -20,3 +20,5 @@ function animatePillBar() {
     });
   }
 }
+
+export { animatePillBar };
