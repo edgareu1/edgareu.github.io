@@ -78,6 +78,10 @@ body {
   margin: 0;
   z-index: 1; }
 
+h2 {
+  font-size: 26px;
+  color: gainsboro; }
+
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -110,9 +114,6 @@ body {
 
 #technologies {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   height: 100vh;
   width: 100%;
   margin: 0; }
@@ -120,14 +121,19 @@ body {
     position: absolute;
     top: 0; }
   #technologies .tech-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     width: 100%; }
     #technologies .tech-content ul {
       list-style: none;
       background-color: rgba(20, 20, 20, 0.75);
-      width: 650px;
-      padding: 20px;
+      width: 750px;
+      padding: 20px 30px 20px 45px;
       margin: 0 auto; }
+      #technologies .tech-content ul h2 {
+        margin: 0 0 0 -35px; }
       #technologies .tech-content ul li .tech-title {
         display: flex;
         align-items: flex-end;
