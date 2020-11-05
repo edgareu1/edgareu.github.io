@@ -16,8 +16,8 @@ function updateCanvasDimensions(canvasElement) {
 
   // Make sure the canvas characteristics stay the same
   let canvas = canvasElement.getContext('2d');
-  canvas.strokeStyle = 'gray';
-  canvas.fillStyle = 'gray';
+  canvas.strokeStyle = 'rgba(100, 100, 100, 0.6)';
+  canvas.fillStyle = 'rgba(100, 100, 100, 0.6)';
   canvas.lineWidth = 5;
 }
 
