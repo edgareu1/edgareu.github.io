@@ -33,9 +33,8 @@ function animateCarousels() {
           slideTo = anchors[j].getAttribute('data-slide-to');
 
           // Update the carousel active slide if the slide does change
-          if (slideTo !== currentSlide) {
-            changeCarouselItem();
-          }
+          if (slideTo !== currentSlide) changeCarouselItem();
+
         // If the anchor is a direction anchor ('prev' or 'next')
         } else {
           // Get the slide to change into
@@ -49,9 +48,8 @@ function animateCarousels() {
             slideTo = 0;
           }
 
-          // Update the carousel active slide
-          slideTo = slideTo.toString();
-          changeCarouselItem();
+          slideTo = slideTo.toString(); // Make sure the slideTo variable is of the string format
+          changeCarouselItem();         // Update the carousel active slide
         }
 
         // Function that changes the currently active slide
