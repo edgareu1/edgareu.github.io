@@ -112,6 +112,42 @@ h2 {
     #navbar ul li {
       margin: 0 0 0 30px; }
 
+.pill-items {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  border-bottom: 1px solid #dee2e6;
+  margin: 0; }
+  .pill-items .pill-item {
+    display: block;
+    color: #007bff;
+    background-color: transparent;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border: 1px solid transparent;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+    margin-bottom: -1px;
+    cursor: pointer; }
+    .pill-items .pill-item.active {
+      color: #495057;
+      background-color: #fff;
+      border-color: #dee2e6 #dee2e6 #fff; }
+
+.tab-items {
+  display: block;
+  border: 1px solid #dee2e6;
+  border-top: none;
+  border-radius: 2px; }
+  .tab-items .tab-item {
+    display: none;
+    opacity: 0;
+    transition: opacity .15s linear; }
+    .tab-items .tab-item.active {
+      display: flex;
+      opacity: 1;
+      width: 100%; }
+
 #projects {
   display: flex;
   flex-direction: column;
@@ -121,40 +157,6 @@ h2 {
   #projects .projects-content {
     width: 850px;
     margin: 0 auto; }
-    #projects .projects-content .pill-items {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      border-bottom: 1px solid #dee2e6;
-      margin: 0; }
-      #projects .projects-content .pill-items .pill-item {
-        display: block;
-        color: #007bff;
-        background-color: transparent;
-        text-decoration: none;
-        padding: .5rem 1rem;
-        border: 1px solid transparent;
-        border-top-left-radius: .25rem;
-        border-top-right-radius: .25rem;
-        margin-bottom: -1px;
-        cursor: pointer; }
-        #projects .projects-content .pill-items .pill-item.active {
-          color: #495057;
-          background-color: #fff;
-          border-color: #dee2e6 #dee2e6 #fff; }
-    #projects .projects-content .tab-items {
-      display: block;
-      border: 1px solid #dee2e6;
-      border-top: none;
-      border-radius: 2px; }
-      #projects .projects-content .tab-items .tab-item {
-        display: none;
-        opacity: 0;
-        transition: opacity .15s linear; }
-        #projects .projects-content .tab-items .tab-item.active {
-          display: flex;
-          opacity: 1;
-          width: 100%; }
     #projects .projects-content .carousel {
       position: relative; }
       #projects .projects-content .carousel ol.carousel-indicators {
