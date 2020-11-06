@@ -22,7 +22,7 @@ function animateCarousels() {
         items = carousels[i].querySelectorAll('.carousel-item'),
         currentItem = carousels[i].querySelector('.carousel-item.active'),
         currentSlide = currentItem.getAttribute('slide'),
-        currentIndicator = Array.from(anchors).filter(anchor => anchor.getAttribute('data-slide-to') == currentSlide)[0],
+        currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
         slideTo = "0";
 
     // If the User clicks on an anchor...
@@ -58,7 +58,7 @@ function animateCarousels() {
         function changeCarouselItem() {
           // Update the currently active Item
           currentItem.classList.remove('active');
-          currentItem = Array.from(items).filter(item => item.getAttribute('slide') == slideTo)[0];
+          currentItem = filterNodeList(items, 'slide', slideTo);
           currentItem.classList.add('active');
 
           // Update the current slide
@@ -66,12 +66,21 @@ function animateCarousels() {
 
           // Update the currently active indicator anchor
           currentIndicator.classList.remove('active');
-          currentIndicator = Array.from(anchors).filter(anchor => anchor.getAttribute('data-slide-to') == currentSlide)[0];
+          currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide);
           currentIndicator.classList.add('active');
         }
       });
     }
   }
+}
+
+// Function that gets the first element in a node list that has a certain value for a certain attribute
+// Arguments:
+//   nodeList:  Node list to filter
+//   attr:      Attribute to evaluate
+//   attrValue: Attribute value that the node list element should have
+function filterNodeList(nodeList, attr, attrValue) {
+  return Array.from(nodeList).filter(el => el.getAttribute(attr) == attrValue)[0];
 }
 
 export { animateCarousels };
