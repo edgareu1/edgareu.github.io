@@ -48,3 +48,5 @@ function animateCarousels() {
     }
   }
 }
+
+export { animateCarousels };
