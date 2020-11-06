@@ -1,3 +1,4 @@
+// Function that animates the app Pill Bar element
 function animatePillBar() {
   const anchors = document.querySelectorAll(".pill-items .pill-item");  // Get the Pill Bar anchors
   const tabItems = document.querySelectorAll(".tab-items .tab-item");   // Get the Pill Bar content items
