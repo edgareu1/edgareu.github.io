@@ -152,16 +152,115 @@ h2 {
         opacity: 0;
         transition: opacity .15s linear; }
         #projects .projects-content .tab-items .tab-item.active {
-          display: block;
-          opacity: 1; }
-    #projects .projects-content .tab-inner-content {
-      display: flex;
-      width: 100%; }
-      #projects .projects-content .tab-inner-content .bd-example {
-        width: 450px;
-        height: 450px; }
-      #projects .projects-content .tab-inner-content .project-description {
-        width: 450px; }
+          display: flex;
+          opacity: 1;
+          width: 100%; }
+    #projects .projects-content .carousel {
+      position: relative; }
+      #projects .projects-content .carousel ol.carousel-indicators {
+        position: absolute;
+        right: 0;
+        bottom: 10px;
+        left: 0;
+        display: flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        list-style: none;
+        z-index: 15;
+        padding-left: 0;
+        margin-top: 0 15% 1rem; }
+        #projects .projects-content .carousel ol.carousel-indicators li {
+          position: relative;
+          -webkit-box-flex: 0;
+          -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+          text-indent: -999px;
+          background-color: rgba(255, 255, 255, 0.5);
+          height: 3px;
+          width: 30px;
+          margin-right: 3px;
+          margin-left: 3px;
+          cursor: pointer; }
+          #projects .projects-content .carousel ol.carousel-indicators li.active, #projects .projects-content .carousel ol.carousel-indicators li:hover {
+            background-color: #fff; }
+      #projects .projects-content .carousel .carousel-inner {
+        position: relative;
+        width: 100%;
+        overflow: hidden; }
+        #projects .projects-content .carousel .carousel-inner .carousel-item {
+          position: relative;
+          display: none;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          width: 100%;
+          transition: -webkit-transform .6s ease;
+          transition: transform .6s ease;
+          transition: transform .6s ease,-webkit-transform .6s ease;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          -webkit-perspective: 1000px;
+          perspective: 1000px; }
+          #projects .projects-content .carousel .carousel-inner .carousel-item.active {
+            display: block; }
+          #projects .projects-content .carousel .carousel-inner .carousel-item img {
+            display: block;
+            width: 100%;
+            border-style: none; }
+          #projects .projects-content .carousel .carousel-inner .carousel-item .carousel-caption {
+            position: absolute;
+            right: 15%;
+            bottom: 20px;
+            left: 15%;
+            text-align: center;
+            color: #fff;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px; }
+      #projects .projects-content .carousel .carousel-control-prev, #projects .projects-content .carousel .carousel-control-next {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        text-align: center;
+        justify-content: center;
+        color: #fff;
+        opacity: 0.5;
+        width: 15%;
+        cursor: pointer; }
+        #projects .projects-content .carousel .carousel-control-prev:hover, #projects .projects-content .carousel .carousel-control-next:hover {
+          color: #fff;
+          text-decoration: none;
+          outline: 0;
+          opacity: 0.9; }
+        #projects .projects-content .carousel .carousel-control-prev span, #projects .projects-content .carousel .carousel-control-next span {
+          display: inline-block;
+          background: transparent no-repeat center center;
+          background-size: 100% 100%;
+          height: 20px;
+          width: 20px; }
+      #projects .projects-content .carousel .carousel-control-prev {
+        left: 0; }
+        #projects .projects-content .carousel .carousel-control-prev .carousel-control-prev-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E"); }
+      #projects .projects-content .carousel .carousel-control-next {
+        right: 0; }
+        #projects .projects-content .carousel .carousel-control-next .carousel-control-next-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
+    #projects .projects-content .carousel {
+      width: 450px; }
+    #projects .projects-content .project-description {
+      width: 450px; }
 
 #technologies {
   position: relative;
