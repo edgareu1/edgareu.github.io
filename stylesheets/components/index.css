@@ -190,9 +190,9 @@ h2 {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background: linear-gradient(180deg, #141414 45%, rgba(20, 20, 20, 0.75) 70%, rgba(20, 20, 20, 0.5) 80%, rgba(20, 20, 20, 0.05) 100%);
+  background-color: rgba(20, 20, 20, 0.9);
   width: 100%;
-  padding: 10px 30px 60px;
+  padding: 10px 30px 10px;
   margin: 0;
   z-index: 10; }
   #navbar [data-target] {
@@ -204,7 +204,7 @@ h2 {
     transition: color 0.15s;
     cursor: pointer; }
     #navbar [data-target]:hover {
-      color: #1496ff; }
+      color: #49aeff; }
   #navbar h3 {
     margin: 0; }
   #navbar ul {
