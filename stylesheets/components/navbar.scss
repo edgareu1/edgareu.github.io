@@ -4,19 +4,27 @@
   position: fixed;
   top: 0;
   background-color: rgba(20, 20, 20, 0.9);
+  list-style: none;
   z-index: 10;
   width: 100%;
   padding: 10px 30px 10px;
   margin: 0;
 
-  [data-target] {
+  .navbar-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
     position: relative;
     color: rgba(200, 200, 200, 1);
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
-    transition: color 0.15s;
+    margin: 0 0 0 30px;
+    transition: color .15s;
     cursor: pointer;
 
     &::before {
@@ -36,21 +44,6 @@
       &::before {
         width: calc(100% + 5px);
       }
-    }
-  }
-
-  h3 {
-    margin: 0;
-  }
-
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin: 0 0 0 30px;
     }
   }
 }
