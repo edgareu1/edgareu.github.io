@@ -3,39 +3,47 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background: linear-gradient(180deg, rgba(20, 20, 20, 1) 45%,   rgba(20, 20, 20, 0.75) 70%,
-                                      rgba(20, 20, 20, 0.5) 80%, rgba(20, 20, 20, 0.05) 100%);
-  width: 100%;
-  padding: 10px 30px 60px;
-  margin: 0;
+  background-color: rgba(20, 20, 20, 0.9);
+  list-style: none;
   z-index: 10;
+  width: 100%;
+  padding: 10px 30px 10px;
+  margin: 0;
 
-  [data-target] {
+  .navbar-links {
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    position: relative;
     color: rgba(200, 200, 200, 1);
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
-    transition: color 0.15s;
+    margin: 0 0 0 30px;
+    transition: color .15s;
     cursor: pointer;
 
-    &:hover {
-      color: rgba(20, 150, 255, 1);
+    &::before {
+      position: absolute;
+      bottom: -8px;
+      left: -2.5px;
+      content: "";
+      background-color: rgba(73, 174, 255, 1);
+      height: 3px;
+      width: 0%;
+      transition: 350ms;
     }
-  }
 
-  h3 {
-    margin: 0;
-  }
+    &:hover {
+      color: rgba(73, 174, 255, 1);
 
-  ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-
-    li {
-      margin: 0 0 0 30px;
+      &::before {
+        width: calc(100% + 5px);
+      }
     }
   }
 }

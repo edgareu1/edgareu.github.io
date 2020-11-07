@@ -175,11 +175,11 @@
 
 body {
   background-color: #141414;
+  z-index: 1;
   min-height: 100%;
   min-width: 100%;
   padding: 0;
-  margin: 0;
-  z-index: 1; }
+  margin: 0; }
 
 h2 {
   font-size: 26px;
@@ -190,30 +190,39 @@ h2 {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background: linear-gradient(180deg, #141414 45%, rgba(20, 20, 20, 0.75) 70%, rgba(20, 20, 20, 0.5) 80%, rgba(20, 20, 20, 0.05) 100%);
+  background-color: rgba(20, 20, 20, 0.9);
+  list-style: none;
+  z-index: 10;
   width: 100%;
-  padding: 10px 30px 60px;
-  margin: 0;
-  z-index: 10; }
-  #navbar [data-target] {
+  padding: 10px 30px 10px;
+  margin: 0; }
+  #navbar .navbar-links {
+    display: flex;
+    padding: 0;
+    margin: 0; }
+  #navbar li {
+    position: relative;
     color: #c8c8c8;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
     padding: 5px;
-    transition: color 0.15s;
+    margin: 0 0 0 30px;
+    transition: color .15s;
     cursor: pointer; }
-    #navbar [data-target]:hover {
-      color: #1496ff; }
-  #navbar h3 {
-    margin: 0; }
-  #navbar ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0; }
-    #navbar ul li {
-      margin: 0 0 0 30px; }
+    #navbar li::before {
+      position: absolute;
+      bottom: -8px;
+      left: -2.5px;
+      content: "";
+      background-color: #49aeff;
+      height: 3px;
+      width: 0%;
+      transition: 350ms; }
+    #navbar li:hover {
+      color: #49aeff; }
+      #navbar li:hover::before {
+        width: calc(100% + 5px); }
 
 .pill-items {
   display: flex;
