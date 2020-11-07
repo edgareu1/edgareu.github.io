@@ -24,7 +24,7 @@
     text-decoration: none;
     padding: 5px;
     margin: 0 0 0 30px;
-    transition: color .15s;
+    transition: color .2s;
     cursor: pointer;
 
     &::before {
@@ -35,7 +35,7 @@
       background-color: rgba(73, 174, 255, 1);
       height: 3px;
       width: 0%;
-      transition: 350ms;
+      transition: 300ms;
     }
 
     &:hover {
