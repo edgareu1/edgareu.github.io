@@ -197,14 +197,7 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 100%;
-      transition: -webkit-transform .6s ease;
-      transition: transform .6s ease;
-      transition: transform .6s ease, -webkit-transform .6s ease;
-      -webkit-backface-visibility: hidden;
-      backface-visibility: hidden;
-      -webkit-perspective: 1000px;
-      perspective: 1000px; }
+      width: 100%; }
       .carousel .carousel-inner .carousel-item.active {
         display: block; }
       .carousel .carousel-inner .carousel-item img {
@@ -352,8 +345,7 @@ h3 {
   border-radius: 2px; }
   .tab-items .tab-item {
     display: none;
-    opacity: 0;
-    transition: opacity .15s linear; }
+    opacity: 0; }
     .tab-items .tab-item.active {
       display: flex;
       opacity: 1;
@@ -416,6 +408,8 @@ h3 {
           position: absolute;
           height: 100%;
           border-radius: 5px;
+          -webkit-transition: width 2s;
+          -o-transition: width 2s;
           transition: width 2s; }
 
 /*# sourceMappingURL=index.css.map */

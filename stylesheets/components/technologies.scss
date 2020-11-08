@@ -54,6 +54,8 @@
             position: absolute;
             height: 100%;
             border-radius: 5px;
+            -webkit-transition: width 2s;
+            -o-transition: width 2s;
             transition: width 2s;
           }
         }
