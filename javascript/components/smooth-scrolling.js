@@ -9,7 +9,7 @@ function smoothScrolling(from, to, time = 800) {
 
     // Performs the scrolling animation during a certain period of time
     $("html, body").animate( {
-      scrollTop: $(to).offset().top
+      scrollTop: $(to).offset().top - 50
     }, time);
   });
 }
