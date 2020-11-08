@@ -34,7 +34,6 @@
   .tab-item {
     display: none;
     opacity: 0;
-    transition: opacity .15s linear;
 
     &.active {
       display: flex;
