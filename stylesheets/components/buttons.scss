@@ -36,3 +36,51 @@
     }
   }
 }
+
+.btn-2 {
+	position: relative;
+  display: block;
+	color: white;
+	font-size: 18px;
+  align-self: center;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: .06em;
+  height: 100%;
+  width: 140px;
+	padding: 12px 15px;
+	margin: 0;
+	transition: all .5s ease;
+	-o-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease;
+	overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #13538f;
+    z-index: -1;
+    height: 0;
+    width: 200%;
+    transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
+    transition: all .75s ease 0s;
+    -o-transition: all .75s ease 0s;
+    -moz-transition: all .75s ease 0s;
+    -webkit-transition: all .75s ease 0s;
+    content: "";
+  }
+
+  &:hover {
+    color: white;
+    text-shadow: none;
+
+    &:after {
+      height: 300%;
+    }
+  }
+}
