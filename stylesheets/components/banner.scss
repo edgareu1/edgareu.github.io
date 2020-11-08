@@ -13,8 +13,7 @@
   }
 
   .banner-image {
-    background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 0.1), rgba(20, 20, 20, 1)),
-                                      url('../../images/keyboard-background.jpg');
+    background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/keyboard-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

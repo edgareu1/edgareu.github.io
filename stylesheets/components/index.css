@@ -11,7 +11,7 @@
     height: 100%;
     width: 100%; }
   #banner .banner-image {
-    background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 0.1), #141414), url("../../images/keyboard-background.jpg");
+    background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/keyboard-background.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -197,7 +197,7 @@ html {
 body {
   text-align: left;
   color: white;
-  background-color: #141414;
+  background-color: black;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
@@ -235,7 +235,7 @@ h3 {
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
   list-style: none;
   z-index: 10;
   width: 100%;
@@ -247,7 +247,7 @@ h3 {
     margin: 0; }
   #navbar li {
     position: relative;
-    color: #c8c8c8;
+    color: white;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
@@ -334,7 +334,7 @@ h3 {
     width: 100%; }
     #technologies .tech-content ul {
       list-style: none;
-      background-color: rgba(20, 20, 20, 0.75);
+      background-color: rgba(0, 0, 0, 0.75);
       width: 750px;
       padding: 20px 30px 20px 45px;
       margin: 0 auto; }

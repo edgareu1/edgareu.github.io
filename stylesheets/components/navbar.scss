@@ -3,7 +3,7 @@
   justify-content: space-between;
   position: fixed;
   top: 0;
-  background-color: rgba(20, 20, 20, 0.9);
+  background-color: rgba(0, 0, 0, 0.75);
   list-style: none;
   z-index: 10;
   width: 100%;
@@ -18,7 +18,7 @@
 
   li {
     position: relative;
-    color: rgba(200, 200, 200, 1);
+    color: white;
     font-family: "PT Sans", sans-serif;
     font-size: 20px;
     text-decoration: none;
