@@ -80,6 +80,24 @@
         #banner .banner-content .banner-code-container::-webkit-scrollbar-thumb:hover {
           background-color: #6e6e6e; }
 
+.btn-1 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 50px;
+  width: 100%;
+  max-width: 240px;
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 20px 5px 0;
+  overflow: hidden; }
+  .btn-1:hover {
+    text-decoration: none; }
+
 .carousel {
   position: relative; }
   .carousel ol.carousel-indicators {
