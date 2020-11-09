@@ -5,11 +5,17 @@ function animateModals() {
   modalButton.addEventListener("click", () => {
     document.body.classList.add('modal-active');
     modalContainer.style.display = "flex";
+    modalContainer.classList.remove('modal-close');
+    modalContainer.classList.add('modal-open');
   });
 
   modalContainer.addEventListener("click", () => {
     document.body.classList.remove('modal-active');
-    modalContainer.style.display = "none";
+    modalContainer.classList.add('modal-close');
+
+    setTimeout(() => {
+      modalContainer.style.display = "none";
+    }, 250);
   });
 }
 

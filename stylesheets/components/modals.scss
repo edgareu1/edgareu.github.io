@@ -13,6 +13,22 @@ body.modal-active {
   z-index: 15;
   height: 100%;
   width: 100%;
+  transform: scale(0);
+  z-index: 15;
+
+  &.modal-open {
+    transform: scale(1);
+
+    .modal {
+      animation: blowUpModal .5s cubic-bezier(0.165, 0.850, 0.450, 1.000) forwards;
+    }
+
+    &.modal-close {
+      .modal {
+        animation: blowUpModalTwo .5s cubic-bezier(0.165, 0.850, 0.450, 1.000) forwards;
+      }
+    }
+  }
 
   .modal {
     background: blue;
@@ -33,5 +49,25 @@ body.modal-active {
       font-size: 18px;
       line-height: 22px;
     }
+  }
+}
+
+@keyframes blowUpModal {
+  0% {
+    transform:scale(0);
+  }
+  100% {
+    transform:scale(1);
+  }
+}
+
+@keyframes blowUpModalTwo {
+  0% {
+    transform:scale(1);
+    opacity:1;
+  }
+  100% {
+    transform:scale(0);
+    opacity:0;
   }
 }
