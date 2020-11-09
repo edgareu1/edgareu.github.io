@@ -325,7 +325,7 @@ h3 {
   margin: 0; }
   .pill-items .pill-item {
     display: block;
-    color: #007bff;
+    color: white;
     background-color: transparent;
     text-decoration: none;
     padding: .5rem 1rem;
@@ -335,7 +335,8 @@ h3 {
     margin-bottom: -1px;
     cursor: pointer; }
     .pill-items .pill-item.active {
-      color: #495057;
+      color: black;
+      font-weight: 600;
       background-color: #fff;
       border-color: #dee2e6 #dee2e6 #fff; }
 

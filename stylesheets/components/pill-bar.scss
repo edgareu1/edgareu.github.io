@@ -7,7 +7,7 @@
 
   .pill-item {
     display: block;
-    color: #007bff;
+    color: white;
     background-color: transparent;
     text-decoration: none;
     padding: .5rem 1rem;
@@ -18,7 +18,8 @@
     cursor: pointer;
 
     &.active {
-      color: #495057;
+      color: black;
+      font-weight: 600;
       background-color: #fff;
       border-color: #dee2e6 #dee2e6 #fff;
     }
