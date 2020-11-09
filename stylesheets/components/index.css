@@ -317,11 +317,14 @@ body.modal-active {
   transform: scale(0);
   z-index: 15; }
   .modal-container.modal-open {
-    transform: scale(1); }
+    transform: scale(1);
+    animation: increaseOpacity 0.5s; }
     .modal-container.modal-open .modal {
-      animation: blowUpModal 0.5s cubic-bezier(0.165, 0.85, 0.45, 1) forwards; }
-    .modal-container.modal-open.modal-close .modal {
-      animation: blowUpModalTwo 0.5s cubic-bezier(0.165, 0.85, 0.45, 1) forwards; }
+      animation: zoomIn .5s; }
+    .modal-container.modal-open.modal-close {
+      animation: decreaseOpacity 0.5s; }
+      .modal-container.modal-open.modal-close .modal {
+        animation: zoomOut .5s; }
   .modal-container .modal {
     background: blue;
     padding: 50px;
@@ -338,18 +341,26 @@ body.modal-active {
       font-size: 18px;
       line-height: 22px; }
 
-@keyframes blowUpModal {
-  0% {
+@keyframes increaseOpacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes zoomIn {
+  from {
     transform: scale(0); }
-  100% {
+  to {
     transform: scale(1); } }
-@keyframes blowUpModalTwo {
-  0% {
-    transform: scale(1);
+@keyframes decreaseOpacity {
+  from {
     opacity: 1; }
-  100% {
-    transform: scale(0);
+  to {
     opacity: 0; } }
+@keyframes zoomOut {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0); } }
 #navbar {
   display: flex;
   justify-content: space-between;

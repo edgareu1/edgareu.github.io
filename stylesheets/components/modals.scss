@@ -18,14 +18,17 @@ body.modal-active {
 
   &.modal-open {
     transform: scale(1);
+    animation: increaseOpacity 0.5s;
 
     .modal {
-      animation: blowUpModal .5s cubic-bezier(0.165, 0.850, 0.450, 1.000) forwards;
+      animation: zoomIn .5s;
     }
 
     &.modal-close {
+      animation: decreaseOpacity 0.5s;
+
       .modal {
-        animation: blowUpModalTwo .5s cubic-bezier(0.165, 0.850, 0.450, 1.000) forwards;
+        animation: zoomOut .5s;
       }
     }
   }
@@ -52,22 +55,22 @@ body.modal-active {
   }
 }
 
-@keyframes blowUpModal {
-  0% {
-    transform:scale(0);
-  }
-  100% {
-    transform:scale(1);
-  }
+@keyframes increaseOpacity {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
-@keyframes blowUpModalTwo {
-  0% {
-    transform:scale(1);
-    opacity:1;
-  }
-  100% {
-    transform:scale(0);
-    opacity:0;
-  }
+@keyframes zoomIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@keyframes decreaseOpacity {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes zoomOut {
+  from { transform: scale(1); }
+  to   { transform: scale(0); }
 }

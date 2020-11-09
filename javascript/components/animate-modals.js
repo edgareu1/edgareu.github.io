@@ -15,7 +15,7 @@ function animateModals() {
 
     setTimeout(() => {
       modalContainer.style.display = "none";
-    }, 250);
+    }, 500);
   });
 }
 
