@@ -300,6 +300,33 @@ h2 {
 h3 {
   font-size: 1.75rem; }
 
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 15;
+  height: 100%;
+  width: 100%; }
+  .modal-container .modal {
+    background: blue;
+    padding: 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    z-index: 20; }
+    .modal-container .modal h2 {
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 15px; }
+    .modal-container .modal p {
+      font-size: 18px;
+      line-height: 22px; }
+
 #navbar {
   display: flex;
   justify-content: space-between;
