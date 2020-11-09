@@ -1,0 +1,74 @@
+body.modal-active {
+  overflow: hidden;
+}
+
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background:rgba(0, 0, 0, .7);
+  z-index: 15;
+  height: 100%;
+  width: 100%;
+  z-index: 15;
+
+  &.modal-open {
+    animation: increaseOpacity 0.5s forwards;
+
+    .modal {
+      animation: zoomIn .5s forwards;
+    }
+
+    &.modal-close {
+      animation: decreaseOpacity 0.5s forwards;
+
+      .modal {
+        animation: zoomOut .5s forwards;
+      }
+    }
+  }
+
+  .modal {
+    background: blue;
+    padding: 50px;
+    display: inline-block;
+    border-radius: 3px;
+    font-weight: 300;
+    position: relative;
+    z-index: 20;
+
+    h2 {
+      font-size: 25px;
+      line-height: 25px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+@keyframes increaseOpacity {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
+}
+
+@keyframes decreaseOpacity {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+@keyframes zoomOut {
+  from { transform: scale(1); }
+  to   { transform: scale(0); }
+}
