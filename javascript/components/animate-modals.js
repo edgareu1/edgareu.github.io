@@ -10,3 +10,5 @@ function animateModals() {
     modalContainer.style.display = "none";
   });
 }
+
+export { animateModals }
