@@ -314,17 +314,15 @@ body.modal-active {
   z-index: 15;
   height: 100%;
   width: 100%;
-  transform: scale(0);
   z-index: 15; }
   .modal-container.modal-open {
-    transform: scale(1);
-    animation: increaseOpacity 0.5s; }
+    animation: increaseOpacity 0.5s forwards; }
     .modal-container.modal-open .modal {
-      animation: zoomIn .5s; }
+      animation: zoomIn .5s forwards; }
     .modal-container.modal-open.modal-close {
-      animation: decreaseOpacity 0.5s; }
+      animation: decreaseOpacity 0.5s forwards; }
       .modal-container.modal-open.modal-close .modal {
-        animation: zoomOut .5s; }
+        animation: zoomOut .5s forwards; }
   .modal-container .modal {
     background: blue;
     padding: 50px;
@@ -432,7 +430,8 @@ body.modal-active {
   position: relative;
   height: 100vh;
   width: 100%;
-  margin: 0; }
+  margin: 0;
+  overflow-x: hidden; }
   #technologies #tech-canvas, #technologies .tech-content {
     position: absolute;
     top: 0; }

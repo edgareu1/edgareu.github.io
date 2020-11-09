@@ -13,22 +13,20 @@ body.modal-active {
   z-index: 15;
   height: 100%;
   width: 100%;
-  transform: scale(0);
   z-index: 15;
 
   &.modal-open {
-    transform: scale(1);
-    animation: increaseOpacity 0.5s;
+    animation: increaseOpacity 0.5s forwards;
 
     .modal {
-      animation: zoomIn .5s;
+      animation: zoomIn .5s forwards;
     }
 
     &.modal-close {
-      animation: decreaseOpacity 0.5s;
+      animation: decreaseOpacity 0.5s forwards;
 
       .modal {
-        animation: zoomOut .5s;
+        animation: zoomOut .5s forwards;
       }
     }
   }
