@@ -96,9 +96,9 @@
   width: 140px;
   padding: 12px 15px;
   margin: 0;
-  -webkit-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
   overflow: hidden; }
   .btn-nav:after {
     position: absolute;
@@ -111,14 +111,14 @@
     -webkit-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
     -ms-transform: translateX(-50%) translateY(-50%) rotate(-25deg);
     transform: translateX(-50%) translateY(-50%) rotate(-25deg);
-    -webkit-transition: all .75s ease 0s;
-    -o-transition: all .75s ease 0s;
-    transition: all .75s ease 0s;
+    -webkit-transition: all .35s ease 0s;
+    -o-transition: all .35s ease 0s;
+    transition: all .35s ease 0s;
     content: ""; }
-  .btn-nav:hover {
+  .btn-nav:hover, .btn-nav.active {
     color: white;
     text-shadow: none; }
-    .btn-nav:hover:after {
+    .btn-nav:hover:after, .btn-nav.active:after {
       height: 300%; }
 
 .btn-modal {
