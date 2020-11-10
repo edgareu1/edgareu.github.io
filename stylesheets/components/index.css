@@ -83,6 +83,11 @@
         #banner .banner-content .banner-code-container::-webkit-scrollbar-thumb:hover {
           background-color: #6e6e6e; }
 
+@keyframes blink-caret {
+  from, to {
+    border-color: white; }
+  50% {
+    border-color: transparent; } }
 .btn-nav {
   position: relative;
   display: block;

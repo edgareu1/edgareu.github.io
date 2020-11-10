@@ -10,11 +10,11 @@ function typeBannerCode() {
       newPar = 0,
       newSpan = 0,
       subString = 0,
-      endString= 0;
+      endString = 0;
 
   // Function that types a certain character of the codeContent variable (depending on the position variable)
   // It recursively calls itself to write the whole codeContent
-  var typeCode = function() {
+  function typeCode() {
     // If the next character is an element...
     if (codeContent[position] == "<") {
       typeWaitTime = 0;
@@ -66,10 +66,31 @@ function typeBannerCode() {
     // simulate the typing animation)
     if (position < codeContent.length - 1) {
       setTimeout(typeCode, typeWaitTime);
+
+    // Otherwise, add the blinking caret animation in a new line
+    } else {
+      addBlinkCaret();
     }
   };
 
-  typeCode();
+  // Function that adds a blinking caret (in a new line) to the codeContainer
+  function addBlinkCaret() {
+    newPar = document.createElement("p");
+    newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
+    newPar.style.color = 'transparent';
+    newPar.innerHTML = '.';
+
+    // Append it to the codeContainer
+    codeContainer.appendChild(newPar);
+  }
+
+  addBlinkCaret();  // Add the blinking caret animation
+
+  // After 3.5s begin the typing animation
+  setTimeout(() => {
+    codeContainer.innerHTML = '';
+    typeCode();
+  }, 3500);
 }
 
 export { typeBannerCode };

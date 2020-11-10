@@ -131,3 +131,8 @@
     }
   }
 }
+
+@keyframes blink-caret {
+  from, to { border-color: white }
+  50%      { border-color: transparent }
+}
