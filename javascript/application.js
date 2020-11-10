@@ -1,6 +1,7 @@
 // Prepare the app JS here
 import { animateCarousels } from './components/animate-carousels.js'
 import { animateModals } from './components/animate-modals.js'
+import { animateNavbar } from './components/animate-navbar.js'
 import { animatePillBar } from './components/animate-pill-bar.js'
 import { smoothNavbarAnchors } from './components/smooth-navbar-anchors.js'
 import { techBackAnimation } from './components/tech-back-animation.js'
@@ -9,6 +10,7 @@ import { updateCanvasDimensions } from './components/update-canvas-dimensions.js
 
 animateCarousels();
 animateModals();
+animateNavbar();
 animatePillBar();
 smoothNavbarAnchors();
 typeBannerCode();
