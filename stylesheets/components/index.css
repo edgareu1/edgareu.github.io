@@ -346,8 +346,12 @@ body.modal-active {
     opacity: 1; } }
 @keyframes zoomIn {
   from {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0); }
   to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1); } }
 @keyframes decreaseOpacity {
   from {
@@ -356,8 +360,12 @@ body.modal-active {
     opacity: 0; } }
 @keyframes zoomOut {
   from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
     transform: scale(1); }
   to {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
     transform: scale(0); } }
 #navbar {
   display: flex;

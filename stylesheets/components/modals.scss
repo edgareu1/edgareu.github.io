@@ -59,8 +59,17 @@ body.modal-active {
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0); }
-  to   { transform: scale(1); }
+  from {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 }
 
 @keyframes decreaseOpacity {
@@ -69,6 +78,15 @@ body.modal-active {
 }
 
 @keyframes zoomOut {
-  from { transform: scale(1); }
-  to   { transform: scale(0); }
+  from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  to {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
 }
