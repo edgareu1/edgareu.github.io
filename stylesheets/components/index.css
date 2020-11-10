@@ -306,6 +306,11 @@ h2 {
 h3 {
   font-size: 1.75rem; }
 
+#profile-main {
+  position: relative; }
+  #profile-main #profile-content, #profile-main canvas {
+    position: absolute; }
+
 body.modal-active {
   overflow: hidden; }
 
@@ -441,54 +446,45 @@ body.modal-active {
       width: 450px; }
 
 #technologies {
-  position: relative;
+  display: flex;
+  justify-content: center;
   height: 100vh;
-  width: 100%;
-  margin: 0;
-  overflow-x: hidden; }
-  #technologies #tech-canvas, #technologies .tech-content {
-    position: absolute;
-    top: 0; }
-  #technologies .tech-content {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: 100%; }
-    #technologies .tech-content ul {
-      list-style: none;
-      background-color: rgba(0, 0, 0, 0.75);
-      width: 750px;
-      padding: 20px 30px 20px 45px;
-      margin: 0 auto; }
-      #technologies .tech-content ul h2 {
-        margin: 0 0 0 -35px; }
-      #technologies .tech-content ul li .tech-title {
-        display: flex;
-        align-items: flex-end;
-        justify-content: space-between;
-        color: gainsboro;
-        font-family: "PT Sans", sans-serif;
-        padding: 0 10px 0 5px;
-        margin-top: 30px; }
-        #technologies .tech-content ul li .tech-title h3 {
-          margin: 0; }
-      #technologies .tech-content ul li .progress-bar-container {
-        display: block;
-        position: relative;
-        background: #505050;
-        height: 10px;
-        width: 100%;
+  width: 100%; }
+  #technologies ul {
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 750px;
+    padding: 20px 30px 20px 45px;
+    margin: 0 auto; }
+    #technologies ul h2 {
+      margin: 0 0 0 -35px; }
+    #technologies ul li .tech-title {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      color: gainsboro;
+      font-family: "PT Sans", sans-serif;
+      padding: 0 10px 0 5px;
+      margin-top: 30px; }
+      #technologies ul li .tech-title h3 {
+        margin: 0; }
+    #technologies ul li .progress-bar-container {
+      display: block;
+      position: relative;
+      background: #505050;
+      height: 10px;
+      width: 100%;
+      border-radius: 5px;
+      margin-top: 10px; }
+      #technologies ul li .progress-bar-container .progress-bar {
+        position: absolute;
+        height: 100%;
         border-radius: 5px;
-        margin-top: 10px; }
-        #technologies .tech-content ul li .progress-bar-container .progress-bar {
-          position: absolute;
-          height: 100%;
-          border-radius: 5px;
-          -webkit-transition: width 2s;
-          -o-transition: width 2s;
-          transition: width 2s; }
-      #technologies .tech-content ul a {
-        max-width: 300px;
-        margin: 32px 5px 0; }
+        -webkit-transition: width 2s;
+        -o-transition: width 2s;
+        transition: width 2s; }
+    #technologies ul a {
+      max-width: 300px;
+      margin: 32px 5px 0; }
 
 /*# sourceMappingURL=index.css.map */

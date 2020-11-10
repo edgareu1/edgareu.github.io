@@ -10,16 +10,20 @@ function animateNavbar() {
 
   // Function that refreshes the navbar active anchor
   function refreshNavbar() {
-    var currentPos = window.scrollY;  // Get the user current window position
+    // Get the user current window position and the navbar and banner elements height
+    const currentPos = window.scrollY,
+          navbarHeight = 50,
+          bannerHeight = document.getElementById('banner').offsetHeight;
 
     // For each of the anchors...
     for (const anchor of anchors) {
-      // Get the anchor target element
-      const anchorRef = anchor.getAttribute('data-target');
-      const target = document.querySelector(anchorRef);
+      // Get the anchor target element and his distance from the top
+      const anchorRef = anchor.getAttribute('data-target'),
+            target = document.querySelector(anchorRef),
+            targetOffsetTop = ( anchorRef == '#banner' ?  0 : bannerHeight + target.offsetTop );
 
       // Get the element the user is currently on and 'activate' its respective navbar anchor
-      if (target.offsetTop - 50  <= currentPos && target.offsetTop + target.offsetHeight - 50 > currentPos) {
+      if (targetOffsetTop - navbarHeight  <= currentPos && targetOffsetTop + target.offsetHeight - navbarHeight > currentPos) {
         anchor.classList.add('active');
       } else {
         anchor.classList.remove('active');
