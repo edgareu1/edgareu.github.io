@@ -2,7 +2,7 @@ import { smoothScrolling } from './smooth-scrolling.js';
 
 // Function that makes the navbar anchors scroll smoothly to their respective destination
 function smoothNavbarAnchors() {
-  const anchors = document.querySelectorAll("#navbar [data-target]"); // Get the anchors of the navbar
+  const anchors = document.querySelectorAll("#navbar a"); // Get the anchors of the navbar
 
   // For each of the anchors...
   for (let anchor of anchors) {
