@@ -1,18 +1,19 @@
-// Function that updates the Canvas dimensions to fill the whole window of the User device
+// Function that updates the Canvas dimensions to fill the whole profile content
 // Arguments:
 //   canvas: Canvas element that will have its dimensions updated
 function updateCanvasDimensions(canvasElement) {
-  // Get the height and width of the User device
-  let windowWidth = window.innerWidth,
-      windowHeight = window.innerHeight;
+  // Get the profile-content element dimensions (which the canvas should mimic)
+  let profileContent = document.getElementById('profile-content'),
+      canvasWidth = profileContent.offsetWidth,
+      canvasHeight = profileContent.offsetHeight;
 
-  // Set the canvas dimensions to be equal to the ones of the User device
-  canvasElement.width = windowWidth;
-  canvasElement.height = windowHeight;
+  // Set the canvas dimensions
+  canvasElement.width = canvasWidth;
+  canvasElement.height = canvasHeight;
 
-  // Set the canvas container dimensions to equal to the ones of the User device
-  canvasElement.style.width = `${windowWidth}px`;
-  canvasElement.style.height = `${windowHeight}px`;
+  // Set the canvas container dimensions
+  canvasElement.style.width = `${canvasWidth}px`;
+  canvasElement.style.height = `${canvasHeight}px`;
 
   // Make sure the canvas characteristics stay the same
   let canvas = canvasElement.getContext('2d');
