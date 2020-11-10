@@ -21,3 +21,5 @@ function animateNavbar() {
     }
   }
 }
+
+export { animateNavbar }
