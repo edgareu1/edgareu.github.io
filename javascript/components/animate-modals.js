@@ -1,5 +1,5 @@
 function animateModals() {
-  const modalButtons = document.querySelectorAll('.btn-1');
+  const modalButtons = document.querySelectorAll('.btn-modal');
   const modalContainer = document.querySelector('.modal-container');
   const modals = document.querySelectorAll('.modal');
 

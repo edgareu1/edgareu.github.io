@@ -14,12 +14,12 @@
 
   <body>
     <div id="navbar">
-      <a href="#" data-target="#banner" class="btn-2">Edgar</a>
+      <a href="#" data-target="#banner" class="btn-nav">Edgar</a>
 
       <div class="navbar-links">
-        <a href="#" data-target="#technologies" class="btn-2">Technologies</a>
-        <a href="#" data-target="#projects" class="btn-2">Projects</a>
-        <a href="#" data-target="#curriculum" class="btn-2">Curriculum</a>
+        <a href="#" data-target="#technologies" class="btn-nav">Technologies</a>
+        <a href="#" data-target="#projects" class="btn-nav">Projects</a>
+        <a href="#" data-target="#curriculum" class="btn-nav">Curriculum</a>
       </div>
     </div>
 
@@ -36,7 +36,7 @@
 
           <h2>My path began in finance, but in 2020 I decided to change my life and learn how to code.</h2>
 
-          <a href="#" class="btn-1 modal-contributions">CONTRIBUTION ACTIVITY</a>
+          <a href="#" class="btn-modal" data-target="modal-contributions">CONTRIBUTION ACTIVITY</a>
         </div>
 
         <div class="banner-code-container"></div>
@@ -100,7 +100,7 @@
             </div>
           </li>
 
-          <a href="#" class="btn-1">COMPLEMENTARY TECHNOLOGIES</a>
+          <a href="#" class="btn-modal" data-target="modal-tech">COMPLEMENTARY TECHNOLOGIES</a>
           <h2 style="margin-top: 30px">&lt;/technologies&gt;</h2>
         </ul>
       </div>
@@ -384,8 +384,13 @@
 </html>
 
 <div class="modal-container">
-  <div class="modal modal-contributions">
-    <h2>Modal headers</h2>
+  <div class="modal" id="modal-contributions">
+    <h2>Modal Contributions</h2>
+    <p>Modal content</p>
+  </div>
+
+  <div class="modal" id="modal-tech">
+    <h2>Modal Tech</h2>
     <p>Modal content</p>
   </div>
 </div>

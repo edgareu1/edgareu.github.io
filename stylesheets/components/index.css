@@ -83,7 +83,7 @@
         #banner .banner-content .banner-code-container::-webkit-scrollbar-thumb:hover {
           background-color: #6e6e6e; }
 
-.btn-1 {
+.btn-nav {
   position: relative;
   display: flex;
   justify-content: center;
@@ -96,7 +96,7 @@
   border: 1px solid;
   border-radius: 2px;
   overflow: hidden; }
-  .btn-1:after {
+  .btn-nav:after {
     position: absolute;
     top: -50px;
     left: -75px;
@@ -107,19 +107,19 @@
     -webkit-transform: rotate(35deg);
     -ms-transform: rotate(35deg);
     transform: rotate(35deg);
-    -webkit-transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1);
-    -o-transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1);
-    transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1);
+    -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+    -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+    transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
     content: ""; }
-  .btn-1:hover {
+  .btn-nav:hover {
     text-decoration: none; }
-    .btn-1:hover:after {
+    .btn-nav:hover:after {
       left: 120%;
-      -webkit-transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1);
-      -o-transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1);
-      transition: all 750ms cubic-bezier(0.2, 1, 0.2, 1); }
+      -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+      -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+      transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1); }
 
-.btn-2 {
+.btn-modal {
   position: relative;
   display: block;
   color: white;
@@ -136,7 +136,7 @@
   -o-transition: all .5s ease;
   transition: all .5s ease;
   overflow: hidden; }
-  .btn-2:after {
+  .btn-modal:after {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -151,10 +151,10 @@
     -o-transition: all .75s ease 0s;
     transition: all .75s ease 0s;
     content: ""; }
-  .btn-2:hover {
+  .btn-modal:hover {
     color: white;
     text-shadow: none; }
-    .btn-2:hover:after {
+    .btn-modal:hover:after {
       height: 300%; }
 
 .carousel {
@@ -326,7 +326,7 @@ body.modal-active {
   .modal-container .modal {
     background: blue;
     padding: 50px;
-    display: inline-block;
+    display: none;
     border-radius: 3px;
     font-weight: 300;
     position: relative;
