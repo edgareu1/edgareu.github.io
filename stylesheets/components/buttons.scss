@@ -1,47 +1,4 @@
 .btn-nav {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  color: white;
-  font-size: 16px;
-  font-weight: 400;
-  text-decoration: none;
-  line-height: 50px;
-  width: 100%;
-  border: 1px solid;
-  border-radius: 2px;
-  overflow: hidden;
-
-  &:after {
-    position: absolute;
-    top: -50px;
-    left: -75px;
-    background: #fff;
-    opacity: .2;
-    height: 155px;
-    width: 50px;
-    -webkit-transform: rotate(35deg);
-    -ms-transform: rotate(35deg);
-    transform: rotate(35deg);
-    -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-    -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-    transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-    content: "";
-  }
-
-  &:hover {
-    text-decoration: none;
-
-    &:after {
-      left: 120%;
-      -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-      -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-      transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
-    }
-  }
-}
-
-.btn-modal {
 	position: relative;
   display: block;
 	color: white;
@@ -82,6 +39,49 @@
 
     &:after {
       height: 300%;
+    }
+  }
+}
+
+.btn-modal {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 50px;
+  width: 100%;
+  border: 1px solid;
+  border-radius: 2px;
+  overflow: hidden;
+
+  &:after {
+    position: absolute;
+    top: -50px;
+    left: -75px;
+    background: #fff;
+    opacity: .2;
+    height: 155px;
+    width: 50px;
+    -webkit-transform: rotate(35deg);
+    -ms-transform: rotate(35deg);
+    transform: rotate(35deg);
+    -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+    -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+    transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+    content: "";
+  }
+
+  &:hover {
+    text-decoration: none;
+
+    &:after {
+      left: 120%;
+      -webkit-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+      -o-transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
+      transition: all 650ms cubic-bezier(0.2, 1, 0.2, 1);
     }
   }
 }
