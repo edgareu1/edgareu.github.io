@@ -85,9 +85,9 @@
 
 @keyframes blink-caret {
   from, to {
-    border-color: transparent; }
+    border-color: white; }
   50% {
-    border-color: white; } }
+    border-color: transparent; } }
 .btn-nav {
   position: relative;
   display: block;
