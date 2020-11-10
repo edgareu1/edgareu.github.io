@@ -66,25 +66,31 @@ function typeBannerCode() {
     // simulate the typing animation)
     if (position < codeContent.length - 1) {
       setTimeout(typeCode, typeWaitTime);
+
+    // Otherwise, add the blinking caret animation in a new line
     } else {
       addBlinkCaret();
     }
   };
 
+  // Function that adds a blinking caret (in a new line) to the codeContainer
   function addBlinkCaret() {
     newPar = document.createElement("p");
-    newPar.style.animation = 'blink-caret 1s step-end infinite';
+    newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
     newPar.style.color = 'transparent';
     newPar.innerHTML = '.';
+
+    // Append it to the codeContainer
     codeContainer.appendChild(newPar);
   }
 
-  addBlinkCaret();
+  addBlinkCaret();  // Add the blinking caret animation
 
+  // After 3.5s begin the typing animation
   setTimeout(() => {
     codeContainer.innerHTML = '';
     typeCode();
-  }, 4500);
+  }, 3500);
 }
 
 export { typeBannerCode };
