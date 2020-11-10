@@ -10,11 +10,11 @@ function typeBannerCode() {
       newPar = 0,
       newSpan = 0,
       subString = 0,
-      endString= 0;
+      endString = 0;
 
   // Function that types a certain character of the codeContent variable (depending on the position variable)
   // It recursively calls itself to write the whole codeContent
-  var typeCode = function() {
+  function typeCode() {
     // If the next character is an element...
     if (codeContent[position] == "<") {
       typeWaitTime = 0;
@@ -68,6 +68,14 @@ function typeBannerCode() {
       setTimeout(typeCode, typeWaitTime);
     }
   };
+
+  function addBlinkCaret() {
+    newPar = document.createElement("p");
+    newPar.style.animation = 'blink-caret 1s step-end infinite';
+    newPar.style.color = 'transparent';
+    newPar.innerHTML = '.';
+    codeContainer.appendChild(newPar);
+  }
 
   typeCode();
 }
