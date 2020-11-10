@@ -51,3 +51,11 @@ h2 {
 h3 {
   font-size: 1.75rem;
 }
+
+#profile-main {
+  position: relative;
+
+  #profile-content, canvas {
+    position: absolute;
+  }
+}
