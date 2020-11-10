@@ -66,6 +66,8 @@ function typeBannerCode() {
     // simulate the typing animation)
     if (position < codeContent.length - 1) {
       setTimeout(typeCode, typeWaitTime);
+    } else {
+      addBlinkCaret();
     }
   };
 
@@ -77,7 +79,12 @@ function typeBannerCode() {
     codeContainer.appendChild(newPar);
   }
 
-  typeCode();
+  addBlinkCaret();
+
+  setTimeout(() => {
+    codeContainer.innerHTML = '';
+    typeCode();
+  }, 4500);
 }
 
 export { typeBannerCode };
