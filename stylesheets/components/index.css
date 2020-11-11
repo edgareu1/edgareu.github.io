@@ -182,6 +182,7 @@
     margin-top: 0 15% 1rem; }
     .carousel ol.carousel-indicators li {
       position: relative;
+      bottom: 0;
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
@@ -191,9 +192,12 @@
       width: 30px;
       margin-right: 3px;
       margin-left: 3px;
+      transition: bottom 0.1s linear;
       cursor: pointer; }
       .carousel ol.carousel-indicators li.active, .carousel ol.carousel-indicators li:hover {
         background-color: #fff; }
+      .carousel ol.carousel-indicators li.active {
+        bottom: 2px; }
   .carousel .carousel-inner {
     position: relative;
     width: 100%;
