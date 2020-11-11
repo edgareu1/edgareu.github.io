@@ -168,45 +168,59 @@
   .carousel ol.carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
-    display: flex;
     display: -webkit-box;
     display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
     list-style: none;
     z-index: 15;
-    padding-left: 0;
-    margin-top: 0 15% 1rem; }
+    padding: 0;
+    margin: 16px 0; }
     .carousel ol.carousel-indicators li {
       position: relative;
+      bottom: 0;
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      text-indent: -999px;
       background-color: rgba(255, 255, 255, 0.5);
-      height: 3px;
+      height: 23px;
       width: 30px;
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
       margin-right: 3px;
       margin-left: 3px;
+      -webkit-transition: border 0.1s linear;
+      -o-transition: border 0.1s linear;
+      transition: border 0.1s linear;
       cursor: pointer; }
       .carousel ol.carousel-indicators li.active, .carousel ol.carousel-indicators li:hover {
         background-color: #fff; }
+      .carousel ol.carousel-indicators li.active {
+        border-top: 8px solid transparent;
+        border-bottom: 12px solid transparent; }
   .carousel .carousel-inner {
     position: relative;
+    height: 100%;
     width: 100%;
     overflow: hidden; }
     .carousel .carousel-inner .carousel-item {
-      position: relative;
-      display: none;
+      position: absolute;
+      top: 0;
+      display: block;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 100%; }
-      .carousel .carousel-inner .carousel-item.active {
-        display: block; }
+      width: 100%;
+      -webkit-transition: -webkit-transform 0.25s linear;
+      transition: -webkit-transform 0.25s linear;
+      -o-transition: transform 0.25s linear;
+      transition: transform 0.25s linear;
+      transition: transform 0.25s linear, -webkit-transform 0.25s linear; }
       .carousel .carousel-inner .carousel-item img {
         display: block;
         width: 100%;
@@ -233,17 +247,17 @@
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    text-align: center;
     justify-content: center;
-    color: #fff;
+    text-align: center;
+    color: white;
     opacity: .5;
     width: 15%;
     cursor: pointer; }
     .carousel .carousel-control-prev:hover, .carousel .carousel-control-next:hover {
-      color: #fff;
+      color: white;
       text-decoration: none;
-      outline: 0;
-      opacity: .9; }
+      opacity: .9;
+      outline: 0; }
     .carousel .carousel-control-prev span, .carousel .carousel-control-next span {
       display: inline-block;
       background: transparent no-repeat center center;
@@ -432,6 +446,7 @@ body.modal-active {
     left: 0;
     display: none;
     opacity: 0;
+    height: 100%;
     width: 100%;
     transition: opacity 0.15s linear; }
     .tab-items .tab-item.active {
