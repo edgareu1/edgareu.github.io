@@ -8,20 +8,25 @@ function techBackAnimation(canvasElement) {
   var techList = { "Ruby": 28, "Rails": 25, "JavaScript": 22, "HTML": 21, "CSS": 23, "SQL": 12, "REGEX": 10, "Canvas": 5, "Git": 16, "GitHub": 14, "Bootstrap": 10, "AJAX": 16, "jQuery": 12, "Web API": 16, "Stripe": 8, "Heroku": 6, "Cloudinary": 7, "OOP": 14, "MVC": 15, "Mailer": 18 },
       techAttr = [];
 
+  const techSize = objSize(techList),
+        randomIndexArray = randomArray(techSize);
+
   // Update the canvas dimensions to the ones of the User device
   updateCanvasDimensions(canvasElement);
 
 	if (canvasElement.getContext) {
 		var canvas = canvasElement.getContext('2d'),
         canvasWidth = canvasElement.width,
-        canvasHeight = canvasElement.height;
+        canvasHeight = canvasElement.height,
+        currentIndex = 0,
+        sliceHeight = canvasHeight / techSize;
 
     // Constructor of a Technology element to display in the canvas
     class Tech {
       constructor(key) {
         this.text = key;
         this.x = Math.random() * canvasWidth;
-        this.y = Math.random() * (canvasHeight - (techList[key] * 2)) + techList[key];
+        this.y = randomIndexArray[currentIndex] * sliceHeight;
         this.font = techList[key] * 3;
         this.speed = (techList[key] / 8) + (Math.random() * 0.2);
       }
@@ -30,12 +35,16 @@ function techBackAnimation(canvasElement) {
     // Construct a Technology element for each of the techList key/value pairs
 		for (let key in techList) {
       techAttr.push(new Tech(key));
-		}
+      currentIndex++;
+    }
 
     // Function that creates the canvas animation
 		function animation() {
+      sliceHeight = canvasElement.height / techSize;
+
       // For each of the techologies...
 			for (var i = 0; i < techAttr.length; i++) {
+        if (currentIndex == techSize) { currentIndex = 0; }
         // Display it in the canvas
 				canvas.font = techAttr[i].font + 'px arial';
 				canvas.fillText(techAttr[i].text, techAttr[i].x, techAttr[i].y);
@@ -45,7 +54,8 @@ function techBackAnimation(canvasElement) {
         // Update it's attributes to simulate it moving in the next animation
         if (techAttr[i].x > canvasElement.width) {
           techAttr[i].x = - techAttr[i].width;
-          techAttr[i].y = Math.random() * (canvasElement.height - (techAttr[i].font * 2)) + techAttr[i].font;
+          techAttr[i].y = randomIndexArray[currentIndex] * sliceHeight;
+          currentIndex++;
         } else {
           techAttr[i].x += techAttr[i].speed;
         }
@@ -58,6 +68,19 @@ function techBackAnimation(canvasElement) {
 			animation();
 		}, 20);
 	}
+}
+
+function objSize(obj) {
+  var size = 0;
+  for (let i in obj) { size++; }
+  return size;
+}
+
+function randomArray(num) {
+  return Array.from({length: num}, (a, b) => b + 1)
+              .map(a => [Math.random(), a])
+              .sort((a, b) => a[0] - b[0])
+              .map(a => a[1]);
 }
 
 export { techBackAnimation };
