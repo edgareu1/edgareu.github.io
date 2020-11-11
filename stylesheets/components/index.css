@@ -203,17 +203,18 @@
         border-bottom: 12px solid transparent; }
   .carousel .carousel-inner {
     position: relative;
+    height: 100%;
     width: 100%;
     overflow: hidden; }
     .carousel .carousel-inner .carousel-item {
-      position: relative;
-      display: none;
+      position: absolute;
+      top: 0;
+      display: block;
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      width: 100%; }
-      .carousel .carousel-inner .carousel-item.active {
-        display: block; }
+      width: 100%;
+      transition: transform 0.25s linear; }
       .carousel .carousel-inner .carousel-item img {
         display: block;
         width: 100%;
@@ -439,6 +440,7 @@ body.modal-active {
     left: 0;
     display: none;
     opacity: 0;
+    height: 100%;
     width: 100%;
     transition: opacity 0.15s linear; }
     .tab-items .tab-item.active {
