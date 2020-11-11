@@ -25,6 +25,8 @@ function animateCarousels() {
         currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
         slideTo = "0";
 
+    refreshItemsPosition();
+
     // If the User clicks on an anchor...
     for (let j = 0; j < anchors.length; j++) {
       anchors[j].addEventListener('click', () => {
@@ -66,8 +68,19 @@ function animateCarousels() {
           currentIndicator.classList.remove('active');
           currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide);
           currentIndicator.classList.add('active');
+
+          refreshItemsPosition();
         }
       });
+    }
+
+    function refreshItemsPosition() {
+      const currentSlideInt = parseInt(currentSlide);
+
+      for (const item of items) {
+        const relativePosition = parseInt(item.getAttribute('slide')) - currentSlideInt;
+        item.style.transform = `translate(${relativePosition * 100}%)`;
+      }
     }
   }
 }
