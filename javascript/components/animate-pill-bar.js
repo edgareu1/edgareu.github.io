@@ -18,8 +18,15 @@ function animatePillBar() {
         anchor.classList.add('active');
 
         // Remove the active class from the previous item and add it to the new one
+        // Do the same for the fade class to create a fading transition
         for (let i = 0; i < tabItems.length; i++) {
-          (tabItems[i].id == anchorRef) ? tabItems[i].classList.add('active') : tabItems[i].classList.remove('active');
+          if (tabItems[i].id == anchorRef) {
+            tabItems[i].classList.add('active');
+            setTimeout(() => { tabItems[i].classList.add('fade'); }, 150);
+          } else {
+            tabItems[i].classList.remove('fade');
+            setTimeout(() => { tabItems[i].classList.remove('active'); }, 150);
+          }
         }
       }
     });

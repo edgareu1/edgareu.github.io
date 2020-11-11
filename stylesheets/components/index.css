@@ -419,17 +419,25 @@ body.modal-active {
       border-color: #dee2e6 #dee2e6 #fff; }
 
 .tab-items {
+  position: relative;
   display: block;
+  width: 900px;
+  height: 450px;
   border: 1px solid #dee2e6;
   border-top: none;
   border-radius: 2px; }
   .tab-items .tab-item {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
-    opacity: 0; }
+    opacity: 0;
+    width: 100%;
+    transition: opacity 0.15s linear; }
     .tab-items .tab-item.active {
-      display: flex;
-      opacity: 1;
-      width: 100%; }
+      display: flex; }
+    .tab-items .tab-item.fade {
+      opacity: 1; }
 
 #projects {
   display: flex;
