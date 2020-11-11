@@ -25,6 +25,7 @@ function animateCarousels() {
         currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
         slideTo = "0";
 
+    // Refresh the items position (positioned side by side with the 'transform: translate' property)
     refreshItemsPosition();
 
     // If the User clicks on an anchor...
@@ -69,11 +70,14 @@ function animateCarousels() {
           currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide);
           currentIndicator.classList.add('active');
 
+          // Refresh the items position (positioned side by side with the 'transform: translate' property)
+          // This will create an animation derived from the 'transition: transform' property
           refreshItemsPosition();
         }
       });
     }
 
+    // Function that refreshes the items position (which are side by side with the 'transform: translate' property)
     function refreshItemsPosition() {
       const currentSlideInt = parseInt(currentSlide);
 
