@@ -90,7 +90,7 @@ function typeBannerCode() {
   setTimeout(() => {
     codeContainer.innerHTML = '';
     typeCode();
-  }, 3500);
+  }, 2500);
 }
 
 export { typeBannerCode };
