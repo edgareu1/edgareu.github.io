@@ -28,11 +28,11 @@ function animateCarousels() {
     refreshItemsPosition();
 
     // If the User clicks on an anchor...
-    for (let j = 0; j < anchors.length; j++) {
-      anchors[j].addEventListener('click', () => {
+    for (const anchor of anchors) {
+      anchor.addEventListener('click', () => {
         // If the anchor is a direct anchor
-        if (anchors[j].hasAttribute('data-slide-to')) {
-          slideTo = anchors[j].getAttribute('data-slide-to');
+        if (anchor.hasAttribute('data-slide-to')) {
+          slideTo = anchor.getAttribute('data-slide-to');
 
           // Update the carousel active slide if the slide does change
           if (slideTo !== currentSlide) changeCarouselItem();
@@ -41,7 +41,7 @@ function animateCarousels() {
         } else {
           // Get the slide to change into
           slideTo = parseInt(slideTo);
-          slideTo += anchors[j].getAttribute('data-slide') == 'prev' ? -1 : 1;
+          slideTo += anchor.getAttribute('data-slide') == 'prev' ? -1 : 1;
 
           // Make sure the 'slideTo' variable is correct
           if (slideTo < 0) {
@@ -82,16 +82,16 @@ function animateCarousels() {
         item.style.transform = `translate(${relativePosition * 100}%)`;
       }
     }
-  }
-}
 
-// Function that gets the first element in a node list that has a certain value for a certain attribute
-// Arguments:
-//   nodeList:  Node list to filter
-//   attr:      Attribute to evaluate
-//   attrValue: Attribute value that the node list element should have
-function filterNodeList(nodeList, attr, attrValue) {
-  return Array.from(nodeList).filter(el => el.getAttribute(attr) == attrValue)[0];
+    // Function that gets the first element in a node list that has a certain value for a certain attribute
+    // Arguments:
+    //   nodeList:  Node list to filter
+    //   attr:      Attribute to evaluate
+    //   attrValue: Attribute value that the node list element should have
+    function filterNodeList(nodeList, attr, attrValue) {
+      return Array.from(nodeList).filter(el => el.getAttribute(attr) == attrValue)[0];
+    }
+  }
 }
 
 export { animateCarousels };
