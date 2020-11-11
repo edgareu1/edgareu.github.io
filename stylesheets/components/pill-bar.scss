@@ -27,12 +27,18 @@
 }
 
 .tab-items {
+  position: relative;
   display: block;
+  width: 900px;
+  height: 450px;
   border: 1px solid #dee2e6;
   border-top: none;
   border-radius: 2px;
 
   .tab-item {
+    position: absolute;
+    top: 0;
+    left: 0;
     display: none;
     opacity: 0;
     width: 100%;
