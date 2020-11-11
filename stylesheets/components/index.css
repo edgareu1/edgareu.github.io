@@ -168,7 +168,7 @@
   .carousel ol.carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     display: flex;
     display: -webkit-box;
@@ -178,18 +178,20 @@
     justify-content: center;
     list-style: none;
     z-index: 15;
-    padding-left: 0;
-    margin-top: 0 15% 1rem; }
+    padding: 0;
+    margin: 16px 0; }
     .carousel ol.carousel-indicators li {
       position: relative;
       bottom: 0;
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      text-indent: -999px;
       background-color: rgba(255, 255, 255, 0.5);
-      height: 3px;
+      height: 23px;
       width: 30px;
+      background-clip: padding-box;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
       margin-right: 3px;
       margin-left: 3px;
       transition: bottom 0.1s linear;
@@ -197,7 +199,8 @@
       .carousel ol.carousel-indicators li.active, .carousel ol.carousel-indicators li:hover {
         background-color: #fff; }
       .carousel ol.carousel-indicators li.active {
-        bottom: 2px; }
+        border-top: 8px solid transparent;
+        border-bottom: 12px solid transparent; }
   .carousel .carousel-inner {
     position: relative;
     width: 100%;

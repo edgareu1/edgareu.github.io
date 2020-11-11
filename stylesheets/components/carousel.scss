@@ -4,7 +4,7 @@
   ol.carousel-indicators {
     position: absolute;
     right: 0;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     display: flex;
     display: -webkit-box;
@@ -14,8 +14,8 @@
     justify-content: center;
     list-style: none;
     z-index: 15;
-    padding-left: 0;
-    margin-top: 0 15% 1rem;
+    padding: 0;
+    margin: 16px 0;
 
     li {
       position: relative;
@@ -23,10 +23,12 @@
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto;
-      text-indent: -999px;
       background-color: rgba(255, 255, 255, .5);
-      height: 3px;
+      height: 23px; // 10px border 2 times, plus 3px for the 'true' height of the element
       width: 30px;
+      background-clip: padding-box; // Background-color only applied to the 'padding-box'
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
       margin-right: 3px;
       margin-left: 3px;
       transition: bottom 0.1s linear;
@@ -37,7 +39,8 @@
       }
 
       &.active {
-        bottom: 2px;
+        border-top: 8px solid transparent;
+        border-bottom: 12px solid transparent;
       }
     }
   }
