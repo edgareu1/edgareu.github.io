@@ -425,11 +425,13 @@ body.modal-active {
   border-radius: 2px; }
   .tab-items .tab-item {
     display: none;
-    opacity: 0; }
+    opacity: 0;
+    width: 100%;
+    transition: opacity 0.15s linear; }
     .tab-items .tab-item.active {
-      display: flex;
-      opacity: 1;
-      width: 100%; }
+      display: flex; }
+    .tab-items .tab-item.fade {
+      opacity: 1; }
 
 #projects {
   display: flex;
