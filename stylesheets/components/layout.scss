@@ -57,5 +57,31 @@ h3 {
 
   #profile-content, canvas {
     position: absolute;
+
+    .section-title {
+      display: flex;
+      width: fit-content;
+      padding: 32px 0 20px;
+      margin: 0 auto;
+
+      h2 {
+        color: white;
+        font-size: 40px;
+      }
+
+      h6 {
+        color: white;
+        font-size: 18px;
+        padding: 8px 12px;
+
+        &:nth-child(1) {
+          align-self: flex-start;
+        }
+
+        &:nth-child(3) {
+          align-self: flex-end;
+        }
+      }
+    }
   }
 }
