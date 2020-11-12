@@ -45,12 +45,14 @@
   position: relative;
   top: 0;
   height: 100vh;
+  min-height: 630px;
   width: 100%;
   z-index: 5; }
   #banner .banner-image, #banner .banner-content {
     position: absolute;
     top: 0;
-    height: 100%;
+    height: 100vh;
+    min-height: 630px;
     width: 100%; }
   #banner .banner-image {
     background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/keyboard-background.jpg");
@@ -83,7 +85,7 @@
       background-color: rgba(0, 0, 0, 0.75);
       z-index: 8;
       height: fit-content;
-      max-height: calc(100vh - 200px);
+      max-height: calc(100% - 200px);
       width: 500px;
       padding: 2px 5px;
       margin: 100px 0 0;
@@ -273,6 +275,14 @@
     .carousel .carousel-control-next .carousel-control-next-icon {
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
+#curriculum {
+  min-height: 100vh;
+  padding-bottom: 20px; }
+  #curriculum .curriculum-content {
+    width: 900px;
+    padding: 20px 30px;
+    margin: 10px auto 20px; }
+
 *, *::before, *::after {
   box-sizing: border-box; }
 
@@ -324,6 +334,26 @@ h3 {
   position: relative; }
   #profile-main #profile-content, #profile-main canvas {
     position: absolute; }
+    #profile-main #profile-content .section-title, #profile-main canvas .section-title {
+      display: flex;
+      width: fit-content;
+      padding: 32px 5px 10px;
+      border-bottom: 1px solid gainsboro;
+      margin: 0 auto 40px; }
+      #profile-main #profile-content .section-title h2, #profile-main canvas .section-title h2 {
+        color: white;
+        font-size: 40px; }
+      #profile-main #profile-content .section-title span, #profile-main canvas .section-title span {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 4px 12px; }
+        #profile-main #profile-content .section-title span:nth-child(1), #profile-main canvas .section-title span:nth-child(1) {
+          align-self: flex-start; }
+        #profile-main #profile-content .section-title span:nth-child(3), #profile-main canvas .section-title span:nth-child(3) {
+          align-self: flex-end; }
+  #profile-main #profile-content {
+    width: 100%; }
 
 body.modal-active {
   overflow: hidden; }
@@ -458,30 +488,28 @@ body.modal-active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
-  width: 100%; }
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 20px; }
   #projects .projects-content {
     width: 900px;
-    margin: 0 auto; }
+    margin: 30px auto 20px; }
     #projects .projects-content .carousel {
       width: 450px; }
     #projects .projects-content .project-description {
       width: 450px; }
 
 #technologies {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-  width: 100%; }
-  #technologies ul {
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 20px; }
+  #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: 750px;
-    padding: 20px 30px 20px 45px;
+    padding: 0 30px 30px;
     margin: 0 auto; }
-    #technologies ul h2 {
-      margin: 0 0 0 -35px; }
-    #technologies ul li .tech-title {
+    #technologies .technologies-content li .tech-title {
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -489,9 +517,9 @@ body.modal-active {
       font-family: "PT Sans", sans-serif;
       padding: 0 10px 0 5px;
       margin-top: 30px; }
-      #technologies ul li .tech-title h3 {
+      #technologies .technologies-content li .tech-title h3 {
         margin: 0; }
-    #technologies ul li .progress-bar-container {
+    #technologies .technologies-content li .progress-bar-container {
       display: block;
       position: relative;
       background: #505050;
@@ -499,14 +527,14 @@ body.modal-active {
       width: 100%;
       border-radius: 5px;
       margin-top: 10px; }
-      #technologies ul li .progress-bar-container .progress-bar {
+      #technologies .technologies-content li .progress-bar-container .progress-bar {
         position: absolute;
         height: 100%;
         border-radius: 5px;
         -webkit-transition: width 2s;
         -o-transition: width 2s;
         transition: width 2s; }
-    #technologies ul a {
+    #technologies .technologies-content a {
       max-width: 300px;
       margin: 32px 5px 0; }
 

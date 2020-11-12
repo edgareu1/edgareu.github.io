@@ -57,5 +57,37 @@ h3 {
 
   #profile-content, canvas {
     position: absolute;
+
+    .section-title {
+      display: flex;
+      width: fit-content;
+      padding: 32px 5px 10px;
+      border-bottom: 1px solid gainsboro;
+      margin: 0 auto 40px;
+
+      h2 {
+        color: white;
+        font-size: 40px;
+      }
+
+      span {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 4px 12px;
+
+        &:nth-child(1) {
+          align-self: flex-start;
+        }
+
+        &:nth-child(3) {
+          align-self: flex-end;
+        }
+      }
+    }
+  }
+
+  #profile-content {
+    width: 100%;
   }
 }
