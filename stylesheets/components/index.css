@@ -279,9 +279,10 @@
   min-height: 100vh;
   padding-bottom: 20px; }
   #curriculum .curriculum-content {
+    background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
     padding: 20px 30px;
-    margin: 10px auto 20px; }
+    margin: 10px auto 0; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -490,8 +491,9 @@ body.modal-active {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 20px; }
+  padding-bottom: 40px; }
   #projects .projects-content {
+    background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
     margin: 30px auto 20px; }
     #projects .projects-content .carousel {
@@ -502,7 +504,7 @@ body.modal-active {
 #technologies {
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 20px; }
+  padding-bottom: 40px; }
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
