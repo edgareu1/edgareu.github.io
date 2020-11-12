@@ -291,8 +291,8 @@
       #curriculum .curriculum-content .cv-element img {
         position: absolute;
         left: -36px;
-        width: 70px;
         height: 70px;
+        width: 70px;
         border-radius: 50%; }
       #curriculum .curriculum-content .cv-element .cv-header-titles {
         padding: 5px 0 10px 45px;
@@ -309,7 +309,34 @@
         #curriculum .curriculum-content .cv-element .cv-element-content p {
           font-size: 16px;
           margin: 5px 0 10px; }
+        #curriculum .curriculum-content .cv-element .cv-element-content .star-icon-container {
+          position: relative;
+          top: 2px;
+          animation: bounce 1.5s infinite; }
+          #curriculum .curriculum-content .cv-element .cv-element-content .star-icon-container polygon {
+            position: absolute; }
 
+@keyframes bounce {
+  0% {
+    top: 3px;
+    transform: rotate(0);
+    filter: none; }
+  25% {
+    top: -1px;
+    transform: rotate(5deg);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.2)); }
+  30% {
+    top: -1px;
+    transform: rotate(10deg);
+    filter: drop-shadow(0 0 4px rgba(255, 255, 0, 0.4)); }
+  50% {
+    top: -1px;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5)); }
+  100% {
+    top: 3px;
+    transform: rotate(0);
+    filter: none; } }
 *, *::before, *::after {
   box-sizing: border-box; }
 
