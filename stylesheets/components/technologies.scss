@@ -1,8 +1,9 @@
 #technologies {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
+  padding-bottom: 20px;
 
-  ul {
+  .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: 750px;
