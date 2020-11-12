@@ -5,7 +5,89 @@
   .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
-    padding: 20px 30px;
+    padding: 20px 20px 20px 60px;
     margin: 10px auto 0;
+
+    .cv-element {
+      position: relative;
+      padding-bottom: 20px;
+      border-left: 3px solid white;
+      margin-bottom: 50px;
+
+      img {
+        position: absolute;
+        left: -36px;
+        height: 70px;
+        width: 70px;
+        border-radius: 50%;
+      }
+
+      .cv-header-titles {
+        padding: 5px 0 10px 45px;
+        margin: 10px 0 0;
+
+        h5 {
+          font-size: 22px;
+        }
+
+        h6 {
+          text-indent: 2px;
+          font-size: 18px;
+          font-weight: 400;
+          margin-top: 10px;
+        }
+      }
+
+      .cv-element-content {
+        padding-left: 62px;
+
+        p {
+          font-size: 16px;
+          margin: 5px 0 10px;
+        }
+
+        .star-icon-container {
+          position: relative;
+          top: 2px;
+          animation: bounce 1.5s infinite;
+
+          polygon {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    top: 3px;
+    transform: rotate(0);
+    filter: none;
+  }
+
+  25% {
+    top: -1px;
+    transform: rotate(5deg);
+    filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.2));
+  }
+
+  30% {
+    top: -1px;
+    transform: rotate(10deg);
+    filter: drop-shadow(0 0 4px rgba(255, 255, 0, 0.4));
+  }
+
+  50% {
+    top: -1px;
+    transform: rotate(-15deg);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5));
+  }
+
+  100% {
+    top: 3px;
+    transform: rotate(0);
+    filter: none;
   }
 }
