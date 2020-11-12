@@ -479,7 +479,7 @@ body.modal-active {
   width: 100%; }
   #projects .projects-content {
     width: 900px;
-    margin: 0 auto; }
+    margin: 30px auto 20px; }
     #projects .projects-content .carousel {
       width: 450px; }
     #projects .projects-content .project-description {
