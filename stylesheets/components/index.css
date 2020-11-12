@@ -485,18 +485,14 @@ body.modal-active {
       width: 450px; }
 
 #technologies {
-  display: flex;
-  justify-content: center;
   height: 100vh;
   width: 100%; }
   #technologies ul {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: 750px;
-    padding: 20px 30px 20px 45px;
+    padding: 0 30px 30px;
     margin: 0 auto; }
-    #technologies ul h2 {
-      margin: 0 0 0 -35px; }
     #technologies ul li .tech-title {
       display: flex;
       align-items: flex-end;
