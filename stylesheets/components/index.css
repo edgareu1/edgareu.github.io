@@ -337,8 +337,9 @@ h3 {
     #profile-main #profile-content .section-title, #profile-main canvas .section-title {
       display: flex;
       width: fit-content;
-      padding: 32px 0 20px;
-      margin: 0 auto; }
+      padding: 32px 5px 10px;
+      border-bottom: 1px solid gainsboro;
+      margin: 0 auto 40px; }
       #profile-main #profile-content .section-title h2, #profile-main canvas .section-title h2 {
         color: white;
         font-size: 40px; }
