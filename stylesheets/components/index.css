@@ -281,8 +281,34 @@
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
-    padding: 20px 30px;
+    padding: 20px 20px 20px 60px;
     margin: 10px auto 0; }
+    #curriculum .curriculum-content .cv-element {
+      position: relative;
+      padding-bottom: 20px;
+      border-left: 3px solid white;
+      margin-bottom: 50px; }
+      #curriculum .curriculum-content .cv-element img {
+        position: absolute;
+        left: -36px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%; }
+      #curriculum .curriculum-content .cv-element .cv-header-titles {
+        padding: 5px 0 10px 45px;
+        margin: 10px 0 0; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
+          font-size: 22px; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
+          text-indent: 2px;
+          font-size: 18px;
+          font-weight: 400;
+          margin-top: 10px; }
+      #curriculum .curriculum-content .cv-element .cv-element-content {
+        padding-left: 62px; }
+        #curriculum .curriculum-content .cv-element .cv-element-content p {
+          font-size: 16px;
+          margin: 5px 0 10px; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
