@@ -332,13 +332,14 @@ h3 {
       #profile-main #profile-content .section-title h2, #profile-main canvas .section-title h2 {
         color: white;
         font-size: 40px; }
-      #profile-main #profile-content .section-title h6, #profile-main canvas .section-title h6 {
+      #profile-main #profile-content .section-title span, #profile-main canvas .section-title span {
         color: white;
         font-size: 18px;
-        padding: 8px 12px; }
-        #profile-main #profile-content .section-title h6:nth-child(1), #profile-main canvas .section-title h6:nth-child(1) {
+        font-weight: 500;
+        padding: 4px 12px; }
+        #profile-main #profile-content .section-title span:nth-child(1), #profile-main canvas .section-title span:nth-child(1) {
           align-self: flex-start; }
-        #profile-main #profile-content .section-title h6:nth-child(3), #profile-main canvas .section-title h6:nth-child(3) {
+        #profile-main #profile-content .section-title span:nth-child(3), #profile-main canvas .section-title span:nth-child(3) {
           align-self: flex-end; }
 
 body.modal-active {

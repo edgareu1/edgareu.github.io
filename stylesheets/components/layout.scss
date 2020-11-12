@@ -69,10 +69,11 @@ h3 {
         font-size: 40px;
       }
 
-      h6 {
+      span {
         color: white;
         font-size: 18px;
-        padding: 8px 12px;
+        font-weight: 500;
+        padding: 4px 12px;
 
         &:nth-child(1) {
           align-self: flex-start;
