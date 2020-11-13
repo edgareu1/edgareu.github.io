@@ -7,7 +7,7 @@ function createGitCalendar() {
     .then(function() {
       var modalContributions = document.getElementById('modal-contributions');
       var gitCalendarTitle = modalContributions.querySelector('.js-yearly-contributions h2');
-      var gitCalendarContent = modalContributions.querySelector('.js-calendar-graph svg');
+      var gitCalendarContent = modalContributions.querySelector('.js-yearly-contributions .graph-before-activity-overview');
 
       modalContributions.innerHTML = '';
       modalContributions.appendChild(gitCalendarTitle);
