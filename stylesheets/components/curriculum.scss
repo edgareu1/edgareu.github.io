@@ -42,52 +42,30 @@
         padding-left: 62px;
 
         p {
+          text-align: justify;
           font-size: 16px;
           margin: 5px 0 10px;
         }
 
-        .star-icon-container {
-          position: relative;
-          top: 2px;
-          animation: bounce 1.5s infinite;
-
-          polygon {
-            position: absolute;
-          }
+        .fa-star {
+          color: yellow;
+          animation: blink 2s infinite;
         }
       }
     }
   }
 }
 
-@keyframes bounce {
+@keyframes blink {
   0% {
-    top: 3px;
-    transform: rotate(0);
-    filter: none;
-  }
-
-  25% {
-    top: -1px;
-    transform: rotate(5deg);
-    filter: drop-shadow(0 0 3px rgba(255, 255, 0, 0.2));
-  }
-
-  30% {
-    top: -1px;
-    transform: rotate(10deg);
-    filter: drop-shadow(0 0 4px rgba(255, 255, 0, 0.4));
+    text-shadow: none;
   }
 
   50% {
-    top: -1px;
-    transform: rotate(-15deg);
-    filter: drop-shadow(0 0 5px rgba(255, 255, 0, 0.5));
+    text-shadow: 0px 0px 10px rgba(255, 255, 0, 0.75);
   }
 
   100% {
-    top: 3px;
-    transform: rotate(0);
-    filter: none;
+    text-shadow: none;
   }
 }
