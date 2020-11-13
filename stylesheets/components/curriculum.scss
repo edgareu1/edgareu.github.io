@@ -14,7 +14,7 @@
       border-left: 3px solid white;
       margin-bottom: 50px;
 
-      img {
+      .cv-logo {
         position: absolute;
         left: -36px;
         height: 70px;
@@ -43,18 +43,26 @@
 
         p {
           text-align: justify;
-          font-size: 16px;
           margin: 5px 0 10px;
-        }
 
-        .fa-star {
-          color: yellow;
-          animation: blink 2s infinite;
-        }
+          span {
+            font-size: 16px;
+            margin-left: 5px;
+          }
 
-        .fa-cog {
-          color: rgba(200, 200, 200, 1);
-          animation: rotate 2s linear infinite;
+          .cv-icon {
+            font-size: 17px;
+          }
+
+          .fa-star {
+            color: yellow;
+            animation: blink 2s infinite;
+          }
+
+          .fa-cog {
+            color: rgba(200, 200, 200, 1);
+            animation: rotate 2s linear infinite;
+          }
         }
       }
     }
