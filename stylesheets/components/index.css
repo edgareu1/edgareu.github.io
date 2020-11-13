@@ -287,7 +287,12 @@
       position: relative;
       padding-bottom: 20px;
       border-left: 3px solid white;
-      margin-bottom: 50px; }
+      margin-bottom: 35px; }
+      #curriculum .curriculum-content .cv-element.level-one {
+        padding-bottom: 50px;
+        margin-bottom: 75px; }
+      #curriculum .curriculum-content .cv-element.level-two {
+        margin: 55px 0 0 105px; }
       #curriculum .curriculum-content .cv-element .cv-logo {
         position: absolute;
         left: -36px;
