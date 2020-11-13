@@ -26,7 +26,7 @@ body {
   margin: 0;
 }
 
-h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
   color: inherit;
   font-family: inherit;
   font-weight: 500;
@@ -44,8 +44,8 @@ h1 {
 }
 
 h2 {
-  font-size: 26px;
   color: rgba(220, 220, 220, 1);
+  font-size: 26px;
 }
 
 h3 {
@@ -59,31 +59,12 @@ h3 {
     position: absolute;
 
     .section-title {
-      display: flex;
+      color: white;
+      font-size: 40px;
       width: fit-content;
-      padding: 32px 5px 10px;
+      padding: 32px 50px 10px;
       border-bottom: 1px solid gainsboro;
       margin: 0 auto 40px;
-
-      h2 {
-        color: white;
-        font-size: 40px;
-      }
-
-      span {
-        color: white;
-        font-size: 18px;
-        font-weight: 500;
-        padding: 4px 12px;
-
-        &:nth-child(1) {
-          align-self: flex-start;
-        }
-
-        &:nth-child(3) {
-          align-self: flex-end;
-        }
-      }
     }
   }
 
