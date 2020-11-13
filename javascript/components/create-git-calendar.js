@@ -14,3 +14,5 @@ function createGitCalendar() {
       modalContributions.appendChild(gitCalendarContent);
     });
 }
+
+export { createGitCalendar };
