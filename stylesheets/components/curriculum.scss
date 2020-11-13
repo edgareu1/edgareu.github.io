@@ -43,6 +43,8 @@
 
         p {
           text-align: justify;
+          color: white;
+          font-size: 16px;
           margin: 5px 0 10px;
 
           span {
@@ -51,17 +53,18 @@
           }
 
           .cv-icon {
-            font-size: 17px;
+            color: rgba(240, 240, 240, 1);
           }
 
           .fa-star {
             color: yellow;
+            font-size: 18px;
             animation: blink 2s infinite;
           }
 
           .fa-cog {
-            color: rgba(200, 200, 200, 1);
-            animation: rotate 2s linear infinite;
+            font-size: 18px;
+            animation: rotate 3s linear infinite;
           }
         }
       }
@@ -75,7 +78,7 @@
   }
 
   50% {
-    text-shadow: 0px 0px 10px rgba(255, 255, 0, 0.75);
+    text-shadow: 0px 0px 16px rgba(255, 200, 0, 1);
   }
 
   100% {
