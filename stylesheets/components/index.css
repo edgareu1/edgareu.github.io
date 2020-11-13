@@ -313,6 +313,9 @@
         #curriculum .curriculum-content .cv-element .cv-element-content .fa-star {
           color: yellow;
           animation: blink 2s infinite; }
+        #curriculum .curriculum-content .cv-element .cv-element-content .fa-cog {
+          color: #c8c8c8;
+          animation: rotate 2s linear infinite; }
 
 @keyframes blink {
   0% {
@@ -321,6 +324,11 @@
     text-shadow: 0px 0px 10px rgba(255, 255, 0, 0.75); }
   100% {
     text-shadow: none; } }
+@keyframes rotate {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
 *, *::before, *::after {
   box-sizing: border-box; }
 

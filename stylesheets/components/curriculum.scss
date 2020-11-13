@@ -51,6 +51,11 @@
           color: yellow;
           animation: blink 2s infinite;
         }
+
+        .fa-cog {
+          color: rgba(200, 200, 200, 1);
+          animation: rotate 2s linear infinite;
+        }
       }
     }
   }
@@ -67,5 +72,15 @@
 
   100% {
     text-shadow: none;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
