@@ -12,6 +12,9 @@ function createGitCalendar() {
       modalContributions.innerHTML = '';
       modalContributions.appendChild(gitCalendarTitle);
       modalContributions.appendChild(gitCalendarContent);
+
+      const gitAnchor = '<a href="https://github.com/edgareu1" class="" target="_blank">Check contributions on GitHub</a>';
+      document.querySelector('.contrib-footer a').innerHTML = gitAnchor;
     });
 }
 
