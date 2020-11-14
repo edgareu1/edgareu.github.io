@@ -15,6 +15,8 @@ animatePillBar();
 smoothNavbarAnchors();
 typeBannerCode();
 
+GitHubCalendar(".calendar", "edgareu1", { responsive: true, tooltips: true });
+
 var canvas = document.getElementById('tech-canvas');
 if (canvas) {
   techWordsAnimation(canvas);  // Create the background canvas animation
