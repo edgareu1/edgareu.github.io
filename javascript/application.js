@@ -15,7 +15,9 @@ animatePillBar();
 smoothNavbarAnchors();
 typeBannerCode();
 
-GitHubCalendar(".calendar", "edgareu1", { responsive: true, tooltips: true });
+const moreInfo = 'For more complete info check <a href="https://github.com/edgareu1" style="color: white; text-decoration: none" target="blank">@edgareu1</a>';
+
+GitHubCalendar(".calendar", "edgareu1", { responsive: true, tooltips: true, summary_text: moreInfo });
 
 var canvas = document.getElementById('tech-canvas');
 if (canvas) {
