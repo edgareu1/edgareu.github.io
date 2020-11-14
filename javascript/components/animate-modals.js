@@ -41,7 +41,7 @@ function animateModals() {
       for (const modal of modals) {
         modal.style.display = "none";
       }
-    }, 500);
+    }, 350);
   });
 }
 
