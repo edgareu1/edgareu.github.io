@@ -18,7 +18,7 @@ function animateModals() {
     button.addEventListener("click", (event) => {
       event.preventDefault();                       // Prevent the anchor default click behavior
       document.body.classList.add('modal-active');  // Update the body style (overflow: hidden)
-      modal.style.display = "block";                // Display the relevant modal
+      modal.style.display = "flex";                 // Display the relevant modal
 
       // Make the modal container visible and add the opening modal animation
       modalContainer.style.display = "flex";
