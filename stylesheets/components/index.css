@@ -345,6 +345,7 @@
   background: black;
   height: fit-content;
   width: 100%;
+  max-width: 900px;
   margin: 0; }
   #modal-contributions .calendar .position-relative {
     padding: 5px 10px; }
