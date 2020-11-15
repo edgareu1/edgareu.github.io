@@ -20,15 +20,26 @@ function animateModals() {
       document.body.classList.add('modal-active');  // Update the body style (overflow: hidden)
       modal.style.display = "flex";                 // Display the relevant modal
 
+      // If the 'modal-contributions' is the one opened, then smoothly scroll to the top of the page
+      // Necessary in order for the 'day-tooltip' to work correctly
+      if (dataTarget == "modal-contributions") {
+        $("html, body").animate( {
+          scrollTop: $('#banner').offset().top
+        }, 500);
+      }
+
       // Make the modal container visible and add the opening modal animation
-      modalContainer.style.display = "flex";
+      modalContainer.style.display = "block";
       modalContainer.classList.remove('modal-close');
       modalContainer.classList.add('modal-open');
     });
   }
 
-  // If the user clicks on the modal container (action that is only possible if a modal is open)...
-  modalContainer.addEventListener("click", () => {
+  // If the user clicks inside the modal container (action that is only possible if a modal is open)...
+  modalContainer.addEventListener("click", (event) => {
+    // If the target was the modal content then do not proceed
+    if (!event.target.classList.contains('modal')) { return; }
+
     // Add the closing modal animation
     modalContainer.classList.add('modal-close');
 

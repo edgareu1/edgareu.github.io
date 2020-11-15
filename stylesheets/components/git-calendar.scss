@@ -1,25 +1,22 @@
 #modal-contributions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-
-  h2 {
-    text-align: center;
-    color: white;
-    font-size: 32px;
-    margin-bottom: 28px;
-  }
-
   .calendar {
     background: black;
     height: fit-content;
     width: 100%;
+    max-width: 900px;
     margin: 0;
 
     .position-relative {
       padding: 5px 10px;
+    }
+
+    .contrib-footer a {
+      color: rgba(100, 255, 95, 1);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     .contrib-number {

@@ -341,27 +341,22 @@
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
-#modal-contributions {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  width: 100%; }
-  #modal-contributions h2 {
-    text-align: center;
-    color: white;
-    font-size: 32px;
-    margin-bottom: 28px; }
-  #modal-contributions .calendar {
-    background: black;
-    height: fit-content;
-    width: 100%;
-    margin: 0; }
-    #modal-contributions .calendar .position-relative {
-      padding: 5px 10px; }
-    #modal-contributions .calendar .contrib-number {
-      color: gainsboro;
-      margin: 5px 0; }
+#modal-contributions .calendar {
+  background: black;
+  height: fit-content;
+  width: 100%;
+  max-width: 900px;
+  margin: 0; }
+  #modal-contributions .calendar .position-relative {
+    padding: 5px 10px; }
+  #modal-contributions .calendar .contrib-footer a {
+    color: #64ff5f;
+    text-decoration: none; }
+    #modal-contributions .calendar .contrib-footer a:hover {
+      text-decoration: underline; }
+  #modal-contributions .calendar .contrib-number {
+    color: gainsboro;
+    margin: 5px 0; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -432,14 +427,11 @@ body.modal-active {
   top: 0;
   left: 0;
   display: none;
-  align-items: center;
-  justify-content: center;
   background: rgba(0, 0, 0, 0.85);
   z-index: 15;
   height: 100%;
   width: 100%;
-  padding-bottom: 10%;
-  z-index: 15; }
+  padding: 0; }
   .modal-container.modal-open {
     animation: increaseOpacity 0.5s forwards; }
     .modal-container.modal-open .modal {
@@ -450,25 +442,29 @@ body.modal-active {
         animation: zoomOut .5s forwards; }
   .modal-container .modal {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: transparent;
-    padding: 20px 50px;
-    border-radius: 3px;
-    font-weight: 300;
-    position: relative;
-    z-index: 20; }
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    padding: 5%; }
     .modal-container .modal h2 {
-      font-size: 25px;
-      line-height: 25px;
-      margin-bottom: 15px; }
-    .modal-container .modal p {
-      font-size: 18px;
-      line-height: 22px; }
+      color: white;
+      font-size: 32px;
+      margin-bottom: 22px; }
 
 @keyframes increaseOpacity {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes decreaseOpacity {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 @keyframes zoomIn {
   from {
     -webkit-transform: scale(0);
@@ -478,11 +474,6 @@ body.modal-active {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); } }
-@keyframes decreaseOpacity {
-  from {
-    opacity: 1; }
-  to {
-    opacity: 0; } }
 @keyframes zoomOut {
   from {
     -webkit-transform: scale(1);
