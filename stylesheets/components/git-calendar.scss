@@ -9,6 +9,15 @@
       padding: 5px 10px;
     }
 
+    .contrib-footer a {
+      color: rgba(100, 255, 95, 1);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
     .contrib-number {
       color: rgba(220, 220, 220, 1);
       margin: 5px 0;

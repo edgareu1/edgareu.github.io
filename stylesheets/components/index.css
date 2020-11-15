@@ -348,6 +348,11 @@
   margin: 0; }
   #modal-contributions .calendar .position-relative {
     padding: 5px 10px; }
+  #modal-contributions .calendar .contrib-footer a {
+    color: #64ff5f;
+    text-decoration: none; }
+    #modal-contributions .calendar .contrib-footer a:hover {
+      text-decoration: underline; }
   #modal-contributions .calendar .contrib-number {
     color: gainsboro;
     margin: 5px 0; }
