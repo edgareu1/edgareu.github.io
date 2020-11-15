@@ -20,6 +20,14 @@ function animateModals() {
       document.body.classList.add('modal-active');  // Update the body style (overflow: hidden)
       modal.style.display = "flex";                 // Display the relevant modal
 
+      // If the 'modal-contributions' is the one opened, then smoothly scroll to the top of the page
+      // Necessary in order for the 'day-tooltip' to work correctly
+      if (dataTarget == "modal-contributions") {
+        $("html, body").animate( {
+          scrollTop: $('#banner').offset().top
+        }, 500);
+      }
+
       // Make the modal container visible and add the opening modal animation
       modalContainer.style.display = "flex";
       modalContainer.classList.remove('modal-close');
