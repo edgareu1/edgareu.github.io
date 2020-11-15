@@ -15,9 +15,6 @@ animatePillBar();
 smoothNavbarAnchors();
 typeBannerCode();
 
-const moreInfo = 'For more details please check <a href="https://github.com/edgareu1" target="blank">@edgareu1</a>';
-GitHubCalendar(".calendar", "edgareu1", { responsive: true, tooltips: true, summary_text: moreInfo });
-
 var canvas = document.getElementById('tech-canvas');
 if (canvas) {
   techWordsAnimation(canvas);  // Create the background canvas animation
