@@ -5,7 +5,7 @@ import { updateCanvasDimensions } from './update-canvas-dimensions.js'
 //   canvas: Canvas element to fill
 function techWordsAnimation(canvasElement) {
   // Variable that stores the technologies names and their respective importance
-  var techList = { "Ruby": 28, "Rails": 25, "JavaScript": 22, "HTML": 21, "CSS": 23, "SQL": 12, "REGEX": 10, "Canvas": 5, "Git": 16, "GitHub": 14, "Bootstrap": 10, "AJAX": 16, "jQuery": 12, "Web API": 16, "Stripe": 8, "Heroku": 6, "Cloudinary": 7, "OOP": 14, "MVC": 15, "Mailer": 18 },
+  var techList = { "Ruby": 28, "Rails": 25, "JavaScript": 22, "HTML": 21, "CSS": 23, "SQL": 12, "REGEX": 10, "Canvas": 5, "Git": 16, "GitHub": 14, "Bootstrap": 10, "AJAX": 16, "jQuery": 12, "Web API": 16, "Stripe": 8, "Heroku": 6, "Cloudinary": 7, "OOP": 14, "MVC": 15, "Mailer": 18, "SVG": 5 },
       techAttr = [];
 
   const numTech = objLength(techList),       // Number of technologies in the 'techList'
