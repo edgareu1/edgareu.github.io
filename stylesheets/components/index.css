@@ -260,11 +260,12 @@
 
 #curriculum {
   min-height: 100vh;
-  padding-bottom: 20px; }
+  padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
-    padding: 20px 20px 20px 60px;
+    padding: 20px 25px 10px 60px;
+    border-radius: 5px;
     margin: 10px auto 0; }
     #curriculum .curriculum-content .cv-element {
       position: relative;
@@ -396,9 +397,9 @@ h3 {
       color: white;
       font-size: 40px;
       width: fit-content;
-      padding: 32px 50px 10px;
+      padding: 16px 50px 10px;
       border-bottom: 1px solid gainsboro;
-      margin: 0 auto 40px; }
+      margin: 0 auto 25px; }
   #profile-main #profile-content {
     width: 100%; }
 
@@ -492,19 +493,18 @@ body.modal-active {
   .pill-items .pill-item {
     display: block;
     color: white;
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.75);
     text-decoration: none;
     padding: .5rem 1rem;
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
+    border-bottom: 1px solid #dee2e6;
     margin-bottom: -1px;
     cursor: pointer; }
     .pill-items .pill-item.active {
       color: black;
       font-weight: 600;
       background-color: #fff;
-      border-color: #dee2e6 #dee2e6 #fff; }
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem; }
 
 .tab-items {
   position: relative;
@@ -534,25 +534,27 @@ body.modal-active {
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 40px; }
+  padding-bottom: 60px; }
   #projects .projects-content {
-    background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
+    border-radius: 5px;
     margin: 30px auto 20px; }
     #projects .projects-content .carousel {
       width: 450px; }
     #projects .projects-content .project-description {
+      background-color: rgba(0, 0, 0, 0.75);
       width: 450px; }
 
 #technologies {
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 40px; }
+  padding-bottom: 60px; }
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: 750px;
-    padding: 0 30px 30px;
+    padding: 20px 30px 30px;
+    border-radius: 5px;
     margin: 0 auto; }
     #technologies .technologies-content li .tech-title {
       display: flex;
@@ -575,12 +577,21 @@ body.modal-active {
       #technologies .technologies-content li .progress-bar-container .progress-bar {
         position: absolute;
         height: 100%;
-        border-radius: 5px;
-        -webkit-transition: width 2s;
-        -o-transition: width 2s;
-        transition: width 2s; }
-    #technologies .technologies-content a {
-      max-width: 300px;
-      margin: 32px 5px 0; }
+        border-radius: 5px; }
+    #technologies .technologies-content .complementary-tech {
+      word-spacing: 1.5px;
+      color: gainsboro;
+      font-size: 18px;
+      margin: 30px 0 0 10px; }
+      #technologies .technologies-content .complementary-tech h4 {
+        display: inline;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 5px 0 -10px; }
+      #technologies .technologies-content .complementary-tech p {
+        display: inline;
+        letter-spacing: 0.5px; }
+        #technologies .technologies-content .complementary-tech p span {
+          font-size: 14px; }
 
 /*# sourceMappingURL=index.css.map */

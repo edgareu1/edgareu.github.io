@@ -1,13 +1,14 @@
 #technologies {
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 
   .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: 750px;
-    padding: 0 30px 30px;
+    padding: 20px 30px 30px;
+    border-radius: 5px;
     margin: 0 auto;
 
     li {
@@ -38,16 +39,31 @@
           position: absolute;
           height: 100%;
           border-radius: 5px;
-          -webkit-transition: width 2s;
-          -o-transition: width 2s;
-          transition: width 2s;
         }
       }
     }
 
-    a {
-      max-width: 300px;
-      margin: 32px 5px 0;
+    .complementary-tech {
+      word-spacing: 1.5px;
+      color: gainsboro;
+      font-size: 18px;
+      margin: 30px 0 0 10px;
+
+      h4 {
+        display: inline;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 5px 0 -10px;
+      }
+
+      p {
+        display: inline;
+        letter-spacing: 0.5px;
+
+        span {
+          font-size: 14px;
+        }
+      }
     }
   }
 }
