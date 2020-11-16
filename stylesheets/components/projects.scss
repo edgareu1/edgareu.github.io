@@ -7,7 +7,6 @@
   padding-bottom: 60px;
 
   .projects-content {
-    background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
     border-radius: 5px;
     margin: 30px auto 20px;
@@ -17,6 +16,7 @@
     }
 
     .project-description {
+      background-color: rgba(0, 0, 0, 0.75);
       width: 450px;
     }
   }
