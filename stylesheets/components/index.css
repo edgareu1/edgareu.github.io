@@ -578,12 +578,21 @@ body.modal-active {
       #technologies .technologies-content li .progress-bar-container .progress-bar {
         position: absolute;
         height: 100%;
-        border-radius: 5px;
-        -webkit-transition: width 2s;
-        -o-transition: width 2s;
-        transition: width 2s; }
-    #technologies .technologies-content a {
-      max-width: 300px;
-      margin: 32px 5px 0; }
+        border-radius: 5px; }
+    #technologies .technologies-content .complementary-tech {
+      word-spacing: 1.5px;
+      color: gainsboro;
+      font-size: 18px;
+      margin: 30px 0 0 10px; }
+      #technologies .technologies-content .complementary-tech h4 {
+        display: inline;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0 5px 0 -10px; }
+      #technologies .technologies-content .complementary-tech p {
+        display: inline;
+        letter-spacing: 0.5px; }
+        #technologies .technologies-content .complementary-tech p span {
+          font-size: 14px; }
 
 /*# sourceMappingURL=index.css.map */
