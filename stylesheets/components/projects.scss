@@ -4,11 +4,12 @@
   justify-content: center;
   min-height: 100vh;
   width: 100%;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
 
   .projects-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
+    border-radius: 5px;
     margin: 30px auto 20px;
 
     .carousel {
