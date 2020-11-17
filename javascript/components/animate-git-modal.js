@@ -1,9 +1,5 @@
-// Function that animates the app modals opening/closing
+// Function that animates the 'modal-git' opening/closing
 function animateGitModal() {
-  // Variables:
-  //   modalButton:    List of the modal buttons
-  //   modalContainer: Container of the modals
-  //   modal:          List of the modals
   const modalButton = document.querySelector('.btn-modal');
   const modalContainer = document.querySelector('.modal-container');
 
@@ -12,11 +8,9 @@ function animateGitModal() {
     event.preventDefault();                       // Prevent the anchor default click behavior
     document.body.classList.add('modal-active');  // Update the body style (overflow: hidden)
 
-    // If the 'modal-contributions' is the one opened, then smoothly scroll to the top of the page
+    // Using jQuery, smoothly scroll to the top of the page
     // Necessary in order for the 'day-tooltip' to work correctly
-    $("html, body").animate( {
-      scrollTop: $('#banner').offset().top
-    }, 500);
+    $("html, body").animate( { scrollTop: $('#banner').offset().top }, 500);
 
     // Make the modal container visible and add the opening modal animation
     modalContainer.style.display = "block";
