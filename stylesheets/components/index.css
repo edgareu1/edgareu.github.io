@@ -479,7 +479,7 @@ body.modal-active {
       .modal-container.modal-open.modal-close .modal {
         animation: zoomOut .5s forwards; }
   .modal-container .modal {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
