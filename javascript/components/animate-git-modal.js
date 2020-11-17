@@ -1,6 +1,6 @@
 // Function that animates the 'modal-git' opening/closing
 function animateGitModal() {
-  const modalButton = document.querySelector('.btn-modal');
+  const modalButton = document.querySelector('[data-target="modal-git"]');
   const modalContainer = document.querySelector('.modal-container');
 
   // If the user clicks on the button...
