@@ -360,7 +360,7 @@
         border: 1px solid white;
         border-radius: 50%;
         content: ""; }
-      .footer .contact-links a:hover::before {
+      .footer .contact-links a.splash-animation::before {
         animation: splash 0.3s ease; }
       .footer .contact-links a img {
         position: absolute;
