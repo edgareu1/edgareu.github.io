@@ -359,11 +359,9 @@
         width: 90%;
         border: 1px solid white;
         border-radius: 50%;
-        transition: all 0.35s ease;
         content: ""; }
       .footer .contact-links a:hover::before {
-        opacity: 0;
-        transform: scale(1.8); }
+        animation: splash 0.3s ease; }
       .footer .contact-links a img {
         position: absolute;
         top: 15%;
@@ -374,6 +372,13 @@
   .footer .footer-copyrights {
     margin: 20px 0 0; }
 
+@keyframes splash {
+  from {
+    opacity: 0.75;
+    transform: scale(1); }
+  to {
+    opacity: 0;
+    transform: scale(1.6); } }
 #modal-contributions .calendar {
   background: black;
   height: fit-content;
