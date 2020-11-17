@@ -1,5 +1,5 @@
 // Function that animates the app modals opening/closing
-function animateModals() {
+function animateGitModal() {
   // Variables:
   //   modalButtons:   List of the modal buttons
   //   modalContainer: Container of the modals
@@ -56,4 +56,4 @@ function animateModals() {
   });
 }
 
-export { animateModals }
+export { animateGitModal }
