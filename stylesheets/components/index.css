@@ -379,20 +379,20 @@
   to {
     opacity: 0;
     transform: scale(1.6); } }
-#modal-contributions .calendar {
+#modal-git .calendar {
   background: black;
   height: fit-content;
   width: 100%;
   max-width: 900px;
   margin: 0; }
-  #modal-contributions .calendar .position-relative {
+  #modal-git .calendar .position-relative {
     padding: 5px 10px; }
-  #modal-contributions .calendar .contrib-footer a {
+  #modal-git .calendar .contrib-footer a {
     color: #64ff5f;
     text-decoration: none; }
-    #modal-contributions .calendar .contrib-footer a:hover {
+    #modal-git .calendar .contrib-footer a:hover {
       text-decoration: underline; }
-  #modal-contributions .calendar .contrib-number {
+  #modal-git .calendar .contrib-number {
     color: gainsboro;
     margin: 5px 0; }
 
@@ -479,7 +479,7 @@ body.modal-active {
       .modal-container.modal-open.modal-close .modal {
         animation: zoomOut .5s forwards; }
   .modal-container .modal {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
