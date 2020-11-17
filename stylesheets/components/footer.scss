@@ -26,6 +26,24 @@
       width: 50px;
       border-radius: 50%;
 
+      &::before {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        opacity: 0.75;
+        height: 90%;
+        width: 90%;
+        border: 1px solid white;
+        border-radius: 50%;
+        transition: all 0.35s ease;
+        content: "";
+      }
+
+      &:hover::before {
+        opacity: 0;
+        transform: scale(1.8);
+      }
+
       img {
         position: absolute;
         top: 15%;
