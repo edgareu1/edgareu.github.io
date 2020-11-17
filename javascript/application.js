@@ -1,5 +1,6 @@
 // Prepare the app JS here
 import { animateCarousels } from './components/animate-carousels.js'
+import { animateFooter } from './components/animate-footer.js'
 import { animateGitModal } from './components/animate-git-modal.js'
 import { animateNavbar } from './components/animate-navbar.js'
 import { animatePillBar } from './components/animate-pill-bar.js'
@@ -10,6 +11,7 @@ import { typeBannerCode } from './components/type-banner-code.js'
 import { updateCanvasDimensions } from './components/update-canvas-dimensions.js'
 
 animateCarousels();
+animateFooter();
 animateGitModal();
 animateNavbar();
 animatePillBar();
