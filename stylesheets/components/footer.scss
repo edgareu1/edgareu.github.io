@@ -38,8 +38,8 @@
         content: "";
       }
 
-      &:hover::before {
-        animation: splash 0.3s ease;
+      &.splash-animation::before {
+        animation: splash 0.4s ease;
       }
 
       img {
