@@ -323,6 +323,14 @@
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
             font-size: 18px;
             animation: rotate 3s linear infinite; }
+    #curriculum .curriculum-content .cv-text {
+      text-align: center;
+      margin-left: -75px; }
+      #curriculum .curriculum-content .cv-text p {
+        color: gainsboro;
+        font-size: 15px;
+        line-height: 1.8;
+        margin: 5px 0; }
 
 @keyframes blink {
   0% {
