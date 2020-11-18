@@ -5,60 +5,87 @@
   .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: 900px;
-    padding: 20px 25px 10px 60px;
+    padding: 20px 35px 15px 105px;
     border-radius: 5px;
-    margin: 10px auto 0;
+    margin: 20px auto 0;
 
     .cv-element {
       position: relative;
       padding-bottom: 20px;
       border-left: 3px solid white;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
 
       &.level-one {
-        padding-bottom: 50px;
-        margin-bottom: 75px;
+        padding-bottom: 40px;
       }
 
       &.level-two {
-        margin: 55px 0 0 105px;
+        margin: 45px 0 0 95px;
+
+        &.no-content {
+          padding: 0;
+          border: none;
+
+          .cv-date-bot, .cv-date-top {
+            left: -190px;
+          }
+        }
+
+        .cv-date-bot, .cv-date-top {
+          left: -193px;
+        }
+      }
+
+      .cv-date-bot, .cv-date-top {
+        position: absolute;
+        left: -95px;
+        color: gainsboro;
+        font-size: 13px;
+      }
+
+      .cv-date-top {
+        top: 21px;
+      }
+
+      .cv-date-bot {
+        bottom: 10px;
       }
 
       .cv-logo {
         position: absolute;
-        left: -36px;
-        height: 70px;
-        width: 70px;
+        left: -34px;
+        height: 65px;
+        width: 65px;
         border-radius: 50%;
       }
 
       .cv-header-titles {
-        padding: 5px 0 10px 45px;
+        padding: 7px 0 8px 42px;
         margin: 10px 0 0;
 
         h5 {
-          font-size: 22px;
+          font-size: 21px;
         }
 
         h6 {
           text-indent: 2px;
-          font-size: 18px;
+          font-size: 17px;
           font-weight: 400;
-          margin-top: 10px;
+          margin-top: 5px;
         }
       }
 
       .cv-element-content {
-        padding-left: 62px;
+        padding: 3px 0 0 60px;
 
         p {
           text-align: justify;
           color: white;
-          font-size: 16px;
+          font-size: 15px;
           margin: 5px 0 10px;
 
           span {
-            font-size: 16px;
+            font-size: 15px;
             margin-left: 5px;
           }
 
@@ -77,6 +104,18 @@
             animation: rotate 3s linear infinite;
           }
         }
+      }
+    }
+
+    .cv-text {
+      text-align: center;
+      margin-left: -70px;
+
+      p {
+        color: gainsboro;
+        font-size: 16px;
+        line-height: 1.8;
+        margin: 5px 0;
       }
     }
   }
