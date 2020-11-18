@@ -263,77 +263,76 @@
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
-    width: 850px;
-    padding: 20px 30px 10px 100px;
+    width: 900px;
+    padding: 20px 35px 15px 105px;
     border-radius: 5px;
-    margin: 10px auto 0; }
+    margin: 20px auto 0; }
     #curriculum .curriculum-content .cv-element {
       position: relative;
       padding-bottom: 20px;
       border-left: 3px solid white;
-      margin-bottom: 35px; }
+      margin-bottom: 30px; }
       #curriculum .curriculum-content .cv-element.level-one {
-        padding-bottom: 40px;
-        margin-bottom: 60px; }
+        padding-bottom: 40px; }
       #curriculum .curriculum-content .cv-element.level-two {
-        margin: 45px 0 0 90px; }
+        margin: 45px 0 0 95px; }
         #curriculum .curriculum-content .cv-element.level-two.no-content {
           padding: 0;
           border: none; }
           #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-top {
-            left: -180px; }
+            left: -190px; }
         #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
-          left: -183px; }
+          left: -193px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
         position: absolute;
-        left: -90px;
+        left: -95px;
         color: gainsboro;
         font-size: 13px; }
       #curriculum .curriculum-content .cv-element .cv-date-top {
-        top: 18px; }
+        top: 21px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot {
         bottom: 10px; }
       #curriculum .curriculum-content .cv-element .cv-logo {
         position: absolute;
-        left: -31.5px;
-        height: 60px;
-        width: 60px;
+        left: -34px;
+        height: 65px;
+        width: 65px;
         border-radius: 50%; }
       #curriculum .curriculum-content .cv-element .cv-header-titles {
-        padding: 5px 0 7px 40px;
+        padding: 7px 0 8px 42px;
         margin: 10px 0 0; }
         #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
-          font-size: 20px; }
+          font-size: 21px; }
         #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
           text-indent: 2px;
-          font-size: 16px;
+          font-size: 17px;
           font-weight: 400;
           margin-top: 5px; }
       #curriculum .curriculum-content .cv-element .cv-element-content {
-        padding: 5px 0 0 60px; }
+        padding: 3px 0 0 60px; }
         #curriculum .curriculum-content .cv-element .cv-element-content p {
           text-align: justify;
           color: white;
-          font-size: 14px;
+          font-size: 15px;
           margin: 5px 0 10px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p span {
-            font-size: 14px;
+            font-size: 15px;
             margin-left: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .cv-icon {
             color: #f0f0f0; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
             color: yellow;
-            font-size: 16px;
+            font-size: 18px;
             animation: blink 2s infinite; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
-            font-size: 16px;
+            font-size: 18px;
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;
-      margin-left: -75px; }
+      margin-left: -70px; }
       #curriculum .curriculum-content .cv-text p {
         color: gainsboro;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.8;
         margin: 5px 0; }
 
