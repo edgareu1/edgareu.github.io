@@ -327,11 +327,10 @@
     transform: rotate(360deg); } }
 .footer {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.75);
-  height: 140px;
+  height: 100px;
   width: 100%;
   padding: 10px 0;
   margin: 0; }
@@ -370,7 +369,7 @@
         width: 70%;
         margin: 0; }
   .footer .footer-copyrights {
-    margin: 20px 0 0; }
+    margin: 0 0 0 30px; }
 
 @keyframes splash {
   from {
