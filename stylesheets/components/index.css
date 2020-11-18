@@ -263,8 +263,8 @@
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
-    width: 900px;
-    padding: 20px 25px 10px 60px;
+    width: 950px;
+    padding: 20px 25px 10px 100px;
     border-radius: 5px;
     margin: 10px auto 0; }
     #curriculum .curriculum-content .cv-element {
@@ -277,6 +277,17 @@
         margin-bottom: 75px; }
       #curriculum .curriculum-content .cv-element.level-two {
         margin: 55px 0 0 105px; }
+        #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
+          left: -200px; }
+      #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
+        position: absolute;
+        left: -95px;
+        color: gainsboro;
+        font-size: 13px; }
+      #curriculum .curriculum-content .cv-element .cv-date-top {
+        top: 22.5px; }
+      #curriculum .curriculum-content .cv-element .cv-date-bot {
+        bottom: 10px; }
       #curriculum .curriculum-content .cv-element .cv-logo {
         position: absolute;
         left: -36px;
