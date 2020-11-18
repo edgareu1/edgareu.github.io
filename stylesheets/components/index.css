@@ -263,8 +263,8 @@
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
-    width: 950px;
-    padding: 20px 25px 10px 100px;
+    width: 850px;
+    padding: 20px 30px 10px 100px;
     border-radius: 5px;
     margin: 10px auto 0; }
     #curriculum .curriculum-content .cv-element {
@@ -273,55 +273,60 @@
       border-left: 3px solid white;
       margin-bottom: 35px; }
       #curriculum .curriculum-content .cv-element.level-one {
-        padding-bottom: 50px;
-        margin-bottom: 75px; }
+        padding-bottom: 40px;
+        margin-bottom: 60px; }
       #curriculum .curriculum-content .cv-element.level-two {
-        margin: 55px 0 0 105px; }
+        margin: 45px 0 0 90px; }
+        #curriculum .curriculum-content .cv-element.level-two.no-content {
+          padding: 0;
+          border: none; }
+          #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-top {
+            left: -180px; }
         #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
-          left: -200px; }
+          left: -183px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
         position: absolute;
-        left: -95px;
+        left: -90px;
         color: gainsboro;
         font-size: 13px; }
       #curriculum .curriculum-content .cv-element .cv-date-top {
-        top: 22.5px; }
+        top: 18px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot {
         bottom: 10px; }
       #curriculum .curriculum-content .cv-element .cv-logo {
         position: absolute;
-        left: -36px;
-        height: 70px;
-        width: 70px;
+        left: -31.5px;
+        height: 60px;
+        width: 60px;
         border-radius: 50%; }
       #curriculum .curriculum-content .cv-element .cv-header-titles {
-        padding: 5px 0 10px 45px;
+        padding: 5px 0 7px 40px;
         margin: 10px 0 0; }
         #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
-          font-size: 22px; }
+          font-size: 20px; }
         #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
           text-indent: 2px;
-          font-size: 18px;
+          font-size: 16px;
           font-weight: 400;
-          margin-top: 10px; }
+          margin-top: 5px; }
       #curriculum .curriculum-content .cv-element .cv-element-content {
-        padding-left: 62px; }
+        padding: 5px 0 0 60px; }
         #curriculum .curriculum-content .cv-element .cv-element-content p {
           text-align: justify;
           color: white;
-          font-size: 16px;
+          font-size: 14px;
           margin: 5px 0 10px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p span {
-            font-size: 16px;
+            font-size: 14px;
             margin-left: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .cv-icon {
             color: #f0f0f0; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
             color: yellow;
-            font-size: 18px;
+            font-size: 16px;
             animation: blink 2s infinite; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
-            font-size: 18px;
+            font-size: 16px;
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;
