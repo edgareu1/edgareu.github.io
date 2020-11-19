@@ -4,6 +4,7 @@ function animateNavbar() {
 
   smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
   refreshNavbarPosition();  // Refresh the navbar active anchor
+  animateShowMore();        // Animate the show-more button
 
   // If the user scrolls his device window, refresh the navbar active anchor
   document.addEventListener('scroll', () => {
@@ -48,6 +49,22 @@ function animateNavbar() {
         anchor.classList.remove('active');
       }
     }
+  }
+
+  // Function that animates the 'navbar-show-more' button
+  function animateShowMore() {
+    const navbarLinks = document.querySelector('.navbar-links'),
+          showMore = document.querySelector('.navbar-show-more');
+
+    showMore.addEventListener('click' , (event) => {
+      event.preventDefault();
+
+      if (!navbarLinks.classList.contains('show')) {
+        navbarLinks.classList.add('show');
+      } else {
+        navbarLinks.classList.remove('show');
+      }
+    });
   }
 }
 
