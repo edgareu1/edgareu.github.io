@@ -1,6 +1,6 @@
 // Function that animates the navbar
 function animateNavbar() {
-  const anchors = document.querySelectorAll("#navbar a"); // Get the navbar anchors
+  const anchors = document.querySelectorAll("#navbar .btn-nav");  // Get the navbar anchors
   refreshNavbar();  // Refresh the navbar active anchor
 
   // If the user scrolls his device window, refresh the navbar active anchor
