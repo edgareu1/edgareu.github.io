@@ -1,4 +1,4 @@
-import { updateCanvasDimensions } from './update-canvas-dimensions.js'
+import { updateDimensionsCanvas } from './update-dimensions-canvas.js'
 
 // Function that will create the Technologies words background animation
 // Arguments:
@@ -12,7 +12,7 @@ function techWordsAnimation(canvasElement) {
         helperArray = randomArray(numTech);  // Array to help the vertical positioning of the words
 
   // Update the canvas dimensions to fill the whole profile content
-  updateCanvasDimensions(canvasElement);
+  updateDimensionsCanvas(canvasElement);
 
 	if (canvasElement.getContext) {
 		var canvas = canvasElement.getContext('2d'),

@@ -8,7 +8,7 @@ import { createGitCalendar } from './components/create-git-calendar.js'
 import { smoothNavbarAnchors } from './components/smooth-navbar-anchors.js'
 import { techWordsAnimation } from './components/tech-words-animation.js'
 import { typeBannerCode } from './components/type-banner-code.js'
-import { updateCanvasDimensions } from './components/update-canvas-dimensions.js'
+import { updateDimensionsCanvas } from './components/update-dimensions-canvas.js'
 
 animateCarousels();
 animateFooter();
@@ -25,6 +25,6 @@ if (canvas) {
 
   // If the User resizes his device window, update the background canvas animation dimensions
   window.addEventListener('resize', () => {
-    updateCanvasDimensions(canvas);
+    updateDimensionsCanvas(canvas);
   });
 }
