@@ -101,7 +101,7 @@
   text-decoration: none;
   letter-spacing: .06em;
   height: 100%;
-  width: 140px;
+  width: 150px;
   padding: 12px 15px;
   margin: 0;
   -webkit-transition: all .25s ease-out;
@@ -555,10 +555,36 @@ body.modal-active {
   width: 100%;
   padding: 0;
   margin: 0; }
-  #navbar .navbar-links {
-    display: flex;
-    padding: 0;
-    margin: 0; }
+  #navbar .navbar-content {
+    position: relative; }
+    #navbar .navbar-content .navbar-links {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0; }
+      #navbar .navbar-content .navbar-links.content-hidden {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.75); }
+        #navbar .navbar-content .navbar-links.content-hidden.show {
+          display: flex; }
+      #navbar .navbar-content .navbar-links li {
+        padding: 0;
+        margin: 0; }
+    #navbar .navbar-content .navbar-show-more {
+      display: none;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      height: 100%;
+      padding: 0 25px; }
+      #navbar .navbar-content .navbar-show-more:hover {
+        color: white;
+        text-decoration: none; }
 
 .pill-items {
   display: flex;

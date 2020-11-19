@@ -1,7 +1,7 @@
 // Function that updates the Canvas dimensions to fill the whole profile content
 // Arguments:
 //   canvas: Canvas element that will have its dimensions updated
-function updateCanvasDimensions(canvasElement) {
+function updateDimensionsCanvas(canvasElement) {
   // Get the profile-content element dimensions (which the canvas should mimic)
   let profileContent = document.getElementById('profile-content'),
       canvasWidth = profileContent.offsetWidth,
@@ -22,4 +22,4 @@ function updateCanvasDimensions(canvasElement) {
   canvas.lineWidth = 5;
 }
 
-export { updateCanvasDimensions };
+export { updateDimensionsCanvas };

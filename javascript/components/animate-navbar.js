@@ -1,15 +1,40 @@
+import { updateDimensionsNavbar } from './update-dimensions-navbar.js'
+
 // Function that animates the navbar
 function animateNavbar() {
-  const anchors = document.querySelectorAll("#navbar a"); // Get the navbar anchors
-  refreshNavbar();  // Refresh the navbar active anchor
+  const anchors = document.querySelectorAll("#navbar .btn-nav"),  // Navbar anchors
+        linksList = document.querySelector('.navbar-links'),      // Navbar links list
+        moreLink = document.querySelector('.navbar-show-more');   // Navbar show-more button
+
+  smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
+  refreshNavbarPosition();  // Refresh the navbar active anchor
+  animateShowMore();        // Animate the show-more button
+  updateDimensionsNavbar(linksList, moreLink);  // Update the navbar dimensions
 
   // If the user scrolls his device window, refresh the navbar active anchor
   document.addEventListener('scroll', () => {
-    refreshNavbar();
+    refreshNavbarPosition();
   });
 
+  // Function that makes the navbar anchors scroll smoothly to their respective destination
+  function smoothNavbarAnchors() {
+    // For each of the anchors...
+    for (let anchor of anchors) {
+      const anchorRef = anchor.getAttribute('data-target');
+
+      anchor.addEventListener('click', (event) => {
+        event.preventDefault(); // Prevent the anchor default click behavior
+
+        // Use jQuery to perform a scrolling animation
+        $("html, body").animate( {
+          scrollTop: $(anchorRef).offset().top - 50
+        }, 250);
+      });
+    }
+  }
+
   // Function that refreshes the navbar active anchor
-  function refreshNavbar() {
+  function refreshNavbarPosition() {
     // Get the user current window position and the navbar and banner elements height
     const currentPos = window.scrollY,
           navbarHeight = 50,
@@ -29,6 +54,19 @@ function animateNavbar() {
         anchor.classList.remove('active');
       }
     }
+  }
+
+  // Function that animates the 'navbar-show-more' button
+  function animateShowMore() {
+    moreLink.addEventListener('click' , (event) => {
+      event.preventDefault();
+
+      if (!linksList.classList.contains('show')) {
+        linksList.classList.add('show');
+      } else {
+        linksList.classList.remove('show');
+      }
+    });
   }
 }
 

@@ -11,9 +11,47 @@
   padding: 0;
   margin: 0;
 
-  .navbar-links {
-    display: flex;
-    padding: 0;
-    margin: 0;
+  .navbar-content {
+    position: relative;
+
+    .navbar-links {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &.content-hidden {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.75);
+
+        &.show {
+          display: flex;
+        }
+      }
+
+      li {
+        padding: 0;
+        margin: 0;
+      }
+    }
+
+    .navbar-show-more {
+      display: none;
+      align-items: center;
+      color: white;
+      font-size: 30px;
+      text-decoration: none;
+      height: 100%;
+      padding: 0 25px;
+
+      &:hover {
+        color: white;
+        text-decoration: none;
+      }
+    }
   }
 }
