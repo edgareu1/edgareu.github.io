@@ -5,7 +5,6 @@ import { animateGitModal } from './components/animate-git-modal.js'
 import { animateNavbar } from './components/animate-navbar.js'
 import { animatePillBar } from './components/animate-pill-bar.js'
 import { createGitCalendar } from './components/create-git-calendar.js'
-import { smoothNavbarAnchors } from './components/smooth-navbar-anchors.js'
 import { techWordsAnimation } from './components/tech-words-animation.js'
 import { typeBannerCode } from './components/type-banner-code.js'
 import { updateDimensionsCanvas } from './components/update-dimensions-canvas.js'
@@ -16,7 +15,6 @@ animateGitModal();
 animateNavbar();
 animatePillBar();
 createGitCalendar();
-smoothNavbarAnchors();
 typeBannerCode();
 
 var canvas = document.getElementById('tech-canvas');
