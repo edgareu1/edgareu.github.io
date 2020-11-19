@@ -7,3 +7,5 @@ function updateDimensionsNavbar(linksList, moreLink) {
     moreLink.style.display = 'none';
   }
 }
+
+export { updateDimensionsNavbar }

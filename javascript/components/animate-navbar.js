@@ -1,10 +1,15 @@
+import { updateDimensionsNavbar } from './components/update-dimensions-navbar.js'
+
 // Function that animates the navbar
 function animateNavbar() {
-  const anchors = document.querySelectorAll("#navbar .btn-nav");  // Get the navbar anchors
+  const anchors = document.querySelectorAll("#navbar .btn-nav"),  // Navbar anchors
+        linksList = document.querySelector('.navbar-links'),      // Navbar links list
+        moreLink = document.querySelector('.navbar-show-more');   // Navbar show-more button
 
   smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
   refreshNavbarPosition();  // Refresh the navbar active anchor
   animateShowMore();        // Animate the show-more button
+  updateDimensionsNavbar(linksList, moreLink);  // Update the navbar dimensions
 
   // If the user scrolls his device window, refresh the navbar active anchor
   document.addEventListener('scroll', () => {
@@ -53,16 +58,13 @@ function animateNavbar() {
 
   // Function that animates the 'navbar-show-more' button
   function animateShowMore() {
-    const navbarLinks = document.querySelector('.navbar-links'),
-          showMore = document.querySelector('.navbar-show-more');
-
-    showMore.addEventListener('click' , (event) => {
+    moreLink.addEventListener('click' , (event) => {
       event.preventDefault();
 
-      if (!navbarLinks.classList.contains('show')) {
-        navbarLinks.classList.add('show');
+      if (!linksList.classList.contains('show')) {
+        linksList.classList.add('show');
       } else {
-        navbarLinks.classList.remove('show');
+        linksList.classList.remove('show');
       }
     });
   }
