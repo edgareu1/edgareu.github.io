@@ -1,4 +1,4 @@
-import { updateDimensionsNavbar } from './components/update-dimensions-navbar.js'
+import { updateDimensionsNavbar } from './update-dimensions-navbar.js'
 
 // Function that animates the navbar
 function animateNavbar() {
