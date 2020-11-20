@@ -611,11 +611,13 @@ body.modal-active {
 .tab-items {
   position: relative;
   display: block;
+  background-color: rgba(0, 0, 0, 0.75);
   width: 900px;
   height: 450px;
   border: 1px solid #dee2e6;
   border-top: none;
-  border-radius: 2px; }
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
   .tab-items .tab-item {
     position: absolute;
     top: 0;
@@ -641,11 +643,47 @@ body.modal-active {
     width: 900px;
     border-radius: 5px;
     margin: 30px auto 20px; }
-    #projects .projects-content .carousel {
-      width: 450px; }
+    #projects .projects-content .carousel, #projects .projects-content .single-img {
+      width: 450px;
+      height: 100%; }
     #projects .projects-content .project-description {
-      background-color: rgba(0, 0, 0, 0.75);
-      width: 450px; }
+      display: flex;
+      flex-direction: column;
+      width: 450px;
+      padding: 10px 15px 20px; }
+      #projects .projects-content .project-description h3 {
+        text-align: center;
+        font-size: 28px; }
+        #projects .projects-content .project-description h3 span {
+          color: gainsboro;
+          font-size: 18px;
+          font-weight: 400; }
+      #projects .projects-content .project-description h6 {
+        font-size: 17px;
+        margin: 15px 0 5px; }
+        #projects .projects-content .project-description h6:first-of-type {
+          margin-top: 10px; }
+      #projects .projects-content .project-description p {
+        text-align: justify;
+        color: gainsboro;
+        font-size: 12.5px;
+        margin: 0; }
+      #projects .projects-content .project-description .anchors-container {
+        margin-top: 20px; }
+        #projects .projects-content .project-description .anchors-container a {
+          display: block;
+          color: #64ff5f;
+          font-size: 15px;
+          text-decoration: none;
+          width: fit-content; }
+          #projects .projects-content .project-description .anchors-container a:hover {
+            text-decoration: underline; }
+          #projects .projects-content .project-description .anchors-container a i {
+            margin-right: 4px; }
+        #projects .projects-content .project-description .anchors-container span {
+          color: gainsboro;
+          font-size: 12px;
+          margin-left: 5px; }
 
 #technologies {
   min-height: 100vh;
