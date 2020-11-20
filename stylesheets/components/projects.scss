@@ -11,14 +11,14 @@
     border-radius: 5px;
     margin: 30px auto 20px;
 
-    .carousel {
+    .carousel, .single-img {
       width: 450px;
+      height: 100%;
     }
 
     .project-description {
       display: flex;
       flex-direction: column;
-      background-color: rgba(0, 0, 0, 0.75);
       width: 450px;
       padding: 10px 15px 20px;
 
