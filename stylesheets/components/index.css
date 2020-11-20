@@ -657,27 +657,31 @@ body.modal-active {
           font-size: 18px;
           font-weight: 400; }
       #projects .projects-content .project-description h6 {
-        font-size: 18px;
+        font-size: 17px;
         margin: 15px 0 5px; }
         #projects .projects-content .project-description h6:first-of-type {
           margin-top: 10px; }
       #projects .projects-content .project-description p {
         text-align: justify;
         color: gainsboro;
-        font-size: 13px;
+        font-size: 12.5px;
         margin: 0; }
       #projects .projects-content .project-description .anchors-container {
-        margin-top: auto; }
+        margin-top: 20px; }
         #projects .projects-content .project-description .anchors-container a {
-          color: #85cad8;
+          display: block;
+          color: #64ff5f;
           font-size: 15px;
-          text-decoration: none; }
+          text-decoration: none;
+          width: fit-content; }
           #projects .projects-content .project-description .anchors-container a:hover {
-            color: #5ee3ff;
             text-decoration: underline; }
+          #projects .projects-content .project-description .anchors-container a i {
+            margin-right: 4px; }
         #projects .projects-content .project-description .anchors-container span {
           color: gainsboro;
-          font-size: 12.5px; }
+          font-size: 12px;
+          margin-left: 5px; }
 
 #technologies {
   min-height: 100vh;

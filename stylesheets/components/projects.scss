@@ -34,7 +34,7 @@
       }
 
       h6 {
-        font-size: 18px;
+        font-size: 17px;
         margin: 15px 0 5px;
 
         &:first-of-type {
@@ -45,27 +45,33 @@
       p {
         text-align: justify;
         color: gainsboro;
-        font-size: 13px;
+        font-size: 12.5px;
         margin: 0;
       }
 
       .anchors-container {
-        margin-top: auto;
+        margin-top: 20px;
 
         a {
-          color: #85cad8;
+          display: block;
+          color: #64ff5f;
           font-size: 15px;
           text-decoration: none;
+          width: fit-content;
 
           &:hover {
-            color: #5ee3ff;
             text-decoration: underline;
+          }
+
+          i {
+            margin-right: 4px;
           }
         }
 
         span {
           color: gainsboro;
-          font-size: 12.5px;
+          font-size: 12px;
+          margin-left: 5px;
         }
       }
     }
