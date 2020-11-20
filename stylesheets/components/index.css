@@ -644,8 +644,40 @@ body.modal-active {
     #projects .projects-content .carousel {
       width: 450px; }
     #projects .projects-content .project-description {
+      display: flex;
+      flex-direction: column;
       background-color: rgba(0, 0, 0, 0.75);
-      width: 450px; }
+      width: 450px;
+      padding: 10px 15px 20px; }
+      #projects .projects-content .project-description h3 {
+        text-align: center;
+        font-size: 28px; }
+        #projects .projects-content .project-description h3 span {
+          color: gainsboro;
+          font-size: 18px;
+          font-weight: 400; }
+      #projects .projects-content .project-description h6 {
+        font-size: 18px;
+        margin: 15px 0 5px; }
+        #projects .projects-content .project-description h6:first-of-type {
+          margin-top: 10px; }
+      #projects .projects-content .project-description p {
+        text-align: justify;
+        color: gainsboro;
+        font-size: 13px;
+        margin: 0; }
+      #projects .projects-content .project-description .anchors-container {
+        margin-top: auto; }
+        #projects .projects-content .project-description .anchors-container a {
+          color: #85cad8;
+          font-size: 15px;
+          text-decoration: none; }
+          #projects .projects-content .project-description .anchors-container a:hover {
+            color: #5ee3ff;
+            text-decoration: underline; }
+        #projects .projects-content .project-description .anchors-container span {
+          color: gainsboro;
+          font-size: 12.5px; }
 
 #technologies {
   min-height: 100vh;
