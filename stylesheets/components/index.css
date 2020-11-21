@@ -200,6 +200,7 @@
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
+      height: 100%;
       width: 100%;
       -webkit-transition: -webkit-transform 0.25s linear;
       transition: -webkit-transform 0.25s linear;
@@ -208,6 +209,7 @@
       transition: transform 0.25s linear, -webkit-transform 0.25s linear; }
       .carousel .carousel-inner .carousel-item img {
         display: block;
+        height: 100%;
         width: 100%;
         border-style: none; }
       .carousel .carousel-inner .carousel-item .carousel-caption {
