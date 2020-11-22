@@ -45,6 +45,7 @@
   position: relative;
   top: 0;
   height: 100vh;
+  max-height: 750px;
   min-height: 630px;
   width: 100%;
   z-index: 5; }
@@ -52,6 +53,7 @@
     position: absolute;
     top: 0;
     height: 100vh;
+    max-height: 750px;
     min-height: 630px;
     width: 100%; }
   #banner .banner-image {
@@ -63,7 +65,7 @@
   #banner .banner-content {
     display: flex; }
     #banner .banner-content .banner-title {
-      width: 600px;
+      max-width: 600px;
       padding: 0;
       margin: 140px 80px 0 50px; }
       #banner .banner-content .banner-title h1 {
@@ -74,9 +76,8 @@
         margin: 0 0 16px; }
       #banner .banner-content .banner-title h2 {
         color: #c8c8c8;
-        font-size: 24px;
+        font-size: 23px;
         line-height: 1.35;
-        max-width: 650px;
         margin: 0; }
       #banner .banner-content .banner-title a {
         max-width: 240px;
@@ -86,9 +87,10 @@
       z-index: 8;
       height: fit-content;
       max-height: calc(100% - 200px);
-      width: 500px;
+      width: 480px;
+      min-width: 480px;
       padding: 2px 5px;
-      margin: 100px 0 0;
+      margin: 100px 20px 0 0;
       overflow: scroll; }
 
 .btn-nav {
