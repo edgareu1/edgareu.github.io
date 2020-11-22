@@ -164,7 +164,7 @@
     list-style: none;
     z-index: 15;
     padding: 0;
-    margin: 16px 0; }
+    margin: 10px 0; }
     .carousel ol.carousel-indicators li {
       position: relative;
       bottom: 0;
@@ -214,14 +214,20 @@
         border-style: none; }
       .carousel .carousel-inner .carousel-item .carousel-caption {
         position: absolute;
-        right: 15%;
-        bottom: 20px;
-        left: 15%;
+        right: 0;
+        bottom: 0;
+        left: 0;
         text-align: center;
         color: #fff;
+        background: rgba(0, 0, 0, 0.65);
         z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px; }
+        padding: 15px 15% 45px; }
+        .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+          color: white;
+          font-size: 16px;
+          font-weight: 400; }
+          .carousel .carousel-inner .carousel-item .carousel-caption h5 span {
+            margin: 0 2px; }
   .carousel .carousel-control-prev, .carousel .carousel-control-next {
     position: absolute;
     top: 0;
