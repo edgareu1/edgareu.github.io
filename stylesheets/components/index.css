@@ -164,7 +164,7 @@
     list-style: none;
     z-index: 15;
     padding: 0;
-    margin: 16px 0; }
+    margin: 10px 0; }
     .carousel ol.carousel-indicators li {
       position: relative;
       bottom: 0;
@@ -214,14 +214,20 @@
         border-style: none; }
       .carousel .carousel-inner .carousel-item .carousel-caption {
         position: absolute;
-        right: 15%;
-        bottom: 20px;
-        left: 15%;
+        right: 0;
+        bottom: 0;
+        left: 0;
         text-align: center;
         color: #fff;
+        background: rgba(0, 0, 0, 0.65);
         z-index: 10;
-        padding-top: 20px;
-        padding-bottom: 20px; }
+        padding: 15px 15% 45px; }
+        .carousel .carousel-inner .carousel-item .carousel-caption h5 {
+          color: white;
+          font-size: 16px;
+          font-weight: 400; }
+          .carousel .carousel-inner .carousel-item .carousel-caption h5 span {
+            margin: 0 2px; }
   .carousel .carousel-control-prev, .carousel .carousel-control-next {
     position: absolute;
     top: 0;
@@ -261,7 +267,7 @@
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
 #curriculum {
-  min-height: 100vh;
+  height: fit-content;
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
@@ -475,7 +481,7 @@ h3 {
       color: white;
       font-size: 40px;
       width: fit-content;
-      padding: 16px 50px 10px;
+      padding: 10px 50px;
       border-bottom: 1px solid gainsboro;
       margin: 0 auto 25px; }
   #profile-main #profile-content {
@@ -638,7 +644,7 @@ body.modal-active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
+  height: fit-content;
   width: 100%;
   padding-bottom: 60px; }
   #projects .projects-content {
@@ -689,7 +695,7 @@ body.modal-active {
           margin-left: 5px; }
 
 #technologies {
-  min-height: 100vh;
+  min-height: fit-content;
   width: 100%;
   padding-bottom: 60px; }
   #technologies .technologies-content {
