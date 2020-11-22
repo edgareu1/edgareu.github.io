@@ -4,7 +4,9 @@
 
   .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
-    width: 900px;
+    width: fit-content;
+    max-width: 900px;
+    min-width: 650px;
     padding: 20px 35px 15px 105px;
     border-radius: 5px;
     margin: 20px auto 0;
