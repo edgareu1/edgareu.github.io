@@ -702,7 +702,9 @@ body.modal-active {
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
-    width: 750px;
+    width: fit-content;
+    max-width: 750px;
+    min-width: 650px;
     padding: 20px 30px 30px;
     border-radius: 5px;
     margin: 0 auto; }
@@ -729,6 +731,7 @@ body.modal-active {
         height: 100%;
         border-radius: 5px; }
     #technologies .technologies-content .complementary-tech {
+      text-align: justify;
       word-spacing: 1.5px;
       color: gainsboro;
       font-size: 18px;
