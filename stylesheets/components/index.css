@@ -517,6 +517,7 @@ body.modal-active {
     z-index: 20;
     height: 100%;
     width: 100%;
+    min-width: 650px;
     padding: 5%; }
     .modal-container .modal h2 {
       color: white;
