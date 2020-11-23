@@ -1,19 +1,22 @@
 #banner {
   position: relative;
-  top: 0;
   height: 100vh;
   max-height: 750px;
   min-height: 630px;
   width: 100%;
+  min-width: 650px;
   z-index: 5;
 
   .banner-image, .banner-content {
     position: absolute;
+    right: 0;
     top: 0;
+    left: 0;
     height: 100vh;
     max-height: 750px;
     min-height: 630px;
     width: 100%;
+    min-width: 650px;
   }
 
   .banner-image {
@@ -26,29 +29,32 @@
 
   .banner-content {
     display: flex;
+    justify-content: space-between;
 
     .banner-title {
-      max-width: 600px;
+      max-width: 650px;
       padding: 0;
-      margin: 140px 80px 0 50px;
+      margin: 150px 75px 0 5%;
 
       h1 {
         display: flex;
         flex-direction: column;
         color: white;
-        font-size: 52px;
+        font-size: 62px;
         margin: 0 0 16px;
       }
 
       h2 {
         color: rgba(200, 200, 200, 1);
-        font-size: 23px;
+        font-size: 28px;
         line-height: 1.35;
         margin: 0;
       }
 
       a {
-        max-width: 240px;
+        font-size: 20px;
+        max-width: 300px;
+        padding: 2px 0;
         margin: 32px 5px 0;
       }
     }
@@ -58,13 +64,11 @@
       z-index: 8;
       height: fit-content;
       max-height: calc(100% - 200px);
-      width: 480px;
-      min-width: 480px;
+      width: 500px;
+      min-width: 250px;
       padding: 2px 5px;
-      margin: 100px 20px 0 0;
+      margin: 100px 5% 0 0;
       overflow: scroll;
     }
   }
 }
-
-@media(max-width: 1150px) { }
