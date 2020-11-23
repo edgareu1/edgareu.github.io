@@ -2,8 +2,9 @@ import { updateDimensionsCanvas } from './update-dimensions-canvas.js'
 
 // Function that will create the Technologies words background animation
 // Arguments:
-//   canvas: Canvas element to fill
-function techWordsAnimation(canvasElement) {
+//   canvas:            Canvas element to fill
+//   profileContainer:  Canvas container
+function techWordsAnimation(canvasElement, profileContainer) {
   // Variable that stores the technologies names and their respective importance
   var techList = { "Ruby": 28, "Rails": 25, "JavaScript": 22, "HTML": 21, "CSS": 23, "SQL": 12, "REGEX": 10, "Canvas": 5, "Git": 16, "GitHub": 14, "Bootstrap": 10, "AJAX": 16, "jQuery": 12, "Web API": 16, "Stripe": 8, "Heroku": 6, "Cloudinary": 7, "OOP": 14, "MVC": 15, "Mailer": 18, "SVG": 5 },
       techAttr = [];
@@ -11,8 +12,8 @@ function techWordsAnimation(canvasElement) {
   const numTech = objLength(techList),       // Number of technologies in the 'techList'
         helperArray = randomArray(numTech);  // Array to help the vertical positioning of the words
 
-  // Update the canvas dimensions to fill the whole profile content
-  updateDimensionsCanvas(canvasElement);
+  // Update the canvas dimensions to fill the whole 'profile-content'
+  updateDimensionsCanvas(canvasElement, profileContainer);
 
 	if (canvasElement.getContext) {
 		var canvas = canvasElement.getContext('2d'),
