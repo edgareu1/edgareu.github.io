@@ -19,13 +19,14 @@ createGitCalendar();
 typeBannerCode();
 
 const canvas = document.getElementById('tech-canvas'),
+      profileContainer = document.getElementById('profile-container'),
       navbarLinksList = document.querySelector('.navbar-links'),
       navbarMoreLink = document.querySelector('.navbar-show-more');
 
-techWordsAnimation(canvas);  // Create the background canvas animation
+techWordsAnimation(canvas, profileContainer);  // Create the background canvas animation
 
 // If the User resizes his device window, update the canvas and navbar dimensions
 window.addEventListener('resize', () => {
-  updateDimensionsCanvas(canvas);
+  updateDimensionsCanvas(canvas, profileContainer);
   updateDimensionsNavbar(navbarLinksList, navbarMoreLink);
 });
