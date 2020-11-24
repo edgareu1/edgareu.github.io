@@ -16,6 +16,28 @@
       display: flex;
       flex-direction: column;
       padding: 10px 15px 20px;
+      overflow-y: scroll;
+
+      // Scrollbar width
+      &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+      }
+
+      // Scrollbar corner
+      &::-webkit-scrollbar-corner {
+        color: transparent;
+      }
+
+      // Scrollbar handle
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(80, 80, 80, 1);
+        border-radius: 5px;
+
+        &:hover {
+          background-color: rgba(110, 110, 110, 1);
+        }
+      }
 
       h3 {
         text-align: center;
