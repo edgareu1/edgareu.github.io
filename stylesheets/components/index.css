@@ -47,7 +47,6 @@
   max-height: 750px;
   min-height: 630px;
   width: 100%;
-  min-width: 650px;
   z-index: 5; }
   #banner .banner-image, #banner .banner-content {
     position: absolute;
@@ -57,8 +56,7 @@
     height: 100vh;
     max-height: 750px;
     min-height: 630px;
-    width: 100%;
-    min-width: 650px; }
+    width: 100%; }
   #banner .banner-image {
     background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/background/keyboard.png");
     background-position: center;
@@ -509,7 +507,8 @@ body {
   line-height: 1.5;
   z-index: 1;
   min-height: 100%;
-  min-width: 100%;
+  width: 100%;
+  min-width: 650px;
   padding: 0;
   margin: 0; }
 
@@ -552,8 +551,7 @@ h3 {
       margin: 0 auto 25px; }
     #profile-container #profile-content #curriculum, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
       min-height: fit-content;
-      width: 100%;
-      min-width: 650px; }
+      width: 100%; }
 
 body.modal-active {
   overflow: hidden; }
@@ -710,9 +708,9 @@ body.modal-active {
       opacity: 1; }
 
 #projects {
-  padding-bottom: 60px; }
+  padding-bottom: 100px; }
   #projects .projects-content {
-    width: 900px;
+    width: 920px;
     padding: 20px 10px;
     border-radius: 5px;
     margin: 0 auto; }
@@ -759,7 +757,7 @@ body.modal-active {
           margin-left: 5px; }
 
 #technologies {
-  padding-bottom: 60px; }
+  padding-bottom: 100px; }
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
