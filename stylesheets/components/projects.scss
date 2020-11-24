@@ -73,3 +73,47 @@
     }
   }
 }
+
+@media(max-width: 800px) {
+  #projects .projects-content .project-description {
+    padding: 8px 12px 15px;
+
+    h3 {
+      font-size: 22px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    h6 {
+      font-size: 14px;
+      margin-top: 12px;
+
+      &:first-of-type {
+        margin-top: 8px;
+      }
+    }
+
+    p {
+      font-size: 11px;
+    }
+
+    .anchors-container {
+      margin-top: 15px;
+
+      a {
+        font-size: 13px;
+
+        i {
+          margin-right: 3px;
+        }
+      }
+
+      span {
+        font-size: 10.5px;
+        margin-left: 4px;
+      }
+    }
+  }
+}

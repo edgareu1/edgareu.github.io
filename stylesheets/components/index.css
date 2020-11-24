@@ -795,6 +795,29 @@ body.modal-active {
           font-size: 12px;
           margin-left: 5px; }
 
+@media (max-width: 800px) {
+  #projects .projects-content .project-description {
+    padding: 8px 12px 15px; }
+    #projects .projects-content .project-description h3 {
+      font-size: 22px; }
+      #projects .projects-content .project-description h3 span {
+        font-size: 14px; }
+    #projects .projects-content .project-description h6 {
+      font-size: 14px;
+      margin-top: 12px; }
+      #projects .projects-content .project-description h6:first-of-type {
+        margin-top: 8px; }
+    #projects .projects-content .project-description p {
+      font-size: 11px; }
+    #projects .projects-content .project-description .anchors-container {
+      margin-top: 15px; }
+      #projects .projects-content .project-description .anchors-container a {
+        font-size: 13px; }
+        #projects .projects-content .project-description .anchors-container a i {
+          margin-right: 3px; }
+      #projects .projects-content .project-description .anchors-container span {
+        font-size: 10.5px;
+        margin-left: 4px; } }
 .scrollable-gray::-webkit-scrollbar {
   width: 10px;
   height: 10px; }
