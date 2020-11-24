@@ -25,10 +25,12 @@ function animateNavbar() {
       anchor.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the anchor default click behavior
 
-        // Use jQuery to perform a scrolling animation
-        $("html, body").animate( {
-          scrollTop: $(anchorRef).offset().top - 50
-        }, 250);
+        // Get the anchor destination distance from the top of the page
+        // Banner height (+) distance of the section from the top of the 'profile-content' element (-) Navbar height
+        const offsetTop = document.getElementById('banner').offsetHeight + document.querySelector(anchorRef).offsetTop - 50;
+
+        // Smoothly scroll to the section
+        scroll( { top: offsetTop, behavior: "smooth" } );
       });
     }
   }

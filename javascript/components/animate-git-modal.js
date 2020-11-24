@@ -8,9 +8,9 @@ function animateGitModal() {
     event.preventDefault();                       // Prevent the anchor default click behavior
     document.body.classList.add('modal-active');  // Update the body style (overflow: hidden)
 
-    // Using jQuery, smoothly scroll to the top of the page
+    // Smoothly scroll to the top of the page
     // Necessary in order for the 'day-tooltip' to work correctly
-    $("html, body").animate( { scrollTop: $('#banner').offset().top }, 500);
+    scroll( { top: 0, behavior: "smooth" } );
 
     // Make the modal container visible and add the opening modal animation
     modalContainer.style.display = "block";
