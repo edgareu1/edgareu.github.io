@@ -4,12 +4,15 @@
   .projects-content {
     max-width: 920px;
     padding: 20px 10px;
-    border-radius: 5px;
     margin: 0 auto;
 
     .carousel, .single-img, .project-description {
       height: 100%;
       width: 50%;
+    }
+
+    .single-img {
+      border-bottom-left-radius: 5px;
     }
 
     .project-description {

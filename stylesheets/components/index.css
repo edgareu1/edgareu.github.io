@@ -715,8 +715,8 @@ body.modal-active {
       color: black;
       font-weight: 600;
       background-color: #fff;
-      border-top-left-radius: .25rem;
-      border-top-right-radius: .25rem; }
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
 
 .tab-items {
   position: relative;
@@ -751,11 +751,12 @@ body.modal-active {
   #projects .projects-content {
     max-width: 920px;
     padding: 20px 10px;
-    border-radius: 5px;
     margin: 0 auto; }
     #projects .projects-content .carousel, #projects .projects-content .single-img, #projects .projects-content .project-description {
       height: 100%;
       width: 50%; }
+    #projects .projects-content .single-img {
+      border-bottom-left-radius: 5px; }
     #projects .projects-content .project-description {
       display: flex;
       flex-direction: column;
