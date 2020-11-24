@@ -327,7 +327,7 @@
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: fit-content;
-    max-width: 900px;
+    max-width: 920px;
     padding: 20px 35px 15px 105px;
     border-radius: 5px;
     margin: 20px auto 0; }
@@ -347,6 +347,8 @@
             left: -190px; }
         #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
           left: -193px; }
+      #curriculum .curriculum-content .cv-element.no-cv-text {
+        margin-bottom: 60px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
         position: absolute;
         left: -95px;
@@ -380,16 +382,15 @@
           font-size: 15px;
           margin: 5px 0 10px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p span {
-            font-size: 15px;
             margin-left: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .cv-icon {
             color: #f0f0f0; }
+          #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star, #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
+            font-size: 18px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
             color: yellow;
-            font-size: 18px;
             animation: blink 2s infinite; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
-            font-size: 18px;
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;

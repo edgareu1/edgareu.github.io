@@ -4,7 +4,7 @@
   .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: fit-content;
-    max-width: 900px;
+    max-width: 920px;
     padding: 20px 35px 15px 105px;
     border-radius: 5px;
     margin: 20px auto 0;
@@ -34,6 +34,10 @@
         .cv-date-bot, .cv-date-top {
           left: -193px;
         }
+      }
+
+      &.no-cv-text {
+        margin-bottom: 60px;
       }
 
       .cv-date-bot, .cv-date-top {
@@ -85,7 +89,6 @@
           margin: 5px 0 10px;
 
           span {
-            font-size: 15px;
             margin-left: 5px;
           }
 
@@ -93,14 +96,16 @@
             color: rgba(240, 240, 240, 1);
           }
 
+          .fa-star, .fa-cog {
+            font-size: 18px;
+          }
+
           .fa-star {
             color: yellow;
-            font-size: 18px;
             animation: blink 2s infinite;
           }
 
           .fa-cog {
-            font-size: 18px;
             animation: rotate 3s linear infinite;
           }
         }
