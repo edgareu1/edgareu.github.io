@@ -25,16 +25,6 @@
     color: #d8805c; }
   #banner > .banner-content > .banner-code-container p .color8 {
     color: #93cea8; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar-corner {
-  color: transparent; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar-thumb {
-  background-color: #505050;
-  border-radius: 5px; }
-  #banner > .banner-content > .banner-code-container::-webkit-scrollbar-thumb:hover {
-    background-color: #6e6e6e; }
 
 @keyframes blink-caret {
   from, to {
@@ -771,16 +761,6 @@ body.modal-active {
       flex-direction: column;
       padding: 10px 15px 20px;
       overflow-y: scroll; }
-      #projects .projects-content .project-description::-webkit-scrollbar {
-        width: 10px;
-        height: 10px; }
-      #projects .projects-content .project-description::-webkit-scrollbar-corner {
-        color: transparent; }
-      #projects .projects-content .project-description::-webkit-scrollbar-thumb {
-        background-color: #505050;
-        border-radius: 5px; }
-        #projects .projects-content .project-description::-webkit-scrollbar-thumb:hover {
-          background-color: #6e6e6e; }
       #projects .projects-content .project-description h3 {
         text-align: center;
         font-size: 28px; }
@@ -814,6 +794,17 @@ body.modal-active {
           color: gainsboro;
           font-size: 12px;
           margin-left: 5px; }
+
+.scrollable-gray::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+.scrollable-gray::-webkit-scrollbar-corner {
+  color: transparent; }
+.scrollable-gray::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border-radius: 5px; }
+  .scrollable-gray::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e; }
 
 #technologies {
   padding-bottom: 100px; }
