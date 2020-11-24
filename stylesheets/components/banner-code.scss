@@ -1,7 +1,7 @@
 #banner > .banner-content > .banner-code-container {
   p {
     white-space: nowrap;
-    font-size: 11.5px;
+    font-size: 12px;
     width: fit-content;
     padding: 0;
     margin: 8px 5px;
@@ -44,27 +44,6 @@
 
     .color8 {
       color: rgba(147, 206, 168, 1);
-    }
-  }
-
-  // Scrollbar width
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
-
-  // Scrollbar corner
-  &::-webkit-scrollbar-corner {
-    color: transparent;
-  }
-
-  // Scrollbar handle
-  &::-webkit-scrollbar-thumb {
-    background-color: rgba(80, 80, 80, 1);
-    border-radius: 5px;
-
-    &:hover {
-      background-color: rgba(110, 110, 110, 1);
     }
   }
 }

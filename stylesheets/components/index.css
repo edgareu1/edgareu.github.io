@@ -1,7 +1,7 @@
 /* Import the SCSS components here */
 #banner > .banner-content > .banner-code-container p {
   white-space: nowrap;
-  font-size: 11.5px;
+  font-size: 12px;
   width: fit-content;
   padding: 0;
   margin: 8px 5px; }
@@ -25,16 +25,6 @@
     color: #d8805c; }
   #banner > .banner-content > .banner-code-container p .color8 {
     color: #93cea8; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar {
-  width: 10px;
-  height: 10px; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar-corner {
-  color: transparent; }
-#banner > .banner-content > .banner-code-container::-webkit-scrollbar-thumb {
-  background-color: #505050;
-  border-radius: 5px; }
-  #banner > .banner-content > .banner-code-container::-webkit-scrollbar-thumb:hover {
-    background-color: #6e6e6e; }
 
 @keyframes blink-caret {
   from, to {
@@ -43,7 +33,6 @@
     border-color: transparent; } }
 #banner {
   position: relative;
-  top: 0;
   height: 100vh;
   max-height: 750px;
   min-height: 630px;
@@ -51,7 +40,9 @@
   z-index: 5; }
   #banner .banner-image, #banner .banner-content {
     position: absolute;
+    right: 0;
     top: 0;
+    left: 0;
     height: 100vh;
     max-height: 750px;
     min-height: 630px;
@@ -63,36 +54,88 @@
     background-size: cover;
     opacity: 0.5; }
   #banner .banner-content {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
     #banner .banner-content .banner-title {
-      max-width: 600px;
+      max-width: 650px;
       padding: 0;
-      margin: 140px 80px 0 50px; }
+      margin: 150px 75px 0 5%; }
       #banner .banner-content .banner-title h1 {
         display: flex;
         flex-direction: column;
         color: white;
-        font-size: 52px;
+        font-size: 62px;
         margin: 0 0 16px; }
       #banner .banner-content .banner-title h2 {
         color: #c8c8c8;
-        font-size: 23px;
+        font-size: 28px;
         line-height: 1.35;
         margin: 0; }
       #banner .banner-content .banner-title a {
-        max-width: 240px;
+        font-size: 20px;
+        max-width: 300px;
+        padding: 2px 0;
         margin: 32px 5px 0; }
     #banner .banner-content .banner-code-container {
       background-color: rgba(0, 0, 0, 0.75);
       z-index: 8;
       height: fit-content;
       max-height: calc(100% - 200px);
-      width: 480px;
-      min-width: 480px;
+      width: 500px;
+      min-width: 250px;
       padding: 2px 5px;
-      margin: 100px 20px 0 0;
+      margin: 100px 5% 0 0;
       overflow: scroll; }
 
+@media (max-width: 1500px) {
+  #banner .banner-content .banner-title {
+    max-width: 600px; }
+    #banner .banner-content .banner-title h1 {
+      font-size: 52px; }
+    #banner .banner-content .banner-title h2 {
+      font-size: 24px; }
+    #banner .banner-content .banner-title a {
+      font-size: 16px;
+      max-width: 240px;
+      padding: 0; }
+  #banner .banner-content .banner-code-container {
+    width: 480px; }
+    #banner .banner-content .banner-code-container p {
+      font-size: 11.5px; } }
+@media (max-width: 1300px) {
+  #banner .banner-content .banner-title {
+    max-width: 475px; }
+    #banner .banner-content .banner-title h1 {
+      font-size: 46px;
+      margin-bottom: 12px; }
+    #banner .banner-content .banner-title h2 {
+      font-size: 20px; }
+    #banner .banner-content .banner-title a {
+      font-size: 15px;
+      max-width: 220px;
+      margin-top: 24px; }
+  #banner .banner-content .banner-code-container {
+    width: 450px; }
+    #banner .banner-content .banner-code-container p {
+      font-size: 10.5px; } }
+@media (max-width: 1125px) {
+  #banner .banner-content .banner-code-container p {
+    font-size: 10px; } }
+@media (max-width: 950px) {
+  #banner .banner-content .banner-title {
+    max-width: 600px;
+    margin-right: 0; }
+    #banner .banner-content .banner-title h1 {
+      font-size: 52px;
+      margin-bottom: 16px; }
+    #banner .banner-content .banner-title h2 {
+      font-size: 23.5px; }
+    #banner .banner-content .banner-title a {
+      font-size: 16px;
+      max-width: 240px;
+      margin-top: 32px; }
+  #banner .banner-content .banner-code-container {
+    display: none; } }
 .btn-nav {
   position: relative;
   display: block;
@@ -270,13 +313,11 @@
       background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E"); }
 
 #curriculum {
-  height: fit-content;
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
     width: fit-content;
-    max-width: 900px;
-    min-width: 650px;
+    max-width: 920px;
     padding: 20px 35px 15px 105px;
     border-radius: 5px;
     margin: 20px auto 0; }
@@ -296,6 +337,8 @@
             left: -190px; }
         #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
           left: -193px; }
+      #curriculum .curriculum-content .cv-element.no-cv-text {
+        margin-bottom: 60px; }
       #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
         position: absolute;
         left: -95px;
@@ -329,16 +372,15 @@
           font-size: 15px;
           margin: 5px 0 10px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p span {
-            font-size: 15px;
             margin-left: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .cv-icon {
             color: #f0f0f0; }
+          #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star, #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
+            font-size: 18px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
             color: yellow;
-            font-size: 18px;
             animation: blink 2s infinite; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
-            font-size: 18px;
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;
@@ -361,6 +403,50 @@
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+@media (max-width: 800px) {
+  #curriculum .curriculum-content {
+    padding-left: 95px; }
+    #curriculum .curriculum-content .cv-element {
+      padding-bottom: 16px;
+      border-left-width: 2px; }
+      #curriculum .curriculum-content .cv-element.level-one {
+        padding-bottom: 35px; }
+      #curriculum .curriculum-content .cv-element.level-two {
+        margin: 40px 0 0 85px; }
+        #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-top {
+          left: -170px; }
+        #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
+          left: -172px; }
+      #curriculum .curriculum-content .cv-element.no-cv-text {
+        margin-bottom: 50px; }
+      #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
+        left: -85px;
+        font-size: 12px; }
+      #curriculum .curriculum-content .cv-element .cv-date-top {
+        top: 17px; }
+      #curriculum .curriculum-content .cv-element .cv-logo {
+        left: -28.5px;
+        height: 55px;
+        width: 55px; }
+      #curriculum .curriculum-content .cv-element .cv-header-titles {
+        padding: 5px 0 5.5px 37px; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
+          font-size: 19px; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
+          font-size: 15px;
+          margin-top: 4px; }
+      #curriculum .curriculum-content .cv-element .cv-element-content {
+        padding-left: 50px; }
+        #curriculum .curriculum-content .cv-element .cv-element-content p {
+          font-size: 13.5px;
+          margin: 4px 0 8px; }
+          #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star, #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
+            font-size: 16px; }
+    #curriculum .curriculum-content .cv-text {
+      margin-left: -60px; }
+      #curriculum .curriculum-content .cv-text p {
+        font-size: 14.5px;
+        margin: 4px 0; } }
 .footer {
   position: absolute;
   right: 0;
@@ -456,7 +542,8 @@ body {
   line-height: 1.5;
   z-index: 1;
   min-height: 100%;
-  min-width: 100%;
+  width: 100%;
+  min-width: 650px;
   padding: 0;
   margin: 0; }
 
@@ -497,6 +584,9 @@ h3 {
       padding: 10px 50px;
       border-bottom: 1px solid gainsboro;
       margin: 0 auto 25px; }
+    #profile-container #profile-content #curriculum, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
+      min-height: fit-content;
+      width: 100%; }
 
 body.modal-active {
   overflow: hidden; }
@@ -632,12 +722,16 @@ body.modal-active {
   position: relative;
   display: block;
   background-color: rgba(0, 0, 0, 0.75);
+  height: 100%;
   width: 100%;
-  height: 450px;
   border: 1px solid #dee2e6;
   border-top: none;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px; }
+  .tab-items:after {
+    content: "";
+    display: block;
+    padding-bottom: 50%; }
   .tab-items .tab-item {
     position: absolute;
     top: 0;
@@ -653,25 +747,20 @@ body.modal-active {
       opacity: 1; }
 
 #projects {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: fit-content;
-  width: 100%;
-  padding-bottom: 60px; }
+  padding-bottom: 100px; }
   #projects .projects-content {
-    width: 900px;
-    padding: 0 10px;
+    max-width: 920px;
+    padding: 20px 10px;
     border-radius: 5px;
-    margin: 30px auto 20px; }
-    #projects .projects-content .carousel, #projects .projects-content .single-img {
-      width: 450px;
-      height: 100%; }
+    margin: 0 auto; }
+    #projects .projects-content .carousel, #projects .projects-content .single-img, #projects .projects-content .project-description {
+      height: 100%;
+      width: 50%; }
     #projects .projects-content .project-description {
       display: flex;
       flex-direction: column;
-      width: 450px;
-      padding: 10px 15px 20px; }
+      padding: 10px 15px 20px;
+      overflow-y: scroll; }
       #projects .projects-content .project-description h3 {
         text-align: center;
         font-size: 28px; }
@@ -706,16 +795,47 @@ body.modal-active {
           font-size: 12px;
           margin-left: 5px; }
 
+@media (max-width: 800px) {
+  #projects .projects-content .project-description {
+    padding: 8px 12px 15px; }
+    #projects .projects-content .project-description h3 {
+      font-size: 22px; }
+      #projects .projects-content .project-description h3 span {
+        font-size: 14px; }
+    #projects .projects-content .project-description h6 {
+      font-size: 14px;
+      margin-top: 12px; }
+      #projects .projects-content .project-description h6:first-of-type {
+        margin-top: 8px; }
+    #projects .projects-content .project-description p {
+      font-size: 11px; }
+    #projects .projects-content .project-description .anchors-container {
+      margin-top: 15px; }
+      #projects .projects-content .project-description .anchors-container a {
+        font-size: 13px; }
+        #projects .projects-content .project-description .anchors-container a i {
+          margin-right: 3px; }
+      #projects .projects-content .project-description .anchors-container span {
+        font-size: 10.5px;
+        margin-left: 4px; } }
+.scrollable-gray::-webkit-scrollbar {
+  width: 10px;
+  height: 10px; }
+.scrollable-gray::-webkit-scrollbar-corner {
+  color: transparent; }
+.scrollable-gray::-webkit-scrollbar-thumb {
+  background-color: #505050;
+  border-radius: 5px; }
+  .scrollable-gray::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e; }
+
 #technologies {
-  min-height: fit-content;
-  width: 100%;
-  padding-bottom: 60px; }
+  padding-bottom: 100px; }
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: fit-content;
     max-width: 750px;
-    min-width: 650px;
     padding: 20px 30px 30px;
     border-radius: 5px;
     margin: 0 auto; }
