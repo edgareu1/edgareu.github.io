@@ -2,20 +2,19 @@
   padding-bottom: 100px;
 
   .projects-content {
-    width: 920px;
+    max-width: 920px;
     padding: 20px 10px;
     border-radius: 5px;
     margin: 0 auto;
 
-    .carousel, .single-img {
-      width: 450px;
+    .carousel, .single-img, .project-description {
       height: 100%;
+      width: 50%;
     }
 
     .project-description {
       display: flex;
       flex-direction: column;
-      width: 450px;
       padding: 10px 15px 20px;
 
       h3 {
