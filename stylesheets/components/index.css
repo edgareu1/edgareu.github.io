@@ -413,6 +413,50 @@
     transform: rotate(0); }
   100% {
     transform: rotate(360deg); } }
+@media (max-width: 800px) {
+  #curriculum .curriculum-content {
+    padding-left: 95px; }
+    #curriculum .curriculum-content .cv-element {
+      padding-bottom: 16px;
+      border-left-width: 2px; }
+      #curriculum .curriculum-content .cv-element.level-one {
+        padding-bottom: 35px; }
+      #curriculum .curriculum-content .cv-element.level-two {
+        margin: 40px 0 0 85px; }
+        #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two.no-content .cv-date-top {
+          left: -170px; }
+        #curriculum .curriculum-content .cv-element.level-two .cv-date-bot, #curriculum .curriculum-content .cv-element.level-two .cv-date-top {
+          left: -172px; }
+      #curriculum .curriculum-content .cv-element.no-cv-text {
+        margin-bottom: 50px; }
+      #curriculum .curriculum-content .cv-element .cv-date-bot, #curriculum .curriculum-content .cv-element .cv-date-top {
+        left: -85px;
+        font-size: 12px; }
+      #curriculum .curriculum-content .cv-element .cv-date-top {
+        top: 17px; }
+      #curriculum .curriculum-content .cv-element .cv-logo {
+        left: -28.5px;
+        height: 55px;
+        width: 55px; }
+      #curriculum .curriculum-content .cv-element .cv-header-titles {
+        padding: 5px 0 5.5px 37px; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
+          font-size: 19px; }
+        #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
+          font-size: 15px;
+          margin-top: 4px; }
+      #curriculum .curriculum-content .cv-element .cv-element-content {
+        padding-left: 50px; }
+        #curriculum .curriculum-content .cv-element .cv-element-content p {
+          font-size: 13.5px;
+          margin: 4px 0 8px; }
+          #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star, #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
+            font-size: 16px; }
+    #curriculum .curriculum-content .cv-text {
+      margin-left: -60px; }
+      #curriculum .curriculum-content .cv-text p {
+        font-size: 14.5px;
+        margin: 4px 0; } }
 .footer {
   position: absolute;
   right: 0;
