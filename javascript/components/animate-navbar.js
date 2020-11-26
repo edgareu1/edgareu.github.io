@@ -30,7 +30,10 @@ function animateNavbar() {
         const offsetTop = document.getElementById('banner').offsetHeight + document.querySelector(anchorRef).offsetTop - 50;
 
         // Smoothly scroll to the section
-        scroll( { top: offsetTop, behavior: "smooth" } );
+        scroll({
+          top: anchorRef == '#banner' ? 0 : offsetTop,
+          behavior: "smooth"
+        });
       });
     }
   }
