@@ -4,7 +4,12 @@
   .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
+
+    // Vendor prefixes 'width'
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+
     max-width: 750px;
     padding: 20px 30px 30px;
     border-radius: 5px;
@@ -12,9 +17,21 @@
 
     li {
       .tech-title {
+        // Vendor prefixes 'display'
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+
+        // Vendor prefixes 'align-items'
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: flex-end;
+
+        // Vendor prefixes 'justify-content'
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+
         color: rgba(220, 220, 220, 1);
         font-family: "PT Sans", sans-serif;
         padding: 0 10px 0 5px;

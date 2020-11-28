@@ -1,7 +1,12 @@
 #modal-git {
   .calendar {
     background: black;
+
+    // Vendor prefixes 'height'
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+
     width: 100%;
     max-width: 900px;
     margin: 0;

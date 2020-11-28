@@ -1,5 +1,9 @@
 .pill-items {
+  // Vendor prefixes 'display'
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+
   list-style: none;
   padding: 0;
   border-bottom: 1px solid #dee2e6;
@@ -50,9 +54,16 @@
     opacity: 0;
     height: 100%;
     width: 100%;
-    transition: opacity 0.15s linear;
+
+    // Vendor prefixes 'transition'
+    -webkit-transition: opacity 0.15s linear;
+         -o-transition: opacity 0.15s linear;
+            transition: opacity 0.15s linear;
 
     &.active {
+      // Vendor prefixes 'display'
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
     }
 
