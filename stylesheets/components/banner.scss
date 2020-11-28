@@ -18,7 +18,11 @@
   }
 
   .banner-image {
+    // Vendor prefixes 'background-image'
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), to(black)), url("../../images/background/keyboard.png");
+    background-image: -o-linear-gradient(top, transparent 45%, black 100%), url("../../images/background/keyboard.png");
     background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/background/keyboard.png");
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -26,7 +30,14 @@
   }
 
   .banner-content {
+    // Vendor prefixes 'display'
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+
+    // Vendor prefixes 'justify-content'
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 
     .banner-title {
@@ -35,8 +46,17 @@
       margin: 150px 75px 0 5%;
 
       h1 {
+        // Vendor prefixes 'display'
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+
+        // Vendor prefixes 'flex-direction'
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
         color: white;
         font-size: 62px;
         margin: 0 0 16px;
@@ -60,7 +80,12 @@
     .banner-code-container {
       background-color: rgba(0, 0, 0, 0.75);
       z-index: 8;
+
+      // Vendor prefixes 'height'
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
       height: fit-content;
+
       max-height: calc(100% - 200px);
       width: 500px;
       min-width: 250px;

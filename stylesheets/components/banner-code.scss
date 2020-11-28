@@ -2,7 +2,12 @@
   p {
     white-space: nowrap;
     font-size: 12px;
+
+    // Vendor prefixes 'width'
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+
     padding: 0;
     margin: 8px 5px;
 
@@ -46,6 +51,12 @@
       color: rgba(147, 206, 168, 1);
     }
   }
+}
+
+// Vendor prefixes '@keyframes'
+@-webkit-keyframes blink-caret {
+  from, to { border-color: white }
+  50%      { border-color: transparent }
 }
 
 @keyframes blink-caret {
