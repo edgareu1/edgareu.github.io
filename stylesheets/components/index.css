@@ -2,6 +2,8 @@
 #banner > .banner-content > .banner-code-container p {
   white-space: nowrap;
   font-size: 12px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 0;
   margin: 8px 5px; }
@@ -26,6 +28,11 @@
   #banner > .banner-content > .banner-code-container p .color8 {
     color: #93cea8; }
 
+@-webkit-keyframes blink-caret {
+  from, to {
+    border-color: white; }
+  50% {
+    border-color: transparent; } }
 @keyframes blink-caret {
   from, to {
     border-color: white; }
@@ -48,20 +55,31 @@
     min-height: 630px;
     width: 100%; }
   #banner .banner-image {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), to(black)), url("../../images/background/keyboard.png");
+    background-image: -o-linear-gradient(top, transparent 45%, black 100%), url("../../images/background/keyboard.png");
     background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/background/keyboard.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.5; }
   #banner .banner-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between; }
     #banner .banner-content .banner-title {
       max-width: 650px;
       padding: 0;
       margin: 150px 75px 0 5%; }
       #banner .banner-content .banner-title h1 {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         color: white;
         font-size: 62px;
@@ -79,6 +97,8 @@
     #banner .banner-content .banner-code-container {
       background-color: rgba(0, 0, 0, 0.75);
       z-index: 8;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
       height: fit-content;
       max-height: calc(100% - 200px);
       width: 500px;
@@ -141,6 +161,8 @@
   display: block;
   color: white;
   font-size: 18px;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center;
   text-align: center;
   text-decoration: none;
@@ -159,7 +181,11 @@
 
 .btn-modal {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: white;
   font-size: 16px;
@@ -310,6 +336,8 @@
   padding-bottom: 40px; }
   #curriculum .curriculum-content {
     background-color: rgba(0, 0, 0, 0.75);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     max-width: 920px;
     padding: 20px 35px 15px 105px;
@@ -373,8 +401,10 @@
             font-size: 18px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
             color: yellow;
+            -webkit-animation: blink 2s infinite;
             animation: blink 2s infinite; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
+            -webkit-animation: rotate 3s linear infinite;
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;
@@ -385,6 +415,13 @@
         line-height: 1.8;
         margin: 5px 0; }
 
+@-webkit-keyframes blink {
+  0% {
+    text-shadow: none; }
+  50% {
+    text-shadow: 0px 0px 16px #ffc800; }
+  100% {
+    text-shadow: none; } }
 @keyframes blink {
   0% {
     text-shadow: none; }
@@ -392,10 +429,19 @@
     text-shadow: 0px 0px 16px #ffc800; }
   100% {
     text-shadow: none; } }
-@keyframes rotate {
+@-webkit-keyframes rotate {
   0% {
+    -webkit-transform: rotate(0);
     transform: rotate(0); }
   100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0); }
+  100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 @media (max-width: 800px) {
   #curriculum .curriculum-content {
@@ -446,8 +492,14 @@
   right: 0;
   bottom: 0;
   left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.75);
   height: 100px;
@@ -455,7 +507,10 @@
   padding: 10px 0;
   margin: 0; }
   .footer .contact-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     list-style: none;
     width: 250px;
@@ -480,6 +535,7 @@
         border-radius: 50%;
         content: ""; }
       .footer .contact-links a.splash-animation::before {
+        -webkit-animation: splash 0.4s ease;
         animation: splash 0.4s ease; }
       .footer .contact-links a img {
         position: absolute;
@@ -491,15 +547,28 @@
   .footer .footer-copyrights {
     margin: 0 0 0 30px; }
 
-@keyframes splash {
+@-webkit-keyframes splash {
   from {
     opacity: 0.75;
+    -webkit-transform: scale(1);
     transform: scale(1); }
   to {
     opacity: 0;
+    -webkit-transform: scale(1.6);
+    transform: scale(1.6); } }
+@keyframes splash {
+  from {
+    opacity: 0.75;
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  to {
+    opacity: 0;
+    -webkit-transform: scale(1.6);
     transform: scale(1.6); } }
 #modal-git .calendar {
   background: black;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   max-width: 900px;
@@ -516,6 +585,7 @@
     margin: 5px 0; }
 
 *, *::before, *::after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html {
@@ -551,9 +621,13 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   display: block;
   font-size: 2em;
+  -webkit-margin-before: 0.67em;
   margin-block-start: 0.67em;
+  -webkit-margin-after: 0.67em;
   margin-block-end: 0.67em;
+  -webkit-margin-start: 0px;
   margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
   margin-inline-end: 0px; }
 
 h2 {
@@ -574,11 +648,15 @@ h3 {
     #profile-container #profile-content .section-title {
       color: white;
       font-size: 40px;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
       width: fit-content;
-      padding: 10px 50px;
+      padding: 20px 50px;
       border-bottom: 1px solid gainsboro;
       margin: 0 auto 25px; }
     #profile-container #profile-content #curriculum, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
+      min-height: -webkit-fit-content;
+      min-height: -moz-fit-content;
       min-height: fit-content;
       width: 100%; }
 
@@ -596,17 +674,30 @@ body.modal-active {
   width: 100%;
   padding: 0; }
   .modal-container.modal-open {
+    -webkit-animation: increaseOpacity 0.5s forwards;
     animation: increaseOpacity 0.5s forwards; }
     .modal-container.modal-open .modal {
+      -webkit-animation: zoomIn .5s forwards;
       animation: zoomIn .5s forwards; }
     .modal-container.modal-open.modal-close {
+      -webkit-animation: decreaseOpacity 0.5s forwards;
       animation: decreaseOpacity 0.5s forwards; }
       .modal-container.modal-open.modal-close .modal {
+        -webkit-animation: zoomOut .5s forwards;
         animation: zoomOut .5s forwards; }
   .modal-container .modal {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background: transparent;
     z-index: 20;
@@ -619,16 +710,35 @@ body.modal-active {
       font-size: 32px;
       margin-bottom: 22px; }
 
+@-webkit-keyframes increaseOpacity {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 @keyframes increaseOpacity {
   from {
     opacity: 0; }
   to {
     opacity: 1; } }
+@-webkit-keyframes decreaseOpacity {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 @keyframes decreaseOpacity {
   from {
     opacity: 1; }
   to {
     opacity: 0; } }
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); }
+  to {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
 @keyframes zoomIn {
   from {
     -webkit-transform: scale(0);
@@ -638,6 +748,15 @@ body.modal-active {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     transform: scale(1); } }
+@-webkit-keyframes zoomOut {
+  from {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+  to {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0); } }
 @keyframes zoomOut {
   from {
     -webkit-transform: scale(1);
@@ -648,7 +767,11 @@ body.modal-active {
     -ms-transform: scale(0);
     transform: scale(0); } }
 #navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   position: fixed;
   top: 0;
@@ -662,6 +785,8 @@ body.modal-active {
   #navbar .navbar-content {
     position: relative; }
     #navbar .navbar-content .navbar-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       list-style: none;
       padding: 0;
@@ -671,15 +796,22 @@ body.modal-active {
         top: 100%;
         right: 0;
         display: none;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.75); }
         #navbar .navbar-content .navbar-links.content-hidden.show {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex; }
       #navbar .navbar-content .navbar-links li {
         padding: 0;
         margin: 0; }
     #navbar .navbar-content .navbar-show-more {
       display: none;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       color: white;
       font-size: 30px;
@@ -691,6 +823,8 @@ body.modal-active {
         text-decoration: none; }
 
 .pill-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
   padding: 0;
@@ -734,14 +868,18 @@ body.modal-active {
     opacity: 0;
     height: 100%;
     width: 100%;
+    -webkit-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
     transition: opacity 0.15s linear; }
     .tab-items .tab-item.active {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex; }
     .tab-items .tab-item.fade {
       opacity: 1; }
 
 #projects {
-  padding-bottom: 100px; }
+  padding-bottom: 80px; }
   #projects .projects-content {
     max-width: 920px;
     padding: 20px 10px;
@@ -752,7 +890,12 @@ body.modal-active {
     #projects .projects-content .single-img {
       border-bottom-left-radius: 5px; }
     #projects .projects-content .project-description {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
       flex-direction: column;
       padding: 10px 15px 20px;
       overflow-y: scroll; }
@@ -780,6 +923,8 @@ body.modal-active {
           color: #64ff5f;
           font-size: 15px;
           text-decoration: none;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content; }
           #projects .projects-content .project-description .anchors-container a:hover {
             text-decoration: underline; }
@@ -825,18 +970,26 @@ body.modal-active {
     background-color: #6e6e6e; }
 
 #technologies {
-  padding-bottom: 100px; }
+  padding-bottom: 80px; }
   #technologies .technologies-content {
     list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
     max-width: 750px;
     padding: 20px 30px 30px;
     border-radius: 5px;
     margin: 0 auto; }
     #technologies .technologies-content li .tech-title {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: end;
+      -ms-flex-align: end;
       align-items: flex-end;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
       justify-content: space-between;
       color: gainsboro;
       font-family: "PT Sans", sans-serif;
