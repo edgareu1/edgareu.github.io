@@ -566,7 +566,13 @@
     -webkit-transform: scale(1.6);
     transform: scale(1.6); } }
 #modal-git .calendar {
+  text-align: center;
+  font-family: Helvetica, arial;
   background: black;
+  min-height: 243px;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
+  margin: 0 auto;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -575,14 +581,112 @@
   margin: 0; }
   #modal-git .calendar .position-relative {
     padding: 5px 10px; }
-  #modal-git .calendar .contrib-footer a {
-    color: #64ff5f;
-    text-decoration: none; }
-    #modal-git .calendar .contrib-footer a:hover {
-      text-decoration: underline; }
+  #modal-git .calendar .contrib-footer {
+    text-align: left;
+    font-size: 11px;
+    height: 26px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px 12px; }
+    #modal-git .calendar .contrib-footer a {
+      color: #64ff5f;
+      text-decoration: none; }
+      #modal-git .calendar .contrib-footer a:hover {
+        text-decoration: underline; }
   #modal-git .calendar .contrib-number {
+    display: block;
     color: gainsboro;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.3em;
     margin: 5px 0; }
+  #modal-git .calendar .calendar-graph {
+    text-align: center;
+    padding: 5px 0 0; }
+    #modal-git .calendar .calendar-graph text.wday, #modal-git .calendar .calendar-graph text.month {
+      fill: #aaa;
+      font-size: 10px; }
+  #modal-git .calendar .contrib-legend {
+    text-align: right;
+    float: right;
+    padding: 0 14px 10px 0; }
+    #modal-git .calendar .contrib-legend .legend {
+      position: relative;
+      bottom: -1px;
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      margin: 0 5px; }
+      #modal-git .calendar .contrib-legend .legend li {
+        display: inline-block;
+        height: 10px;
+        width: 10px; }
+  #modal-git .calendar .text-small {
+    color: #767676;
+    font-size: 12px; }
+  #modal-git .calendar .contrib-column {
+    text-align: center;
+    font-size: 11px;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd; }
+  #modal-git .calendar .contrib-column-first {
+    border-left: 0; }
+  #modal-git .calendar .table-column {
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+    padding-right: 10px;
+    padding-left: 10px; }
+  #modal-git .calendar img.spinner {
+    min-height: 70px;
+    width: 70px;
+    margin-top: 50px; }
+  #modal-git .calendar .monospace {
+    text-align: center;
+    color: #000;
+    font-family: monospace; }
+    #modal-git .calendar .monospace a {
+      color: #1D75AB;
+      text-decoration: none; }
+  #modal-git .calendar .left.text-muted {
+    float: left;
+    color: #767676;
+    margin-left: 9px; }
+    #modal-git .calendar .left.text-muted a {
+      color: #4078c0;
+      text-decoration: none; }
+  #modal-git .calendar .left.text-muted a:hover, #modal-git .calendar .monospace a:hover {
+    text-decoration: underline; }
+  #modal-git .calendar .float-left {
+    float: left; }
+  #modal-git .calendar .day-tooltip {
+    position: absolute;
+    display: none;
+    text-align: center;
+    white-space: nowrap;
+    color: #959da5;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 10px;
+    border-radius: 3px;
+    z-index: 99999;
+    pointer-events: none; }
+    #modal-git .calendar .day-tooltip strong {
+      color: #dfe2e5; }
+    #modal-git .calendar .day-tooltip.is-visible {
+      display: block; }
+    #modal-git .calendar .day-tooltip::after {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      height: 5px;
+      width: 5px;
+      box-sizing: border-box;
+      border: 5px solid transparent;
+      border-top-color: rgba(0, 0, 0, 0.85);
+      margin: 0 0 0 -5px;
+      content: " "; }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
