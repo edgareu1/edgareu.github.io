@@ -72,6 +72,7 @@ async function createGitCalendar() {
       let calendarDays = calendar.querySelectorAll('rect.day'),
           dayCount = 0,
           dayCountSum = 0,
+          dayColor,
           activeDays = 0,
           streakDays = 0,
           inStreak = true,
@@ -81,6 +82,20 @@ async function createGitCalendar() {
       for (let i = calendarDays.length - 1; i >= 0; i--) {
         dayCount = parseInt(calendarDays[i].getAttribute('data-count'));
         dayCountSum += dayCount;
+
+        if (dayCount == 0) {
+          dayColor = 'rgba(240, 240, 240)';
+        } else if (dayCount <= 8) {
+          dayColor = 'rgba(100, 250, 100)';
+        } else if (dayCount <= 16) {
+          dayColor = 'rgba(60, 200, 60)';
+        } else if (dayCount <= 24) {
+          dayColor = 'rgba(30, 150, 30)';
+        } else {
+          dayColor = 'rgba(0, 100, 0)';
+        }
+
+        calendarDays[i].setAttribute('fill', dayColor);
 
         if (!inStreak) { continue; }
 
