@@ -1,6 +1,9 @@
 // Function that creates the git calendar using the 'Bloggify/github-calendar' library
 // Added a small change to personalize it
 async function createGitCalendar() {
+  const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        ABBR_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
   function fetchCalendar() {
     fetch(`https://api.bloggify.net/gh-calendar/?username=edgareu1`)
     .then(response => response.text())
@@ -27,7 +30,71 @@ async function createGitCalendar() {
         calendarSVG.setAttribute("viewBox", "0 0 " + width + " " + height);
       }
 
+      let calendarDays = calendar.querySelectorAll('rect.day'),
+          dayCount = 0,
+          dayCountSum = 0,
+          activeDays = 0,
+          streakDays = 0,
+          inStreak = true,
+          dateStreakBegin,
+          dateStreakEnd;
+
+      for (let i = calendarDays.length - 1; i >= 0; i--) {
+        dayCount = parseInt(calendarDays[i].getAttribute('data-count'));
+        dayCountSum += dayCount;
+
+        if (!inStreak) { continue; }
+
+        if (dayCount > 0) {
+          if (dateStreakEnd  === undefined) { dateStreakEnd = new Date(calendarDays[i].getAttribute("data-date")); }
+          streakDays++;
+          activeDays++;
+
+        } else if (i < calendarDays.length - 2) {
+          inStreak = false;
+          dateStreakBegin = new Date(calendarDays[i + 1].getAttribute("data-date"));
+        }
+      }
+
+      const dateStreak = `${FULL_MONTHS[dateStreakBegin.getUTCMonth()]} ${dateStreakBegin.getUTCDate()} - ${FULL_MONTHS[dateStreakEnd.getUTCMonth()]} ${dateStreakEnd.getUTCDate()}`,
+            dateCalendarFull = `${dateString(new Date(calendarDays[0].getAttribute("data-date")))} - ${dateString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")))}`;
+
+      createContribContent({
+        first: 'Contributions in the last year',
+        second: `${dayCountSum} total`,
+        third: dateCalendarFull,
+        firstColumn: true
+      });
+
+      createContribContent({
+        first: 'Average daily contributions',
+        second: Number.parseFloat(dayCountSum / activeDays).toFixed(1),
+        third: dateCalendarFull
+      });
+
+      createContribContent({
+        first: 'Current streak',
+        second: `${streakDays} days`,
+        third: dateStreak
+      });
+
       container.innerHTML = calendar.innerHTML;
+
+      function createContribContent({first, second, third, firstColumn} = {}) {
+        const calendarCol = document.createElement("div");
+        calendarCol.classList = 'contrib-column table-column';
+
+        if (firstColumn) { calendarCol.classList.add('contrib-column-first'); }
+
+        calendarCol.innerHTML = `<span class="text-muted">${first}</span>
+                                 <span class="contrib-number">${second}</span>
+                                 <span class="text-muted">${third}</span>`;
+        calendar.appendChild(calendarCol);
+      }
+
+      function dateString(date) {
+        return `${ABBR_MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getFullYear()}`;
+      }
     });
   }
 
