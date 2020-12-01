@@ -4,6 +4,45 @@ async function createGitCalendar() {
   const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
         ABBR_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+  function addTooltips(container) {
+    const tooltip = document.createElement("div"),
+          calendarDays = document.querySelectorAll('rect.day');
+
+    tooltip.classList.add("day-tooltip");
+    container.appendChild(tooltip);
+
+    for (let i = 0; i < calendarDays.length; i++) {
+      calendarDays[i].addEventListener("mouseenter", (event) => {
+        let dayCount = event.target.getAttribute("data-count");
+
+        if (dayCount === "0") {
+          dayCount = "No contributions";
+        } else if (dayCount === "1") {
+          dayCount = "1 contribution";
+        } else {
+          dayCount = `${dayCount} contributions`;
+        }
+
+        const date = new Date(event.target.getAttribute("data-date")),
+              dateText = `${ABBR_MONTHS[date.getUTCMonth()].slice(0, 3)} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+
+        tooltip.innerHTML = `<strong>${dayCount}</strong> on ${dateText}`;
+        tooltip.classList.add("is-visible");
+
+        const size = event.target.getBoundingClientRect(),
+              leftPos = size.left + window.pageXOffset - tooltip.offsetWidth / 2 + size.width / 2,
+              topPos = size.bottom + window.pageYOffset - tooltip.offsetHeight - 2 * size.height;
+
+        tooltip.style.top = `${topPos}px`;
+        tooltip.style.left = `${leftPos}px`;
+      });
+
+      calendarDays[i].addEventListener("mouseleave", () => {
+        tooltip.classList.remove("is-visible");
+      });
+    }
+  }
+
   function fetchCalendar() {
     fetch(`https://api.bloggify.net/gh-calendar/?username=edgareu1`)
     .then(response => response.text())
@@ -79,6 +118,7 @@ async function createGitCalendar() {
       });
 
       container.innerHTML = calendar.innerHTML;
+      addTooltips(container);
 
       function createContribContent({first, second, third, firstColumn} = {}) {
         const calendarCol = document.createElement("div");
