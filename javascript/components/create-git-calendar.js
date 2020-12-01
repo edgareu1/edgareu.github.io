@@ -68,8 +68,10 @@ async function createGitCalendar() {
       let calendarHelper = document.createElement("div"),
           container = document.querySelector('.calendar');
 
+      // Remove the unnecessary elements
       calendarHelper.innerHTML = response;
       calendarHelper.querySelector('h2').remove();
+      calendarHelper.querySelector('#user-activity-overview').remove();
 
       let calendar = calendarHelper.querySelector(".js-yearly-contributions");
 
