@@ -92,94 +92,94 @@ async function createGitCalendar() {
         calendarSVG.removeAttribute("height");
         calendarSVG.setAttribute("width", "100%");
         calendarSVG.setAttribute("viewBox", "0 0 " + width + " " + height);
-      }
 
-      let calendarDays = calendar.querySelectorAll('rect.day'),
-          dayCount,
-          dayColor,
-          dayCountSum = 0,
-          activeDays = 0,
-          streakDays = 0,
-          inStreak = true,
-          dateStreakBegin,
-          dateStreakEnd;
+        let calendarDays = calendar.querySelectorAll('rect.day'),
+            dayCount,
+            dayColor,
+            dayCountSum = 0,
+            activeDays = 0,
+            streakDays = 0,
+            inStreak = true,
+            dateStreakBegin,
+            dateStreakEnd;
 
-      // Quantify the stats metrics
-      for (let i = calendarDays.length - 1; i >= 0; i--) {
-        dayCount = parseInt(calendarDays[i].getAttribute('data-count'));
+        // Quantify the stats metrics
+        for (let i = calendarDays.length - 1; i >= 0; i--) {
+          dayCount = parseInt(calendarDays[i].getAttribute('data-count'));
 
-        if (dayCount > 0) {
-          dayCountSum += dayCount;
-          activeDays++;
+          if (dayCount > 0) {
+            dayCountSum += dayCount;
+            activeDays++;
+          }
+
+          if (dayCount == 0) {
+            dayColor = 'rgba(240, 240, 240)';
+          } else if (dayCount <= 8) {
+            dayColor = 'rgba(100, 250, 100)';
+          } else if (dayCount <= 16) {
+            dayColor = 'rgba(60, 200, 60)';
+          } else if (dayCount <= 24) {
+            dayColor = 'rgba(30, 150, 30)';
+          } else {
+            dayColor = 'rgba(0, 100, 0)';
+          }
+
+          // Add colors to the calendar days
+          calendarDays[i].setAttribute('fill', dayColor);
+
+          if (!inStreak) { continue; }
+
+          if (dayCount > 0) {
+            if (dateStreakEnd  === undefined) { dateStreakEnd = new Date(calendarDays[i].getAttribute("data-date")); }
+            streakDays++;
+
+          } else if (i < calendarDays.length - 2) {
+            inStreak = false;
+            dateStreakBegin = new Date(calendarDays[i + 1].getAttribute("data-date"));
+          }
         }
 
-        if (dayCount == 0) {
-          dayColor = 'rgba(240, 240, 240)';
-        } else if (dayCount <= 8) {
-          dayColor = 'rgba(100, 250, 100)';
-        } else if (dayCount <= 16) {
-          dayColor = 'rgba(60, 200, 60)';
-        } else if (dayCount <= 24) {
-          dayColor = 'rgba(30, 150, 30)';
-        } else {
-          dayColor = 'rgba(0, 100, 0)';
+        const calendarDatePeriod = dateAbbrString(new Date(calendarDays[0].getAttribute("data-date")))
+                                  + ' - '
+                                  + dateAbbrString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")));
+
+        // Create the first 'contribution-stats' column
+        createContribContent({
+          first: 'Contributions in the last year',
+          second: `${dayCountSum} total`,
+          third: calendarDatePeriod,
+          firstColumn: true
+        });
+
+        // Create the second 'contribution-stats' column
+        createContribContent({
+          first: 'Average daily contributions',
+          second: Number.parseFloat(dayCountSum / activeDays).toFixed(1),
+          third: calendarDatePeriod
+        });
+
+        // Create the third 'contribution-stats' column
+        createContribContent({
+          first: 'Current streak',
+          second: `${streakDays} days`,
+          third: `${dateFullString(dateStreakBegin)} - ${dateFullString(dateStreakEnd)}`
+        });
+
+        container.innerHTML = calendar.innerHTML; // Add the calendar to the document
+        addTooltips(container);                   // Add tooltips to the calendar
+
+        // Function that adds a 'contribution-stats' column to the bottom of the calendar
+        function createContribContent({first, second, third, firstColumn} = {}) {
+          const calendarCol = document.createElement("div");
+          calendarCol.classList = 'contrib-column table-column';
+
+          if (firstColumn) { calendarCol.classList.add('contrib-column-first'); }
+
+          calendarCol.innerHTML = `<span class="text-muted">${first}</span>
+                                  <span class="contrib-number">${second}</span>
+                                  <span class="text-muted">${third}</span>`;
+          calendar.appendChild(calendarCol);
         }
-
-        // Add colors to the calendar days
-        calendarDays[i].setAttribute('fill', dayColor);
-
-        if (!inStreak) { continue; }
-
-        if (dayCount > 0) {
-          if (dateStreakEnd  === undefined) { dateStreakEnd = new Date(calendarDays[i].getAttribute("data-date")); }
-          streakDays++;
-
-        } else if (i < calendarDays.length - 2) {
-          inStreak = false;
-          dateStreakBegin = new Date(calendarDays[i + 1].getAttribute("data-date"));
-        }
-      }
-
-      const calendarDatePeriod = dateAbbrString(new Date(calendarDays[0].getAttribute("data-date")))
-                                 + ' - '
-                                 + dateAbbrString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")));
-
-      // Create the first 'contribution-stats' column
-      createContribContent({
-        first: 'Contributions in the last year',
-        second: `${dayCountSum} total`,
-        third: calendarDatePeriod,
-        firstColumn: true
-      });
-
-      // Create the second 'contribution-stats' column
-      createContribContent({
-        first: 'Average daily contributions',
-        second: Number.parseFloat(dayCountSum / activeDays).toFixed(1),
-        third: calendarDatePeriod
-      });
-
-      // Create the third 'contribution-stats' column
-      createContribContent({
-        first: 'Current streak',
-        second: `${streakDays} days`,
-        third: `${dateFullString(dateStreakBegin)} - ${dateFullString(dateStreakEnd)}`
-      });
-
-      container.innerHTML = calendar.innerHTML; // Add the calendar to the document
-      addTooltips(container);                   // Add tooltips to the calendar
-
-      // Function that adds a 'contribution-stats' column to the bottom of the calendar
-      function createContribContent({first, second, third, firstColumn} = {}) {
-        const calendarCol = document.createElement("div");
-        calendarCol.classList = 'contrib-column table-column';
-
-        if (firstColumn) { calendarCol.classList.add('contrib-column-first'); }
-
-        calendarCol.innerHTML = `<span class="text-muted">${first}</span>
-                                 <span class="contrib-number">${second}</span>
-                                 <span class="text-muted">${third}</span>`;
-        calendar.appendChild(calendarCol);
       }
     });
   }
