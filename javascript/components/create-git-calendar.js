@@ -28,8 +28,7 @@ async function createGitCalendar() {
           dayCount = `${dayCount} contributions`;
         }
 
-        const date = new Date(event.target.getAttribute("data-date")),
-              dateText = `${ABBR_MONTHS[date.getUTCMonth()].slice(0, 3)} ${date.getUTCDate()}, ${date.getUTCFullYear()}`;
+        const dateText = dateAbbrString(new Date(event.target.getAttribute("data-date")));
 
         // Add the text to the tooltip and make it visible
         tooltip.innerHTML = `<strong>${dayCount}</strong> on ${dateText}`;
@@ -49,6 +48,16 @@ async function createGitCalendar() {
         tooltip.classList.remove("is-visible");
       });
     }
+  }
+
+  // Function that transforms a date into string abbreviation format (ex: 'Dec 1, 2020')
+  function dateAbbrString(date) {
+    return `${ABBR_MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getFullYear()}`;
+  }
+
+  // Function that transforms a date into string full format (ex: 'December 1')
+  function dateFullString(date) {
+    return `${FULL_MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}`;
   }
 
   // Function that fetches the git calendar, improves its style, add stats and the tooltip on hover
@@ -129,14 +138,15 @@ async function createGitCalendar() {
         }
       }
 
-      const dateStreak = `${FULL_MONTHS[dateStreakBegin.getUTCMonth()]} ${dateStreakBegin.getUTCDate()} - ${FULL_MONTHS[dateStreakEnd.getUTCMonth()]} ${dateStreakEnd.getUTCDate()}`,
-            dateCalendarFull = `${dateString(new Date(calendarDays[0].getAttribute("data-date")))} - ${dateString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")))}`;
+      const calendarDatePeriod = dateAbbrString(new Date(calendarDays[0].getAttribute("data-date")))
+                                 + ' - '
+                                 + dateAbbrString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")));
 
       // Create the first 'contribution-stats' column
       createContribContent({
         first: 'Contributions in the last year',
         second: `${dayCountSum} total`,
-        third: dateCalendarFull,
+        third: calendarDatePeriod,
         firstColumn: true
       });
 
@@ -144,14 +154,14 @@ async function createGitCalendar() {
       createContribContent({
         first: 'Average daily contributions',
         second: Number.parseFloat(dayCountSum / activeDays).toFixed(1),
-        third: dateCalendarFull
+        third: calendarDatePeriod
       });
 
       // Create the third 'contribution-stats' column
       createContribContent({
         first: 'Current streak',
         second: `${streakDays} days`,
-        third: dateStreak
+        third: `${dateFullString(dateStreakBegin)} - ${dateFullString(dateStreakEnd)}`
       });
 
       container.innerHTML = calendar.innerHTML; // Add the calendar to the document
@@ -168,11 +178,6 @@ async function createGitCalendar() {
                                  <span class="contrib-number">${second}</span>
                                  <span class="text-muted">${third}</span>`;
         calendar.appendChild(calendarCol);
-      }
-
-      // Function that transforms a date into string format (ex: 'Dez 1, 2020')
-      function dateString(date) {
-        return `${ABBR_MONTHS[date.getUTCMonth()]} ${date.getUTCDate()}, ${date.getFullYear()}`;
       }
     });
   }
