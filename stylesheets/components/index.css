@@ -565,6 +565,13 @@
     opacity: 0;
     -webkit-transform: scale(1.6);
     transform: scale(1.6); } }
+:root {
+  --color-calendar-graph-day-bg: #f0f0f0;
+  --color-calendar-graph-day-L1-bg: #64fa64;
+  --color-calendar-graph-day-L2-bg: #3cc83c;
+  --color-calendar-graph-day-L3-bg: #1e961e;
+  --color-calendar-graph-day-L4-bg: #006400; }
+
 #modal-git .calendar {
   text-align: center;
   font-family: Helvetica, arial;
@@ -660,33 +667,6 @@
     text-decoration: underline; }
   #modal-git .calendar .float-left {
     float: left; }
-  #modal-git .calendar .day-tooltip {
-    position: absolute;
-    display: none;
-    text-align: center;
-    white-space: nowrap;
-    color: #959da5;
-    font-size: 12px;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 10px;
-    border-radius: 3px;
-    z-index: 99999;
-    pointer-events: none; }
-    #modal-git .calendar .day-tooltip strong {
-      color: #dfe2e5; }
-    #modal-git .calendar .day-tooltip.is-visible {
-      display: block; }
-    #modal-git .calendar .day-tooltip::after {
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      height: 5px;
-      width: 5px;
-      box-sizing: border-box;
-      border: 5px solid transparent;
-      border-top-color: rgba(0, 0, 0, 0.85);
-      margin: 0 0 0 -5px;
-      content: " "; }
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -1129,5 +1109,33 @@ body.modal-active {
         letter-spacing: 0.5px; }
         #technologies .technologies-content .complementary-tech p span {
           font-size: 14px; }
+
+.calendar .day-tooltip {
+  position: absolute;
+  display: none;
+  text-align: center;
+  white-space: nowrap;
+  color: #959da5;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 10px;
+  border-radius: 3px;
+  z-index: 99999;
+  pointer-events: none; }
+  .calendar .day-tooltip strong {
+    color: #dfe2e5; }
+  .calendar .day-tooltip.is-visible {
+    display: block; }
+  .calendar .day-tooltip::after {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.85);
+    margin: 0 0 0 -5px;
+    content: " "; }
 
 /*# sourceMappingURL=index.css.map */
