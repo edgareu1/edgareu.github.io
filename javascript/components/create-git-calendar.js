@@ -116,15 +116,15 @@ function createGitCalendar() {
 
         // Choose the color of the day
         if (dayCount == 0) {
-          dayColor = 'rgba(240, 240, 240)';
+          dayColor = 'var(--color-calendar-graph-day-bg)';
         } else if (dayCount <= 8) {
-          dayColor = 'rgba(100, 250, 100)';
+          dayColor = 'var(--color-calendar-graph-day-L1-bg)';
         } else if (dayCount <= 16) {
-          dayColor = 'rgba(60, 200, 60)';
+          dayColor = 'var(--color-calendar-graph-day-L2-bg)';
         } else if (dayCount <= 24) {
-          dayColor = 'rgba(30, 150, 30)';
+          dayColor = 'var(--color-calendar-graph-day-L3-bg)';
         } else {
-          dayColor = 'rgba(0, 100, 0)';
+          dayColor = 'var(--color-calendar-graph-day-L4-bg)';
         }
 
         // Add colors to the calendar days
