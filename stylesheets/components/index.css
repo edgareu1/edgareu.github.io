@@ -990,6 +990,10 @@ body.modal-active {
           color: gainsboro;
           font-size: 18px;
           font-weight: 400; }
+          #projects .projects-content .project-description h3 span pare:first-child {
+            margin-right: 2px; }
+          #projects .projects-content .project-description h3 span pare:nth-child(2) {
+            margin-left: 2px; }
       #projects .projects-content .project-description h6 {
         font-size: 17px;
         margin: 15px 0 5px; }
