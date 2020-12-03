@@ -38,6 +38,14 @@
           color: gainsboro;
           font-size: 18px;
           font-weight: 400;
+
+          pare:first-child {
+            margin-right: 2px;
+          }
+
+          pare:nth-child(2) {
+            margin-left: 2px;
+          }
         }
       }
 
