@@ -83,11 +83,13 @@
         flex-direction: column;
         color: white;
         font-size: 62px;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
         margin: 0 0 16px; }
       #banner .banner-content .banner-title h2 {
         color: #c8c8c8;
         font-size: 28px;
         line-height: 1.35;
+        text-shadow: 1px 1px 5px black;
         margin: 0; }
       #banner .banner-content .banner-title a {
         font-size: 20px;
@@ -735,8 +737,8 @@ h3 {
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content;
-      padding: 20px 50px;
-      border-bottom: 1px solid gainsboro;
+      padding: 20px 35px 10px;
+      border-bottom: 2px solid rgba(220, 220, 220, 0.5);
       margin: 0 auto 25px; }
     #profile-container #profile-content #curriculum, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
       min-height: -webkit-fit-content;
