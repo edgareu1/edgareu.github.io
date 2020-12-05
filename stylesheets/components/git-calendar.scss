@@ -24,6 +24,20 @@
   max-width: 900px;
   margin: 0;
 
+  .no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    .fa-spinner {
+      font-size: 60px;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+
   .position-relative {
     padding: 5px 10px;
   }
