@@ -24,6 +24,40 @@
   max-width: 900px;
   margin: 0;
 
+  .no-content {
+    // Vendor prefixes 'display'
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    // Vendor prefixes 'align-items'
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    // Vendor prefixes 'justify-content'
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+
+    .fa-spinner {
+      font-size: 60px;
+
+      // Vendor prefixes 'height'
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+
+      // Vendor prefixes 'width'
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      width: fit-content;
+    }
+  }
+
   .position-relative {
     padding: 5px 10px;
   }

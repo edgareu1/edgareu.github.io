@@ -15,7 +15,6 @@ animateFooter();
 animateGitModal();
 animateNavbar();
 animatePillBar();
-createGitCalendar();
 typeBannerCode();
 
 const canvas = document.getElementById('tech-canvas'),
@@ -30,3 +29,5 @@ window.addEventListener('resize', () => {
   updateDimensionsCanvas(canvas, profileContainer);
   updateDimensionsNavbar(navbarLinksList, navbarMoreLink);
 });
+
+createGitCalendar();
