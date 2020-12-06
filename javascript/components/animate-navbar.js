@@ -72,7 +72,7 @@ function animateNavbar() {
         } else {
           linksList.classList.remove('show');
         }
-      } else if (linksList.classList.contains('show') && !event.target.classList.contains('btn-nav')) {
+      } else if (linksList.classList.contains('show') && !event.target.classList.contains('nav-link')) {
         linksList.classList.remove('show');
       }
     });
