@@ -63,12 +63,16 @@ function animateNavbar() {
 
   // Function that animates the 'navbar-show-more' button
   function animateShowMore() {
-    moreLink.addEventListener('click' , (event) => {
-      event.preventDefault();
+    document.addEventListener('click', (event) => {
+      if (event.target.classList.contains('nav-show')) {
+        event.preventDefault();
 
-      if (!linksList.classList.contains('show')) {
-        linksList.classList.add('show');
-      } else {
+        if (!linksList.classList.contains('show')) {
+          linksList.classList.add('show');
+        } else {
+          linksList.classList.remove('show');
+        }
+      } else if (linksList.classList.contains('show') && !event.target.classList.contains('btn-nav')) {
         linksList.classList.remove('show');
       }
     });
