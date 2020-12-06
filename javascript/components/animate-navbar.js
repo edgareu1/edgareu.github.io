@@ -7,13 +7,13 @@ function animateNavbar() {
         moreLink = document.querySelector('.navbar-show-more');   // Navbar show-more button
 
   smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
-  refreshNavbarPosition();  // Refresh the navbar active anchor
-  animateShowMore();        // Animate the show-more button
+  refreshActiveElement();   // Refresh the navbar active element
+  animateShowMore();        // Animate the show-more feature
   updateDimensionsNavbar(linksList, moreLink);  // Update the navbar dimensions
 
-  // If the user scrolls his device window, refresh the navbar active anchor
+  // If the user scrolls his device window, refresh the navbar active element
   document.addEventListener('scroll', () => {
-    refreshNavbarPosition();
+    refreshActiveElement();
   });
 
   // Function that makes the navbar anchors scroll smoothly to their respective destination
@@ -38,8 +38,8 @@ function animateNavbar() {
     }
   }
 
-  // Function that refreshes the navbar active anchor
-  function refreshNavbarPosition() {
+  // Function that refreshes the navbar active element
+  function refreshActiveElement() {
     // Get the user current window position and the navbar and banner elements height
     const currentPos = window.scrollY,
           navbarHeight = 50,
@@ -61,7 +61,7 @@ function animateNavbar() {
     }
   }
 
-  // Function that animates the 'navbar-show-more' button
+  // Function that animates the show-more feature
   function animateShowMore() {
     document.addEventListener('click', (event) => {
       if (event.target.classList.contains('nav-show')) {
