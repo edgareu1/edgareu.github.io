@@ -342,14 +342,14 @@
     width: -moz-fit-content;
     width: fit-content;
     max-width: 920px;
-    padding: 20px 35px 15px 105px;
+    padding: 20px 30px 15px 110px;
     border-radius: 5px;
     margin: 20px auto 0; }
     #curriculum .curriculum-content .cv-element {
       position: relative;
       padding-bottom: 20px;
       border-left: 3px solid white;
-      margin-bottom: 30px; }
+      margin-bottom: 40px; }
       #curriculum .curriculum-content .cv-element.level-one {
         padding-bottom: 40px; }
       #curriculum .curriculum-content .cv-element.level-two {
@@ -410,7 +410,8 @@
             animation: rotate 3s linear infinite; }
     #curriculum .curriculum-content .cv-text {
       text-align: center;
-      margin-left: -70px; }
+      margin-left: -70px;
+      margin-bottom: 45px; }
       #curriculum .curriculum-content .cv-text p {
         color: gainsboro;
         font-size: 16px;
@@ -447,7 +448,7 @@
     transform: rotate(360deg); } }
 @media (max-width: 800px) {
   #curriculum .curriculum-content {
-    padding-left: 95px; }
+    padding-left: 100px; }
     #curriculum .curriculum-content .cv-element {
       padding-bottom: 16px;
       border-left-width: 2px; }
