@@ -134,54 +134,70 @@
 
           <div class="projects-content">
             <ul class="pill-items">
-              <li class="pill-item" data-target="nav-trip">Trip Finder</li>
-              <li class="pill-item" data-target="nav-portfolio">Portfolio</li>
-              <li class="pill-item active" data-target="nav-hook">Hook</li>
               <li class="pill-item" data-target="nav-artisan">Artisan</li>
+              <li class="pill-item active" data-target="nav-hook">Hook</li>
+              <li class="pill-item" data-target="nav-portfolio">Portfolio</li>
+              <li class="pill-item" data-target="nav-trip">Trip Finder</li>
             </ul>
 
             <div class="tab-items">
-              <div class="tab-item" id="nav-trip">
-                <img src="./images/projects/trip-finder/coming-soon.png" alt="Coming soon" class="single-img">
+              <div class="tab-item" id="nav-artisan">
+                <div id="carousel-artisan" class="carousel">
+                  <ol class="carousel-indicators">
+                    <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
+                    <li data-target="carousel-artisan" data-slide-to="1"></li>
+                    <li data-target="carousel-artisan" data-slide-to="2"></li>
+                  </ol>
 
-                <div class="project-description scrollable-gray">
-                  <h3>Trip Finder <span><pare>(</pare>Nov 2020 - Present<pare>)</pare></span></h3>
+                  <div class="carousel-inner">
+                    <div class="carousel-item active" slide="0">
+                      <img src="images/projects/artisan/home-page.png" alt="Home page">
+                      <div class="carousel-caption">
+                        <h5>Home page</h5>
+                      </div>
+                    </div>
 
-                  <h6>Summary</h6>
-                  <p>A web platform that fetches data from airline and housing Web APIs in order to find the best travel packages avaliable.</p>
+                    <div class="carousel-item" slide="1">
+                      <img src="images/projects/artisan/products-show.png" alt="Products#show">
+                      <div class="carousel-caption">
+                        <h5>Products<span>#</span>show</h5>
+                      </div>
+                    </div>
 
-                  <h6>Context</h6>
-                  <p>A project of mine still in development...</p>
+                    <div class="carousel-item" slide="2">
+                      <img src="images/projects/artisan/orders-index.png" alt="Orders#index">
+                      <div class="carousel-caption">
+                        <h5>Orders<span>#</span>index</h5>
+                      </div>
+                    </div>
+                  </div>
 
-                  <h6>Technologies</h6>
-                  <p>Ruby on Rails, JavaScript, HTML, CSS, Web API (fetch), Web Scraping</p>
+                  <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
+                    <i class="fas fa-angle-left"></i>
+                  </div>
 
-                  <div class="anchors-container">
-                    <a href="https://github.com/edgareu1/rails-trip-finder" target="_blank">
-                      <i class="fab fa-github"></i>
-                      GitHub repository
-                    </a>
+                  <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
+                    <i class="fas fa-angle-right"></i>
                   </div>
                 </div>
-              </div>
-
-              <div class="tab-item" id="nav-portfolio">
-                <img src="./images/projects/portfolio/intro.png" alt="Introduction" class="single-img">
 
                 <div class="project-description scrollable-gray">
-                  <h3>Portfolio <span><pare>(</pare>Nov 2020<pare>)</pare></span></h3>
+                  <h3>Artisan <span><pare>(</pare>Jun - Aug 2020<pare>)</pare></span></h3>
 
                   <h6>Summary</h6>
-                  <p>My portfolio website (this one), which I created from scratch without any external dependencies.</p>
+                  <p>An online marketplace for craftwork.</p>
+
+                  <h6>Context</h6>
+                  <p>Le Wagon bootcamp group project which, after presenting, I took the liberty to refactor/clean and to add more advanced features.</p>
 
                   <h6>Technologies</h6>
-                  <p>JavaScript, HTML, CSS</p>
+                  <p>Ruby on Rails, JavaScript, HTML, CSS, AJAX, Stripe, Background Jobs</p>
 
                   <h6>My main features</h6>
-                  <p>Custom made navbar, carousel and pill-bar; GitHub contributions calendar; background running words animation.</p>
+                  <p>Stripe's payment system; simulation of orders delivery with Background Jobs; autocomplete search bar.</p>
 
                   <div class="anchors-container">
-                    <a href="https://github.com/edgareu1/edgareu1.github.io" target="_blank">
+                    <a href="https://github.com/JulieMariano/Artisan" target="_blank">
                       <i class="fab fa-github"></i>
                       GitHub repository
                     </a>
@@ -277,13 +293,15 @@
                   <p>Machine learning algorithm that predicts the best fishing locations avaliable; manipulation of location and weather data from Web APIs; Web API interface.</p>
 
                   <div class="anchors-container">
-                    <a href="https://github.com/edgareu1/rails-hook" target="_blank" style="display: inline;">
+                    <a href="https://www.hookeu.com" target="_blank">
                       <i class="fas fa-desktop"></i>
                       Website
                     </a>
-                    <span>demo_account: { username: 'demo', password: 123456 }</span>
 
-                    <a href="https://github.com/edgareu1/rails-hook" target="_blank" style="margin-top: 2px;">
+                    <li>demo_account: { username: 'demo', password: 123456 }</li>
+                    <li>the first request may take a couple of seconds</li>
+
+                    <a href="https://github.com/edgareu1/rails-hook" target="_blank" style="margin-top: 5px;">
                       <i class="fab fa-github"></i>
                       GitHub repository
                     </a>
@@ -291,63 +309,47 @@
                 </div>
               </div>
 
-              <div class="tab-item" id="nav-artisan">
-                <div id="carousel-artisan" class="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
-                    <li data-target="carousel-artisan" data-slide-to="1"></li>
-                    <li data-target="carousel-artisan" data-slide-to="2"></li>
-                  </ol>
-
-                  <div class="carousel-inner">
-                    <div class="carousel-item active" slide="0">
-                      <img src="images/projects/artisan/home-page.png" alt="Home page">
-                      <div class="carousel-caption">
-                        <h5>Home page</h5>
-                      </div>
-                    </div>
-
-                    <div class="carousel-item" slide="1">
-                      <img src="images/projects/artisan/products-show.png" alt="Products#show">
-                      <div class="carousel-caption">
-                        <h5>Products<span>#</span>show</h5>
-                      </div>
-                    </div>
-
-                    <div class="carousel-item" slide="2">
-                      <img src="images/projects/artisan/orders-index.png" alt="Orders#index">
-                      <div class="carousel-caption">
-                        <h5>Orders<span>#</span>index</h5>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
-                    <i class="fas fa-angle-left"></i>
-                  </div>
-
-                  <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
-                    <i class="fas fa-angle-right"></i>
-                  </div>
-                </div>
+              <div class="tab-item" id="nav-portfolio">
+                <img src="./images/projects/portfolio/intro.png" alt="Introduction" class="single-img">
 
                 <div class="project-description scrollable-gray">
-                  <h3>Artisan <span><pare>(</pare>Jun - Aug 2020<pare>)</pare></span></h3>
+                  <h3>Portfolio <span><pare>(</pare>Nov 2020<pare>)</pare></span></h3>
 
                   <h6>Summary</h6>
-                  <p>An online marketplace for craftwork.</p>
-
-                  <h6>Context</h6>
-                  <p>Le Wagon bootcamp group project which, after presenting, I took the liberty to refactor/clean and to add more advanced features.</p>
+                  <p>My online portfolio (this one), which I created from scratch without any external dependencies.</p>
 
                   <h6>Technologies</h6>
-                  <p>Ruby on Rails, JavaScript, HTML, CSS, AJAX, Stripe, Background Jobs</p>
+                  <p>JavaScript, HTML, CSS</p>
 
                   <h6>My main features</h6>
-                  <p>Stripe's payment system; simulation of orders delivery with Background Jobs; autocomplete search bar.</p>
+                  <p>Custom made navbar, carousel and pill-bar; GitHub contributions calendar; background running words animation.</p>
 
                   <div class="anchors-container">
-                    <a href="https://github.com/JulieMariano/Artisan" target="_blank">
+                    <a href="https://github.com/edgareu1/edgareu1.github.io" target="_blank">
+                      <i class="fab fa-github"></i>
+                      GitHub repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-item" id="nav-trip">
+                <img src="./images/projects/trip-finder/coming-soon.png" alt="Coming soon" class="single-img">
+
+                <div class="project-description scrollable-gray">
+                  <h3>Trip Finder <span><pare>(</pare>Nov 2020 - Present<pare>)</pare></span></h3>
+
+                  <h6>Summary</h6>
+                  <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages avaliable.</p>
+
+                  <h6>Context</h6>
+                  <p>A project of mine still in development...</p>
+
+                  <h6>Technologies</h6>
+                  <p>Ruby on Rails, JavaScript, HTML, CSS, Web API (fetch), Web Scraping</p>
+
+                  <div class="anchors-container">
+                    <a href="https://github.com/edgareu1/rails-trip-finder" target="_blank">
                       <i class="fab fa-github"></i>
                       GitHub repository
                     </a>
@@ -441,7 +443,7 @@
               </div>
             </div>
 
-            <div class="cv-text" style="margin-bottom: 35px;">
+            <div class="cv-text">
               <p>My plan was to do a gap-year and travel Europe✈️ but then Covid-19 appeared😷</p>
               <p>I then decided to change my life and learn how to code🚀</p>
             </div>

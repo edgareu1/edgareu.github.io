@@ -10,7 +10,7 @@
     width: fit-content;
 
     max-width: 920px;
-    padding: 20px 35px 15px 105px;
+    padding: 20px 30px 15px 110px;
     border-radius: 5px;
     margin: 20px auto 0;
 
@@ -18,7 +18,7 @@
       position: relative;
       padding-bottom: 20px;
       border-left: 3px solid white;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
 
       &.level-one {
         padding-bottom: 40px;
@@ -125,6 +125,7 @@
     .cv-text {
       text-align: center;
       margin-left: -70px;
+      margin-bottom: 45px;
 
       p {
         color: gainsboro;
@@ -180,7 +181,7 @@
 
 @media(max-width: 800px) {
   #curriculum .curriculum-content {
-    padding-left: 95px;
+    padding-left: 100px;
 
     .cv-element {
       padding-bottom: 16px;
