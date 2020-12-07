@@ -1041,10 +1041,9 @@ body.modal-active {
             text-decoration: underline; }
           #projects .projects-content .project-description .anchors-container a i {
             margin-right: 4px; }
-        #projects .projects-content .project-description .anchors-container span {
-          color: gainsboro;
-          font-size: 12px;
-          margin-left: 5px; }
+        #projects .projects-content .project-description .anchors-container li {
+          font-size: 11px;
+          padding-left: 25px; }
 
 @media (max-width: 800px) {
   #projects .projects-content .project-description {
@@ -1066,9 +1065,9 @@ body.modal-active {
         font-size: 13px; }
         #projects .projects-content .project-description .anchors-container a i {
           margin-right: 3px; }
-      #projects .projects-content .project-description .anchors-container span {
-        font-size: 10.5px;
-        margin-left: 4px; } }
+      #projects .projects-content .project-description .anchors-container li {
+        font-size: 10px;
+        padding-left: 20px; } }
 .scrollable-gray::-webkit-scrollbar {
   width: 10px;
   height: 10px; }
