@@ -88,9 +88,17 @@
           }
         }
 
-        li {
+        span {
+          color: gainsboro;
           font-size: 11px;
-          padding-left: 25px;
+
+          pare:first-child {
+            margin-right: 1px;
+          }
+
+          pare:nth-child(2) {
+            margin-left: 1px;
+          }
         }
       }
     }
@@ -133,9 +141,8 @@
         }
       }
 
-      li {
-        font-size: 10px;
-        padding-left: 20px;
+      span {
+        font-size: 9.5px;
       }
     }
   }
