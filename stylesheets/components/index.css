@@ -570,9 +570,9 @@
     transform: scale(1.6); } }
 :root {
   --color-calendar-graph-day-bg: #f0f0f0;
-  --color-calendar-graph-day-L1-bg: #64fa64;
-  --color-calendar-graph-day-L2-bg: #3cc83c;
-  --color-calendar-graph-day-L3-bg: #1e961e;
+  --color-calendar-graph-day-L1-bg: #32ff32;
+  --color-calendar-graph-day-L2-bg: #32c832;
+  --color-calendar-graph-day-L3-bg: #199619;
   --color-calendar-graph-day-L4-bg: #006400; }
 
 #modal-git .calendar {
@@ -1041,9 +1041,13 @@ body.modal-active {
             text-decoration: underline; }
           #projects .projects-content .project-description .anchors-container a i {
             margin-right: 4px; }
-        #projects .projects-content .project-description .anchors-container li {
-          font-size: 11px;
-          padding-left: 25px; }
+        #projects .projects-content .project-description .anchors-container span {
+          color: gainsboro;
+          font-size: 11px; }
+          #projects .projects-content .project-description .anchors-container span pare:first-child {
+            margin-right: 1px; }
+          #projects .projects-content .project-description .anchors-container span pare:nth-child(2) {
+            margin-left: 1px; }
 
 @media (max-width: 800px) {
   #projects .projects-content .project-description {
@@ -1065,9 +1069,8 @@ body.modal-active {
         font-size: 13px; }
         #projects .projects-content .project-description .anchors-container a i {
           margin-right: 3px; }
-      #projects .projects-content .project-description .anchors-container li {
-        font-size: 10px;
-        padding-left: 20px; } }
+      #projects .projects-content .project-description .anchors-container span {
+        font-size: 9.5px; } }
 .scrollable-gray::-webkit-scrollbar {
   width: 10px;
   height: 10px; }
