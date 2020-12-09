@@ -1004,7 +1004,7 @@ body.modal-active {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding: 10px 15px 20px;
+      padding: 10px 15px;
       overflow-y: scroll; }
       #projects .projects-content .project-description h3 {
         text-align: center;
