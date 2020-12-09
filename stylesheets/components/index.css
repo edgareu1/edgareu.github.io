@@ -569,11 +569,11 @@
     -webkit-transform: scale(1.6);
     transform: scale(1.6); } }
 :root {
-  --color-calendar-graph-day-bg: #f0f0f0;
-  --color-calendar-graph-day-L1-bg: #32ff32;
-  --color-calendar-graph-day-L2-bg: #32c832;
-  --color-calendar-graph-day-L3-bg: #199619;
-  --color-calendar-graph-day-L4-bg: #006400; }
+  --color-calendar-graph-day-bg: rgba(240, 240, 240, 1);
+  --color-calendar-graph-day-L1-bg: rgba(70, 255, 70, 1);
+  --color-calendar-graph-day-L2-bg: rgba(40, 200, 40, 1);
+  --color-calendar-graph-day-L3-bg: rgba(20, 150, 20, 1);
+  --color-calendar-graph-day-L4-bg: rgba(0, 100, 0, 1); }
 
 #modal-git .calendar {
   text-align: center;
