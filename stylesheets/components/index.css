@@ -344,7 +344,7 @@
     max-width: 920px;
     padding: 20px 30px 15px 110px;
     border-radius: 5px;
-    margin: 20px auto 0; }
+    margin: 0 auto; }
     #curriculum .curriculum-content .cv-element {
       position: relative;
       padding-bottom: 20px;
@@ -1091,7 +1091,7 @@ body.modal-active {
     width: -moz-fit-content;
     width: fit-content;
     max-width: 750px;
-    padding: 20px 30px 30px;
+    padding: 30px;
     border-radius: 5px;
     margin: 0 auto; }
     #technologies .technologies-content li .tech-title {
