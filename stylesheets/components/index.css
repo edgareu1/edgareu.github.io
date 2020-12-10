@@ -1126,8 +1126,8 @@ body.modal-active {
       text-align: justify;
       word-spacing: 1.5px;
       color: gainsboro;
-      font-size: 18px;
-      margin: 30px 0 0 10px; }
+      font-size: 17px;
+      margin: 30px 10px 0; }
       #technologies .technologies-content .complementary-tech h4 {
         display: inline;
         font-size: 20px;
@@ -1135,6 +1135,7 @@ body.modal-active {
         margin: 0 5px 0 -10px; }
       #technologies .technologies-content .complementary-tech p {
         display: inline;
+        line-height: 28px;
         letter-spacing: 0.5px; }
         #technologies .technologies-content .complementary-tech p span {
           font-size: 14px; }
