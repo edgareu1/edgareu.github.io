@@ -69,11 +69,11 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between; }
-    #banner .banner-content .banner-title {
+    #banner .banner-content .banner-text {
       max-width: 650px;
       padding: 0;
       margin: 150px 75px 0 5%; }
-      #banner .banner-content .banner-title h1 {
+      #banner .banner-content .banner-text h1 {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -85,13 +85,13 @@
         font-size: 62px;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
         margin: 0 0 16px; }
-      #banner .banner-content .banner-title h2 {
+      #banner .banner-content .banner-text h2 {
         color: #c8c8c8;
         font-size: 28px;
         line-height: 1.35;
         text-shadow: 1px 1px 5px black;
         margin: 0; }
-      #banner .banner-content .banner-title a {
+      #banner .banner-content .banner-text a {
         font-size: 20px;
         max-width: 300px;
         padding: 2px 0;
@@ -110,13 +110,13 @@
       overflow: scroll; }
 
 @media (max-width: 1500px) {
-  #banner .banner-content .banner-title {
+  #banner .banner-content .banner-text {
     max-width: 600px; }
-    #banner .banner-content .banner-title h1 {
+    #banner .banner-content .banner-text h1 {
       font-size: 52px; }
-    #banner .banner-content .banner-title h2 {
+    #banner .banner-content .banner-text h2 {
       font-size: 24px; }
-    #banner .banner-content .banner-title a {
+    #banner .banner-content .banner-text a {
       font-size: 16px;
       max-width: 240px;
       padding: 0; }
@@ -125,14 +125,14 @@
     #banner .banner-content .banner-code-container p {
       font-size: 11.5px; } }
 @media (max-width: 1300px) {
-  #banner .banner-content .banner-title {
+  #banner .banner-content .banner-text {
     max-width: 475px; }
-    #banner .banner-content .banner-title h1 {
+    #banner .banner-content .banner-text h1 {
       font-size: 46px;
       margin-bottom: 12px; }
-    #banner .banner-content .banner-title h2 {
+    #banner .banner-content .banner-text h2 {
       font-size: 20px; }
-    #banner .banner-content .banner-title a {
+    #banner .banner-content .banner-text a {
       font-size: 15px;
       max-width: 220px;
       margin-top: 24px; }
@@ -144,15 +144,15 @@
   #banner .banner-content .banner-code-container p {
     font-size: 10px; } }
 @media (max-width: 950px) {
-  #banner .banner-content .banner-title {
+  #banner .banner-content .banner-text {
     max-width: 600px;
     margin-right: 0; }
-    #banner .banner-content .banner-title h1 {
+    #banner .banner-content .banner-text h1 {
       font-size: 52px;
       margin-bottom: 16px; }
-    #banner .banner-content .banner-title h2 {
+    #banner .banner-content .banner-text h2 {
       font-size: 23.5px; }
-    #banner .banner-content .banner-title a {
+    #banner .banner-content .banner-text a {
       font-size: 16px;
       max-width: 240px;
       margin-top: 32px; }
