@@ -747,12 +747,12 @@ h3 {
 #profile-container {
   position: relative;
   width: 100%; }
-  #profile-container #profile-content, #profile-container canvas {
+  #profile-container canvas, #profile-container main {
     position: absolute; }
-  #profile-container #profile-content {
+  #profile-container main {
     width: 100%;
     padding-bottom: 100px; }
-    #profile-container #profile-content .section-title {
+    #profile-container main .section-title {
       color: white;
       font-size: 40px;
       width: -webkit-fit-content;
@@ -761,7 +761,7 @@ h3 {
       padding: 20px 35px 10px;
       border-bottom: 2px solid rgba(220, 220, 220, 0.5);
       margin: 0 auto 25px; }
-    #profile-container #profile-content #curriculum, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
+    #profile-container main #curriculum, #profile-container main #projects, #profile-container main #technologies {
       min-height: -webkit-fit-content;
       min-height: -moz-fit-content;
       min-height: fit-content;

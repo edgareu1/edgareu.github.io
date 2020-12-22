@@ -12,7 +12,7 @@ function techWordsAnimation(canvasElement, profileContainer) {
   const numTech = objLength(techList),       // Number of technologies in the 'techList'
         helperArray = randomArray(numTech);  // Array to help the vertical positioning of the words
 
-  // Update the canvas dimensions to fill the whole 'profile-content'
+  // Update the canvas dimensions to fill the whole 'main' element
   updateDimensionsCanvas(canvasElement, profileContainer);
 
 	if (canvasElement.getContext) {

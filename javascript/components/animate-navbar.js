@@ -26,7 +26,7 @@ function animateNavbar() {
         event.preventDefault(); // Prevent the anchor default click behavior
 
         // Get the anchor destination distance from the top of the page
-        // Banner height (+) distance of the section from the top of the 'profile-content' element (-) Navbar height
+        // Banner height (+) distance of the section from the top of the 'main' element (-) Navbar height
         const offsetTop = document.getElementById('banner').offsetHeight + document.querySelector(anchorRef).offsetTop - 50;
 
         // Smoothly scroll to the section
