@@ -21,11 +21,11 @@
 
   <body>
     <!-- Navbar -->
-    <div id="navbar">
+    <nav>
       <a href="#" data-target="#banner" class="btn-nav">Edgar</a>
 
-      <div class="navbar-content">
-        <ul class="navbar-links">
+      <div class="nav-content">
+        <ul class="nav-links">
           <li class="nav-link">
             <a href="#" data-target="#technologies" class="nav-link btn-nav">Technologies</a>
           </li>
@@ -39,43 +39,49 @@
           </li>
         </ul>
 
-        <a href="#" class="nav-show navbar-show-more">
+        <a href="#" class="nav-show nav-show-more">
           <i class="nav-show fas fa-bars"></i>
         </a>
       </div>
-    </div>
+    </nav>
 
     <!-- Banner -->
-    <div id="banner">
+    <section id="banner">
+      <!-- Image in a separate 'div' in order for its 'opacity' property to not affect any of the
+      other banner children elements -->
       <div class="banner-image"></div>
 
       <div class="banner-content">
-        <div class="banner-title">
-          <h1>
-            <span>Hi,</span>
-            <span>I'm Edgar,</span>
-            <span>a web developer.</span>
-          </h1>
+        <div class="banner-text">
+          <header>
+            <h1>
+              Hi,<br>
+              I'm Edgar,<br>
+              a web developer.
+            </h1>
 
-          <h2>My path began in finance, but in 2020 I decided to change my life and learn how to code.</h2>
+            <h2>My path began in finance, but in 2020 I decided to change my life and learn how to code.</h2>
+          </header>
 
           <a href="#" class="btn-modal" data-target="modal-git">CONTRIBUTION ACTIVITY</a>
         </div>
 
         <div class="banner-code-container scrollable-gray"></div>
       </div>
-    </div>
+    </section>
 
     <!-- Profile container -->
     <div id="profile-container">
       <!-- Background running words animation -->
       <canvas id="tech-canvas"></canvas>
 
-      <!-- Profile Content -->
-      <div id="profile-content">
+      <!-- Main Content -->
+      <main>
         <!-- Technologies section -->
-        <div id="technologies">
-          <h2 class="section-title" style="margin-top: 30px;">Technologies</h2>
+        <section id="technologies">
+          <header>
+            <h2 class="section-title" style="margin-top: 30px;">Technologies</h2>
+          </header>
 
           <ul class="technologies-content">
             <li>
@@ -123,11 +129,13 @@
               <p>Web API <span>(integration and building)</span>, AJAX, Git/GitHub, SQL, jQuery, REGEX, Bootstrap, Stripe, Cloudinary...</p>
             </div>
           </ul>
-        </div>
+        </section>
 
         <!-- Projects section -->
-        <div id="projects">
-          <h2 class="section-title">Main Projects</h2>
+        <section id="projects">
+          <header>
+            <h2 class="section-title">Main Projects</h2>
+          </header>
 
           <div class="projects-content">
             <!-- Pill-bar -->
@@ -360,11 +368,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Curriculum Section -->
-        <div id="curriculum">
-          <h2 class="section-title">Curriculum</h2>
+        <section id="curriculum">
+          <header>
+            <h2 class="section-title">Curriculum</h2>
+          </header>
 
           <div class="curriculum-content">
 
@@ -487,11 +497,11 @@
               <p>Since then I kept improving my skill set while also working on my personal projects🚀</p>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </main>
 
       <!-- Footer -->
-      <div class="footer">
+      <footer>
         <ul class="contact-links">
           <li>
             <a href="https://www.linkedin.com/in/edgareu1" target="_blank" title="LinkedIn">
@@ -515,7 +525,7 @@
         <p class="footer-copyrights">
           Edgar Marques <i class="far fa-copyright"></i> 2020
         </p>
-      </div>
+      </footer>
     </div>
 
     <!-- GitHub calendar modal -->

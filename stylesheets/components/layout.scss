@@ -71,11 +71,11 @@ h3 {
   position: relative;
   width: 100%;
 
-  #profile-content, canvas {
+  canvas, main {
     position: absolute;
   }
 
-  #profile-content {
+  main {
     width: 100%;
     padding-bottom: 100px; // Footer height
 

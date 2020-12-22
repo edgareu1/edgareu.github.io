@@ -1,4 +1,4 @@
-#navbar {
+nav {
   // Vendor prefixes 'display'
   display: -webkit-box;
   display: -ms-flexbox;
@@ -19,10 +19,10 @@
   padding: 0;
   margin: 0;
 
-  .navbar-content {
+  .nav-content {
     position: relative;
 
-    .navbar-links {
+    .nav-links {
       // Vendor prefixes 'display'
       display: -webkit-box;
       display: -ms-flexbox;
@@ -60,7 +60,7 @@
       }
     }
 
-    .navbar-show-more {
+    .nav-show-more {
       display: none;
 
       // Vendor prefixes 'align-items'

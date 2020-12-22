@@ -1,10 +1,10 @@
-// Function that updates the Canvas dimensions to fill the whole 'profile-content'
+// Function that updates the Canvas dimensions to fill the whole 'main' element
 // Arguments:
 //   canvas:            Canvas element that will have its dimensions updated
 //   profileContainer:  Canvas container that will have its height updated
 function updateDimensionsCanvas(canvasElement, profileContainer) {
-  // Get the profile-content element dimensions (which the canvas should mimic)
-  let profileContent = document.getElementById('profile-content'),
+  // Get the 'main' element dimensions (which the canvas should mimic)
+  let profileContent = document.querySelector('main'),
       canvasWidth = profileContent.offsetWidth,
       canvasHeight = profileContent.offsetHeight;
 
