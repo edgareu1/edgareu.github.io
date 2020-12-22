@@ -873,7 +873,7 @@ body.modal-active {
     -webkit-transform: scale(0);
     -ms-transform: scale(0);
     transform: scale(0); } }
-#navbar {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -889,16 +889,16 @@ body.modal-active {
   width: 100%;
   padding: 0;
   margin: 0; }
-  #navbar .navbar-content {
+  nav .nav-content {
     position: relative; }
-    #navbar .navbar-content .navbar-links {
+    nav .nav-content .nav-links {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       list-style: none;
       padding: 0;
       margin: 0; }
-      #navbar .navbar-content .navbar-links.content-hidden {
+      nav .nav-content .nav-links.content-hidden {
         position: absolute;
         top: 100%;
         right: 0;
@@ -908,14 +908,14 @@ body.modal-active {
         -ms-flex-direction: column;
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0.75); }
-        #navbar .navbar-content .navbar-links.content-hidden.show {
+        nav .nav-content .nav-links.content-hidden.show {
           display: -webkit-box;
           display: -ms-flexbox;
           display: flex; }
-      #navbar .navbar-content .navbar-links li {
+      nav .nav-content .nav-links li {
         padding: 0;
         margin: 0; }
-    #navbar .navbar-content .navbar-show-more {
+    nav .nav-content .nav-show-more {
       display: none;
       -webkit-box-align: center;
       -ms-flex-align: center;
@@ -925,7 +925,7 @@ body.modal-active {
       text-decoration: none;
       height: 100%;
       padding: 0 25px; }
-      #navbar .navbar-content .navbar-show-more:hover {
+      nav .nav-content .nav-show-more:hover {
         color: white;
         text-decoration: none; }
 

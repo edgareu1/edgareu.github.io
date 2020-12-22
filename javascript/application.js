@@ -19,8 +19,8 @@ typeBannerCode();
 
 const canvas = document.getElementById('tech-canvas'),
       profileContainer = document.getElementById('profile-container'),
-      navbarLinksList = document.querySelector('.navbar-links'),
-      navbarMoreLink = document.querySelector('.navbar-show-more');
+      navbarLinksList = document.querySelector('.nav-links'),
+      navbarMoreLink = document.querySelector('.nav-show-more');
 
 techWordsAnimation(canvas, profileContainer);  // Create the background canvas animation
 

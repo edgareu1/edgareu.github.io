@@ -2,9 +2,9 @@ import { updateDimensionsNavbar } from './update-dimensions-navbar.js'
 
 // Function that animates the navbar
 function animateNavbar() {
-  const anchors = document.querySelectorAll("#navbar .btn-nav"),  // Navbar anchors
-        linksList = document.querySelector('.navbar-links'),      // Navbar links list
-        moreLink = document.querySelector('.navbar-show-more');   // Navbar show-more button
+  const anchors = document.querySelectorAll('nav .btn-nav'),  // Navbar anchors
+        linksList = document.querySelector('.nav-links'),     // Navbar links list
+        moreLink = document.querySelector('.nav-show-more');  // Navbar show-more button
 
   smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
   refreshActiveElement();   // Refresh the navbar active element
