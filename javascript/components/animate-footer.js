@@ -1,6 +1,6 @@
 // Function that animates the footer
 function animateFooter() {
-  const footerAnchors = document.querySelectorAll('.footer a');
+  const footerAnchors = document.querySelectorAll('footer a');
 
   // For each of the anchors...
   for (const anchor of footerAnchors) {

@@ -490,7 +490,7 @@
       #curriculum .curriculum-content .cv-text p {
         font-size: 14.5px;
         margin: 4px 0; } }
-.footer {
+footer {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -509,7 +509,7 @@
   width: 100%;
   padding: 10px 0;
   margin: 0; }
-  .footer .contact-links {
+  footer .contact-links {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -519,7 +519,7 @@
     width: 250px;
     padding: 0;
     margin: 0; }
-    .footer .contact-links a {
+    footer .contact-links a {
       position: relative;
       display: block;
       text-decoration: none;
@@ -527,7 +527,7 @@
       height: 50px;
       width: 50px;
       border-radius: 50%; }
-      .footer .contact-links a::before {
+      footer .contact-links a::before {
         position: absolute;
         top: 5%;
         left: 5%;
@@ -537,17 +537,17 @@
         border: 1px solid white;
         border-radius: 50%;
         content: ""; }
-      .footer .contact-links a.splash-animation::before {
+      footer .contact-links a.splash-animation::before {
         -webkit-animation: splash 0.4s ease;
         animation: splash 0.4s ease; }
-      .footer .contact-links a img {
+      footer .contact-links a img {
         position: absolute;
         top: 15%;
         left: 15%;
         height: 70%;
         width: 70%;
         margin: 0; }
-  .footer .footer-copyrights {
+  footer .footer-copyrights {
     margin: 0 0 0 30px; }
 
 @-webkit-keyframes splash {
