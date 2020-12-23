@@ -1085,7 +1085,6 @@ nav {
 #technologies {
   padding-bottom: 80px; }
   #technologies .technologies-content {
-    list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -1094,34 +1093,39 @@ nav {
     padding: 30px;
     border-radius: 5px;
     margin: 0 auto; }
-    #technologies .technologies-content li .tech-title {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: end;
-      -ms-flex-align: end;
-      align-items: flex-end;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      color: gainsboro;
-      font-family: "PT Sans", sans-serif;
-      padding: 0 10px 0 5px;
-      margin-top: 30px; }
-      #technologies .technologies-content li .tech-title h3 {
-        margin: 0; }
-    #technologies .technologies-content li .progress-bar-container {
-      display: block;
-      position: relative;
-      background: #505050;
-      height: 10px;
+    #technologies .technologies-content .progress-bars-list {
+      list-style: none;
       width: 100%;
-      border-radius: 5px;
-      margin-top: 10px; }
-      #technologies .technologies-content li .progress-bar-container .progress-bar {
-        position: absolute;
-        height: 100%;
-        border-radius: 5px; }
+      padding: 0;
+      margin: 0; }
+      #technologies .technologies-content .progress-bars-list .tech-title {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        color: gainsboro;
+        font-family: "PT Sans", sans-serif;
+        padding: 0 10px 0 5px;
+        margin-top: 30px; }
+        #technologies .technologies-content .progress-bars-list .tech-title h3 {
+          margin: 0; }
+      #technologies .technologies-content .progress-bars-list .progress-bar-container {
+        display: block;
+        position: relative;
+        background: #505050;
+        height: 10px;
+        width: 100%;
+        border-radius: 5px;
+        margin-top: 10px; }
+        #technologies .technologies-content .progress-bars-list .progress-bar-container .progress-bar {
+          position: absolute;
+          height: 100%;
+          border-radius: 5px; }
     #technologies .technologies-content .complementary-tech {
       text-align: justify;
       word-spacing: 1.5px;

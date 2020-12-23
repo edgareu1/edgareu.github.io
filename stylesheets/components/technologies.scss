@@ -2,7 +2,6 @@
   padding-bottom: 80px;
 
   .technologies-content {
-    list-style: none;
     background-color: rgba(0, 0, 0, 0.75);
 
     // Vendor prefixes 'width'
@@ -15,7 +14,12 @@
     border-radius: 5px;
     margin: 0 auto;
 
-    li {
+    .progress-bars-list {
+      list-style: none;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+
       .tech-title {
         // Vendor prefixes 'display'
         display: -webkit-box;
