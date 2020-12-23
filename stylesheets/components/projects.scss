@@ -30,21 +30,27 @@
       padding: 10px 15px;
       overflow-y: scroll;
 
-      h3 {
+      header > h3 {
         text-align: center;
         font-size: 28px;
 
         span {
           color: gainsboro;
-          font-size: 18px;
+          font-size: 0; // To remove the whitespace between the inline children elements
           font-weight: 400;
 
-          pare:first-child {
-            margin-right: 2px;
+          &.text, &.parenthesis, time {
+            font-size: 18px;
           }
 
-          pare:nth-child(2) {
-            margin-left: 2px;
+          &.parenthesis {
+            &.open {
+              margin-right: 2px;
+            }
+
+            &.close {
+              margin-left: 2px;
+            }
           }
         }
       }
@@ -90,14 +96,20 @@
 
         span {
           color: gainsboro;
-          font-size: 11px;
+          font-size: 0; // To remove the whitespace between the inline children elements
 
-          pare:first-child {
-            margin-right: 1px;
+          &.text, &.parenthesis {
+            font-size: 11px;
           }
 
-          pare:nth-child(2) {
-            margin-left: 1px;
+          &.parenthesis {
+            &.open {
+              margin-right: 2px;
+            }
+
+            &.close {
+              margin-left: 2px;
+            }
           }
         }
       }
@@ -109,11 +121,13 @@
   #projects .projects-content .project-description {
     padding: 8px 12px 15px;
 
-    h3 {
+    header > h3 {
       font-size: 22px;
 
       span {
-        font-size: 14px;
+        .text, .parenthesis, time {
+          font-size: 14px;
+        }
       }
     }
 
@@ -142,7 +156,9 @@
       }
 
       span {
-        font-size: 9.5px;
+        &.text, &.parenthesis {
+          font-size: 9.5px;
+        }
       }
     }
   }

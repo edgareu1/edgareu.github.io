@@ -83,52 +83,58 @@
             <h2 class="section-title" style="margin-top: 30px;">Technologies</h2>
           </header>
 
-          <ul class="technologies-content">
-            <li>
-              <div class="tech-title" style="margin: 0;">
-                <h3>Ruby on Rails</h3>
-                <span class="percent">80%</span>
-              </div>
-              <div class="progress-bar-container">
-                <span class="progress-bar" style="width: 80%; background: #d12f1e;"></span>
-              </div>
-            </li>
+          <div class="technologies-content">
+            <ul class="progress-bars-list">
+              <li>
+                <div class="tech-title" style="margin: 0;">
+                  <h3>Ruby on Rails</h3>
+                  <span class="percent">80%</span>
+                </div>
 
-            <li>
-              <div class="tech-title">
-                <h3>JavaScript ES6</h3>
-                <span class="percent">75%</span>
-              </div>
-              <div class="progress-bar-container">
-                <span class="progress-bar" style="width: 75%; background: #ffb52d;"></span>
-              </div>
-            </li>
+                <div class="progress-bar-container">
+                  <span class="progress-bar" style="width: 80%; background: #d12f1e;"></span>
+                </div>
+              </li>
 
-            <li>
-              <div class="tech-title">
-                <h3>HTML</h3>
-                <span class="percent">85%</span>
-              </div>
-              <div class="progress-bar-container">
-                <span class="progress-bar" style="width: 85%; background: #20a03a;"></span>
-              </div>
-            </li>
+              <li>
+                <div class="tech-title">
+                  <h3>JavaScript ES6</h3>
+                  <span class="percent">75%</span>
+                </div>
 
-            <li>
-              <div class="tech-title">
-                <h3>CSS</h3>
-                <span class="percent">85%</span>
-              </div>
-              <div class="progress-bar-container">
-                <span class="progress-bar" style="width: 85%; background: #0078d2;"></span>
-              </div>
-            </li>
+                <div class="progress-bar-container">
+                  <span class="progress-bar" style="width: 75%; background: #ffb52d;"></span>
+                </div>
+              </li>
+
+              <li>
+                <div class="tech-title">
+                  <h3>HTML</h3>
+                  <span class="percent">85%</span>
+                </div>
+
+                <div class="progress-bar-container">
+                  <span class="progress-bar" style="width: 85%; background: #20a03a;"></span>
+                </div>
+              </li>
+
+              <li>
+                <div class="tech-title">
+                  <h3>CSS</h3>
+                  <span class="percent">85%</span>
+                </div>
+
+                <div class="progress-bar-container">
+                  <span class="progress-bar" style="width: 85%; background: #0078d2;"></span>
+                </div>
+              </li>
+            </ul>
 
             <div class="complementary-tech">
               <h4>Complementary Technologies:</h4>
               <p>Web API <span>(integration and building)</span>, AJAX, Git/GitHub, SQL, jQuery, REGEX, Bootstrap, Stripe, Cloudinary...</p>
             </div>
-          </ul>
+          </div>
         </section>
 
         <!-- Projects section -->
@@ -150,7 +156,7 @@
             <div class="tab-items">
 
               <!-- Artisan -->
-              <div class="tab-item" id="nav-artisan">
+              <article class="tab-item" id="nav-artisan">
                 <div id="carousel-artisan" class="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
@@ -159,21 +165,21 @@
                   </ol>
 
                   <div class="carousel-inner">
-                    <div class="carousel-item active" slide="0">
+                    <div class="carousel-item active" data-slide="0">
                       <img src="images/projects/artisan/home-page.png" alt="Home page">
                       <div class="carousel-caption">
                         <h5>Home page</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="1">
+                    <div class="carousel-item" data-slide="1">
                       <img src="images/projects/artisan/products-show.png" alt="Products#show">
                       <div class="carousel-caption">
                         <h5>Products<span>#</span>show</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="2">
+                    <div class="carousel-item" data-slide="2">
                       <img src="images/projects/artisan/orders-index.png" alt="Orders#index">
                       <div class="carousel-caption">
                         <h5>Orders<span>#</span>index</h5>
@@ -191,7 +197,18 @@
                 </div>
 
                 <div class="project-description scrollable-gray">
-                  <h3>Artisan <span><pare>(</pare>Jun - Aug 2020<pare>)</pare></span></h3>
+                  <header>
+                    <h3>
+                      Artisan
+                      <span>
+                        <span class="parenthesis open">(</span>
+                        <time datetime="2020-06">Jun </time>
+                        <span class="text">- </span>
+                        <time datetime="2020-08">Aug 2020</time>
+                        <span class="parenthesis close">)</span>
+                      </span>
+                    </h3>
+                  </header>
 
                   <h6>Summary</h6>
                   <p>An online marketplace for craftwork.</p>
@@ -212,10 +229,10 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </article>
 
               <!-- Hook -->
-              <div class="tab-item fade active" id="nav-hook">
+              <article class="tab-item fade active" id="nav-hook">
                 <div id="carousel-hook" class="carousel">
                   <ol class="carousel-indicators">
                     <li data-target="carousel-hook" data-slide-to="0" class="active"></li>
@@ -228,49 +245,49 @@
                   </ol>
 
                   <div class="carousel-inner">
-                    <div class="carousel-item active" slide="0">
+                    <div class="carousel-item active" data-slide="0">
                       <img src="images/projects/hook/home-page.png" alt="Home page">
                       <div class="carousel-caption">
                         <h5>Home page</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="1">
+                    <div class="carousel-item" data-slide="1">
                       <img src="images/projects/hook/prediction-page.png" alt="Prediction page">
                       <div class="carousel-caption">
                         <h5>Prediction page</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="2">
+                    <div class="carousel-item" data-slide="2">
                       <img src="images/projects/hook/logs-index.png" alt="Logs index">
                       <div class="carousel-caption">
                         <h5>Logs<span>#</span>index</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="3">
+                    <div class="carousel-item" data-slide="3">
                       <img src="images/projects/hook/logs-show.png" alt="Logs show">
                       <div class="carousel-caption">
                         <h5>Logs<span>#</span>show</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="4">
+                    <div class="carousel-item" data-slide="4">
                       <img src="images/projects/hook/locations-index.png" alt="Locations index">
                       <div class="carousel-caption">
                         <h5>Locations<span>#</span>index</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="5">
+                    <div class="carousel-item" data-slide="5">
                       <img src="images/projects/hook/locations-show.png" alt="Locations show">
                       <div class="carousel-caption">
                         <h5>Locations<span>#</span>show</h5>
                       </div>
                     </div>
 
-                    <div class="carousel-item" slide="6">
+                    <div class="carousel-item" data-slide="6">
                       <img src="images/projects/hook/fish-index.png" alt="Fish index">
                       <div class="carousel-caption">
                         <h5>Fish<span>#</span>index</h5>
@@ -288,7 +305,18 @@
                 </div>
 
                 <div class="project-description scrollable-gray">
-                  <h3>Hook <span><pare>(</pare>Jul - Oct 2020<pare>)</pare></span></h3>
+                  <header>
+                    <h3>
+                      Hook
+                      <span>
+                        <span class="parenthesis open">(</span>
+                        <time datetime="2020-07">Jul </time>
+                        <span class="text">- </span>
+                        <time datetime="2020-10">Oct 2020</time>
+                        <span class="parenthesis close">)</span>
+                      </span>
+                    </h3>
+                  </header>
 
                   <h6>Summary</h6>
                   <p>A web platform for fisherman to record their fishing trips and get predictions of the best fishing locations avaliable.</p>
@@ -307,7 +335,12 @@
                       <i class="fas fa-desktop"></i>
                       Website
                     </a>
-                    <span><pare>(</pare>the first request may take a couple of seconds<pare>)</pare></span>
+
+                    <span>
+                      <span class="parenthesis open">(</span>
+                      <span class="text">the first request may take a couple of seconds</span>
+                      <span class="parenthesis close">)</span>
+                    </span>
 
                     <a href="https://github.com/edgareu1/rails-hook" target="_blank" title="Hook repository" style="margin-top: 5px;">
                       <i class="fab fa-github"></i>
@@ -315,14 +348,23 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </article>
 
               <!-- Portfolio -->
-              <div class="tab-item" id="nav-portfolio">
+              <article class="tab-item" id="nav-portfolio">
                 <img src="./images/projects/portfolio/intro.png" alt="Introduction" class="single-img">
 
                 <div class="project-description scrollable-gray">
-                  <h3>Portfolio <span><pare>(</pare>Nov 2020<pare>)</pare></span></h3>
+                  <header>
+                    <h3>
+                      Portfolio
+                      <span>
+                        <span class="parenthesis open">(</span>
+                        <time datetime="2020-11">Nov 2020</time>
+                        <span class="parenthesis close">)</span>
+                      </span>
+                    </h3>
+                  </header>
 
                   <h6>Summary</h6>
                   <p>My online portfolio (this one), which I created from scratch without any external dependencies.</p>
@@ -340,14 +382,25 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </article>
 
               <!-- Trip Finder -->
-              <div class="tab-item" id="nav-trip">
+              <article class="tab-item" id="nav-trip">
                 <img src="./images/projects/trip-finder/coming-soon.png" alt="Coming soon" class="single-img">
 
                 <div class="project-description scrollable-gray">
-                  <h3>Trip Finder <span><pare>(</pare>Nov 2020 - Present<pare>)</pare></span></h3>
+                  <header>
+                    <h3>
+                      Trip Finder
+                      <span>
+                        <span class="parenthesis open">(</span>
+                        <time datetime="2020-11">Nov 2020 </time>
+                        <span class="text">- </span>
+                        <time datetime="2020">Present</time>
+                        <span class="parenthesis close">)</span>
+                      </span>
+                    </h3>
+                  </header>
 
                   <h6>Summary</h6>
                   <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages avaliable.</p>
@@ -365,7 +418,7 @@
                     </a>
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           </div>
         </section>
