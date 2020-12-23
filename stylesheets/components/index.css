@@ -1006,18 +1006,18 @@ nav {
       flex-direction: column;
       padding: 10px 15px;
       overflow-y: scroll; }
-      #projects .projects-content .project-description h3 {
+      #projects .projects-content .project-description header > h3 {
         text-align: center;
         font-size: 28px; }
-        #projects .projects-content .project-description h3 span {
+        #projects .projects-content .project-description header > h3 span {
           color: gainsboro;
           font-size: 0;
           font-weight: 400; }
-          #projects .projects-content .project-description h3 span.text, #projects .projects-content .project-description h3 span.parenthesis, #projects .projects-content .project-description h3 span time {
+          #projects .projects-content .project-description header > h3 span.text, #projects .projects-content .project-description header > h3 span.parenthesis, #projects .projects-content .project-description header > h3 span time {
             font-size: 18px; }
-          #projects .projects-content .project-description h3 span.parenthesis.open {
+          #projects .projects-content .project-description header > h3 span.parenthesis.open {
             margin-right: 2px; }
-          #projects .projects-content .project-description h3 span.parenthesis.close {
+          #projects .projects-content .project-description header > h3 span.parenthesis.close {
             margin-left: 2px; }
       #projects .projects-content .project-description h6 {
         font-size: 17px;
@@ -1056,9 +1056,9 @@ nav {
 @media (max-width: 800px) {
   #projects .projects-content .project-description {
     padding: 8px 12px 15px; }
-    #projects .projects-content .project-description h3 {
+    #projects .projects-content .project-description header > h3 {
       font-size: 22px; }
-      #projects .projects-content .project-description h3 span .text, #projects .projects-content .project-description h3 span .parenthesis, #projects .projects-content .project-description h3 span time {
+      #projects .projects-content .project-description header > h3 span .text, #projects .projects-content .project-description header > h3 span .parenthesis, #projects .projects-content .project-description header > h3 span time {
         font-size: 14px; }
     #projects .projects-content .project-description h6 {
       font-size: 14px;
