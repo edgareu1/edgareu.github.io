@@ -21,7 +21,7 @@ function animateCarousels() {
     var anchors = carousels[i].querySelectorAll('[data-target]'),
         items = carousels[i].querySelectorAll('.carousel-item'),
         currentItem = carousels[i].querySelector('.carousel-item.active'),
-        currentSlide = currentItem.getAttribute('slide'),
+        currentSlide = currentItem.getAttribute('data-slide'),
         currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
         slideTo = "0";
 
@@ -59,7 +59,7 @@ function animateCarousels() {
         function changeCarouselItem() {
           // Update the currently active Item
           currentItem.classList.remove('active');
-          currentItem = filterNodeList(items, 'slide', slideTo);
+          currentItem = filterNodeList(items, 'data-slide', slideTo);
           currentItem.classList.add('active');
 
           // Update the current slide
@@ -82,7 +82,7 @@ function animateCarousels() {
       const currentSlideInt = parseInt(currentSlide);
 
       for (const item of items) {
-        const relativePosition = parseInt(item.getAttribute('slide')) - currentSlideInt;
+        const relativePosition = parseInt(item.getAttribute('data-slide')) - currentSlideInt;
         item.style.transform = `translate(${relativePosition * 100}%)`;
       }
     }
