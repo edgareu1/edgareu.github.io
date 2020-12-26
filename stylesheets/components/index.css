@@ -757,6 +757,9 @@ h2 {
 h3 {
   font-size: 1.75rem; }
 
+abbr[title] {
+  text-decoration: inherit; }
+
 #profile-container {
   position: relative;
   width: 100%; }
