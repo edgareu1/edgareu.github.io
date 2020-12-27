@@ -63,15 +63,16 @@
         margin: 0 0 16px;
       }
 
-      h2 {
+      p {
         color: rgba(200, 200, 200, 1);
         font-size: 28px;
+        font-weight: 500;
         line-height: 1.35;
         text-shadow: 1px 1px 5px black;
         margin: 0;
       }
 
-      a {
+      .btn-modal {
         font-size: 20px;
         max-width: 300px;
         padding: 2px 0;
@@ -107,11 +108,11 @@
         font-size: 52px;
       }
 
-      h2 {
+      p {
         font-size: 24px;
       }
 
-      a {
+      .btn-modal {
         font-size: 16px;
         max-width: 240px;
         padding: 0;
@@ -138,11 +139,11 @@
         margin-bottom: 12px;
       }
 
-      h2 {
+      p {
         font-size: 20px;
       }
 
-      a {
+      .btn-modal {
         font-size: 15px;
         max-width: 220px;
         margin-top: 24px;
@@ -176,11 +177,11 @@
         margin-bottom: 16px;
       }
 
-      h2 {
+      p {
         font-size: 23.5px;
       }
 
-      a {
+      .btn-modal {
         font-size: 16px;
         max-width: 240px;
         margin-top: 32px;
