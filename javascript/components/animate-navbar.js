@@ -20,7 +20,7 @@ function animateNavbar() {
   function smoothNavbarAnchors() {
     // For each of the anchors...
     for (let anchor of anchors) {
-      const anchorRef = anchor.getAttribute('data-target');
+      const anchorRef = anchor.getAttribute('href');
 
       anchor.addEventListener('click', (event) => {
         event.preventDefault(); // Prevent the anchor default click behavior
@@ -48,7 +48,7 @@ function animateNavbar() {
     // For each of the anchors...
     for (const anchor of anchors) {
       // Get the anchor target element and his distance from the top
-      const anchorRef = anchor.getAttribute('data-target'),
+      const anchorRef = anchor.getAttribute('href'),
             target = document.querySelector(anchorRef),
             targetOffsetTop = ( anchorRef == '#banner' ?  0 : bannerHeight + target.offsetTop );
 

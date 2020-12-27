@@ -67,6 +67,13 @@ h3 {
   font-size: 1.75rem;
 }
 
+button {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  outline: none;
+}
+
 abbr[title] {
   text-decoration: inherit;
 }

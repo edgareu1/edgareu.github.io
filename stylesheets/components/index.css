@@ -85,13 +85,14 @@
         font-size: 62px;
         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
         margin: 0 0 16px; }
-      #banner .banner-content .banner-text h2 {
+      #banner .banner-content .banner-text p {
         color: #c8c8c8;
         font-size: 28px;
+        font-weight: 500;
         line-height: 1.35;
         text-shadow: 1px 1px 5px black;
         margin: 0; }
-      #banner .banner-content .banner-text a {
+      #banner .banner-content .banner-text .btn-modal {
         font-size: 20px;
         max-width: 300px;
         padding: 2px 0;
@@ -114,9 +115,9 @@
     max-width: 600px; }
     #banner .banner-content .banner-text h1 {
       font-size: 52px; }
-    #banner .banner-content .banner-text h2 {
+    #banner .banner-content .banner-text p {
       font-size: 24px; }
-    #banner .banner-content .banner-text a {
+    #banner .banner-content .banner-text .btn-modal {
       font-size: 16px;
       max-width: 240px;
       padding: 0; }
@@ -130,9 +131,9 @@
     #banner .banner-content .banner-text h1 {
       font-size: 46px;
       margin-bottom: 12px; }
-    #banner .banner-content .banner-text h2 {
+    #banner .banner-content .banner-text p {
       font-size: 20px; }
-    #banner .banner-content .banner-text a {
+    #banner .banner-content .banner-text .btn-modal {
       font-size: 15px;
       max-width: 220px;
       margin-top: 24px; }
@@ -150,9 +151,9 @@
     #banner .banner-content .banner-text h1 {
       font-size: 52px;
       margin-bottom: 16px; }
-    #banner .banner-content .banner-text h2 {
+    #banner .banner-content .banner-text p {
       font-size: 23.5px; }
-    #banner .banner-content .banner-text a {
+    #banner .banner-content .banner-text .btn-modal {
       font-size: 16px;
       max-width: 240px;
       margin-top: 32px; }
@@ -756,6 +757,12 @@ h2 {
 
 h3 {
   font-size: 1.75rem; }
+
+button {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  outline: none; }
 
 abbr[title] {
   text-decoration: inherit; }
