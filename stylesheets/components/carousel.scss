@@ -99,20 +99,17 @@
         bottom: 0;
         left: 0;
         text-align: center;
-        color: #fff;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        text-shadow: 0px 0px 5px black;
         background: rgba(0, 0, 0, 0.65);
         z-index: 10;
+        line-height: 1.2;
         padding: 15px 15% 45px;
 
-        h5 {
-          color: white;
-          font-size: 16px;
-          font-weight: 400;
-          text-shadow: 0px 0px 5px black;
-
-          span {
-            margin: 0 2px;
-          }
+        span {
+          margin: 0 4px;
         }
       }
     }
