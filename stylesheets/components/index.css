@@ -294,17 +294,16 @@
         bottom: 0;
         left: 0;
         text-align: center;
-        color: #fff;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        text-shadow: 0px 0px 5px black;
         background: rgba(0, 0, 0, 0.65);
         z-index: 10;
+        line-height: 1.2;
         padding: 15px 15% 45px; }
-        .carousel .carousel-inner .carousel-item .carousel-caption h5 {
-          color: white;
-          font-size: 16px;
-          font-weight: 400;
-          text-shadow: 0px 0px 5px black; }
-          .carousel .carousel-inner .carousel-item .carousel-caption h5 span {
-            margin: 0 2px; }
+        .carousel .carousel-inner .carousel-item .carousel-caption span {
+          margin: 0 4px; }
   .carousel .carousel-control-prev, .carousel .carousel-control-next {
     position: absolute;
     top: 0;
@@ -393,13 +392,14 @@
       #curriculum .curriculum-content .cv-element .cv-header-titles {
         padding: 7px 0 8px 42px;
         margin: 10px 0 0; }
-        #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
+        #curriculum .curriculum-content .cv-element .cv-header-titles h3 {
           font-size: 21px; }
-        #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
+        #curriculum .curriculum-content .cv-element .cv-header-titles p {
           text-indent: 2px;
           font-size: 17px;
           font-weight: 400;
-          margin-top: 5px; }
+          line-height: 1.2;
+          margin: 5px 0 0; }
       #curriculum .curriculum-content .cv-element .cv-element-content {
         padding: 3px 0 0 60px; }
         #curriculum .curriculum-content .cv-element .cv-element-content p {
@@ -408,10 +408,9 @@
           font-size: 15px;
           line-height: 24px;
           margin: 5px 0 10px; }
-          #curriculum .curriculum-content .cv-element .cv-element-content p span {
-            margin-left: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .cv-icon {
-            color: #f0f0f0; }
+            color: #f0f0f0;
+            margin-right: 5px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star, #curriculum .curriculum-content .cv-element .cv-element-content p .fa-cog {
             font-size: 18px; }
           #curriculum .curriculum-content .cv-element .cv-element-content p .fa-star {
@@ -486,9 +485,9 @@
         width: 55px; }
       #curriculum .curriculum-content .cv-element .cv-header-titles {
         padding: 5px 0 5.5px 37px; }
-        #curriculum .curriculum-content .cv-element .cv-header-titles h5 {
+        #curriculum .curriculum-content .cv-element .cv-header-titles h3 {
           font-size: 19px; }
-        #curriculum .curriculum-content .cv-element .cv-header-titles h6 {
+        #curriculum .curriculum-content .cv-element .cv-header-titles p {
           font-size: 15px;
           margin-top: 4px; }
       #curriculum .curriculum-content .cv-element .cv-element-content {
@@ -1045,10 +1044,10 @@ nav {
             margin-right: 2px; }
           #projects .projects-content .project-description header > h3 span.parenthesis.close {
             margin-left: 2px; }
-      #projects .projects-content .project-description h6 {
+      #projects .projects-content .project-description h4 {
         font-size: 17px;
         margin: 15px 0 5px; }
-        #projects .projects-content .project-description h6:first-of-type {
+        #projects .projects-content .project-description h4:first-of-type {
           margin-top: 10px; }
       #projects .projects-content .project-description p {
         text-align: justify;
@@ -1086,10 +1085,10 @@ nav {
       font-size: 22px; }
       #projects .projects-content .project-description header > h3 span .text, #projects .projects-content .project-description header > h3 span .parenthesis, #projects .projects-content .project-description header > h3 span time {
         font-size: 14px; }
-    #projects .projects-content .project-description h6 {
+    #projects .projects-content .project-description h4 {
       font-size: 14px;
       margin-top: 12px; }
-      #projects .projects-content .project-description h6:first-of-type {
+      #projects .projects-content .project-description h4:first-of-type {
         margin-top: 8px; }
     #projects .projects-content .project-description p {
       font-size: 11px; }
@@ -1162,7 +1161,7 @@ nav {
       color: gainsboro;
       font-size: 17px;
       margin: 30px 10px 0; }
-      #technologies .technologies-content .complementary-tech h4 {
+      #technologies .technologies-content .complementary-tech h3 {
         display: inline;
         font-size: 20px;
         font-weight: 600;

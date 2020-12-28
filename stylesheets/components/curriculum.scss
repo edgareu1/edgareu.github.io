@@ -88,15 +88,16 @@
         padding: 7px 0 8px 42px;
         margin: 10px 0 0;
 
-        h5 {
+        h3 {
           font-size: 21px;
         }
 
-        h6 {
+        p {
           text-indent: 2px;
           font-size: 17px;
           font-weight: 400;
-          margin-top: 5px;
+          line-height: 1.2;
+          margin: 5px 0 0;
         }
       }
 
@@ -110,12 +111,9 @@
           line-height: 24px;
           margin: 5px 0 10px;
 
-          span {
-            margin-left: 5px;
-          }
-
           .cv-icon {
             color: rgba(240, 240, 240, 1);
+            margin-right: 5px;
           }
 
           .fa-star, .fa-cog {
@@ -244,11 +242,11 @@
       .cv-header-titles {
         padding: 5px 0 5.5px 37px;
 
-        h5 {
+        h3 {
           font-size: 19px;
         }
 
-        h6 {
+        p {
           font-size: 15px;
           margin-top: 4px;
         }
