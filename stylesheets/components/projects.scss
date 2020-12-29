@@ -85,16 +85,16 @@
           width: -moz-fit-content;
           width: fit-content;
 
-          &:hover {
-            text-decoration: underline;
-          }
-
           i {
             margin-right: 4px;
           }
+
+          &:hover .hover-underline {
+            text-decoration: underline;
+          }
         }
 
-        span {
+        .side-note {
           color: gainsboro;
           font-size: 0; // To remove the whitespace between the inline children elements
 
@@ -155,7 +155,7 @@
         }
       }
 
-      span {
+      .side-note {
         &.text, &.parenthesis {
           font-size: 9.5px;
         }

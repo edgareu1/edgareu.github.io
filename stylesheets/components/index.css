@@ -1064,18 +1064,18 @@ nav {
           width: -webkit-fit-content;
           width: -moz-fit-content;
           width: fit-content; }
-          #projects .projects-content .project-description .anchors-container a:hover {
-            text-decoration: underline; }
           #projects .projects-content .project-description .anchors-container a i {
             margin-right: 4px; }
-        #projects .projects-content .project-description .anchors-container span {
+          #projects .projects-content .project-description .anchors-container a:hover .hover-underline {
+            text-decoration: underline; }
+        #projects .projects-content .project-description .anchors-container .side-note {
           color: gainsboro;
           font-size: 0; }
-          #projects .projects-content .project-description .anchors-container span.text, #projects .projects-content .project-description .anchors-container span.parenthesis {
+          #projects .projects-content .project-description .anchors-container .side-note.text, #projects .projects-content .project-description .anchors-container .side-note.parenthesis {
             font-size: 11px; }
-          #projects .projects-content .project-description .anchors-container span.parenthesis.open {
+          #projects .projects-content .project-description .anchors-container .side-note.parenthesis.open {
             margin-right: 2px; }
-          #projects .projects-content .project-description .anchors-container span.parenthesis.close {
+          #projects .projects-content .project-description .anchors-container .side-note.parenthesis.close {
             margin-left: 2px; }
 
 @media (max-width: 800px) {
@@ -1098,7 +1098,7 @@ nav {
         font-size: 13px; }
         #projects .projects-content .project-description .anchors-container a i {
           margin-right: 3px; }
-      #projects .projects-content .project-description .anchors-container span.text, #projects .projects-content .project-description .anchors-container span.parenthesis {
+      #projects .projects-content .project-description .anchors-container .side-note.text, #projects .projects-content .project-description .anchors-container .side-note.parenthesis {
         font-size: 9.5px; } }
 .scrollable-gray::-webkit-scrollbar {
   width: 10px;
