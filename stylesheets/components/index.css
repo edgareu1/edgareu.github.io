@@ -760,7 +760,8 @@ h3 {
 button {
   background: transparent;
   font-family: inherit;
-  border: none; }
+  border: none;
+  cursor: pointer; }
   button:focus {
     outline: none; }
   button:focus-visible {
