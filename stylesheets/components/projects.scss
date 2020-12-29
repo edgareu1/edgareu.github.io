@@ -76,9 +76,7 @@
 
         a {
           display: block;
-          color: #64ff5f;
           font-size: 15px;
-          text-decoration: none;
 
           // Vendor prefixes 'width'
           width: -webkit-fit-content;
@@ -98,17 +96,19 @@
           color: gainsboro;
           font-size: 0; // To remove the whitespace between the inline children elements
 
-          &.text, &.parenthesis {
-            font-size: 11px;
-          }
-
-          &.parenthesis {
-            &.open {
-              margin-right: 2px;
+          span {
+            &.text, &.parenthesis {
+              font-size: 11px;
             }
 
-            &.close {
-              margin-left: 2px;
+            &.parenthesis {
+              &.open {
+                margin-right: 2px;
+              }
+
+              &.close {
+                margin-left: 2px;
+              }
             }
           }
         }
@@ -155,7 +155,7 @@
         }
       }
 
-      .side-note {
+      .side-note span {
         &.text, &.parenthesis {
           font-size: 9.5px;
         }

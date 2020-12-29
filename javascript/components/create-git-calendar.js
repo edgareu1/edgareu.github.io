@@ -76,7 +76,7 @@ function createGitCalendar() {
     let calendar = calendarHelper.querySelector(".js-yearly-contributions");
 
     // Improve the 'more details' anchor content
-    const modeDetails = 'For more details please check <a href="https://github.com/edgareu1" target="blank">#edgareu1</a>';
+    const modeDetails = 'For more details please check my <a href="https://github.com/edgareu1" target="blank" class="inline-anchor">GitHub profile</a>';
     calendar.querySelector(".contrib-footer .float-left").innerHTML = modeDetails;
 
     // If the calendar does not load, try again
