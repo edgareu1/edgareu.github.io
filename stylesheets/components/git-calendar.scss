@@ -70,13 +70,8 @@
     box-sizing: border-box;
     padding: 0 10px 12px;
 
-    a {
-      color: rgba(100, 255, 95, 1);
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    a:hover {
+      text-decoration: underline;
     }
   }
 
