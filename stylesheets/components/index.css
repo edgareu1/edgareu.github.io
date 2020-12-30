@@ -793,6 +793,8 @@ abbr[title] {
 .inline-anchor {
   color: #64ff5f;
   text-decoration: none; }
+  .inline-anchor:active {
+    color: lime; }
 
 body.modal-active {
   overflow: hidden; }
