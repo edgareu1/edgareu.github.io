@@ -127,6 +127,10 @@ abbr[title] {
   color: rgba(100, 255, 95, 1);
   text-decoration: none;
 
+  &:hover .hover-underline {
+    text-decoration: underline;
+  }
+
   &:active {
     color: rgba(0, 255, 0, 1);
   }

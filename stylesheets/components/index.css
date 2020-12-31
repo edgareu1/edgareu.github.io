@@ -631,8 +631,6 @@ footer {
     width: 100%;
     box-sizing: border-box;
     padding: 0 10px 12px; }
-    #modal-git .calendar .contrib-footer a:hover {
-      text-decoration: underline; }
   #modal-git .calendar .contrib-number {
     display: block;
     color: gainsboro;
@@ -793,6 +791,8 @@ abbr[title] {
 .inline-anchor {
   color: #64ff5f;
   text-decoration: none; }
+  .inline-anchor:hover .hover-underline {
+    text-decoration: underline; }
   .inline-anchor:active {
     color: lime; }
 
@@ -1068,8 +1068,6 @@ nav {
           width: fit-content; }
           #projects .projects-content .project-description .anchors-container a i {
             margin-right: 4px; }
-          #projects .projects-content .project-description .anchors-container a:hover .hover-underline {
-            text-decoration: underline; }
         #projects .projects-content .project-description .anchors-container .side-note {
           color: gainsboro;
           font-size: 0; }
