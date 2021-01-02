@@ -3,7 +3,40 @@ function typeBannerCode() {
   var codeContainer = document.querySelector('.banner-code-container');
 
   // The codeContent variable holds the HTML code to display
-  var codeContent = '<p><span class="color3">const </span><span class="color2">edgar </span><span class="color1">= </span><span class="color3">new </span><span class="color4">Person</span><span class="color1">(</span><span class="color7">"Edgar"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">greetings</span><span class="color1">( ) ;</span></p><p><span class="color5">// Hi, I\'m Edgar and this is my life!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginBachelorDegree</span><span class="color1">(</span><span class="color7">"Management"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Economics"</span><span class="color1">, </span><span class="color7">"Mathematics"</span><span class="color1">, </span><span class="color7">"Business Law"</span><span class="color1">, </span><span class="color7">"Marketing"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addAcademicAward</span><span class="color1">(</span><span class="color7">"3% Best Students"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeBachelorDegree</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar completed his bachelor\'s degree in Management in the top 3% of the students!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginMasterDegree</span><span class="color1">(</span><span class="color7">"Finance"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Finance"</span><span class="color1">, </span><span class="color7">"Statistics"</span><span class="color1">, </span><span class="color7">"Accounting"</span><span class="color1">, </span><span class="color7">"Tax Law"<span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginWorking</span><span class="color1">(</span><span class="color7">"Accounting Office"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addProfessionalAchievement</span><span class="color1">(</span><span class="color7">"Automated accounting process"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">stopWorking</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar worked 1.5 years as an accountant, having automated the accounting process!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addAcademicAward</span><span class="color1">(</span><span class="color7">"Best Student"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeMasterDegree</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar completed his master\'s degree in Finance as the best student!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginTraveling</span><span class="color1">(</span><span class="color7">"Europe"</span><span class="color1">) ;</span></p><p><span class="color5">// Edgar began a gap year of travelling around Europe!</span></p><p><span class="color6">covidAppears</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar is forced to stop travelling!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">acessLifeGoals</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar is acessing his life goals...</span></p><p><span class="color5">// Edgar decided to change his life and learn how to code!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginCodingBootcamp</span><span class="color1">( ) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Ruby on Rails"</span><span class="color1">, </span><span class="color7">"JavaScript"</span><span class="color1">, </span><span class="color7">"HTML"</span><span class="color1">, </span><span class="color7">"CSS"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">createProjects</span><span class="color1">(</span><span class="color7">"Artisan"</span><span class="color1">, </span><span class="color7">"Hook"</span><span class="color1">) ;</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeCodingBootcamp</span><span class="color1">( ) ;</span></p><p><span class="color5">// Edgar completed the bootcamp having built several minor apps and 2 major ones!</span></p><p><span class="color2">edgar</span><span class="color1">.</span><span class="color6">farewell</span><span class="color1">( ) ;</span></p><p><span class="color5">// This was my life!</span></p><p><span class="color5">// For more details check the curriculum section!</span></p>',
+  var codeContent = [
+        '<span class="color3">const </span><span class="color2">edgar </span><span class="color1">= </span><span class="color3">new </span><span class="color4">Person</span><span class="color1">(</span><span class="color7">"Edgar"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">greetings</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Hi, I\'m Edgar and this is my life!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginBachelorDegree</span><span class="color1">(</span><span class="color7">"Management"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Economics"</span><span class="color1">, </span><span class="color7">"Mathematics"</span><span class="color1">, </span><span class="color7">"Business Law"</span><span class="color1">, </span><span class="color7">"Marketing"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addAcademicAward</span><span class="color1">(</span><span class="color7">"3% Best Students"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeBachelorDegree</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar completed his bachelor\'s degree in Management in the top 3% of the students!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginMasterDegree</span><span class="color1">(</span><span class="color7">"Finance"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Finance"</span><span class="color1">, </span><span class="color7">"Statistics"</span><span class="color1">, </span><span class="color7">"Accounting"</span><span class="color1">, </span><span class="color7">"Tax Law"<span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginWorking</span><span class="color1">(</span><span class="color7">"Accounting Office"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addProfessionalAchievement</span><span class="color1">(</span><span class="color7">"Automated accounting process"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">stopWorking</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar worked 1.5 years as an accountant, having automated the accounting process!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addAcademicAward</span><span class="color1">(</span><span class="color7">"Best Student"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeMasterDegree</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar completed his master\'s degree in Finance as the best student!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginTraveling</span><span class="color1">(</span><span class="color7">"Europe"</span><span class="color1">) ;</span>',
+        '<span class="color5">// Edgar began a gap year of travelling around Europe!</span>',
+        '<span class="color6">covidAppears</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar is forced to stop travelling!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">acessLifeGoals</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar is acessing his life goals...</span>',
+        '<span class="color5">// Edgar decided to change his life and learn how to code!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">beginCodingBootcamp</span><span class="color1">( ) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">addSkills</span><span class="color1">(</span><span class="color7">"Ruby on Rails"</span><span class="color1">, </span><span class="color7">"JavaScript"</span><span class="color1">, </span><span class="color7">"HTML"</span><span class="color1">, </span><span class="color7">"CSS"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">createProjects</span><span class="color1">(</span><span class="color7">"Artisan"</span><span class="color1">, </span><span class="color7">"Hook"</span><span class="color1">) ;</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">completeCodingBootcamp</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// Edgar completed the bootcamp having built several minor apps and 2 major ones!</span>',
+        '<span class="color2">edgar</span><span class="color1">.</span><span class="color6">farewell</span><span class="color1">( ) ;</span>',
+        '<span class="color5">// This was my life!</span>',
+        '<span class="color5">// For more details check the curriculum section!</span>'
+      ],
       position = 0,
       typeSpeed = 50,
       typeWaitTime = 0,
@@ -11,6 +44,8 @@ function typeBannerCode() {
       newSpan = 0,
       subString = 0,
       endString = 0;
+
+  codeContent = codeContent.join('</p><p>');
 
   // Function that types a certain character of the codeContent variable (depending on the position variable)
   // It recursively calls itself to write the whole codeContent
@@ -44,10 +79,9 @@ function typeBannerCode() {
 
     // Otherwise add a character to the HTML
     } else {
-      typeWaitTime = (Math.random() * typeSpeed) + 20;
-
       // If the element is a comment, type the whole comment
       if (codeContent.slice(position, position + 2) == "//") {
+        typeWaitTime = 0;
         subString = codeContent.substring(position);
         endString = subString.indexOf("<");
         newSpan.innerHTML += subString.slice(0, endString);
@@ -55,6 +89,7 @@ function typeBannerCode() {
 
       // Otherwise type a single character
       } else {
+        typeWaitTime = (Math.random() * typeSpeed) + 20;
         newSpan.innerHTML += codeContent[position];
         position += 1;
       }
@@ -86,8 +121,12 @@ function typeBannerCode() {
   // Function that adds a blinking caret (in a new line) to the codeContainer
   function addBlinkCaret() {
     newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
-
     newSpan.classList.add('blink-caret');
+  }
+
+  function removeBlinkCaret() {
+    newPar.style.animation = '';
+    newSpan.classList.remove('blink-caret');
   }
 
   addTerminalPrefix();
@@ -95,7 +134,7 @@ function typeBannerCode() {
 
   // After 1.4s begin the typing animation
   setTimeout(() => {
-    codeContainer.innerHTML = '';
+    removeBlinkCaret();
     position = 0;
     typeCode();
   }, 1400);
