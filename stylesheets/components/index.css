@@ -13,6 +13,8 @@
     border-right: 1px solid white; }
   #banner > .banner-content > .banner-code-container p .color1 {
     color: white; }
+    #banner > .banner-content > .banner-code-container p .color1.blink-caret {
+      padding-right: 6px; }
   #banner > .banner-content > .banner-code-container p .color2 {
     color: #8cdcfe; }
   #banner > .banner-content > .banner-code-container p .color3 {

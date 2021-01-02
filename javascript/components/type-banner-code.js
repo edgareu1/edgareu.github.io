@@ -21,9 +21,7 @@ function typeBannerCode() {
 
       // If it is a paragraph opening...
       if (codeContent[position + 1] == "p") {
-        newPar = document.createElement("p");
-        codeContainer.appendChild(newPar);
-        position += 3;
+        addTerminalPrefix();
 
       // If it is a span opening...
       } else if (codeContent[position + 1] == "s") {
@@ -69,26 +67,36 @@ function typeBannerCode() {
 
     // Otherwise, add the blinking caret animation in a new line
     } else {
+      addTerminalPrefix();
       addBlinkCaret();
     }
   };
 
-  // Function that adds a blinking caret (in a new line) to the codeContainer
-  function addBlinkCaret() {
+  function addTerminalPrefix() {
     newPar = document.createElement("p");
-    newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
-    newPar.style.color = 'transparent';
-    newPar.innerHTML = '.';
-
-    // Append it to the codeContainer
     codeContainer.appendChild(newPar);
+    position += 3;
+
+    newSpan = document.createElement("span");
+    newSpan.className = 'color1';
+    newSpan.innerHTML = '> ';
+    newPar.appendChild(newSpan);
   }
 
+  // Function that adds a blinking caret (in a new line) to the codeContainer
+  function addBlinkCaret() {
+    newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
+
+    newSpan.classList.add('blink-caret');
+  }
+
+  addTerminalPrefix();
   addBlinkCaret();  // Add the blinking caret animation
 
-  // After 3.5s begin the typing animation
+  // After 1.4s begin the typing animation
   setTimeout(() => {
     codeContainer.innerHTML = '';
+    position = 0;
     typeCode();
   }, 1400);
 }

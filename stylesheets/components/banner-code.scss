@@ -21,6 +21,10 @@
 
     .color1 {
       color: white;
+
+      &.blink-caret {
+        padding-right: 6px;
+      }
     }
 
     .color2 {
