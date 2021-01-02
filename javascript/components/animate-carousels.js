@@ -23,7 +23,7 @@ function animateCarousels() {
         currentItem = carousels[i].querySelector('.carousel-item.active'),
         currentSlide = currentItem.getAttribute('data-slide'),
         currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
-        slideTo = "0";
+        slideTo = '0';
 
     // Refresh the items position (positioned side by side with the 'transform: translate' property)
     refreshItemsPosition();

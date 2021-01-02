@@ -1,6 +1,7 @@
 #banner > .banner-content > .banner-code-container {
   p {
     white-space: nowrap;
+    color: rgba(94, 138, 53, 1);
     font-size: 12px;
 
     // Vendor prefixes 'width'
@@ -21,6 +22,10 @@
 
     .color1 {
       color: white;
+
+      &.blink-caret {
+        padding-right: 6px;
+      }
     }
 
     .color2 {
@@ -36,19 +41,11 @@
     }
 
     .color5 {
-      color: rgba(94, 138, 53, 1);
-    }
-
-    .color6 {
       color: rgba(220, 220, 139, 1);
     }
 
-    .color7 {
+    .color6 {
       color: rgba(216, 128, 92, 1);
-    }
-
-    .color8 {
-      color: rgba(147, 206, 168, 1);
     }
   }
 }

@@ -32,7 +32,7 @@ function animateNavbar() {
         // Smoothly scroll to the section
         scroll({
           top: anchorRef == '#banner' ? 0 : offsetTop,
-          behavior: "smooth"
+          behavior: 'smooth'
         });
       });
     }
