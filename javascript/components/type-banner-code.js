@@ -2,7 +2,16 @@
 function typeBannerCode() {
   var codeContainer = document.querySelector('.banner-code-container');
 
-  // The codeContent variable holds the HTML code to display
+  // The codeContent variable holds the simplified HTML code to display
+  // <c> represents a code element
+  // <s> represents a HTML span element
+  // <s1> is a span of color: white
+  // <s2> is a span of color: rgba(140, 220, 254, 1)
+  // <s3> is a span of color: rgba(30,  100, 200, 1)
+  // <s4> is a span of color: rgba(78,  188, 124, 1)
+  // <s5> is a span of color: rgba(220, 220, 139, 1)
+  // <s6> is a span of color: rgba(216, 128, 92,  1)
+  // <k> represents a comment
   var codeContent = [
         '<c><s3>const </s><s2>edgar </s><s1>= </s><s3>new </s><s4>Person</s><s1>(</s><s6>"Edgar"</s><s1>) ;</s></c>',
         '<c><s2>edgar</s><s1>.</s><s5>greetings</s><s1>( ) ;</s></c>',
@@ -44,42 +53,44 @@ function typeBannerCode() {
       newSpan = 0,
       newCode = 0,
       subString = 0,
-      endString = 0;
+      endStringIndex = 0;
 
   codeContent = codeContent.join('');
 
   // Function that types a certain character of the codeContent variable (depending on the position variable)
-  // It recursively calls itself to write the whole codeContent
+  // It recursively calls itself to type the whole codeContent
   function typeCode() {
     // If the next character is an element...
-    if (codeContent[position] == "<") {
+    if (codeContent[position] === '<') {
       typeWaitTime = 0;
 
-      // If it is a paragraph opening...
-      if (codeContent[position + 1] == "c") {
+      // If it is a code element opening...
+      if (codeContent[position + 1] === 'c') {
         addTerminalPrefix();
 
-        newCode = document.createElement("code");
+        // Add a code element to the codeContainer
+        newCode = document.createElement('code');
         newPar.appendChild(newCode);
 
-      // If it is a span opening...
-      } else if (codeContent[position + 1] == "s") {
-        newSpan = document.createElement("span");
+      // If it is a span element opening...
+      } else if (codeContent[position + 1] === 's') {
+        newSpan = document.createElement('span');
         newSpan.className = `color${codeContent[position + 2]}`;
         newCode.appendChild(newSpan);
         position += 4;
 
-      } else if (codeContent[position + 1] == "k") {
-        newPar = document.createElement("p");
-        typeWaitTime = 0;
+      // If it is a comment element opening...
+      // Type the whole comment
+      } else if (codeContent[position + 1] === 'k') {
+        newPar = document.createElement('p');
         subString = codeContent.substring(position + 3);
-        endString = subString.indexOf("<");
-        newPar.innerHTML += subString.slice(0, endString);
-        position += 3 + endString;
+        endStringIndex = subString.indexOf('<');
+        newPar.innerHTML += subString.slice(0, endStringIndex);
         codeContainer.appendChild(newPar);
+        position += 3 + endStringIndex;
 
       // If it is a closing element...
-      } else if (codeContent[position + 1] == "/") {
+      } else if (codeContent[position + 1] === '/') {
         position += 4;
       }
 
@@ -90,8 +101,8 @@ function typeBannerCode() {
       position += 1;
     }
 
-    // If the HTML written is still not finished, recursively call the function for the next character (with a delay to
-    // simulate the typing animation)
+    // If the code typing animation is still not finished, recursively call the function for the
+    // next character (with a delay to simulate the typing animation)
     if (position < codeContent.length - 1) {
       setTimeout(typeCode, typeWaitTime);
 
@@ -102,39 +113,42 @@ function typeBannerCode() {
     }
   };
 
+  // Function that adds a new line to the codeContainer with a terminal prefix
   function addTerminalPrefix() {
-    newPar = document.createElement("p");
+    newPar = document.createElement('p');
     codeContainer.appendChild(newPar);
     position += 3;
 
-    newSpan = document.createElement("span");
+    newSpan = document.createElement('span');
     newSpan.className = 'color1';
     newSpan.innerHTML = '> ';
     newPar.appendChild(newSpan);
   }
 
-  // Function that adds a blinking caret (in a new line) to the codeContainer
+  // Function that adds a blinking caret to the last line of the codeContainer
   function addBlinkCaret() {
     newPar.style.animation = 'blink-caret 1s step-end infinite';  // Blinking animation in the stylesheets/components
     newSpan.classList.add('blink-caret');
   }
 
+  // Function that removes the blinking caret
   function removeBlinkCaret() {
     newPar.style.animation = '';
     newSpan.classList.remove('blink-caret');
   }
 
-  addTerminalPrefix();
-  addBlinkCaret();  // Add the blinking caret animation
+  addTerminalPrefix();  // Add a terminal prefix to the codeContainer
+  addBlinkCaret();      // Add the blinking caret animation
 
   // After 1.4s begin the typing animation
   setTimeout(() => {
-    removeBlinkCaret();
+    removeBlinkCaret(); // Remove the blinking caret animation
 
-    newCode = document.createElement("code");
+    // Add a code element to the codeContainer (position already at +3)
+    newCode = document.createElement('code');
     newPar.appendChild(newCode);
 
-    typeCode();
+    typeCode(); // Create the code typing animation
   }, 1400);
 }
 
