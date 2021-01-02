@@ -1,6 +1,7 @@
 /* Import the SCSS components here */
 #banner > .banner-content > .banner-code-container p {
   white-space: nowrap;
+  color: #5e8a35;
   font-size: 12px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -22,13 +23,9 @@
   #banner > .banner-content > .banner-code-container p .color4 {
     color: #4ebc7c; }
   #banner > .banner-content > .banner-code-container p .color5 {
-    color: #5e8a35; }
-  #banner > .banner-content > .banner-code-container p .color6 {
     color: #dcdc8b; }
-  #banner > .banner-content > .banner-code-container p .color7 {
+  #banner > .banner-content > .banner-code-container p .color6 {
     color: #d8805c; }
-  #banner > .banner-content > .banner-code-container p .color8 {
-    color: #93cea8; }
 
 @-webkit-keyframes blink-caret {
   from, to {
@@ -717,7 +714,7 @@ body {
   text-align: left;
   color: white;
   background-color: black;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -766,6 +763,9 @@ button {
 
 abbr[title] {
   text-decoration: inherit; }
+
+code {
+  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
 
 #profile-container {
   position: relative;
