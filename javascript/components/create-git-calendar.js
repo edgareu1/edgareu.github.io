@@ -1,8 +1,8 @@
 // Function that creates the git calendar
 // Inspired on the 'Bloggify/github-calendar' library
 function createGitCalendar() {
-  const FULL_MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        ABBR_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  const FULL_MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        ABBR_MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
   // Function that transforms a date into string in an abbreviation format
   // eg: 'Dec 1, 2020'
@@ -18,33 +18,33 @@ function createGitCalendar() {
 
   // Function that, on hover, adds tooltips to each calendar day
   function addTooltips(container) {
-    const tooltip = document.createElement("div"),
+    const tooltip = document.createElement('div'),
           calendarDays = document.querySelectorAll('rect.day');
 
     // Add the tooltip to the document
-    tooltip.classList.add("day-tooltip");
+    tooltip.classList.add('day-tooltip');
     container.appendChild(tooltip);
 
     // Add a tooltip for each calendar day
     for (let i = 0; i < calendarDays.length; i++) {
       // Uppon hovering over a calendar day, show the tooltip with the relevant day information
-      calendarDays[i].addEventListener("mouseenter", (event) => {
-        let dayCount = event.target.getAttribute("data-count");
+      calendarDays[i].addEventListener('mouseenter', (event) => {
+        let dayCount = event.target.getAttribute('data-count');
 
         // Quantify the number of contributions as a string
-        if (dayCount === "0") {
-          dayCount = "No contributions";
-        } else if (dayCount === "1") {
-          dayCount = "1 contribution";
+        if (dayCount === '0') {
+          dayCount = 'No contributions';
+        } else if (dayCount === '1') {
+          dayCount = '1 contribution';
         } else {
           dayCount = `${dayCount} contributions`;
         }
 
-        const dateText = dateAbbrString(new Date(event.target.getAttribute("data-date")));
+        const dateText = dateAbbrString(new Date(event.target.getAttribute('data-date')));
 
         // Add the text to the tooltip and make it visible
         tooltip.innerHTML = `<strong>${dayCount}</strong> on ${dateText}`;
-        tooltip.classList.add("is-visible");
+        tooltip.classList.add('is-visible');
 
         const size = event.target.getBoundingClientRect(),
               leftPos = size.left + window.pageXOffset - tooltip.offsetWidth / 2 + size.width / 2,
@@ -56,8 +56,8 @@ function createGitCalendar() {
       });
 
       // Uppon taking the mouse off a calendar day, hide the tooltip
-      calendarDays[i].addEventListener("mouseleave", () => {
-        tooltip.classList.remove("is-visible");
+      calendarDays[i].addEventListener('mouseleave', () => {
+        tooltip.classList.remove('is-visible');
       });
     }
   }
@@ -65,7 +65,7 @@ function createGitCalendar() {
   fetch(`https://api.bloggify.net/gh-calendar/?username=edgareu1`)
   .then(response => response.text())
   .then(response => {
-    let calendarHelper = document.createElement("div"),
+    let calendarHelper = document.createElement('div'),
         container = document.querySelector('.calendar');
 
     // Remove the unnecessary elements
@@ -73,26 +73,26 @@ function createGitCalendar() {
     calendarHelper.querySelector('h2').remove();
     calendarHelper.querySelector('#user-activity-overview').remove();
 
-    let calendar = calendarHelper.querySelector(".js-yearly-contributions");
+    let calendar = calendarHelper.querySelector('.js-yearly-contributions');
 
     // Improve the 'more details' anchor content
     const modeDetails = 'For more details please check my <a href="https://github.com/edgareu1" target="blank" class="inline-anchor"><span class="hover-underline">GitHub profile</span></a>';
-    calendar.querySelector(".contrib-footer .float-left").innerHTML = modeDetails;
+    calendar.querySelector('.contrib-footer .float-left').innerHTML = modeDetails;
 
     // If the calendar does not load, try again
-    if (calendar.querySelector("include-fragment")) {
+    if (calendar.querySelector('include-fragment')) {
       setTimeout(createGitCalendar(), 500);
 
     // Otherwise improve its style and content
     } else {
-      let calendarSVG = calendar.querySelector("svg.js-calendar-graph-svg"),
-          width = calendarSVG.getAttribute("width"),
-          height = calendarSVG.getAttribute("height");
+      let calendarSVG = calendar.querySelector('svg.js-calendar-graph-svg'),
+          width = calendarSVG.getAttribute('width'),
+          height = calendarSVG.getAttribute('height');
 
       // Make the calendar style responsive
-      calendarSVG.removeAttribute("height");
-      calendarSVG.setAttribute("width", "100%");
-      calendarSVG.setAttribute("viewBox", "0 0 " + width + " " + height);
+      calendarSVG.removeAttribute('height');
+      calendarSVG.setAttribute('width', '100%');
+      calendarSVG.setAttribute('viewBox', '0 0 ' + width + ' ' + height);
 
       let calendarDays = calendar.querySelectorAll('rect.day'),
           dayCount,
@@ -135,19 +135,19 @@ function createGitCalendar() {
 
         if (dayCount > 0) {
           if (dateStreakEnd  === undefined) {
-            dateStreakEnd = new Date(calendarDays[i].getAttribute("data-date"));
+            dateStreakEnd = new Date(calendarDays[i].getAttribute('data-date'));
           }
           streakDays++;
 
         } else if (i < calendarDays.length - 2) {
           inStreak = false;
-          dateStreakBegin = new Date(calendarDays[i + 1].getAttribute("data-date"));
+          dateStreakBegin = new Date(calendarDays[i + 1].getAttribute('data-date'));
         }
       }
 
-      const calendarDatePeriod = dateAbbrString(new Date(calendarDays[0].getAttribute("data-date")))
+      const calendarDatePeriod = dateAbbrString(new Date(calendarDays[0].getAttribute('data-date')))
                                  + ' - '
-                                 + dateAbbrString(new Date(calendarDays[calendarDays.length - 1].getAttribute("data-date")));
+                                 + dateAbbrString(new Date(calendarDays[calendarDays.length - 1].getAttribute('data-date')));
 
       // Create the first 'contribution-stats' column
       createContribContent({
@@ -176,7 +176,7 @@ function createGitCalendar() {
 
       // Function that adds a 'contribution-stats' column to the bottom of the calendar
       function createContribContent({first, second, third, firstColumn} = {}) {
-        const calendarCol = document.createElement("div");
+        const calendarCol = document.createElement('div');
         calendarCol.classList = 'contrib-column table-column';
 
         if (firstColumn) { calendarCol.classList.add('contrib-column-first'); }
