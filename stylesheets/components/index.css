@@ -792,7 +792,14 @@ abbr[title] {
   color: #64ff5f;
   text-decoration: none; }
   .inline-anchor:hover .hover-underline {
-    text-decoration: underline; }
+    position: relative; }
+    .inline-anchor:hover .hover-underline::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      border-bottom: 1px solid;
+      content: ""; }
   .inline-anchor:active {
     color: lime; }
 
