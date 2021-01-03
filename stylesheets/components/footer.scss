@@ -51,20 +51,21 @@ footer {
 
       &::before {
         position: absolute;
-        top: 5%;
-        left: 5%;
-        opacity: 0.75;
-        height: 90%;
-        width: 90%;
-        border: 1px solid white;
+        top: 0;
+        left: 0;
+        background-color: inherit;
+        height: 100%;
+        width: 100%;
         border-radius: 50%;
+        transition: 0.1s;
         content: "";
       }
 
-      &.splash-animation::before {
-        // Vendor prefixes 'animation'
-        -webkit-animation: splash 0.4s ease;
-                animation: splash 0.4s ease;
+      &.expand-background::before {
+        top: -6%;
+        left: -6%;
+        height: 112%;
+        width: 112%;
       }
 
       img {
@@ -80,42 +81,5 @@ footer {
 
   .footer-copyrights {
     margin: 0 0 0 30px;
-  }
-}
-
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes splash {
-  from {
-    opacity: 0.75;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
-  }
-}
-
-@keyframes splash {
-  from {
-    opacity: 0.75;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
   }
 }
