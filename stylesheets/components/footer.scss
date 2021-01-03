@@ -57,12 +57,20 @@ footer {
         height: 100%;
         width: 100%;
         border-radius: 50%;
-        transition: 0.25s;
+
+        // Vendor prefixes 'transition'
+        -webkit-transition: 0.25s;
+             -o-transition: 0.25s;
+                transition: 0.25s;
+
         content: "";
       }
 
       &.expand-element {
-        transform: scale(1.12);
+        // Vendor prefixes 'transform'
+        -webkit-transform: scale(1.12);
+            -ms-transform: scale(1.12);
+                transform: scale(1.12);
 
         &::before {
           top: -6%;

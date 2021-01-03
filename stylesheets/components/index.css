@@ -547,9 +547,13 @@ footer {
         height: 100%;
         width: 100%;
         border-radius: 50%;
+        -webkit-transition: 0.25s;
+        -o-transition: 0.25s;
         transition: 0.25s;
         content: ""; }
       footer .contact-links a.expand-element {
+        -webkit-transform: scale(1.12);
+        -ms-transform: scale(1.12);
         transform: scale(1.12); }
         footer .contact-links a.expand-element::before {
           top: -6%;
