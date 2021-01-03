@@ -539,19 +539,10 @@ footer {
       height: 50px;
       width: 50px;
       border-radius: 50%; }
-      footer .contact-links a::before {
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        opacity: 0.75;
-        height: 90%;
-        width: 90%;
-        border: 1px solid white;
-        border-radius: 50%;
-        content: ""; }
-      footer .contact-links a.splash-animation::before {
-        -webkit-animation: splash 0.4s ease;
-        animation: splash 0.4s ease; }
+      footer .contact-links a.expand-element {
+        -webkit-transform: scale(1.12);
+        -ms-transform: scale(1.12);
+        transform: scale(1.12); }
       footer .contact-links a img {
         position: absolute;
         top: 15%;
@@ -562,24 +553,6 @@ footer {
   footer .footer-copyrights {
     margin: 0 0 0 30px; }
 
-@-webkit-keyframes splash {
-  from {
-    opacity: 0.75;
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.6);
-    transform: scale(1.6); } }
-@keyframes splash {
-  from {
-    opacity: 0.75;
-    -webkit-transform: scale(1);
-    transform: scale(1); }
-  to {
-    opacity: 0;
-    -webkit-transform: scale(1.6);
-    transform: scale(1.6); } }
 :root {
   --color-calendar-graph-day-bg: rgba(240, 240, 240, 1);
   --color-calendar-graph-day-L1-bg: rgba(70, 255, 70, 1);

@@ -49,22 +49,11 @@ footer {
       width: 50px;
       border-radius: 50%;
 
-      &::before {
-        position: absolute;
-        top: 5%;
-        left: 5%;
-        opacity: 0.75;
-        height: 90%;
-        width: 90%;
-        border: 1px solid white;
-        border-radius: 50%;
-        content: "";
-      }
-
-      &.splash-animation::before {
-        // Vendor prefixes 'animation'
-        -webkit-animation: splash 0.4s ease;
-                animation: splash 0.4s ease;
+      &.expand-element {
+        // Vendor prefixes 'transform'
+        -webkit-transform: scale(1.12);
+            -ms-transform: scale(1.12);
+                transform: scale(1.12);
       }
 
       img {
@@ -80,42 +69,5 @@ footer {
 
   .footer-copyrights {
     margin: 0 0 0 30px;
-  }
-}
-
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes splash {
-  from {
-    opacity: 0.75;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
-  }
-}
-
-@keyframes splash {
-  from {
-    opacity: 0.75;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    opacity: 0;
-
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
   }
 }

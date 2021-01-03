@@ -4,16 +4,16 @@ function animateFooter() {
 
   // For each of the anchors...
   for (const anchor of footerAnchors) {
-    // If the user hovers over the anchor: add the 'splash-animation' class
+    // If the user hovers over the anchor: add the 'expand-element' class
     anchor.addEventListener('mouseover', () => {
-      if (!anchor.classList.contains('splash-animation')) {
-        anchor.classList.add('splash-animation');
+      if (!anchor.classList.contains('expand-element')) {
+        anchor.classList.add('expand-element');
       }
     });
 
-    // When the animation ends: remove the 'splash-animation' class
-    anchor.addEventListener('animationend', () => {
-      anchor.classList.remove('splash-animation');
+    // When the user removes his mouse from the anchor: remove the 'expand-element' class
+    anchor.addEventListener('mouseout', () => {
+      anchor.classList.remove('expand-element');
     });
   }
 }
