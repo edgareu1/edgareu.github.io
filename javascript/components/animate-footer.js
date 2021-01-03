@@ -11,7 +11,7 @@ function animateFooter() {
       }
     });
 
-    // When the animation ends: remove the 'expand-element' class
+    // When the user removes his mouse from the anchor: remove the 'expand-element' class
     anchor.addEventListener('mouseout', () => {
       anchor.classList.remove('expand-element');
     });
