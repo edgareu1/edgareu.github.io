@@ -4,16 +4,16 @@ function animateFooter() {
 
   // For each of the anchors...
   for (const anchor of footerAnchors) {
-    // If the user hovers over the anchor: add the 'expand-background' class
+    // If the user hovers over the anchor: add the 'expand-element' class
     anchor.addEventListener('mouseover', () => {
-      if (!anchor.classList.contains('expand-background')) {
-        anchor.classList.add('expand-background');
+      if (!anchor.classList.contains('expand-element')) {
+        anchor.classList.add('expand-element');
       }
     });
 
-    // When the animation ends: remove the 'expand-background' class
+    // When the animation ends: remove the 'expand-element' class
     anchor.addEventListener('mouseout', () => {
-      anchor.classList.remove('expand-background');
+      anchor.classList.remove('expand-element');
     });
   }
 }
