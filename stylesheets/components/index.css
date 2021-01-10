@@ -1145,9 +1145,12 @@ nav {
       margin: 30px 10px 0; }
       #technologies .technologies-content .complementary-tech h3 {
         display: inline;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 600;
         margin: 0 5px 0 -5px; }
+        #technologies .technologies-content .complementary-tech h3::after {
+          content: ":";
+          margin-left: 4px; }
       #technologies .technologies-content .complementary-tech p {
         display: inline;
         line-height: 28px;
@@ -1155,6 +1158,13 @@ nav {
         #technologies .technologies-content .complementary-tech p span {
           font-size: 14px; }
 
+@media (max-width: 700px) {
+  #technologies .technologies-content .complementary-tech {
+    font-size: 16px; }
+    #technologies .technologies-content .complementary-tech h3 {
+      font-size: 18px; }
+    #technologies .technologies-content .complementary-tech p span {
+      font-size: 13px; } }
 .calendar .day-tooltip {
   position: absolute;
   display: none;

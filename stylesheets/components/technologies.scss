@@ -72,9 +72,14 @@
 
       h3 {
         display: inline;
-        font-size: 20px;
+        font-size: 19px;
         font-weight: 600;
         margin: 0 5px 0 -5px;
+
+        &::after {
+          content: ":";
+          margin-left: 4px;
+        }
       }
 
       p {
@@ -86,6 +91,20 @@
           font-size: 14px;
         }
       }
+    }
+  }
+}
+
+@media(max-width: 700px) {
+  #technologies .technologies-content .complementary-tech {
+    font-size: 16px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p span {
+      font-size: 13px;
     }
   }
 }
