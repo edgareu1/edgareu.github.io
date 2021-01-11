@@ -6,7 +6,7 @@ import { updateDimensionsCanvas } from './update-dimensions-canvas.js'
 //   profileContainer:  Canvas container
 function techWordsAnimation(canvasElement, profileContainer) {
   // Variable that stores the technologies names and their respective importance
-  var techList = { 'Ruby': 25, 'Rails': 24, 'JavaScript': 22, 'HTML': 24, 'CSS': 24, 'Web API': 18, 'AJAX': 16, 'Git': 16, 'GitHub': 14, 'SQL': 14, 'OOP': 14, 'MVC': 14, 'REST': 14, 'REGEX': 12, 'jQuery': 12, 'Bootstrap': 12, 'Stripe': 10, 'React': 10, 'Heroku': 8, 'Cloudinary': 8, 'Canvas': 6, 'SVG': 6 },
+  var techList = { 'Ruby': 25, 'Rails': 24, 'JavaScript': 22, 'HTML': 24, 'CSS': 24, 'API': 18, 'AJAX': 16, 'Git': 16, 'GitHub': 14, 'SQL': 14, 'OOP': 14, 'MVC': 14, 'REST': 14, 'PostgreSQL': 12, 'REGEX': 12, 'jQuery': 12, 'Bootstrap': 12, 'Stripe': 10, 'React': 10, 'Heroku': 8, 'Cloudinary': 8, 'Canvas': 6, 'SVG': 6 },
       techAttr = [];
 
   const numTech = objLength(techList),       // Number of technologies in the 'techList'
