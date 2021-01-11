@@ -771,10 +771,12 @@ code {
     .inline-anchor:hover .hover-underline::after {
       position: absolute;
       left: 0;
-      bottom: 0;
+      bottom: 1px;
       right: 0;
       border-bottom: 1px solid;
       content: ""; }
+    .inline-anchor:hover .hover-underline.closer-underline::after {
+      bottom: 0; }
   .inline-anchor:active {
     color: lime; }
 
