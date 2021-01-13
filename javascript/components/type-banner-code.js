@@ -35,7 +35,7 @@ function typeBannerCode() {
         '<c><s5>covidAppears</s><s1>( )</s></c>',
         '<k>Edgar is forced to stop travelling!</k>',
         '<c><s2>edgar</s><s1>.</s><s5>acessLifeGoals</s><s1>( )</s></c>',
-        '<k>Edgar is acessing his life goals...</k>',
+        '<k>Edgar is accessing his life goals...</k>',
         '<k>Edgar decided to change his life and learn how to code!</k>',
         '<c><s2>edgar</s><s1>.</s><s5>beginCodingBootcamp</s><s1>( )</s></c>',
         '<c><s2>edgar</s><s1>.</s><s5>addSkills</s><s1>(</s><s6>\'Ruby on Rails\'</s><s1>, </s><s6>\'JavaScript\'</s><s1>, </s><s6>\'HTML\'</s><s1>, </s><s6>\'CSS\'</s><s1>)</s></c>',
