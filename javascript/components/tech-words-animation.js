@@ -29,7 +29,7 @@ function techWordsAnimation(canvasElement, profileContainer) {
         this.x = Math.random() * canvasWidth;
         this.y = helperArray[currentArrayIndex] * sliceHeight;
         this.font = techList[key] * 3;
-        this.speed = (techList[key] / 8) + (Math.random() * 0.2);
+        this.speed = (techList[key] + Math.random()) / 16;
       }
     }
 
@@ -41,7 +41,8 @@ function techWordsAnimation(canvasElement, profileContainer) {
 
     // Function that creates the canvas animation
 		function animation() {
-      sliceHeight = canvasElement.height / numTech;
+      // Clear the canvas
+      canvas.clearRect(0, 0, canvasElement.width, canvasElement.height);
 
       // For each of the techologies...
 			for (var i = 0; i < techAttr.length; i++) {
@@ -61,15 +62,14 @@ function techWordsAnimation(canvasElement, profileContainer) {
         } else {
           techAttr[i].x += techAttr[i].speed;
         }
-			}
-		}
+      }
 
-    // Create an infinite loop that moves the canvas technologies every 20ms
-		setInterval(function() {
-			canvas.clearRect(0, 0, canvasElement.width, canvasElement.height);
-			animation();
-		}, 20);
-	}
+      requestAnimationFrame(animation);
+    }
+
+    // Create an animation that moves the canvas technologies
+    animation();
+  }
 }
 
 // Function that returns the length of an object
