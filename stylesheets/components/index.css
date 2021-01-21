@@ -1,4 +1,44 @@
 /* Import the SCSS components here */
+.animation-toggle-container {
+  position: sticky;
+  top: calc(100vh - 90px);
+  right: 22px;
+  float: right;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  z-index: 10;
+  padding: 8px 10px;
+  box-shadow: 1px 1px 4px #0a3ca0;
+  border-radius: 5px; }
+  .animation-toggle-container .switch-container {
+    display: flex;
+    margin-top: 5px; }
+    .animation-toggle-container .switch-container .switch {
+      display: flex;
+      background-color: #0a3ca0;
+      width: 40px;
+      padding: 5px;
+      border-radius: 40px;
+      transition: 0.2s; }
+      .animation-toggle-container .switch-container .switch .toggle-symbol {
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.1s; }
+    .animation-toggle-container .switch-container .toggle-state {
+      font-size: 10px;
+      margin: 5px 0 0 5px; }
+      .animation-toggle-container .switch-container .toggle-state::after {
+        content: "ON"; }
+    .animation-toggle-container .switch-container:not(.on) .switch {
+      background: #505050; }
+      .animation-toggle-container .switch-container:not(.on) .switch .toggle-symbol {
+        transform: translateX(15px); }
+    .animation-toggle-container .switch-container:not(.on) .toggle-state::after {
+      content: "OFF"; }
+
 #banner > .banner-content > .banner-code-container p {
   white-space: nowrap;
   color: #5e8a35;

@@ -1,0 +1,58 @@
+.animation-toggle-container {
+  position: sticky;
+  top: calc(100vh - 90px);
+  right: 22px;
+  float: right;
+  color: white;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  z-index: 10;
+  padding: 8px 10px;
+  box-shadow: 1px 1px 4px rgba(10, 60, 160, 1);
+  border-radius: 5px;
+
+  .switch-container {
+    display: flex;
+    margin-top: 5px;
+
+    .switch {
+      display: flex;
+      background-color: rgba(10, 60, 160, 1);
+      width: 40px;
+      padding: 5px;
+      border-radius: 40px;
+      transition: 0.2s;
+
+      .toggle-symbol {
+        height: 15px;
+        width: 15px;
+        background-color: white;
+        border-radius: 50%;
+        transition: 0.1s;
+      }
+    }
+
+    .toggle-state {
+      font-size: 10px;
+      margin: 5px 0 0 5px;
+
+      &::after {
+        content: "ON";
+      }
+    }
+
+    &:not(.on) {
+      .switch {
+        background: rgba(80, 80, 80, 1);
+
+        .toggle-symbol {
+          transform: translateX(15px);
+        }
+      }
+
+      .toggle-state::after {
+        content: "OFF";
+      }
+    }
+  }
+}
