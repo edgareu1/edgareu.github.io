@@ -629,7 +629,7 @@ code {
       padding: 20px 35px 10px;
       border-bottom: 2px solid rgba(220, 220, 220, 0.5);
       margin: 0 auto 25px; }
-    #profile-container main #curriculum, #profile-container main #projects, #profile-container main #technologies {
+    #profile-container main #contacts, #profile-container main #projects, #profile-container main #technologies {
       min-height: -webkit-fit-content;
       min-height: -moz-fit-content;
       min-height: fit-content;
