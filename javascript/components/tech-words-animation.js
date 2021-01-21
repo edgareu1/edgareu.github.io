@@ -7,7 +7,9 @@ import { updateDimensionsCanvas } from './update-dimensions-canvas.js'
 function techWordsAnimation(canvasElement, profileContainer) {
   // Variable that stores the technologies names and their respective importance
   var techList = { 'Ruby': 24, 'Rails': 24, 'JavaScript': 24, 'HTML': 24, 'CSS': 24, 'API': 18, 'AJAX': 18, 'Sass': 16, 'Git': 16, 'GitHub': 14, 'SQL': 14, 'OOP': 14, 'MVC': 14, 'REST': 14, 'PostgreSQL': 12, 'JSON': 12, 'REGEX': 12, 'jQuery': 12, 'Bootstrap': 12, 'Stripe': 10, 'React': 10, 'Node.js': 10, 'Heroku': 10, 'Canvas': 6, 'SVG': 6 },
-      techAttr = [];
+      techAttr = [],
+      isPaused = false,
+      rAF;
 
   const numTech = objLength(techList),       // Number of technologies in the 'techList'
         helperArray = randomArray(numTech);  // Array to help the vertical positioning of the words
@@ -64,8 +66,22 @@ function techWordsAnimation(canvasElement, profileContainer) {
         }
       }
 
-      requestAnimationFrame(animation);
+      rAF = requestAnimationFrame(animation);
     }
+
+    const toogleButton = document.querySelector('.switch');
+    toogleButton.addEventListener('click', () => {
+      toogleButton.parentElement.classList.toggle('on');
+
+      if (isPaused) {
+        isPaused = false;
+        animation();
+      } else {
+        isPaused = true;
+        cancelAnimationFrame(rAF);
+        canvas.clearRect(0, 0, canvasElement.width, canvasElement.height);
+      }
+    });
 
     // Create an animation that moves the canvas technologies
     animation();
