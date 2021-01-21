@@ -44,7 +44,7 @@ function typeBannerCode() {
         '<k>Edgar completed the bootcamp having built several minor apps and 2 major ones!</k>',
         '<c><s2>edgar</s><s1>.</s><s5>farewell</s><s1>( )</s></c>',
         '<k>This was my life!</k>',
-        '<k>For more details check the curriculum section!</k>'
+        '<k>For more details check my resume at the bottom of the page!</k>'
       ],
       position = 0,
       typeSpeed = 50,
