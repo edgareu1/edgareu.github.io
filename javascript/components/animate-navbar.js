@@ -6,7 +6,6 @@ function animateNavbar() {
         linksList = document.querySelector('.nav-links'),     // Navbar links list
         moreLink = document.querySelector('.nav-show-more');  // Navbar show-more button
 
-  smoothNavbarAnchors();    // Make the navbar anchors scroll smoothly to their respective destination
   refreshActiveElement();   // Refresh the navbar active element
   animateShowMore();        // Animate the show-more feature
   updateDimensionsNavbar(linksList, moreLink);  // Update the navbar dimensions
@@ -15,28 +14,6 @@ function animateNavbar() {
   document.addEventListener('scroll', () => {
     refreshActiveElement();
   });
-
-  // Function that makes the navbar anchors scroll smoothly to their respective destination
-  function smoothNavbarAnchors() {
-    // For each of the anchors...
-    for (let anchor of anchors) {
-      const anchorRef = anchor.getAttribute('href');
-
-      anchor.addEventListener('click', (event) => {
-        event.preventDefault(); // Prevent the anchor default click behavior
-
-        // Get the anchor destination distance from the top of the page
-        // Banner height (+) distance of the section from the top of the 'main' element (-) Navbar height
-        const offsetTop = document.getElementById('banner').offsetHeight + document.querySelector(anchorRef).offsetTop - 50;
-
-        // Smoothly scroll to the section
-        scroll({
-          top: anchorRef == '#banner' ? 0 : offsetTop,
-          behavior: 'smooth'
-        });
-      });
-    }
-  }
 
   // Function that refreshes the navbar active element
   function refreshActiveElement() {
