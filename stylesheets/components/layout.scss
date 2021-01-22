@@ -94,13 +94,18 @@ code {
   position: relative;
   width: 100%;
 
-  canvas, main {
+  canvas, #profile-content {
     position: absolute;
   }
 
-  main {
+  #profile-content {
+    height: fit-content;
     width: 100%;
-    padding-bottom: 100px; // Footer height
+
+    main {
+      height: fit-content;
+      width: 100%;
+    }
 
     .section-title {
       color: white;
