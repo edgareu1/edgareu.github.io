@@ -1,14 +1,23 @@
+.animation-toggle-container.pos-rel {
+  position: relative;
+  top: 50px;
+}
+
+.animation-toggle-container.pos-fixed {
+  position: fixed;
+  bottom: 20px;
+}
+
 .animation-toggle-container {
-  position: sticky;
-  top: calc(100vh - 90px);
-  right: 22px;
+  right: 20px;
   float: right;
   color: white;
   background: rgba(0, 0, 0, 0.9);
   font-size: 14px;
   z-index: 10;
   padding: 8px 10px;
-  box-shadow: 1px 1px 5px rgba(10, 60, 160, 1);
+  box-shadow: 1px 1px 3px rgba(10, 60, 160, 1);
+  border: 1px solid rgba(10, 60, 160, 0.5);
   border-radius: 5px;
 
   .switch-container {
