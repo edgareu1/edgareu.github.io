@@ -79,396 +79,399 @@
       <!-- Background running words animation -->
       <canvas id="tech-canvas"></canvas>
 
-      <!-- Main Content -->
-      <main>
-        <div class="animation-toggle-container pos-rel">
-          <span>Animation</span>
-          <div class="switch-container on">
-            <button type="button" class="switch">
-              <span class="toggle-symbol"></span>
-            </button>
-            <span class="toggle-state"></span>
-          </div>
-        </div>
-
-        <!-- Technologies section -->
-        <section id="technologies">
-          <header>
-            <h2 class="section-title" style="margin-top: 30px;">Technologies</h2>
-          </header>
-
-          <div class="technologies-content">
-            <ul class="progress-bars-list">
-              <li>
-                <div class="tech-title" style="margin: 0;">
-                  <h3>Ruby on Rails</h3>
-                  <span class="percent">75%</span>
-                </div>
-
-                <div class="progress-bar-container">
-                  <span class="progress-bar" style="width: 75%; background: #d12f1e;"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="tech-title">
-                  <h3>JavaScript <abbr title="ECMAScript 6">ES6</abbr></h3>
-                  <span class="percent">75%</span>
-                </div>
-
-                <div class="progress-bar-container">
-                  <span class="progress-bar" style="width: 75%; background: #ffb52d;"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="tech-title">
-                  <h3><abbr title="HyperText Markup Language">HTML</abbr> 5</h3>
-                  <span class="percent">80%</span>
-                </div>
-
-                <div class="progress-bar-container">
-                  <span class="progress-bar" style="width: 80%; background: #20a03a;"></span>
-                </div>
-              </li>
-
-              <li>
-                <div class="tech-title">
-                  <h3><abbr title="Cascading Style Sheets">CSS</abbr> 3 / <abbr title="Syntactically Awesome Style Sheets">Sass</abbr></h3>
-                  <span class="percent">80%</span>
-                </div>
-
-                <div class="progress-bar-container">
-                  <span class="progress-bar" style="width: 80%; background: #0078d2;"></span>
-                </div>
-              </li>
-            </ul>
-
-            <div class="complementary-tech">
-              <h3>Complementary Technologies</h3>
-              <p><abbr title="Structured Query Language">SQL</abbr> Databases, React, <abbr title="Application Programming Interface">API</abbr> <span>(integration and building)</span>, jQuery, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Git/GitHub, <abbr title="Object Oriented Programming">OOP</abbr>, <abbr title="Representational State Transfer">REST</abbr>, Bootstrap, Heroku, Stripe...</p>
+      <!-- Profile content -->
+      <div id="profile-content">
+        <!-- Main Content -->
+        <main>
+          <div class="animation-toggle-container pos-rel">
+            <span>Animation</span>
+            <div class="switch-container on">
+              <button type="button" class="switch">
+                <span class="toggle-symbol"></span>
+              </button>
+              <span class="toggle-state"></span>
             </div>
           </div>
-        </section>
 
-        <!-- Projects section -->
-        <section id="projects">
-          <header>
-            <h2 class="section-title">Main Projects</h2>
-          </header>
+          <!-- Technologies section -->
+          <section id="technologies">
+            <header>
+              <h2 class="section-title" style="margin-top: 30px;">Technologies</h2>
+            </header>
 
-          <div class="projects-content">
-            <!-- Pill-bar -->
-            <ul class="pill-items">
-              <li class="pill-item" data-target="nav-artisan">Artisan</li>
-              <li class="pill-item active" data-target="nav-hook">Hook</li>
-              <li class="pill-item" data-target="nav-portfolio">Portfolio</li>
-              <li class="pill-item" data-target="nav-trip">Trip Finder</li>
-            </ul>
-
-            <!-- Projects content -->
-            <div class="tab-items">
-
-              <!-- Artisan -->
-              <article class="tab-item" id="nav-artisan">
-                <div id="carousel-artisan" class="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
-                    <li data-target="carousel-artisan" data-slide-to="1"></li>
-                    <li data-target="carousel-artisan" data-slide-to="2"></li>
-                  </ol>
-
-                  <div class="carousel-inner">
-                    <figure class="carousel-item active" data-slide="0">
-                      <img src="images/projects/artisan/home-page.png" alt="Artisan project home page">
-
-                      <figcaption class="carousel-caption">Home page</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="1">
-                      <img src="images/projects/artisan/products-show.png" alt="Artisan project Products#show page">
-
-                      <figcaption class="carousel-caption">Products<span>#</span>show</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="2">
-                      <img src="images/projects/artisan/orders-index.png" alt="Artisan project Orders#index page">
-
-                      <figcaption class="carousel-caption">Orders<span>#</span>index</figcaption>
-                    </figure>
+            <div class="technologies-content">
+              <ul class="progress-bars-list">
+                <li>
+                  <div class="tech-title" style="margin: 0;">
+                    <h3>Ruby on Rails</h3>
+                    <span class="percent">75%</span>
                   </div>
 
-                  <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
-                    <i class="fas fa-angle-left"></i>
+                  <div class="progress-bar-container">
+                    <span class="progress-bar" style="width: 75%; background: #d12f1e;"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tech-title">
+                    <h3>JavaScript <abbr title="ECMAScript 6">ES6</abbr></h3>
+                    <span class="percent">75%</span>
                   </div>
 
-                  <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
-                    <i class="fas fa-angle-right"></i>
+                  <div class="progress-bar-container">
+                    <span class="progress-bar" style="width: 75%; background: #ffb52d;"></span>
                   </div>
-                </div>
+                </li>
 
-                <div class="project-description scrollable-gray">
-                  <header>
-                    <h3>
-                      Artisan
-                      <span>
-                        <span class="parenthesis open">(</span>
-                        <time datetime="2020-06">Jun </time>
-                        <span class="text">- </span>
-                        <time datetime="2020-08">Aug 2020</time>
-                        <span class="parenthesis close">)</span>
-                      </span>
-                    </h3>
-                  </header>
-
-                  <h4>Summary</h4>
-                  <p>An online marketplace for craftwork.</p>
-
-                  <h4>Context</h4>
-                  <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
-
-                  <h4>Technologies</h4>
-                  <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Stripe, Background Jobs</p>
-
-                  <h4>My main features</h4>
-                  <p>Implemented the Stripe's payment system; simulated orders delivery using Background Jobs; created a custom made autocomplete search bar.</p>
-
-                  <div class="anchors-container">
-                    <a href="https://github.com/JulieMariano/Artisan" target="_blank" title="Artisan project GitHub repository" class="inline-anchor">
-                      <i class="fab fa-github"></i>
-                      <span class="hover-underline">GitHub repository</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Hook -->
-              <article class="tab-item fade active" id="nav-hook">
-                <div id="carousel-hook" class="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-target="carousel-hook" data-slide-to="0" class="active"></li>
-                    <li data-target="carousel-hook" data-slide-to="1"></li>
-                    <li data-target="carousel-hook" data-slide-to="2"></li>
-                    <li data-target="carousel-hook" data-slide-to="3"></li>
-                    <li data-target="carousel-hook" data-slide-to="4"></li>
-                    <li data-target="carousel-hook" data-slide-to="5"></li>
-                    <li data-target="carousel-hook" data-slide-to="6"></li>
-                  </ol>
-
-                  <div class="carousel-inner">
-                    <figure class="carousel-item active" data-slide="0">
-                      <img src="images/projects/hook/home-page.png" alt="Hook project home page">
-
-                      <figcaption class="carousel-caption">Home page</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="1">
-                      <img src="images/projects/hook/prediction-page.png" alt="Hook project prediction page">
-
-                      <figcaption class="carousel-caption">Prediction page</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="2">
-                      <img src="images/projects/hook/logs-index.png" alt="Hook project Logs#index page">
-
-                      <figcaption class="carousel-caption">Logs<span>#</span>index</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="3">
-                      <img src="images/projects/hook/logs-show.png" alt="Hook project Logs#show page">
-
-                      <figcaption class="carousel-caption">Logs<span>#</span>show</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="4">
-                      <img src="images/projects/hook/locations-index.png" alt="Hook project Locations#index page">
-
-                      <figcaption class="carousel-caption">Locations<span>#</span>index</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="5">
-                      <img src="images/projects/hook/locations-show.png" alt="Hook project Locations#show page">
-
-                      <figcaption class="carousel-caption">Locations<span>#</span>show</figcaption>
-                    </figure>
-
-                    <figure class="carousel-item" data-slide="6">
-                      <img src="images/projects/hook/fish-index.png" alt="Hook project Fish#index page">
-
-                      <figcaption class="carousel-caption">Fish<span>#</span>index</figcaption>
-                    </figure>
+                <li>
+                  <div class="tech-title">
+                    <h3><abbr title="HyperText Markup Language">HTML</abbr> 5</h3>
+                    <span class="percent">80%</span>
                   </div>
 
-                  <div class="carousel-control-prev light" data-target="carousel-hook" data-slide="prev">
-                    <i class="fas fa-angle-left"></i>
+                  <div class="progress-bar-container">
+                    <span class="progress-bar" style="width: 80%; background: #20a03a;"></span>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="tech-title">
+                    <h3><abbr title="Cascading Style Sheets">CSS</abbr> 3 / <abbr title="Syntactically Awesome Style Sheets">Sass</abbr></h3>
+                    <span class="percent">80%</span>
                   </div>
 
-                  <div class="carousel-control-next light" data-target="carousel-hook" data-slide="next">
-                    <i class="fas fa-angle-right"></i>
+                  <div class="progress-bar-container">
+                    <span class="progress-bar" style="width: 80%; background: #0078d2;"></span>
                   </div>
-                </div>
+                </li>
+              </ul>
 
-                <div class="project-description scrollable-gray">
-                  <header>
-                    <h3>
-                      Hook
-                      <span>
-                        <span class="parenthesis open">(</span>
-                        <time datetime="2020-07">Jul </time>
-                        <span class="text">- </span>
-                        <time datetime="2020-10">Oct 2020</time>
-                        <span class="parenthesis close">)</span>
-                      </span>
-                    </h3>
-                  </header>
-
-                  <h4>Summary</h4>
-                  <p>A web platform for fisherman to record their fishing trips and to get predictions on the best fishing locations available.</p>
-
-                  <h4>Context</h4>
-                  <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
-
-                  <h4>Technologies</h4>
-                  <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Application Programming Interface">API</abbr> (integration and building), <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Machine Learning</p>
-
-                  <h4>My main features</h4>
-                  <p>Implemented a machine learning algorithm to predict the best fishing locations available; integrated location and weather <abbr title="Application Programming Interfaces">APIs</abbr>; Built a <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>.</p>
-
-                  <div class="anchors-container">
-                    <a href="https://www.hookeu.com" target="_blank" title="Hook project live demo" class="inline-anchor" style="display: inline;">
-                      <i class="fas fa-desktop"></i>
-                      <span class="hover-underline">Website</span>
-                    </a>
-
-                    <span class="side-note">
-                      <span class="parenthesis open">(</span>
-                      <span class="text">the first request may take a couple of seconds</span>
-                      <span class="parenthesis close">)</span>
-                    </span>
-
-                    <a href="https://github.com/edgareu1/rails-hook" target="_blank" title="Hook project GitHub repository" class="inline-anchor" style="margin-top: 5px;">
-                      <i class="fab fa-github"></i>
-                      <span class="hover-underline">GitHub repository</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Portfolio -->
-              <article class="tab-item" id="nav-portfolio">
-                <img src="./images/projects/portfolio/intro.png" alt="Portfolio project welcoming page" class="single-img">
-
-                <div class="project-description scrollable-gray">
-                  <header>
-                    <h3>
-                      Portfolio
-                      <span>
-                        <span class="parenthesis open">(</span>
-                        <time datetime="2020-11">Nov 2020</time>
-                        <span class="parenthesis close">)</span>
-                      </span>
-                    </h3>
-                  </header>
-
-                  <h4>Summary</h4>
-                  <p>My online portfolio (this one), which I created from scratch without any external dependencies.</p>
-
-                  <h4>Technologies</h4>
-                  <p>JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr></p>
-
-                  <h4>My main features</h4>
-                  <p>Created a custom made navbar, carousel and pill-bar; created the GitHub contributions calendar and the code typing animation.</p>
-
-                  <div class="anchors-container">
-                    <a href="https://github.com/edgareu1/edgareu1.github.io" target="_blank" title="Portfolio project GitHub repository" class="inline-anchor">
-                      <i class="fab fa-github"></i>
-                      <span class="hover-underline">GitHub repository</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
-
-              <!-- Trip Finder -->
-              <article class="tab-item" id="nav-trip">
-                <img src="./images/projects/trip-finder/coming-soon.png" alt="A light bulb with the text 'Coming soon'" class="single-img">
-
-                <div class="project-description scrollable-gray">
-                  <header>
-                    <h3>
-                      Trip Finder
-                      <span>
-                        <span class="parenthesis open">(</span>
-                        <time datetime="2020-11">Nov 2020 </time>
-                        <span class="text">- </span>
-                        <time datetime="2020">Present</time>
-                        <span class="parenthesis close">)</span>
-                      </span>
-                    </h3>
-                  </header>
-
-                  <h4>Summary</h4>
-                  <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages available.</p>
-
-                  <h4>Context</h4>
-                  <p>A project of mine still in development...</p>
-
-                  <h4>Technologies</h4>
-                  <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="Application Programming Interface">API</abbr> (integration), Web Scraping</p>
-
-                  <div class="anchors-container">
-                    <a href="https://github.com/edgareu1/rails-trip-finder" target="_blank" title="Trip Finder project GitHub repository" class="inline-anchor">
-                      <i class="fab fa-github"></i>
-                      <span class="hover-underline">GitHub repository</span>
-                    </a>
-                  </div>
-                </div>
-              </article>
+              <div class="complementary-tech">
+                <h3>Complementary Technologies</h3>
+                <p><abbr title="Structured Query Language">SQL</abbr> Databases, React, <abbr title="Application Programming Interface">API</abbr> <span>(integration and building)</span>, jQuery, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Git/GitHub, <abbr title="Object Oriented Programming">OOP</abbr>, <abbr title="Representational State Transfer">REST</abbr>, Bootstrap, Heroku, Stripe...</p>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Contacts section -->
-        <section id="contacts">
-          <header>
-            <h2>Wanna get in touch?</h2>
-          </header>
+          <!-- Projects section -->
+          <section id="projects">
+            <header>
+              <h2 class="section-title">Main Projects</h2>
+            </header>
 
-          <p>Fill the form bellow or use <a href="mailto:edgar.eu1@hotmail.com" class="inline-anchor"><span class="hover-underline">this email</span></a></p>
-          <form action="https://formspree.io/f/mdopbzqy" method="POST" id="contact-form">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="_replyto" placeholder="Email" required>
-            <textarea name="message" placeholder="Your message" required></textarea>
-            <button type="submit" class="btn-modal contact-submit">Send Email</button>
-          </form>
-        </section>
-      </main>
+            <div class="projects-content">
+              <!-- Pill-bar -->
+              <ul class="pill-items">
+                <li class="pill-item" data-target="nav-artisan">Artisan</li>
+                <li class="pill-item active" data-target="nav-hook">Hook</li>
+                <li class="pill-item" data-target="nav-portfolio">Portfolio</li>
+                <li class="pill-item" data-target="nav-trip">Trip Finder</li>
+              </ul>
 
-      <!-- Footer -->
-      <footer>
-        <ul class="contact-links">
-          <li>
-            <a href="https://www.linkedin.com/in/edgareu1" target="_blank" title="LinkedIn profile - Professional landing page">
-              <img src="./images/logos/linkedin.png" alt="LinkedIn logo">
-            </a>
-          </li>
+              <!-- Projects content -->
+              <div class="tab-items">
 
-          <li>
-            <a href="https://github.com/edgareu1" target="_blank" title="GitHub profile - Source code repository">
-              <img src="./images/logos/github.png" alt="GitHub logo">
-            </a>
-          </li>
+                <!-- Artisan -->
+                <article class="tab-item" id="nav-artisan">
+                  <div id="carousel-artisan" class="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
+                      <li data-target="carousel-artisan" data-slide-to="1"></li>
+                      <li data-target="carousel-artisan" data-slide-to="2"></li>
+                    </ol>
 
-          <li>
-            <a href="https://www.codewars.com/users/edgareu" target="_blank" title="CodeWars profile - Coding challenges platform">
-              <img src="./images/logos/codewars.png" alt="CodeWars logo">
-            </a>
-          </li>
-        </ul>
+                    <div class="carousel-inner">
+                      <figure class="carousel-item active" data-slide="0">
+                        <img src="images/projects/artisan/home-page.png" alt="Artisan project home page">
 
-        <p class="footer-copyrights">
-          Edgar Marques <i class="far fa-copyright"></i> 2020
-        </p>
-      </footer>
+                        <figcaption class="carousel-caption">Home page</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="1">
+                        <img src="images/projects/artisan/products-show.png" alt="Artisan project Products#show page">
+
+                        <figcaption class="carousel-caption">Products<span>#</span>show</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="2">
+                        <img src="images/projects/artisan/orders-index.png" alt="Artisan project Orders#index page">
+
+                        <figcaption class="carousel-caption">Orders<span>#</span>index</figcaption>
+                      </figure>
+                    </div>
+
+                    <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
+                      <i class="fas fa-angle-left"></i>
+                    </div>
+
+                    <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-description scrollable-gray">
+                    <header>
+                      <h3>
+                        Artisan
+                        <span>
+                          <span class="parenthesis open">(</span>
+                          <time datetime="2020-06">Jun </time>
+                          <span class="text">- </span>
+                          <time datetime="2020-08">Aug 2020</time>
+                          <span class="parenthesis close">)</span>
+                        </span>
+                      </h3>
+                    </header>
+
+                    <h4>Summary</h4>
+                    <p>An online marketplace for craftwork.</p>
+
+                    <h4>Context</h4>
+                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
+
+                    <h4>Technologies</h4>
+                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Stripe, Background Jobs</p>
+
+                    <h4>My main features</h4>
+                    <p>Implemented the Stripe's payment system; simulated orders delivery using Background Jobs; created a custom made autocomplete search bar.</p>
+
+                    <div class="anchors-container">
+                      <a href="https://github.com/JulieMariano/Artisan" target="_blank" title="Artisan project GitHub repository" class="inline-anchor">
+                        <i class="fab fa-github"></i>
+                        <span class="hover-underline">GitHub repository</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Hook -->
+                <article class="tab-item fade active" id="nav-hook">
+                  <div id="carousel-hook" class="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="carousel-hook" data-slide-to="0" class="active"></li>
+                      <li data-target="carousel-hook" data-slide-to="1"></li>
+                      <li data-target="carousel-hook" data-slide-to="2"></li>
+                      <li data-target="carousel-hook" data-slide-to="3"></li>
+                      <li data-target="carousel-hook" data-slide-to="4"></li>
+                      <li data-target="carousel-hook" data-slide-to="5"></li>
+                      <li data-target="carousel-hook" data-slide-to="6"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                      <figure class="carousel-item active" data-slide="0">
+                        <img src="images/projects/hook/home-page.png" alt="Hook project home page">
+
+                        <figcaption class="carousel-caption">Home page</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="1">
+                        <img src="images/projects/hook/prediction-page.png" alt="Hook project prediction page">
+
+                        <figcaption class="carousel-caption">Prediction page</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="2">
+                        <img src="images/projects/hook/logs-index.png" alt="Hook project Logs#index page">
+
+                        <figcaption class="carousel-caption">Logs<span>#</span>index</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="3">
+                        <img src="images/projects/hook/logs-show.png" alt="Hook project Logs#show page">
+
+                        <figcaption class="carousel-caption">Logs<span>#</span>show</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="4">
+                        <img src="images/projects/hook/locations-index.png" alt="Hook project Locations#index page">
+
+                        <figcaption class="carousel-caption">Locations<span>#</span>index</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="5">
+                        <img src="images/projects/hook/locations-show.png" alt="Hook project Locations#show page">
+
+                        <figcaption class="carousel-caption">Locations<span>#</span>show</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="6">
+                        <img src="images/projects/hook/fish-index.png" alt="Hook project Fish#index page">
+
+                        <figcaption class="carousel-caption">Fish<span>#</span>index</figcaption>
+                      </figure>
+                    </div>
+
+                    <div class="carousel-control-prev light" data-target="carousel-hook" data-slide="prev">
+                      <i class="fas fa-angle-left"></i>
+                    </div>
+
+                    <div class="carousel-control-next light" data-target="carousel-hook" data-slide="next">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-description scrollable-gray">
+                    <header>
+                      <h3>
+                        Hook
+                        <span>
+                          <span class="parenthesis open">(</span>
+                          <time datetime="2020-07">Jul </time>
+                          <span class="text">- </span>
+                          <time datetime="2020-10">Oct 2020</time>
+                          <span class="parenthesis close">)</span>
+                        </span>
+                      </h3>
+                    </header>
+
+                    <h4>Summary</h4>
+                    <p>A web platform for fisherman to record their fishing trips and to get predictions on the best fishing locations available.</p>
+
+                    <h4>Context</h4>
+                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
+
+                    <h4>Technologies</h4>
+                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Application Programming Interface">API</abbr> (integration and building), <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Machine Learning</p>
+
+                    <h4>My main features</h4>
+                    <p>Implemented a machine learning algorithm to predict the best fishing locations available; integrated location and weather <abbr title="Application Programming Interfaces">APIs</abbr>; Built a <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>.</p>
+
+                    <div class="anchors-container">
+                      <a href="https://www.hookeu.com" target="_blank" title="Hook project live demo" class="inline-anchor" style="display: inline;">
+                        <i class="fas fa-desktop"></i>
+                        <span class="hover-underline">Website</span>
+                      </a>
+
+                      <span class="side-note">
+                        <span class="parenthesis open">(</span>
+                        <span class="text">the first request may take a couple of seconds</span>
+                        <span class="parenthesis close">)</span>
+                      </span>
+
+                      <a href="https://github.com/edgareu1/rails-hook" target="_blank" title="Hook project GitHub repository" class="inline-anchor" style="margin-top: 5px;">
+                        <i class="fab fa-github"></i>
+                        <span class="hover-underline">GitHub repository</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Portfolio -->
+                <article class="tab-item" id="nav-portfolio">
+                  <img src="./images/projects/portfolio/intro.png" alt="Portfolio project welcoming page" class="single-img">
+
+                  <div class="project-description scrollable-gray">
+                    <header>
+                      <h3>
+                        Portfolio
+                        <span>
+                          <span class="parenthesis open">(</span>
+                          <time datetime="2020-11">Nov 2020</time>
+                          <span class="parenthesis close">)</span>
+                        </span>
+                      </h3>
+                    </header>
+
+                    <h4>Summary</h4>
+                    <p>My online portfolio (this one), which I created from scratch without any external dependencies.</p>
+
+                    <h4>Technologies</h4>
+                    <p>JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr></p>
+
+                    <h4>My main features</h4>
+                    <p>Created a custom made navbar, carousel and pill-bar; created the GitHub contributions calendar and the code typing animation.</p>
+
+                    <div class="anchors-container">
+                      <a href="https://github.com/edgareu1/edgareu1.github.io" target="_blank" title="Portfolio project GitHub repository" class="inline-anchor">
+                        <i class="fab fa-github"></i>
+                        <span class="hover-underline">GitHub repository</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Trip Finder -->
+                <article class="tab-item" id="nav-trip">
+                  <img src="./images/projects/trip-finder/coming-soon.png" alt="A light bulb with the text 'Coming soon'" class="single-img">
+
+                  <div class="project-description scrollable-gray">
+                    <header>
+                      <h3>
+                        Trip Finder
+                        <span>
+                          <span class="parenthesis open">(</span>
+                          <time datetime="2020-11">Nov 2020 </time>
+                          <span class="text">- </span>
+                          <time datetime="2020">Present</time>
+                          <span class="parenthesis close">)</span>
+                        </span>
+                      </h3>
+                    </header>
+
+                    <h4>Summary</h4>
+                    <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages available.</p>
+
+                    <h4>Context</h4>
+                    <p>A project of mine still in development...</p>
+
+                    <h4>Technologies</h4>
+                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="Application Programming Interface">API</abbr> (integration), Web Scraping</p>
+
+                    <div class="anchors-container">
+                      <a href="https://github.com/edgareu1/rails-trip-finder" target="_blank" title="Trip Finder project GitHub repository" class="inline-anchor">
+                        <i class="fab fa-github"></i>
+                        <span class="hover-underline">GitHub repository</span>
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contacts section -->
+          <section id="contacts">
+            <header>
+              <h2>Wanna get in touch?</h2>
+            </header>
+
+            <p>Fill the form bellow or use <a href="mailto:edgar.eu1@hotmail.com" class="inline-anchor"><span class="hover-underline">this email</span></a></p>
+            <form action="https://formspree.io/f/mdopbzqy" method="POST" id="contact-form">
+              <input type="text" name="name" placeholder="Name" required>
+              <input type="email" name="_replyto" placeholder="Email" required>
+              <textarea name="message" placeholder="Your message" required></textarea>
+              <button type="submit" class="btn-modal contact-submit">Send Email</button>
+            </form>
+          </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+          <ul class="contact-links">
+            <li>
+              <a href="https://www.linkedin.com/in/edgareu1" target="_blank" title="LinkedIn profile - Professional landing page">
+                <img src="./images/logos/linkedin.png" alt="LinkedIn logo">
+              </a>
+            </li>
+
+            <li>
+              <a href="https://github.com/edgareu1" target="_blank" title="GitHub profile - Source code repository">
+                <img src="./images/logos/github.png" alt="GitHub logo">
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.codewars.com/users/edgareu" target="_blank" title="CodeWars profile - Coding challenges platform">
+                <img src="./images/logos/codewars.png" alt="CodeWars logo">
+              </a>
+            </li>
+          </ul>
+
+          <p class="footer-copyrights">
+            Edgar Marques <i class="far fa-copyright"></i> 2020
+          </p>
+        </footer>
+      </div>
     </div>
 
     <!-- GitHub calendar modal -->
