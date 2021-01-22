@@ -434,6 +434,7 @@
       margin-top: 8px; }
 
 footer {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -443,11 +444,30 @@ footer {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.75);
-  height: 100px;
+  background: #141414;
+  height: fit-content;
   width: 100%;
-  padding: 10px 0;
+  padding: 60px 0 30px;
   margin: 0; }
+  footer .page-scroll {
+    position: absolute;
+    top: -25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.9);
+    background: #13538f;
+    text-decoration: none;
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 2px;
+    margin: 0 auto;
+    transition: 0.1s; }
+    footer .page-scroll:hover {
+      color: white;
+      transform: scale(1.05); }
   footer .contact-links {
     display: -webkit-box;
     display: -ms-flexbox;
