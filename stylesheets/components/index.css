@@ -381,6 +381,58 @@
   .carousel .carousel-control-next {
     right: 0; }
 
+#contacts {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 80px; }
+  #contacts h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0px 20px;
+    white-space: nowrap; }
+    #contacts h2::after {
+      position: relative;
+      top: 2px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(80, 80, 80, 0.5);
+      margin: 0 5px 0 10px;
+      content: ""; }
+  #contacts p {
+    color: gainsboro;
+    margin: 0; }
+  #contacts #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0; }
+    #contacts #contact-form input, #contacts #contact-form textarea {
+      display: block;
+      color: white;
+      background: #282832;
+      width: 100%;
+      font: inherit;
+      font-size: 14px;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 1px;
+      outline: none;
+      margin-bottom: 5px; }
+      #contacts #contact-form input::placeholder, #contacts #contact-form textarea::placeholder {
+        color: #c8c8c8; }
+    #contacts #contact-form textarea {
+      height: 150px;
+      resize: vertical; }
+    #contacts #contact-form .contact-submit {
+      align-self: flex-end;
+      line-height: inherit;
+      width: fit-content;
+      padding: 10px 20px;
+      margin-top: 8px; }
+
 footer {
   position: absolute;
   right: 0;
