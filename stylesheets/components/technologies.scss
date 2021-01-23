@@ -1,110 +1,103 @@
 #technologies {
+  display: flex;
+  justify-content: center;
   padding-bottom: 80px;
 
-  .technologies-content {
-    background-color: rgba(0, 0, 0, 0.75);
+  .skills-container {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr;
+    grid-gap: 0;
+    background: rgba(0, 0, 0, 0.75);
+    height: fit-content;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid rgba(80, 80, 80, 0.5);
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.35);
+    margin: 50px 24px 0;
 
-    // Vendor prefixes 'width'
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-
-    max-width: 750px;
-    padding: 30px;
-    border-radius: 5px;
-    margin: 0 auto;
-
-    .progress-bars-list {
-      list-style: none;
+    .skills-header, .skills-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 100%;
       width: 100%;
-      padding: 0;
       margin: 0;
+    }
 
-      .tech-title {
-        // Vendor prefixes 'display'
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+    .skills-header {
+      text-align: center;
+      padding: 50px 15px 20px;
 
-        // Vendor prefixes 'align-items'
-        -webkit-box-align: end;
-        -ms-flex-align: end;
-        align-items: flex-end;
+      .skills-header-container {
+        height: 100%;
+        width: 100%;
+        padding: 0 0 20px;
+        border-bottom: 1px solid rgba(80, 80, 80, 0.5);
 
-        // Vendor prefixes 'justify-content'
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-
-        color: rgba(220, 220, 220, 1);
-        font-family: "PT Sans", sans-serif;
-        padding: 0 10px 0 5px;
-        margin-top: 30px;
+        i {
+          color: rgba(50, 120, 255, 1);
+          font-size: 50px;
+        }
 
         h3 {
-          margin: 0;
+          color: white;
+          font-size: 26px;
+          margin-top: 25px;
         }
-      }
 
-      .progress-bar-container {
-        display: block;
-        position: relative;
-        background: rgba(60, 60, 60, 1);
-        height: 10px;
-        width: 100%;
-        border-radius: 5px;
-        margin-top: 10px;
-
-        .progress-bar {
-          position: absolute;
-          height: 100%;
-          border-radius: 5px;
-        }
-      }
-    }
-
-    .complementary-tech {
-      text-align: justify;
-      word-spacing: 1.5px;
-      color: gainsboro;
-      font-size: 17px;
-      margin: 30px 10px 0;
-
-      h3 {
-        display: inline;
-        font-size: 19px;
-        font-weight: 600;
-        margin: 0 5px 0 -5px;
-
-        &::after {
-          content: ":";
-          margin-left: 4px;
-        }
-      }
-
-      p {
-        display: inline;
-        line-height: 28px;
-        letter-spacing: 0.5px;
-
-        span {
+        p {
+          color: rgba(230, 230, 230, 1);
           font-size: 14px;
+          margin: 20px 0 0;
         }
       }
     }
-  }
-}
 
-@media(max-width: 700px) {
-  #technologies .technologies-content .complementary-tech {
-    font-size: 16px;
-
-    h3 {
+    .skills-content {
+      list-style: none;
+      color: rgba(230, 230, 230, 1);
       font-size: 18px;
+      width: 100%;
+      padding: 10px 10px 30px;
+
+      li {
+        text-align: center;
+        padding: 4px 5px;
+      }
+
+      &.tools {
+        display: inline-grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      &:not(.tools) li {
+        height: 22.5%;
+      }
     }
 
-    p span {
-      font-size: 13px;
+    .col-1 {
+      grid-column: 1;
+    }
+
+    .col-2 {
+      grid-column: 2;
+    }
+
+    .col-3 {
+      grid-column: 3;
+    }
+
+    .row-1 {
+      grid-row: 1;
+    }
+
+    .row-2 {
+      grid-row: 2;
+    }
+
+    .col-1, .col-2 {
+      border-right: 1px solid rgba(80, 80, 80, 0.5);
     }
   }
 }
