@@ -83,6 +83,16 @@ footer {
         transform: scale(1.1);
       }
     }
+
+    .resume-link {
+      align-self: center;
+
+      .btn-modal {
+        line-height: inherit;
+        width: fit-content;
+        padding: 10px 20px;
+      }
+    }
   }
 
   .footer-copyrights {

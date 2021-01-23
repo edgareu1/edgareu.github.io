@@ -495,6 +495,12 @@ footer {
         opacity: 1;
         box-shadow: 1px 1px 10px black;
         transform: scale(1.1); }
+    footer .contact-links .resume-link {
+      align-self: center; }
+      footer .contact-links .resume-link .btn-modal {
+        line-height: inherit;
+        width: fit-content;
+        padding: 10px 20px; }
   footer .footer-copyrights {
     margin: 0; }
 
