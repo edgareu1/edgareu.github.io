@@ -1,7 +1,10 @@
 /* Import the SCSS components here */
-.animation-toggle-container.pos-rel {
-  position: relative;
-  top: 50px; }
+.animation-toggle-container.pos-abs {
+  position: absolute; }
+  .animation-toggle-container.pos-abs.bottom {
+    bottom: 20px; }
+  .animation-toggle-container.pos-abs.top {
+    top: 50px; }
 
 .animation-toggle-container.pos-fixed {
   position: fixed;
@@ -282,7 +285,7 @@
     -ms-flex-pack: center;
     justify-content: center;
     list-style: none;
-    z-index: 15;
+    z-index: 8;
     padding: 0;
     margin: 10px 0; }
     .carousel ol.carousel-indicators li {
@@ -345,7 +348,7 @@
         font-weight: 400;
         text-shadow: 0px 0px 5px black;
         background: rgba(0, 0, 0, 0.65);
-        z-index: 10;
+        z-index: 5;
         line-height: 1.2;
         padding: 15px 15% 45px; }
         .carousel .carousel-inner .carousel-item .carousel-caption span {
@@ -385,7 +388,7 @@
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
-  padding-bottom: 80px; }
+  padding-bottom: 120px; }
   #contacts h2 {
     display: flex;
     align-items: center;
@@ -438,6 +441,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-direction: column;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -447,7 +451,7 @@ footer {
   background: #141414;
   height: fit-content;
   width: 100%;
-  padding: 60px 0 30px;
+  padding: 80px 0 60px;
   margin: 0; }
   footer .page-scroll {
     position: absolute;
@@ -475,30 +479,33 @@ footer {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     list-style: none;
-    width: 250px;
+    width: 360px;
     padding: 0;
-    margin: 0; }
-    footer .contact-links a {
-      position: relative;
+    margin: 0 0 50px; }
+    footer .contact-links .social-link a {
       display: block;
       text-decoration: none;
-      background: white;
       height: 50px;
       width: 50px;
-      border-radius: 50%; }
-      footer .contact-links a.expand-element {
-        -webkit-transform: scale(1.12);
-        -ms-transform: scale(1.12);
-        transform: scale(1.12); }
-      footer .contact-links a img {
-        position: absolute;
-        top: 15%;
-        left: 15%;
-        height: 70%;
-        width: 70%;
+      opacity: 0.95;
+      transition: 0.2s; }
+      footer .contact-links .social-link a img {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
         margin: 0; }
+      footer .contact-links .social-link a:hover, footer .contact-links .social-link a:active {
+        opacity: 1;
+        box-shadow: 1px 1px 10px black;
+        transform: scale(1.1); }
+    footer .contact-links .resume-link {
+      align-self: center; }
+      footer .contact-links .resume-link .btn-modal {
+        line-height: inherit;
+        width: fit-content;
+        padding: 10px 20px; }
   footer .footer-copyrights {
-    margin: 0 0 0 30px; }
+    margin: 0; }
 
 :root {
   --color-calendar-graph-day-bg: rgba(240, 240, 240, 1);
@@ -696,6 +703,7 @@ code {
     height: fit-content;
     width: 100%; }
     #profile-container #profile-content main {
+      position: relative;
       height: fit-content;
       width: 100%; }
     #profile-container #profile-content .section-title {
@@ -739,7 +747,7 @@ body.modal-active {
   left: 0;
   display: none;
   background: rgba(0, 0, 0, 0.85);
-  z-index: 15;
+  z-index: 20;
   height: 100%;
   width: 100%;
   padding: 0; }
@@ -770,7 +778,7 @@ body.modal-active {
     -ms-flex-pack: center;
     justify-content: center;
     background: transparent;
-    z-index: 20;
+    z-index: 25;
     height: 100%;
     width: 100%;
     min-width: 650px;
@@ -847,7 +855,7 @@ nav {
   top: 0;
   background-color: rgba(0, 0, 0, 0.75);
   list-style: none;
-  z-index: 10;
+  z-index: 15;
   height: 50px;
   width: 100%;
   padding: 0;

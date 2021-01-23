@@ -21,7 +21,7 @@ function techWordsAnimation(canvasElement, profileContainer) {
         canvasWidth = canvasElement.width,
         canvasHeight = canvasElement.height,
         currentArrayIndex = 0,                // Current index on the helperArray
-        sliceHeight = canvasHeight / numTech; // Size of the canvas height that each word should occupy
+        sliceHeight = (canvasHeight - 20) / numTech; // Size of the canvas height that each word should occupy
 
     // Constructor of a Technology element to display in the canvas
     class Tech {
@@ -29,7 +29,7 @@ function techWordsAnimation(canvasElement, profileContainer) {
         this.text = key;
         this.x = Math.random() * canvasWidth;
         this.y = helperArray[currentArrayIndex] * sliceHeight;
-        this.font = techList[key] * 3;
+        this.font = techList[key] * 2.5;
         this.speed = (techList[key] + Math.random()) / 16;
       }
     }
