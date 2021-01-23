@@ -1,6 +1,13 @@
-.animation-toggle-container.pos-rel {
-  position: relative;
-  top: 50px;
+.animation-toggle-container.pos-abs {
+  position: absolute;
+
+  &.bottom {
+    bottom: 20px;
+  }
+
+  &.top {
+    top: 50px;
+  }
 }
 
 .animation-toggle-container.pos-fixed {
