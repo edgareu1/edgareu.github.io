@@ -715,7 +715,7 @@ code {
       padding: 20px 35px 10px;
       border-bottom: 2px solid rgba(220, 220, 220, 0.5);
       margin: 0 auto 25px; }
-    #profile-container #profile-content #contacts, #profile-container #profile-content #projects, #profile-container #profile-content #technologies {
+    #profile-container #profile-content #contacts, #profile-container #profile-content #projects, #profile-container #profile-content #skills {
       min-height: -webkit-fit-content;
       min-height: -moz-fit-content;
       min-height: fit-content;
@@ -1053,11 +1053,11 @@ nav {
   .scrollable-gray::-webkit-scrollbar-thumb:hover {
     background-color: #6e6e6e; }
 
-#technologies {
+#skills {
   display: flex;
   justify-content: center;
   padding-bottom: 80px; }
-  #technologies .skills-container {
+  #skills .skills-container {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr;
     grid-gap: 0;
@@ -1069,57 +1069,57 @@ nav {
     border-radius: 20px;
     box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.35);
     margin: 50px 24px 0; }
-    #technologies .skills-container .skills-header, #technologies .skills-container .skills-content {
+    #skills .skills-container .skills-header, #skills .skills-container .skills-content {
       display: flex;
       flex-direction: column;
       justify-content: start;
       height: 100%;
       width: 100%;
       margin: 0; }
-    #technologies .skills-container .skills-header {
+    #skills .skills-container .skills-header {
       text-align: center;
       padding: 50px 15px 20px; }
-      #technologies .skills-container .skills-header .skills-header-container {
+      #skills .skills-container .skills-header .skills-header-container {
         height: 100%;
         width: 100%;
         padding: 0 0 20px;
         border-bottom: 1px solid rgba(80, 80, 80, 0.5); }
-        #technologies .skills-container .skills-header .skills-header-container i {
+        #skills .skills-container .skills-header .skills-header-container i {
           color: #3278ff;
           font-size: 50px; }
-        #technologies .skills-container .skills-header .skills-header-container h3 {
+        #skills .skills-container .skills-header .skills-header-container h3 {
           color: white;
           font-size: 26px;
           margin-top: 25px; }
-        #technologies .skills-container .skills-header .skills-header-container p {
+        #skills .skills-container .skills-header .skills-header-container p {
           color: #e6e6e6;
           font-size: 14px;
           margin: 20px 0 0; }
-    #technologies .skills-container .skills-content {
+    #skills .skills-container .skills-content {
       list-style: none;
       color: #e6e6e6;
       font-size: 18px;
       width: 100%;
       padding: 10px 10px 30px; }
-      #technologies .skills-container .skills-content li {
+      #skills .skills-container .skills-content li {
         text-align: center;
         padding: 4px 5px; }
-      #technologies .skills-container .skills-content.tools {
+      #skills .skills-container .skills-content.tools {
         display: inline-grid;
         grid-template-columns: 1fr 1fr; }
-      #technologies .skills-container .skills-content:not(.tools) li {
+      #skills .skills-container .skills-content:not(.tools) li {
         height: 22.5%; }
-    #technologies .skills-container .col-1 {
+    #skills .skills-container .col-1 {
       grid-column: 1; }
-    #technologies .skills-container .col-2 {
+    #skills .skills-container .col-2 {
       grid-column: 2; }
-    #technologies .skills-container .col-3 {
+    #skills .skills-container .col-3 {
       grid-column: 3; }
-    #technologies .skills-container .row-1 {
+    #skills .skills-container .row-1 {
       grid-row: 1; }
-    #technologies .skills-container .row-2 {
+    #skills .skills-container .row-2 {
       grid-row: 2; }
-    #technologies .skills-container .col-1, #technologies .skills-container .col-2 {
+    #skills .skills-container .col-1, #skills .skills-container .col-2 {
       border-right: 1px solid rgba(80, 80, 80, 0.5); }
 
 .calendar .day-tooltip {
