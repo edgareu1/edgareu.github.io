@@ -21,8 +21,8 @@ function updateDimensionsCanvas(canvasElement, profileContainer) {
 
   // Make sure the canvas characteristics stay the same
   let canvas = canvasElement.getContext('2d');
-  canvas.strokeStyle = 'rgba(100, 100, 100, 0.4)';
-  canvas.fillStyle = 'rgba(100, 100, 100, 0.4)';
+  canvas.strokeStyle = 'rgba(50, 50, 50, 0.4)';
+  canvas.fillStyle = 'rgba(50, 50, 50, 0.4)';
   canvas.lineWidth = 5;
 }
 
