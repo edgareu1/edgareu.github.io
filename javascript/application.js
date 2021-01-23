@@ -1,6 +1,5 @@
 // Prepare the app JS here
 import { animateCarousels } from './components/animate-carousels.js'
-import { animateFooter } from './components/animate-footer.js'
 import { animateGitModal } from './components/animate-git-modal.js'
 import { animateNavbar } from './components/animate-navbar.js'
 import { animatePageScroll } from './components/animate-page-scroll.js'
@@ -13,7 +12,6 @@ import { updateDimensionsCanvas } from './components/update-dimensions-canvas.js
 import { updateDimensionsNavbar } from './components/update-dimensions-navbar.js'
 
 animateCarousels();
-animateFooter();
 animateGitModal();
 animateNavbar();
 animatePageScroll();
