@@ -106,3 +106,40 @@
     }
   }
 }
+
+@media(max-width: 900px) {
+  #skills .skills-container {
+    column-gap: calc(1px + 2.5%);
+
+    .skills-header-container {
+      padding: 0 10px;
+
+      .skills-header {
+        padding: 25px 5px 15px;
+
+        i {
+          font-size: 45px;
+        }
+
+        h3 {
+          font-size: 22px;
+          margin-top: 20px;
+        }
+
+        p {
+          font-size: 11px;
+          margin: 14px 0 0;
+        }
+      }
+    }
+
+    .skills-content {
+      font-size: 14px;
+      padding: 18px 8px;
+
+      li {
+        padding: 3px 4px;
+      }
+    }
+  }
+}

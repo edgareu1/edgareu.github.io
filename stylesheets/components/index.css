@@ -1129,6 +1129,26 @@ nav {
     #skills .skills-container .row-2 {
       grid-row: 2; }
 
+@media (max-width: 900px) {
+  #skills .skills-container {
+    column-gap: calc(1px + 2.5%); }
+    #skills .skills-container .skills-header-container {
+      padding: 0 10px; }
+      #skills .skills-container .skills-header-container .skills-header {
+        padding: 25px 5px 15px; }
+        #skills .skills-container .skills-header-container .skills-header i {
+          font-size: 45px; }
+        #skills .skills-container .skills-header-container .skills-header h3 {
+          font-size: 22px;
+          margin-top: 20px; }
+        #skills .skills-container .skills-header-container .skills-header p {
+          font-size: 11px;
+          margin: 14px 0 0; }
+    #skills .skills-container .skills-content {
+      font-size: 14px;
+      padding: 18px 8px; }
+      #skills .skills-container .skills-content li {
+        padding: 3px 4px; } }
 .calendar .day-tooltip {
   position: absolute;
   display: none;
