@@ -3,7 +3,6 @@ import { animateCarousels } from './components/animate-carousels.js'
 import { animateGitModal } from './components/animate-git-modal.js'
 import { animateNavbar } from './components/animate-navbar.js'
 import { animatePageScroll } from './components/animate-page-scroll.js'
-import { animatePillBar } from './components/animate-pill-bar.js'
 import { animateTogglePositioning } from './components/animate-toggle-positioning.js'
 import { createGitCalendar } from './components/create-git-calendar.js'
 import { techWordsAnimation } from './components/tech-words-animation.js'
@@ -15,7 +14,6 @@ animateCarousels();
 animateGitModal();
 animateNavbar();
 animatePageScroll();
-animatePillBar();
 animateTogglePositioning();
 typeBannerCode();
 
