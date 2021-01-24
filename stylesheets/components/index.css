@@ -89,11 +89,13 @@
     border-color: transparent; } }
 #banner {
   position: relative;
+  z-index: 5;
+  box-sizing: content-box;
   height: 100vh;
   max-height: 750px;
   min-height: 630px;
   width: 100%;
-  z-index: 5; }
+  padding-bottom: 80px; }
   #banner .banner-image, #banner .banner-content {
     position: absolute;
     right: 0;
@@ -1056,19 +1058,17 @@ nav {
 #skills {
   display: flex;
   justify-content: center;
-  padding-bottom: 80px; }
+  padding: 0 0 100px; }
   #skills .skills-container {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr;
     grid-gap: 0;
-    background: rgba(0, 0, 0, 0.75);
+    column-gap: calc(5px + 2.5%);
+    box-sizing: content-box;
     height: fit-content;
     width: 100%;
     max-width: 1000px;
-    border: 1px solid rgba(80, 80, 80, 0.5);
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px rgba(80, 80, 80, 0.35);
-    margin: 50px 24px 0; }
+    padding: 50px min(24px, 2%) 0; }
     #skills .skills-container .skills-header, #skills .skills-container .skills-content {
       display: flex;
       flex-direction: column;
@@ -1076,31 +1076,40 @@ nav {
       height: 100%;
       width: 100%;
       margin: 0; }
-    #skills .skills-container .skills-header {
-      text-align: center;
-      padding: 50px 15px 20px; }
-      #skills .skills-container .skills-header .skills-header-container {
+    #skills .skills-container .skills-header-container, #skills .skills-container .skills-content {
+      background: rgba(20, 20, 20, 0.9); }
+    #skills .skills-container .skills-header-container {
+      height: 100%;
+      width: 100%;
+      padding: 0 15px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px; }
+      #skills .skills-container .skills-header-container .skills-header {
+        text-align: center;
         height: 100%;
         width: 100%;
-        padding: 0 0 20px;
-        border-bottom: 1px solid rgba(80, 80, 80, 0.5); }
-        #skills .skills-container .skills-header .skills-header-container i {
+        padding: 30px 5px 20px;
+        border-bottom: 1px solid rgba(80, 80, 80, 0.8); }
+        #skills .skills-container .skills-header-container .skills-header i {
           color: #3278ff;
           font-size: 50px; }
-        #skills .skills-container .skills-header .skills-header-container h3 {
+        #skills .skills-container .skills-header-container .skills-header h3 {
           color: white;
           font-size: 26px;
           margin-top: 25px; }
-        #skills .skills-container .skills-header .skills-header-container p {
-          color: #e6e6e6;
+        #skills .skills-container .skills-header-container .skills-header p {
+          color: #ebebeb;
           font-size: 14px;
+          line-height: 170%;
           margin: 20px 0 0; }
     #skills .skills-container .skills-content {
       list-style: none;
-      color: #e6e6e6;
+      color: #ebebeb;
       font-size: 18px;
       width: 100%;
-      padding: 10px 10px 30px; }
+      padding: 25px 10px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
       #skills .skills-container .skills-content li {
         text-align: center;
         padding: 4px 5px; }
@@ -1119,8 +1128,6 @@ nav {
       grid-row: 1; }
     #skills .skills-container .row-2 {
       grid-row: 2; }
-    #skills .skills-container .col-1, #skills .skills-container .col-2 {
-      border-right: 1px solid rgba(80, 80, 80, 0.5); }
 
 .calendar .day-tooltip {
   position: absolute;
