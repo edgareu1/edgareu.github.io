@@ -1,38 +1,24 @@
 #contacts {
   width: 100%;
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
-  padding-bottom: 120px;
+  padding: 20px min(24px, 2%) 120px;
 
-  h2 {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    margin: 10px 0px 20px;
-    white-space: nowrap;
-
-    &::after {
-      position: relative;
-      top: 2px;
-      display: block;
-      height: 1px;
-      width: 100%;
-      background-color: rgba(80, 80, 80, 0.5);
-      margin: 0 5px 0 10px;
-      content: "";
-    }
+  .section-title {
+    margin-bottom: 20px;
+    margin-left: 0;
   }
 
   p {
     color: rgba(220, 220, 220, 1);
-    margin: 0;
+    margin: 0 0 0 2px;
   }
 
   #contact-form {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 10px 0;
+    margin: 15px 0;
 
     input, textarea {
       display: block;
@@ -40,12 +26,12 @@
       background: rgba(40, 40, 50, 1);
       width: 100%;
       font: inherit;
-      font-size: 14px;
-      padding: 10px 15px;
+      font-size: 17.5px;
+      padding: 12px 18px;
       border: none;
-      border-radius: 1px;
+      border-radius: 2px;
       outline: none;
-      margin-bottom: 5px;
+      margin-bottom: 7.5px;
 
       &::placeholder {
         color: rgba(200, 200, 200, 1);
@@ -58,11 +44,12 @@
     }
 
     .contact-submit {
+      font-size: 18px;
       align-self: flex-end;
       line-height: inherit;
       width: fit-content;
-      padding: 10px 20px;
-      margin-top: 8px;
+      padding: 12px 24px;
+      margin-top: 12px;
     }
   }
 }

@@ -109,17 +109,23 @@ code {
     }
 
     .section-title {
-      color: white;
       font-size: 40px;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      margin-right: 10px;
+      white-space: nowrap;
 
-      // Vendor prefixes 'width'
-      width: -webkit-fit-content;
-      width: -moz-fit-content;
-      width: fit-content;
-
-      padding: 20px 35px 10px;
-      border-bottom: 2px solid rgba(220, 220, 220, 0.5);
-      margin: 0 auto 25px;
+      &::after {
+        position: relative;
+        top: 4px;
+        display: block;
+        height: 1px;
+        width: 100%;
+        background-color: rgba(80, 80, 80, 0.5);
+        margin: 0 20px 0 15px;
+        content: "";
+      }
     }
 
     #contacts, #projects, #skills {
