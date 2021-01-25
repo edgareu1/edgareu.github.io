@@ -153,97 +153,14 @@
 
           <!-- Projects section -->
           <section id="projects">
-            <header>
-              <h2 class="section-title">Main Projects</h2>
-            </header>
-
             <div class="projects-content">
-              <!-- Pill-bar -->
-              <ul class="pill-items">
-                <li class="pill-item" data-target="nav-artisan">Artisan</li>
-                <li class="pill-item active" data-target="nav-hook">Hook</li>
-                <li class="pill-item" data-target="nav-portfolio">Portfolio</li>
-                <li class="pill-item" data-target="nav-trip">Trip Finder</li>
-              </ul>
+              <header>
+                <h2 class="section-title">Main Projects</h2>
+              </header>
 
-              <!-- Projects content -->
-              <div class="tab-items">
-
-                <!-- Artisan -->
-                <article class="tab-item" id="nav-artisan">
-                  <div id="carousel-artisan" class="carousel">
-                    <ol class="carousel-indicators">
-                      <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
-                      <li data-target="carousel-artisan" data-slide-to="1"></li>
-                      <li data-target="carousel-artisan" data-slide-to="2"></li>
-                    </ol>
-
-                    <div class="carousel-inner">
-                      <figure class="carousel-item active" data-slide="0">
-                        <img src="images/projects/artisan/home-page.png" alt="Artisan project home page">
-
-                        <figcaption class="carousel-caption">Home page</figcaption>
-                      </figure>
-
-                      <figure class="carousel-item" data-slide="1">
-                        <img src="images/projects/artisan/products-show.png" alt="Artisan project Products#show page">
-
-                        <figcaption class="carousel-caption">Products<span>#</span>show</figcaption>
-                      </figure>
-
-                      <figure class="carousel-item" data-slide="2">
-                        <img src="images/projects/artisan/orders-index.png" alt="Artisan project Orders#index page">
-
-                        <figcaption class="carousel-caption">Orders<span>#</span>index</figcaption>
-                      </figure>
-                    </div>
-
-                    <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
-                      <i class="fas fa-angle-left"></i>
-                    </div>
-
-                    <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
-                      <i class="fas fa-angle-right"></i>
-                    </div>
-                  </div>
-
-                  <div class="project-description scrollable-gray">
-                    <header>
-                      <h3>
-                        Artisan
-                        <span>
-                          <span class="parenthesis open">(</span>
-                          <time datetime="2020-06">Jun </time>
-                          <span class="text">- </span>
-                          <time datetime="2020-08">Aug 2020</time>
-                          <span class="parenthesis close">)</span>
-                        </span>
-                      </h3>
-                    </header>
-
-                    <h4>Summary</h4>
-                    <p>An online marketplace for craftwork.</p>
-
-                    <h4>Context</h4>
-                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
-
-                    <h4>Technologies</h4>
-                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Stripe, Background Jobs</p>
-
-                    <h4>My main features</h4>
-                    <p>Implemented the Stripe's payment system; simulated orders delivery using Background Jobs; created a custom made autocomplete search bar.</p>
-
-                    <div class="anchors-container">
-                      <a href="https://github.com/JulieMariano/Artisan" target="_blank" title="Artisan project GitHub repository" class="inline-anchor">
-                        <i class="fab fa-github"></i>
-                        <span class="hover-underline">GitHub repository</span>
-                      </a>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Hook -->
-                <article class="tab-item fade active" id="nav-hook">
+              <!-- Hook -->
+              <article class="project-content" id="hook">
+                <div class="project-positioning">
                   <div id="carousel-hook" class="carousel">
                     <ol class="carousel-indicators">
                       <li data-target="carousel-hook" data-slide-to="0" class="active"></li>
@@ -352,10 +269,87 @@
                       </a>
                     </div>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- Portfolio -->
-                <article class="tab-item" id="nav-portfolio">
+              <!-- Artisan -->
+              <article class="project-content" id="artisan">
+                <div class="project-positioning">
+                  <div id="carousel-artisan" class="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-target="carousel-artisan" data-slide-to="0" class="active"></li>
+                      <li data-target="carousel-artisan" data-slide-to="1"></li>
+                      <li data-target="carousel-artisan" data-slide-to="2"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                      <figure class="carousel-item active" data-slide="0">
+                        <img src="images/projects/artisan/home-page.png" alt="Artisan project home page">
+
+                        <figcaption class="carousel-caption">Home page</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="1">
+                        <img src="images/projects/artisan/products-show.png" alt="Artisan project Products#show page">
+
+                        <figcaption class="carousel-caption">Products<span>#</span>show</figcaption>
+                      </figure>
+
+                      <figure class="carousel-item" data-slide="2">
+                        <img src="images/projects/artisan/orders-index.png" alt="Artisan project Orders#index page">
+
+                        <figcaption class="carousel-caption">Orders<span>#</span>index</figcaption>
+                      </figure>
+                    </div>
+
+                    <div class="carousel-control-prev dark" data-target="carousel-artisan" data-slide="prev">
+                      <i class="fas fa-angle-left"></i>
+                    </div>
+
+                    <div class="carousel-control-next dark" data-target="carousel-artisan" data-slide="next">
+                      <i class="fas fa-angle-right"></i>
+                    </div>
+                  </div>
+
+                  <div class="project-description scrollable-gray">
+                    <header>
+                      <h3>
+                        Artisan
+                        <span>
+                          <span class="parenthesis open">(</span>
+                          <time datetime="2020-06">Jun </time>
+                          <span class="text">- </span>
+                          <time datetime="2020-08">Aug 2020</time>
+                          <span class="parenthesis close">)</span>
+                        </span>
+                      </h3>
+                    </header>
+
+                    <h4>Summary</h4>
+                    <p>An online marketplace for craftwork.</p>
+
+                    <h4>Context</h4>
+                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
+
+                    <h4>Technologies</h4>
+                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Stripe, Background Jobs</p>
+
+                    <h4>My main features</h4>
+                    <p>Implemented the Stripe's payment system; simulated orders delivery using Background Jobs; created a custom made autocomplete search bar.</p>
+
+                    <div class="anchors-container">
+                      <a href="https://github.com/JulieMariano/Artisan" target="_blank" title="Artisan project GitHub repository" class="inline-anchor">
+                        <i class="fab fa-github"></i>
+                        <span class="hover-underline">GitHub repository</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Portfolio -->
+              <article class="project-content" id="portfolio">
+                <div class="project-positioning">
                   <img src="./images/projects/portfolio/intro.png" alt="Portfolio project welcoming page" class="single-img">
 
                   <div class="project-description scrollable-gray">
@@ -386,10 +380,12 @@
                       </a>
                     </div>
                   </div>
-                </article>
+                </div>
+              </article>
 
-                <!-- Trip Finder -->
-                <article class="tab-item" id="nav-trip">
+              <!-- Trip Finder -->
+              <article class="project-content" id="trip">
+                <div class="project-positioning">
                   <img src="./images/projects/trip-finder/coming-soon.png" alt="A light bulb with the text 'Coming soon'" class="single-img">
 
                   <div class="project-description scrollable-gray">
@@ -422,15 +418,15 @@
                       </a>
                     </div>
                   </div>
-                </article>
-              </div>
+                </div>
+              </article>
             </div>
           </section>
 
           <!-- Contacts section -->
           <section id="contacts">
             <header>
-              <h2>Wanna get in touch?</h2>
+              <h2 class="section-title">Wanna get in touch?</h2>
             </header>
 
             <p>Fill the form bellow or use <a href="mailto:edgar.eu1@hotmail.com" class="inline-anchor"><span class="hover-underline">this email</span></a></p>
