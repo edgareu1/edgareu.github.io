@@ -9,7 +9,12 @@
     height: fit-content;
     width: 100%;
     max-width: 1000px;
-    padding: 10px min(24px, 2%) 0;
+    padding: 20px min(24px, 2%) 0;
+
+    .section-title {
+      margin-bottom: 30px;
+      margin-left: 10px;
+    }
 
     .project-content {
       position: relative;
