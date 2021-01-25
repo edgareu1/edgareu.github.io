@@ -24,7 +24,7 @@
     }
 
     .skills-header-container, .skills-content {
-      background: rgba(20, 20, 20, 0.9);
+      background: rgba(10, 10, 10, 0.9);
     }
 
     .skills-header-container {
@@ -33,6 +33,8 @@
       padding: 0 15px;
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
+      box-shadow: 1px 0px 2px 0px rgba(80, 80, 80, 0.5),
+        -1px -1px 2px 0px rgba(80, 80, 80, 0.25);
 
       .skills-header {
         text-align: center;
@@ -44,6 +46,7 @@
         i {
           color: rgba(50, 120, 255, 1);
           font-size: 50px;
+          text-shadow: 1px 1px 5px rgba(10, 60, 160, 0.8);
         }
 
         h3 {
@@ -69,6 +72,8 @@
       padding: 25px 10px;
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
+      box-shadow: 1px 1px 2px 0px rgba(80, 80, 80, 0.5),
+        -1px 1px 2px 0px rgba(80, 80, 80, 0.25);
 
       li {
         text-align: center;

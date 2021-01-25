@@ -918,9 +918,10 @@ nav {
       background-color: rgba(0, 0, 0, 0.5);
       height: 100%;
       width: 100%;
-      box-shadow: 1px 1px 5px 0px rgba(80, 80, 80, 0.5);
       border-radius: 5px;
-      margin-bottom: 60px; }
+      box-shadow: 1px 1px 5px 0px rgba(80, 80, 80, 0.5), -1px -1px 2px 0px rgba(80, 80, 80, 0.25);
+      margin-bottom: 60px;
+      overflow: hidden; }
       #projects .projects-content .project-content:after {
         display: block;
         padding-bottom: 50%;
@@ -945,7 +946,7 @@ nav {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      padding: 10px 15px;
+      padding: 10px 15px 10px 20px;
       overflow-y: scroll; }
       #projects .projects-content .project-description header > h3 {
         text-align: center;
@@ -1045,13 +1046,14 @@ nav {
       width: 100%;
       margin: 0; }
     #skills .skills-container .skills-header-container, #skills .skills-container .skills-content {
-      background: rgba(20, 20, 20, 0.9); }
+      background: rgba(10, 10, 10, 0.9); }
     #skills .skills-container .skills-header-container {
       height: 100%;
       width: 100%;
       padding: 0 15px;
       border-top-left-radius: 5px;
-      border-top-right-radius: 5px; }
+      border-top-right-radius: 5px;
+      box-shadow: 1px 0px 2px 0px rgba(80, 80, 80, 0.5), -1px -1px 2px 0px rgba(80, 80, 80, 0.25); }
       #skills .skills-container .skills-header-container .skills-header {
         text-align: center;
         height: 100%;
@@ -1060,7 +1062,8 @@ nav {
         border-bottom: 1px solid rgba(80, 80, 80, 0.8); }
         #skills .skills-container .skills-header-container .skills-header i {
           color: #3278ff;
-          font-size: 50px; }
+          font-size: 50px;
+          text-shadow: 1px 1px 5px rgba(10, 60, 160, 0.8); }
         #skills .skills-container .skills-header-container .skills-header h3 {
           color: white;
           font-size: 26px;
@@ -1077,7 +1080,8 @@ nav {
       width: 100%;
       padding: 25px 10px;
       border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
+      border-bottom-right-radius: 5px;
+      box-shadow: 1px 1px 2px 0px rgba(80, 80, 80, 0.5), -1px 1px 2px 0px rgba(80, 80, 80, 0.25); }
       #skills .skills-container .skills-content li {
         text-align: center;
         padding: 4px 5px; }
