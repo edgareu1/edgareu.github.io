@@ -937,8 +937,6 @@ nav {
 #projects .section-container .carousel, #projects .section-container .single-img, #projects .section-container .project-description {
   height: 100%;
   width: 50%; }
-#projects .section-container .single-img {
-  border-bottom-left-radius: 5px; }
 #projects .section-container .project-description {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -950,70 +948,85 @@ nav {
   padding: 10px 15px 10px 20px;
   overflow-y: scroll; }
   #projects .section-container .project-description header > h3 {
-    text-align: center;
-    font-size: 28px; }
+    font-size: 32px; }
     #projects .section-container .project-description header > h3 span {
       color: gainsboro;
       font-size: 0;
       font-weight: 400; }
       #projects .section-container .project-description header > h3 span.text, #projects .section-container .project-description header > h3 span.parenthesis, #projects .section-container .project-description header > h3 span time {
-        font-size: 18px; }
+        font-size: 20px; }
       #projects .section-container .project-description header > h3 span.parenthesis.open {
         margin-right: 2px; }
       #projects .section-container .project-description header > h3 span.parenthesis.close {
         margin-left: 2px; }
   #projects .section-container .project-description h4 {
-    font-size: 17px;
-    margin: 15px 0 5px; }
-    #projects .section-container .project-description h4:first-of-type {
-      margin-top: 10px; }
-  #projects .section-container .project-description p {
+    font-size: 20px;
+    margin: 20px 0 5px; }
+  #projects .section-container .project-description ul {
+    padding-left: 20px;
+    margin: 6px 0 0; }
+  #projects .section-container .project-description p, #projects .section-container .project-description li {
     text-align: justify;
     color: gainsboro;
-    font-size: 12.5px;
+    font-size: 14px;
     margin: 0; }
   #projects .section-container .project-description .anchors-container {
-    margin-top: 20px; }
+    margin-top: 25px; }
     #projects .section-container .project-description .anchors-container a {
       display: block;
-      font-size: 15px;
+      font-size: 16.5px;
       width: -webkit-fit-content;
       width: -moz-fit-content;
       width: fit-content; }
+      #projects .section-container .project-description .anchors-container a:nth-child(2) {
+        margin-top: 5px; }
       #projects .section-container .project-description .anchors-container a i {
         margin-right: 4px; }
-    #projects .section-container .project-description .anchors-container .side-note {
-      color: gainsboro;
-      font-size: 0; }
-      #projects .section-container .project-description .anchors-container .side-note span.text, #projects .section-container .project-description .anchors-container .side-note span.parenthesis {
-        font-size: 11px; }
-      #projects .section-container .project-description .anchors-container .side-note span.parenthesis.open {
-        margin-right: 2px; }
-      #projects .section-container .project-description .anchors-container .side-note span.parenthesis.close {
-        margin-left: 2px; }
 
-@media (max-width: 800px) {
-  #projects .projects-container .project-description {
-    padding: 8px 12px 15px; }
-    #projects .projects-container .project-description header > h3 {
-      font-size: 22px; }
-      #projects .projects-container .project-description header > h3 span .text, #projects .projects-container .project-description header > h3 span .parenthesis, #projects .projects-container .project-description header > h3 span time {
-        font-size: 14px; }
-    #projects .projects-container .project-description h4 {
-      font-size: 14px;
-      margin-top: 12px; }
-      #projects .projects-container .project-description h4:first-of-type {
-        margin-top: 8px; }
-    #projects .projects-container .project-description p {
-      font-size: 11px; }
-    #projects .projects-container .project-description .anchors-container {
-      margin-top: 15px; }
-      #projects .projects-container .project-description .anchors-container a {
-        font-size: 13px; }
-        #projects .projects-container .project-description .anchors-container a i {
-          margin-right: 3px; }
-      #projects .projects-container .project-description .anchors-container .side-note span.text, #projects .projects-container .project-description .anchors-container .side-note span.parenthesis {
-        font-size: 9.5px; } }
+@media (max-width: 950px) {
+  #projects .section-container .section-title {
+    margin-bottom: 25px; }
+  #projects .section-container .project-description {
+    padding: 8px 12px 8px 16px; }
+    #projects .section-container .project-description header > h3 {
+      font-size: 26px; }
+      #projects .section-container .project-description header > h3 span.text, #projects .section-container .project-description header > h3 span.parenthesis, #projects .section-container .project-description header > h3 span time {
+        font-size: 16px; }
+    #projects .section-container .project-description h4 {
+      font-size: 16px;
+      margin-top: 16px; }
+    #projects .section-container .project-description ul {
+      padding-left: 18px;
+      margin: 4px 0 0; }
+    #projects .section-container .project-description p, #projects .section-container .project-description li {
+      font-size: 12px; }
+    #projects .section-container .project-description .anchors-container {
+      margin-top: 20px; }
+      #projects .section-container .project-description .anchors-container a {
+        font-size: 15px; }
+        #projects .section-container .project-description .anchors-container a:nth-child(2) {
+          margin-top: 3px; } }
+@media (max-width: 750px) {
+  #projects .section-container .section-title {
+    margin-bottom: 20px; }
+  #projects .section-container .project-description header > h3 {
+    font-size: 24px; }
+    #projects .section-container .project-description header > h3 span.text, #projects .section-container .project-description header > h3 span.parenthesis, #projects .section-container .project-description header > h3 span time {
+      font-size: 14px; }
+  #projects .section-container .project-description h4 {
+    font-size: 14px;
+    margin-top: 14px; }
+  #projects .section-container .project-description ul {
+    padding-left: 16px;
+    margin: 2px 0 0; }
+  #projects .section-container .project-description p, #projects .section-container .project-description li {
+    font-size: 11px; }
+  #projects .section-container .project-description .anchors-container {
+    margin-top: 16px; }
+    #projects .section-container .project-description .anchors-container a {
+      font-size: 13px; }
+      #projects .section-container .project-description .anchors-container a:nth-child(2) {
+        margin-top: 2px; } }
 .scrollable-gray::-webkit-scrollbar {
   width: 10px;
   height: 10px; }

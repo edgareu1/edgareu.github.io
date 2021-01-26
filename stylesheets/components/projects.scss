@@ -41,10 +41,6 @@
     width: 50%;
   }
 
-  .single-img {
-    border-bottom-left-radius: 5px;
-  }
-
   .project-description {
     // Vendor prefixes 'display'
     display: -webkit-box;
@@ -61,8 +57,7 @@
     overflow-y: scroll;
 
     header > h3 {
-      text-align: center;
-      font-size: 28px;
+      font-size: 32px;
 
       span {
         color: gainsboro;
@@ -70,7 +65,7 @@
         font-weight: 400;
 
         &.text, &.parenthesis, time {
-          font-size: 18px;
+          font-size: 20px;
         }
 
         &.parenthesis {
@@ -86,55 +81,87 @@
     }
 
     h4 {
-      font-size: 17px;
-      margin: 15px 0 5px;
-
-      &:first-of-type {
-        margin-top: 10px;
-      }
+      font-size: 20px;
+      margin: 20px 0 5px;
     }
 
-    p {
+    ul {
+      padding-left: 20px;
+      margin: 6px 0 0;
+    }
+
+    p, li {
       text-align: justify;
       color: gainsboro;
-      font-size: 12.5px;
+      font-size: 14px;
       margin: 0;
     }
 
     .anchors-container {
-      margin-top: 20px;
+      margin-top: 25px;
 
       a {
         display: block;
-        font-size: 15px;
+        font-size: 16.5px;
 
         // Vendor prefixes 'width'
         width: -webkit-fit-content;
         width: -moz-fit-content;
         width: fit-content;
 
+        &:nth-child(2) {
+          margin-top: 5px;
+        }
+
         i {
           margin-right: 4px;
         }
       }
+    }
+  }
+}
 
-      .side-note {
-        color: gainsboro;
-        font-size: 0; // To remove the whitespace between the inline children elements
+@media(max-width: 950px) {
+  #projects .section-container {
+    .section-title {
+      margin-bottom: 25px;
+    }
+
+    .project-description {
+      padding: 8px 12px 8px 16px;
+
+      header > h3 {
+        font-size: 26px;
 
         span {
-          &.text, &.parenthesis {
-            font-size: 11px;
+          &.text, &.parenthesis, time {
+            font-size: 16px;
           }
+        }
+      }
 
-          &.parenthesis {
-            &.open {
-              margin-right: 2px;
-            }
+      h4 {
+        font-size: 16px;
+        margin-top: 16px;
+      }
 
-            &.close {
-              margin-left: 2px;
-            }
+      ul {
+        padding-left: 18px;
+        margin: 4px 0 0;
+      }
+
+      p, li {
+        font-size: 12px;
+      }
+
+      .anchors-container {
+        margin-top: 20px;
+
+        a {
+          font-size: 15px;
+
+          &:nth-child(2) {
+            margin-top: 3px;
           }
         }
       }
@@ -142,47 +169,46 @@
   }
 }
 
-@media(max-width: 800px) {
-  #projects .projects-container .project-description {
-    padding: 8px 12px 15px;
-
-    header > h3 {
-      font-size: 22px;
-
-      span {
-        .text, .parenthesis, time {
-          font-size: 14px;
-        }
-      }
+@media(max-width: 750px) {
+  #projects .section-container {
+    .section-title {
+      margin-bottom: 20px;
     }
 
-    h4 {
-      font-size: 14px;
-      margin-top: 12px;
+    .project-description {
+      header > h3 {
+        font-size: 24px;
 
-      &:first-of-type {
-        margin-top: 8px;
-      }
-    }
-
-    p {
-      font-size: 11px;
-    }
-
-    .anchors-container {
-      margin-top: 15px;
-
-      a {
-        font-size: 13px;
-
-        i {
-          margin-right: 3px;
+        span {
+          &.text, &.parenthesis, time {
+            font-size: 14px;
+          }
         }
       }
 
-      .side-note span {
-        &.text, &.parenthesis {
-          font-size: 9.5px;
+      h4 {
+        font-size: 14px;
+        margin-top: 14px;
+      }
+
+      ul {
+        padding-left: 16px;
+        margin: 2px 0 0;
+      }
+
+      p, li {
+        font-size: 11px;
+      }
+
+      .anchors-container {
+        margin-top: 16px;
+
+        a {
+          font-size: 13px;
+
+          &:nth-child(2) {
+            margin-top: 2px;
+          }
         }
       }
     }
