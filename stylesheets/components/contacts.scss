@@ -1,17 +1,6 @@
 #contacts .section-container {
   max-width: 800px;
 
-  .section-title {
-    margin-bottom: 20px;
-    margin-left: 0;
-  }
-
-  p {
-    color: rgba(220, 220, 220, 1);
-    font-size: 16px;
-    margin: 0 0 0 2px;
-  }
-
   #contact-form {
     display: flex;
     flex-direction: column;
@@ -54,14 +43,6 @@
 
 @media(max-width: 750px) {
   #contacts .section-container {
-    .section-title {
-      margin-bottom: 15px;
-    }
-
-    p {
-      font-size: 14px;
-    }
-
     #contact-form {
       margin-top: 12px;
 

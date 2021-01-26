@@ -1,9 +1,10 @@
 #skills .section-container {
-  &.section-grid {
+  .section-grid {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr;
     grid-gap: 0;
     column-gap: calc(5px + 2.5%);
+    padding-top: 2px;
   }
 
   .skills-header, .skills-content {
@@ -16,7 +17,7 @@
   }
 
   .skills-header-container, .skills-content {
-    background: rgba(10, 10, 10, 0.9);
+    background: rgba(20, 20, 22, 0.9);
   }
 
   .skills-header-container {
@@ -25,20 +26,20 @@
     padding: 0 15px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-    box-shadow: 1px 0px 2px 0px rgba(80, 80, 80, 0.5),
-      -1px -1px 2px 0px rgba(80, 80, 80, 0.25);
+    box-shadow: 1px 0 2px 0 rgba(100, 100, 100, 0.5),
+      -1px -1px 2px 0 rgba(100, 100, 100, 0.25);
 
     .skills-header {
       text-align: center;
       height: 100%;
       width: 100%;
       padding: 30px 5px 20px;
-      border-bottom: 1px solid rgba(80, 80, 80, 0.8);
+      border-bottom: 1px solid rgba(100, 100, 100, 0.8);
 
       i {
-        color: rgba(50, 120, 255, 1);
+        color: rgba(70, 140, 255, 1);
         font-size: 50px;
-        text-shadow: 1px 1px 5px rgba(10, 60, 160, 0.8);
+        text-shadow: 1px 1px 8px rgba(35, 70, 150, 0.8);
       }
 
       h3 {
@@ -64,8 +65,8 @@
     padding: 25px 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    box-shadow: 1px 1px 2px 0px rgba(80, 80, 80, 0.5),
-      -1px 1px 2px 0px rgba(80, 80, 80, 0.25);
+    box-shadow: 1px 1px 2px 0 rgba(100, 100, 100, 0.5),
+      -1px 1px 2px 0 rgba(100, 100, 100, 0.25);
 
     li {
       text-align: center;
@@ -106,7 +107,7 @@
 @media(max-width: 900px) {
   #skills .section-container {
     &.section-grid {
-      column-gap: calc(1px + 2.5%);
+      column-gap: calc(2.5px + 2.5%);
     }
 
     .skills-header-container {
