@@ -391,6 +391,7 @@
     margin-left: 0; }
   #contacts .section-container p {
     color: gainsboro;
+    font-size: 16px;
     margin: 0 0 0 2px; }
   #contacts .section-container #contact-form {
     display: flex;
@@ -422,6 +423,23 @@
       padding: 12px 24px;
       margin-top: 12px; }
 
+@media (max-width: 750px) {
+  #contacts .section-container .section-title {
+    margin-bottom: 15px; }
+  #contacts .section-container p {
+    font-size: 14px; }
+  #contacts .section-container #contact-form {
+    margin-top: 12px; }
+    #contacts .section-container #contact-form input, #contacts .section-container #contact-form textarea {
+      font-size: 16px;
+      padding: 10px 15px;
+      margin-bottom: 6px; }
+    #contacts .section-container #contact-form textarea {
+      height: 120px; }
+    #contacts .section-container #contact-form .contact-submit {
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-top: 10px; } }
 footer {
   position: relative;
   display: -webkit-box;
