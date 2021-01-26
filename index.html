@@ -67,7 +67,7 @@
             <p>My path began in finance, but in 2020 I decided to change my life and learn how to code.</p>
           </header>
 
-          <button type="button" class="btn-modal">CONTRIBUTION ACTIVITY</button>
+          <button type="button" class="btn-light">CONTRIBUTION ACTIVITY</button>
         </div>
 
         <div class="banner-code-container scrollable-gray"></div>
@@ -94,29 +94,13 @@
           </div>
 
           <!-- Skills section -->
-          <section id="skills">
-            <div class="skills-container">
+          <section id="skills" class="profile-section">
+            <div class="section-container section-grid section-no-header">
               <div class="skills-header-container col-1 row-1">
                 <div class="skills-header langs">
                   <i class="fas fa-code"></i>
                   <h3>Languages</h3>
                   <p>Programming, markup and style sheet languages</p>
-                </div>
-              </div>
-
-              <div class="skills-header-container col-2 row-1">
-                <div class="skills-header frameworks">
-                  <i class="fas fa-sitemap"></i>
-                  <h3>Frameworks</h3>
-                  <p>Frameworks, libraries and <abbr title="Java Runtime Environments">JREs</abbr></p>
-                </div>
-              </div>
-
-              <div class="skills-header-container col-3 row-1">
-                <div class="skills-header tools">
-                  <i class="fas fa-wrench"></i>
-                  <h3>Other Tools</h3>
-                  <p>Complementary tools to the skill set</p>
                 </div>
               </div>
 
@@ -127,12 +111,28 @@
                 <li><abbr title="Cascading Style Sheets">CSS</abbr> 3</li>
               </ul>
 
+              <div class="skills-header-container col-2 row-1">
+                <div class="skills-header frameworks">
+                  <i class="fas fa-sitemap"></i>
+                  <h3>Frameworks</h3>
+                  <p>Frameworks, libraries and <abbr title="Java Runtime Environments">JREs</abbr></p>
+                </div>
+              </div>
+
               <ul class="skills-content frameworks col-2 row-2">
                 <li>Ruby on Rails</li>
                 <li>React</li>
                 <li>Node.js</li>
                 <li>jQuery</li>
               </ul>
+
+              <div class="skills-header-container col-3 row-1">
+                <div class="skills-header tools">
+                  <i class="fas fa-wrench"></i>
+                  <h3>Other Tools</h3>
+                  <p>Complementary tools to the skill set</p>
+                </div>
+              </div>
 
               <ul class="skills-content tools col-3 row-2">
                 <li><abbr title="Structured Query Language">SQL</abbr> Databases</li>
@@ -152,8 +152,8 @@
           </section>
 
           <!-- Projects section -->
-          <section id="projects">
-            <div class="projects-content">
+          <section id="projects" class="profile-section">
+            <div class="section-container">
               <header>
                 <h2 class="section-title">Main Projects</h2>
               </header>
@@ -240,16 +240,17 @@
                     </header>
 
                     <h4>Summary</h4>
-                    <p>A web platform for fisherman to record their fishing trips and to get predictions on the best fishing locations available.</p>
+                    <p>A web platform for fisherman to record their fishing trips and to get predictions on the best fishing locations available</p>
 
-                    <h4>Context</h4>
-                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
+                    <h4>Main features</h4>
+                    <ul>
+                      <li>Implemented a machine learning algorithm to predict the best fishing locations available</li>
+                      <li>Integrated location and weather <abbr title="Application Programming Interfaces">APIs</abbr></li>
+                      <li>Built a <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr></li>
+                    </ul>
 
                     <h4>Technologies</h4>
                     <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Application Programming Interface">API</abbr> (integration and building), <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Machine Learning</p>
-
-                    <h4>My main features</h4>
-                    <p>Implemented a machine learning algorithm to predict the best fishing locations available; integrated location and weather <abbr title="Application Programming Interfaces">APIs</abbr>; Built a <abbr title="Representational State Transfer">REST</abbr> <abbr title="Application Programming Interface">API</abbr>.</p>
 
                     <div class="anchors-container">
                       <a href="https://www.hookeu.com" target="_blank" title="Hook project live demo" class="inline-anchor" style="display: inline;">
@@ -257,13 +258,7 @@
                         <span class="hover-underline">Website</span>
                       </a>
 
-                      <span class="side-note">
-                        <span class="parenthesis open">(</span>
-                        <span class="text">the first request may take a couple of seconds</span>
-                        <span class="parenthesis close">)</span>
-                      </span>
-
-                      <a href="https://github.com/edgareu1/rails-hook" target="_blank" title="Hook project GitHub repository" class="inline-anchor" style="margin-top: 5px;">
+                      <a href="https://github.com/edgareu1/rails-hook" target="_blank" title="Hook project GitHub repository" class="inline-anchor">
                         <i class="fab fa-github"></i>
                         <span class="hover-underline">GitHub repository</span>
                       </a>
@@ -326,16 +321,17 @@
                     </header>
 
                     <h4>Summary</h4>
-                    <p>An online marketplace for craftwork.</p>
+                    <p>An online marketplace for craftwork</p>
 
-                    <h4>Context</h4>
-                    <p>Le Wagon bootcamp group project which, after presented, I took the liberty to refactor/clean and to add more advanced features.</p>
+                    <h4>Main features</h4>
+                    <ul>
+                      <li>Integrated the Stripe's payment processing <abbr title="Application Programming Interface">API</abbr></li>
+                      <li>Simulated orders delivery using Background Jobs</li>
+                      <li>Created a custom made autocomplete search bar</li>
+                    </ul>
 
                     <h4>Technologies</h4>
                     <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, PostgreSQL, <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>, Stripe, Background Jobs</p>
-
-                    <h4>My main features</h4>
-                    <p>Implemented the Stripe's payment system; simulated orders delivery using Background Jobs; created a custom made autocomplete search bar.</p>
 
                     <div class="anchors-container">
                       <a href="https://github.com/JulieMariano/Artisan" target="_blank" title="Artisan project GitHub repository" class="inline-anchor">
@@ -365,13 +361,16 @@
                     </header>
 
                     <h4>Summary</h4>
-                    <p>My online portfolio (this one), which I created from scratch without any external dependencies.</p>
+                    <p>My online portfolio (this one), created from scratch without any external dependencies</p>
+
+                    <h4>Main features</h4>
+                    <ul>
+                      <li>Created a custom made navbar and carousel</li>
+                      <li>Created the GitHub contributions calendar and the code typing animation</li>
+                    </ul>
 
                     <h4>Technologies</h4>
                     <p>JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr></p>
-
-                    <h4>My main features</h4>
-                    <p>Created a custom made navbar, carousel and pill-bar; created the GitHub contributions calendar and the code typing animation.</p>
 
                     <div class="anchors-container">
                       <a href="https://github.com/edgareu1/edgareu1.github.io" target="_blank" title="Portfolio project GitHub repository" class="inline-anchor">
@@ -394,22 +393,22 @@
                         Trip Finder
                         <span>
                           <span class="parenthesis open">(</span>
-                          <time datetime="2020-11">Nov 2020 </time>
+                          <time datetime="2020-12">Dec 2020 </time>
                           <span class="text">- </span>
-                          <time datetime="2020">Present</time>
+                          <time datetime="2021">Present</time>
                           <span class="parenthesis close">)</span>
                         </span>
                       </h3>
                     </header>
 
                     <h4>Summary</h4>
-                    <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages available.</p>
+                    <p>A web platform that fetches data from airline and housing websites in order to find the best travel packages available</p>
 
                     <h4>Context</h4>
-                    <p>A project of mine still in development...</p>
+                    <p>A project of still in development...</p>
 
                     <h4>Technologies</h4>
-                    <p>Ruby on Rails, JavaScript, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="Application Programming Interface">API</abbr> (integration), Web Scraping</p>
+                    <p>Ruby on Rails, React, <abbr title="HyperText Markup Language">HTML</abbr>, <abbr title="Cascading Style Sheets">CSS</abbr>, <abbr title="Application Programming Interface">API</abbr> (integration), Web Scraping</p>
 
                     <div class="anchors-container">
                       <a href="https://github.com/edgareu1/rails-trip-finder" target="_blank" title="Trip Finder project GitHub repository" class="inline-anchor">
@@ -424,18 +423,20 @@
           </section>
 
           <!-- Contacts section -->
-          <section id="contacts">
-            <header>
-              <h2 class="section-title">Wanna get in touch?</h2>
-            </header>
+          <section id="contacts" class="profile-section">
+            <div class="section-container">
+              <header>
+                <h2 class="section-title">Wanna get in touch?</h2>
+              </header>
 
-            <p>Fill the form bellow or use <a href="mailto:edgar.eu1@hotmail.com" class="inline-anchor"><span class="hover-underline">this email</span></a></p>
-            <form action="https://formspree.io/f/mdopbzqy" method="POST" id="contact-form">
-              <input type="text" name="name" placeholder="Name" required>
-              <input type="email" name="_replyto" placeholder="Email" required>
-              <textarea name="message" placeholder="Your message" required></textarea>
-              <button type="submit" class="btn-modal contact-submit">Send Email</button>
-            </form>
+              <p>Fill the form bellow or use <a href="mailto:edgar.eu1@hotmail.com" class="inline-anchor"><span class="hover-underline">this email</span></a></p>
+              <form action="https://formspree.io/f/mdopbzqy" method="POST" id="contact-form">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="_replyto" placeholder="Email" required>
+                <textarea name="message" placeholder="Your message" required></textarea>
+                <button type="submit" class="btn-light contact-submit">Send Email</button>
+              </form>
+            </div>
           </section>
         </main>
 
@@ -465,7 +466,7 @@
             </li>
 
             <li class="resume-link">
-              <a href="./resume.pdf" target="_blank" class="btn-modal">
+              <a href="./resume.pdf" target="_blank" class="btn-light">
                 Resume
               </a>
             </li>
