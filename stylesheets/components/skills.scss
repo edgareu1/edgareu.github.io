@@ -104,8 +104,10 @@
 }
 
 @media(max-width: 900px) {
-  #skills .skills-container {
-    column-gap: calc(1px + 2.5%);
+  #skills .section-container {
+    &.section-grid {
+      column-gap: calc(1px + 2.5%);
+    }
 
     .skills-header-container {
       padding: 0 10px;

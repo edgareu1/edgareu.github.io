@@ -493,6 +493,7 @@ footer {
         width: fit-content;
         padding: 10px 20px; }
   footer .footer-copyrights {
+    font-size: 18px;
     margin: 0; }
 
 :root {
@@ -682,19 +683,6 @@ abbr[title] {
 code {
   font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
 
-.profile-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-bottom: 180px; }
-  .profile-section .section-container {
-    height: fit-content;
-    width: 100%;
-    max-width: 1050px;
-    padding: 20px min(24px, 2%) 0; }
-    .profile-section .section-container.section-no-header {
-      padding-top: 50px; }
-
 #profile-container {
   position: relative;
   width: 100%; }
@@ -707,28 +695,58 @@ code {
       position: relative;
       height: fit-content;
       width: 100%; }
-    #profile-container #profile-content .section-title {
-      font-size: 40px;
-      display: flex;
-      align-items: center;
-      width: 100%;
-      margin-right: 10px;
-      white-space: nowrap; }
-      #profile-container #profile-content .section-title::after {
-        position: relative;
-        top: 4px;
-        display: block;
-        height: 1px;
-        width: 100%;
-        background-color: rgba(80, 80, 80, 0.5);
-        margin: 0 20px 0 15px;
-        content: ""; }
-    #profile-container #profile-content #contacts, #profile-container #profile-content #projects, #profile-container #profile-content #skills {
-      min-height: -webkit-fit-content;
-      min-height: -moz-fit-content;
-      min-height: fit-content;
-      width: 100%; }
 
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: fit-content;
+  width: 100%;
+  padding-bottom: 180px; }
+  .profile-section .section-container {
+    height: fit-content;
+    width: 100%;
+    max-width: 1050px;
+    padding: 20px min(24px, 3%) 0; }
+    .profile-section .section-container.section-no-header {
+      padding-top: 50px; }
+  .profile-section .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    width: 100%;
+    margin-right: 10px;
+    white-space: nowrap; }
+    .profile-section .section-title::after {
+      position: relative;
+      top: 4px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(80, 80, 80, 0.5);
+      margin: 0 20px 0 15px;
+      content: ""; }
+
+@media (max-width: 900px) {
+  .profile-section {
+    padding-bottom: 150px; }
+    .profile-section .section-container.section-no-header {
+      padding-top: 40px; }
+    .profile-section .section-title {
+      font-size: 36px; }
+
+  #banner {
+    padding-bottom: 90px; } }
+@media (max-width: 750px) {
+  .profile-section {
+    padding-bottom: 120px; }
+    .profile-section .section-container.section-no-header {
+      padding-top: 30px; }
+    .profile-section .section-title {
+      font-size: 32px; }
+
+  #banner {
+    padding-bottom: 70px; } }
 .inline-anchor {
   color: #64ff5f;
   text-decoration: none; }
@@ -1107,25 +1125,25 @@ nav {
   grid-row: 2; }
 
 @media (max-width: 900px) {
-  #skills .skills-container {
+  #skills .section-container.section-grid {
     column-gap: calc(1px + 2.5%); }
-    #skills .skills-container .skills-header-container {
-      padding: 0 10px; }
-      #skills .skills-container .skills-header-container .skills-header {
-        padding: 25px 5px 15px; }
-        #skills .skills-container .skills-header-container .skills-header i {
-          font-size: 45px; }
-        #skills .skills-container .skills-header-container .skills-header h3 {
-          font-size: 22px;
-          margin-top: 20px; }
-        #skills .skills-container .skills-header-container .skills-header p {
-          font-size: 11px;
-          margin: 14px 0 0; }
-    #skills .skills-container .skills-content {
-      font-size: 14px;
-      padding: 18px 8px; }
-      #skills .skills-container .skills-content li {
-        padding: 3px 4px; } }
+  #skills .section-container .skills-header-container {
+    padding: 0 10px; }
+    #skills .section-container .skills-header-container .skills-header {
+      padding: 25px 5px 15px; }
+      #skills .section-container .skills-header-container .skills-header i {
+        font-size: 45px; }
+      #skills .section-container .skills-header-container .skills-header h3 {
+        font-size: 22px;
+        margin-top: 20px; }
+      #skills .section-container .skills-header-container .skills-header p {
+        font-size: 11px;
+        margin: 14px 0 0; }
+  #skills .section-container .skills-content {
+    font-size: 14px;
+    padding: 18px 8px; }
+    #skills .section-container .skills-content li {
+      padding: 3px 4px; } }
 .calendar .day-tooltip {
   position: absolute;
   display: none;
