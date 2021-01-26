@@ -50,12 +50,12 @@ h1 {
           margin-block-end: 0.67em;
 
   // Vendor prefixes 'margin-inline-start'
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
 
   // Vendor prefixes 'margin-inline-end'
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
 }
 
 h2 {
@@ -78,7 +78,7 @@ button {
   }
 
   &:focus-visible {
-    box-shadow: 0px 0px 1px 1px white;
+    box-shadow: 0 0 1px 1px white;
   }
 }
 
@@ -123,10 +123,6 @@ code {
     width: 100%;
     max-width: 1050px;
     padding: 20px min(24px, 3%) 0;
-
-    &.section-no-header {
-      padding-top: 50px;
-    }
   }
 
   .section-title {
@@ -134,7 +130,7 @@ code {
     align-items: center;
     font-size: 40px;
     width: 100%;
-    margin-right: 10px;
+    margin: 0 10px 20px 0;
     white-space: nowrap;
 
     &::after {
@@ -143,20 +139,22 @@ code {
       display: block;
       height: 1px;
       width: 100%;
-      background-color: rgba(80, 80, 80, 0.5);
+      background-color: rgba(100, 100, 100, 0.5);
       margin: 0 20px 0 15px;
       content: "";
     }
+  }
+
+  .section-description {
+    color: rgba(220, 220, 220, 1);
+    font-size: 16px;
+    margin: 0 0 15px 4px;
   }
 }
 
 @media(max-width: 900px) {
   .profile-section {
     padding-bottom: 150px;
-
-    .section-container.section-no-header {
-      padding-top: 40px;
-    }
 
     .section-title {
       font-size: 36px;
@@ -172,12 +170,14 @@ code {
   .profile-section {
     padding-bottom: 120px;
 
-    .section-container.section-no-header {
-      padding-top: 30px;
-    }
-
     .section-title {
       font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      font-size: 14px;
+      margin-bottom: 12px;
     }
   }
 
