@@ -3,8 +3,6 @@
   position: absolute; }
   .animation-toggle-container.pos-abs.bottom {
     bottom: 20px; }
-  .animation-toggle-container.pos-abs.top {
-    top: 50px; }
 
 .animation-toggle-container.pos-fixed {
   position: fixed;

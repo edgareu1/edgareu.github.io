@@ -3,7 +3,11 @@
 function animateTogglePositioning() {
   const toogleContainer = document.querySelector('.animation-toggle-container'),
     banner = document.querySelector('#banner'),
-    main = document.querySelector('main');
+    main = document.querySelector('main'),
+    skillsContainer = document.querySelector('#skills .section-container');
+
+  let skillsContainerPaddingTop,
+    distanceBannerMain;
 
   updateTogglePosition();
 
@@ -15,18 +19,22 @@ function animateTogglePositioning() {
   // If the user is in the banner: position absolute at the top of the main;
   // If the user is in the main: position fixed at the bottom of the window;
   // Otherwise, the user is in the footer: position absolute at the bottom of the main;
-  // The 70 in the calculation refers to the 50px (distance of the content from the banner) plus
-  // 20px (distance from the bottom of the post-fixed class)
   function updateTogglePosition() {
+    skillsContainerPaddingTop = window.getComputedStyle(skillsContainer, null).getPropertyValue('padding-top');
+    distanceBannerMain = Number(skillsContainerPaddingTop.slice(0, 2));
+
     if (window.innerHeight + window.scrollY > banner.offsetHeight + main.offsetHeight) {
       toogleContainer.classList.remove('pos-fixed', 'top');
+      toogleContainer.style.top = '';
       toogleContainer.classList.add('pos-abs', 'bottom');
-    } else if (window.innerHeight + window.scrollY > banner.offsetHeight + toogleContainer.offsetHeight + 70) {
+    } else if (window.innerHeight + window.scrollY > banner.offsetHeight + toogleContainer.offsetHeight + distanceBannerMain + 20) {
       toogleContainer.classList.remove('pos-abs', 'bottom', 'top');
+      toogleContainer.style.top = '';
       toogleContainer.classList.add('pos-fixed');
     } else {
       toogleContainer.classList.remove('pos-fixed', 'bottom');
       toogleContainer.classList.add('pos-abs', 'top');
+      toogleContainer.style.top = distanceBannerMain + 'px';
     }
   }
 }
