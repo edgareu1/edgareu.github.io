@@ -1,0 +1,47 @@
+#page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 32px;
+  height: 100vh;
+  width: 100vw;
+
+  .loading-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+
+    .circle {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .outter-circle {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba(220, 220, 220, 0.5) 0%,
+        rgba(80, 80, 80, 0.5) 20%, rgba(80, 80, 80, 0.2) 35%);
+      box-sizing: border-box;
+      padding: 5px;
+      animation: completeRotation 2.5s linear 0.1s infinite normal;
+    }
+
+    .inner-circle {
+      background: black;
+    }
+  }
+}
+
+@keyframes completeRotation {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
