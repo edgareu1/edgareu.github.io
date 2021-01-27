@@ -784,6 +784,10 @@ code {
   z-index: 20;
   height: 100vh;
   width: 100vw; }
+  #page-loading.close {
+    animation: decreaseOpacity 0.5s forwards; }
+    #page-loading.close .sentence-container {
+      animation: zoomOut .5s forwards; }
   #page-loading .sentence-container {
     display: flex;
     align-items: center;
@@ -841,6 +845,16 @@ code {
     opacity: 0; }
   to {
     opacity: 1; } }
+@keyframes decreaseOpacity {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes zoomOut {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(0); } }
 body.modal-active {
   overflow: hidden; }
 

@@ -3,17 +3,20 @@ import { typeBannerCode } from './type-banner-code.js'
 
 function loadingPageAnimation() {
   const loadingScreen = document.getElementById('page-loading'),
-    pageContent= document.getElementById('page-content'),
     canvas = document.getElementById('tech-canvas'),
     profileContainer = document.getElementById('profile-container');
 
   document.addEventListener('readystatechange', () => {
     if (document.readyState === 'complete') {
-      pageContent.style.display = 'block';
-      loadingScreen.style.display = 'none';
+      loadingScreen.classList.add('close');
 
-      typeBannerCode();
-      techWordsAnimation(canvas, profileContainer);
+      setTimeout(() => {
+        document.body.removeChild(loadingScreen);
+        document.body.classList.remove('modal-active');
+
+        typeBannerCode();
+        techWordsAnimation(canvas, profileContainer);
+      }, 350);
     }
   });
 }
