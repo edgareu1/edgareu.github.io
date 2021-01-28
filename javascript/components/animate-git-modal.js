@@ -5,7 +5,6 @@ function animateGitModal() {
 
   // If the user clicks on the button...
   modalButton.addEventListener('click', (event) => {
-    // Prevent the anchor default click behavior
     event.preventDefault();
     // Update the body style (overflow: hidden)
     document.body.classList.add('modal-active');
