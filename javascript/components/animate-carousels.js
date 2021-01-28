@@ -1,13 +1,15 @@
 // Function that animates the app carousels
 function animateCarousels() {
-  var carousels = document.querySelectorAll('.carousel'); // Get the app carousels
+  // Get the app carousels
+  const carousels = document.querySelectorAll('.carousel');
 
   // Animate each carousel
   for (let i = 0; i < carousels.length; i++) {
     animateCarousel(i);
   }
 
-  // Function that animates the carousel of index 'i' in the 'carousels' node list variable
+  // Function that animates the carousel of index 'i' in the 'carousels' node
+  // list variable;
   // Arguments:
   //   i: Index of the carousel to animate
   function animateCarousel(i) {
@@ -15,17 +17,17 @@ function animateCarousels() {
     //   anchors:          Anchors that change the active carousel item
     //   items:            Items of the carousel
     //   currentItem:      Currently active item
-    //   currentSlide:     Currently active item slide (number in string format)
+    //   currentSlide:     Currently active item slide (num in string format)
     //   currentIndicator: Carousel indicator anchor that is currently active
     //   slideTo:          Carousel slide to change into
-    var anchors = carousels[i].querySelectorAll('[data-target]'),
-        items = carousels[i].querySelectorAll('.carousel-item'),
-        currentItem = carousels[i].querySelector('.carousel-item.active'),
-        currentSlide = currentItem.getAttribute('data-slide'),
-        currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
-        slideTo = '0';
+    const anchors = carousels[i].querySelectorAll('[data-target]'),
+      items = carousels[i].querySelectorAll('.carousel-item');
+    let currentItem = carousels[i].querySelector('.carousel-item.active'),
+      currentSlide = currentItem.getAttribute('data-slide'),
+      currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide),
+      slideTo = '0';
 
-    // Refresh the items position (positioned side by side with the 'transform: translate' property)
+    // Refresh the items position
     refreshItemsPosition();
 
     // If the User clicks on an anchor...
@@ -34,50 +36,46 @@ function animateCarousels() {
         // If the anchor is a direct anchor
         if (anchor.hasAttribute('data-slide-to')) {
           slideTo = anchor.getAttribute('data-slide-to');
-
           // Update the carousel active slide if the slide does change
           if (slideTo !== currentSlide) changeCarouselItem();
-
         // If the anchor is a direction anchor ('prev' or 'next')
         } else {
           // Get the slide to change into
           slideTo = parseInt(slideTo);
           slideTo += anchor.getAttribute('data-slide') == 'prev' ? -1 : 1;
-
           // Make sure the 'slideTo' variable is correct
           if (slideTo < 0) {
             slideTo = items.length - 1;
           } else if (slideTo >= items.length) {
             slideTo = 0;
           }
-
-          slideTo = slideTo.toString(); // Make sure the slideTo variable is of the string format
-          changeCarouselItem();         // Update the carousel active slide
-        }
-
-        // Function that changes the currently active slide
-        function changeCarouselItem() {
-          // Update the currently active Item
-          currentItem.classList.remove('active');
-          currentItem = filterNodeList(items, 'data-slide', slideTo);
-          currentItem.classList.add('active');
-
-          // Update the current slide
-          currentSlide = slideTo;
-
-          // Update the currently active indicator anchor
-          currentIndicator.classList.remove('active');
-          currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide);
-          currentIndicator.classList.add('active');
-
-          // Refresh the items position (positioned side by side with the 'transform: translate' property)
-          // This will create an animation derived from the 'transition: transform' property
-          refreshItemsPosition();
+          // Make sure the 'slideTo' variable is of string format
+          slideTo = slideTo.toString();
+          // Update the carousel active slide
+          changeCarouselItem();
         }
       });
     }
 
-    // Function that refreshes the items position (which are side by side with the 'transform: translate' property)
+    // Function that changes the currently active slide
+    function changeCarouselItem() {
+      // Update the currently active Item
+      currentItem.classList.remove('active');
+      currentItem = filterNodeList(items, 'data-slide', slideTo);
+      currentItem.classList.add('active');
+      // Update the current slide
+      currentSlide = slideTo;
+      // Update the currently active indicator anchor
+      currentIndicator.classList.remove('active');
+      currentIndicator = filterNodeList(anchors, 'data-slide-to', currentSlide);
+      currentIndicator.classList.add('active');
+      // Refresh the items position; This will create an animation derived from
+      // the CSS 'transition: transform' property
+      refreshItemsPosition();
+    }
+
+    // Function that refreshes the items position (which are side by side with
+    // the CSS 'transform: translate' property)
     function refreshItemsPosition() {
       const currentSlideInt = parseInt(currentSlide);
 
@@ -87,7 +85,8 @@ function animateCarousels() {
       }
     }
 
-    // Function that gets the first element in a node list that has a certain value for a certain attribute
+    // Function that gets the first element in a node list that has a certain
+    // value for a certain attribute;
     // Arguments:
     //   nodeList:  Node list to filter
     //   attr:      Attribute to evaluate
@@ -98,4 +97,4 @@ function animateCarousels() {
   }
 }
 
-export { animateCarousels };
+export { animateCarousels }
