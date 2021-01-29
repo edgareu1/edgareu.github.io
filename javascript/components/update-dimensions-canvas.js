@@ -1,8 +1,8 @@
-// Function that updates the Canvas dimensions to fill the whole 'main' element
+// Function that updates the Canvas dimensions to match the 'main' element
 // Arguments:
-//   canvas:            Canvas element that will have its dimensions updated
-//   profileContainer:  Canvas container that will have its height updated
-function updateDimensionsCanvas(canvasElement, profileContainer) {
+//   canvas:          Canvas element that will have its dimensions updated
+//   canvasContainer: Canvas container that will have its height updated
+function updateDimensionsCanvas(canvasElement, canvasContainer) {
   // Variables:
   //   profileContent: Main element
   //   canvasWidth:    Main element width
@@ -19,8 +19,8 @@ function updateDimensionsCanvas(canvasElement, profileContainer) {
   // Set the canvas inner container dimensions
   canvasElement.style.width = canvasWidth + 'px';
   canvasElement.style.height = canvasHeight + 'px';
-  // Set the 'profile-container' height
-  profileContainer.style.height = canvasHeight + 'px';
+  // Set the 'canvasContainer' height
+  canvasContainer.style.height = canvasHeight + 'px';
   // Make sure the canvas characteristics stay the same
   canvas.strokeStyle = 'rgba(80, 80, 80, 0.4)';
   canvas.fillStyle = 'rgba(80, 80, 80, 0.4)';

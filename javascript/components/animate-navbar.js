@@ -26,6 +26,11 @@ function animateNavbar() {
     refreshActiveElement();
   });
 
+  // If the User resizes his device window, update the navbar dimensions
+  window.addEventListener('resize', () => {
+    updateDimensionsNavbar(linksList, moreLink);
+  });
+
   // Function that refreshes the navbar active element
   function refreshActiveElement() {
     // Get the user current window position and the navbar and banner height
