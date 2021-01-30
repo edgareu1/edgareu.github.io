@@ -8,7 +8,7 @@ import { createGitCalendar } from './components/create-git-calendar.js'
 import { loadingPageAnimation } from './components/loading-page-animation.js'
 
 // Import the app CSS here
-import "../stylesheets/application.css";
+import "../stylesheets/index.scss";
 
 // Prepare the app JS here
 loadingPageAnimation();
