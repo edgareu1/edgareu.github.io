@@ -42,7 +42,7 @@ function animateCarousels() {
         } else {
           // Get the slide to change into
           slideTo = parseInt(slideTo);
-          slideTo += anchor.getAttribute('data-slide') == 'prev' ? -1 : 1;
+          slideTo += anchor.getAttribute('data-slide') === 'prev' ? -1 : 1;
           // Make sure the 'slideTo' variable is correct
           if (slideTo < 0) {
             slideTo = items.length - 1;
@@ -92,7 +92,7 @@ function animateCarousels() {
     //   attr:      Attribute to evaluate
     //   attrValue: Attribute value that the node list element should have
     function filterNodeList(nodeList, attr, attrValue) {
-      return Array.from(nodeList).filter(el => el.getAttribute(attr) == attrValue)[0];
+      return Array.from(nodeList).filter(el => el.getAttribute(attr) === attrValue)[0];
     }
   }
 }

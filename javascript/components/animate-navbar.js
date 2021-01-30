@@ -14,8 +14,10 @@ function animateNavbar() {
     linksList = navbar.querySelector('.nav-links'),
     moreLink = navbar.querySelector('.nav-show-more');
 
-  // Refresh the navbar active element
-  refreshActiveElement();
+  // Turn the 'Edgar' navbar anchor the active link
+  // The 'refreshActiveElement' function would not work as the page content is
+  // under the CSS 'display: none' property while the page is loading
+  anchors[0].classList.add('active');
   // Animate the show-more feature
   animateShowMore();
   // Update the navbar dimensions
@@ -43,7 +45,7 @@ function animateNavbar() {
       // Get the anchor target element and his distance from the top
       const anchorRef = anchor.getAttribute('href'),
         target = document.querySelector(anchorRef),
-        targetOffsetTop = ( anchorRef == '#banner' ?  0 : bannerHeight + target.offsetTop );
+        targetOffsetTop = ( anchorRef === '#banner' ?  0 : bannerHeight + target.offsetTop );
 
       // Get the element the user is currently on and 'activate' its respective
       // navbar anchor

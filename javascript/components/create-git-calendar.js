@@ -46,6 +46,11 @@ function createGitCalendar() {
       // Add the tooltip animation to the calendar
       addTooltip();
     }
+  })
+  .catch((error) => {
+    console.log('There was an error loading the GitHub calendar: ', error);
+    // If there was an error, try it again
+    setTimeout(createGitCalendar(), 2000);
   });
 
   // Function that transforms a date into a string in an abbreviation format
