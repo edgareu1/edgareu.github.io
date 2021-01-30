@@ -90,7 +90,7 @@ function backgroundWordsAnimation() {
 
       // For each of the techologies...
       for (let i = 0; i < techAttr.length; i++) {
-        if (currentArrayIndex == numTech) { currentArrayIndex = 0; }
+        if (currentArrayIndex === numTech) { currentArrayIndex = 0; }
         // Display it in the canvas
         canvas.font = techAttr[i].font + 'px arial';
         canvas.fillText(techAttr[i].text, techAttr[i].x, techAttr[i].y);
