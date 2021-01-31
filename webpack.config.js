@@ -1,18 +1,20 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./src/javascript/index.js",
   output: {
-    filename: "main.js",
+    filename: "main.[contenthash].js",
     path: path.resolve(__dirname, "build"),
     publicPath: './'
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html"
-    })
+    }),
+    new CleanWebpackPlugin()
   ],
   module: {
     rules: [
@@ -33,6 +35,7 @@ module.exports = {
         use: {
           loader: "file-loader",
           options: {
+            name: "[name].[contenthash].[ext]",
             outputPath: "images"
           }
         }
