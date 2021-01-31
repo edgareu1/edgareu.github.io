@@ -6,17 +6,8 @@
     right: 0;
     bottom: 0;
     left: 0;
-
-    // Vendor prefixes 'display'
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-
-    // Vendor prefixes 'justify-content'
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-
     list-style: none;
     z-index: 8;
     padding: 0;
@@ -25,12 +16,7 @@
     li {
       position: relative;
       bottom: 0;
-
-      // Vendor prefixes 'flex'
-      -webkit-box-flex: 0;
-      -ms-flex: 0 1 auto;
-          flex: 0 1 auto;
-
+      flex: 0 1 auto;
       background-color: rgba(255, 255, 255, .5);
       height: 23px; // 10px border 2 times, plus 3px for the 'true' height of the element
       width: 30px;
@@ -39,12 +25,7 @@
       border-bottom: 10px solid transparent;
       margin-right: 3px;
       margin-left: 3px;
-
-      // Vendor prefixes 'transition'
-      -webkit-transition: border 0.1s linear;
-           -o-transition: border 0.1s linear;
-              transition: border 0.1s linear;
-
+      transition: border 0.1s linear;
       cursor: pointer;
 
       &.active, &:hover {
@@ -69,22 +50,11 @@
       position: absolute;
       top: 0;
       display: block;
-
-      // Vendor prefixes 'align-items'
-      -webkit-box-align: center;
-      -ms-flex-align: center;
       align-items: center;
-
       height: 100%;
       width: 100%;
       margin: 0;
-
-      // Vendor prefixes 'transition'
-      -webkit-transition: -webkit-transform 0.25s linear;
-              transition: -webkit-transform 0.25s linear;
-      -o-transition: transform 0.25s linear;
-         transition: transform 0.25s linear;
-         transition: transform 0.25s linear, -webkit-transform 0.25s linear;
+      transition: transform 0.25s linear;
 
       img {
         display: block;
@@ -119,22 +89,9 @@
     position: absolute;
     top: 0;
     bottom: 0;
-
-    // Vendor prefixes 'display'
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-
-    // Vendor prefixes 'align-items'
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
-
-    // Vendor prefixes 'justify-content'
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-
     text-align: center;
     font-size: 30px;
     opacity: .5;

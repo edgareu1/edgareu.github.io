@@ -14,51 +14,26 @@ body.modal-active {
   padding: 0;
 
   &.modal-open {
-    // Vendor prefixes 'animation'
-    -webkit-animation: increaseOpacity 0.5s forwards;
-            animation: increaseOpacity 0.5s forwards;
+    animation: increaseOpacity 0.5s forwards;
 
     .modal {
-      // Vendor prefixes 'animation'
-      -webkit-animation: zoomIn .5s forwards;
-              animation: zoomIn .5s forwards;
+      animation: zoomIn .5s forwards;
     }
 
     &.modal-close {
-      // Vendor prefixes 'animation'
-      -webkit-animation: decreaseOpacity 0.5s forwards;
-              animation: decreaseOpacity 0.5s forwards;
+      animation: decreaseOpacity 0.5s forwards;
 
       .modal {
-        // Vendor prefixes 'animation'
-        -webkit-animation: zoomOut .5s forwards;
-                animation: zoomOut .5s forwards;
+        animation: zoomOut .5s forwards;
       }
     }
   }
 
   .modal {
-    // Vendor prefixes 'display'
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-
-    // Vendor prefixes 'flex-direction'
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-
-    // Vendor prefixes 'align-items'
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    flex-direction: column;
     align-items: center;
-
-    // Vendor prefixes 'justify-content'
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
-
     background: transparent;
     z-index: 25;
     height: 100%;
@@ -74,21 +49,9 @@ body.modal-active {
   }
 }
 
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes increaseOpacity {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
 @keyframes increaseOpacity {
   from { opacity: 0; }
   to   { opacity: 1; }
-}
-
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes decreaseOpacity {
-  from { opacity: 1; }
-  to   { opacity: 0; }
 }
 
 @keyframes decreaseOpacity {
@@ -96,68 +59,12 @@ body.modal-active {
   to   { opacity: 0; }
 }
 
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes zoomIn {
-  from {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
-
-  to {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 @keyframes zoomIn {
-  from {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
-
-  to {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-// Vendor prefixes '@keyframes'
-@-webkit-keyframes zoomOut {
-  from {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
+  from { transform: scale(0); }
+  to   { transform: scale(1); }
 }
 
 @keyframes zoomOut {
-  from {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-
-  to {
-    // Vendor prefixes 'transform'
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0);
-  }
+  from { transform: scale(1); }
+  to   { transform: scale(0); }
 }

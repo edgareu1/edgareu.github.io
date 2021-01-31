@@ -37,17 +37,8 @@
   }
 
   .project-description {
-    // Vendor prefixes 'display'
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-
-    // Vendor prefixes 'flex-direction'
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-        flex-direction: column;
-
+    flex-direction: column;
     padding: 10px 15px 10px 20px;
     overflow-y: scroll;
 
@@ -98,10 +89,6 @@
       a {
         display: block;
         font-size: 16.5px;
-
-        // Vendor prefixes 'width'
-        width: -webkit-fit-content;
-        width: -moz-fit-content;
         width: fit-content;
 
         &:nth-child(2) {
