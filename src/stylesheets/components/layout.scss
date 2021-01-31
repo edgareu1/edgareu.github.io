@@ -1,0 +1,199 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-overflow-style: scrollbar;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  text-align: left;
+  color: white;
+  background-color: black;
+  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  z-index: 1;
+  min-height: 100%;
+  width: 100%;
+  min-width: 650px;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: inherit;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0;
+}
+
+h1 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+h2 {
+  color: rgba(220, 220, 220, 1);
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+button {
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  cursor:pointer;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 1px 1px white;
+  }
+}
+
+abbr[title] {
+  text-decoration: inherit;
+}
+
+code {
+  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
+
+#profile-container {
+  position: relative;
+  width: 100%;
+
+  canvas, #profile-content {
+    position: absolute;
+  }
+
+  #profile-content {
+    height: fit-content;
+    width: 100%;
+
+    main {
+      position: relative;
+      height: fit-content;
+      width: 100%;
+    }
+  }
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: fit-content;
+  width: 100%;
+  padding-bottom: 180px;
+
+  .section-container {
+    height: fit-content;
+    width: 100%;
+    max-width: 1050px;
+    padding: 20px min(24px, 3%) 0;
+  }
+
+  .section-title {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    width: 100%;
+    margin: 0 10px 20px 0;
+    white-space: nowrap;
+
+    &::after {
+      position: relative;
+      top: 4px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(100, 100, 100, 0.5);
+      margin: 0 20px 0 15px;
+      content: "";
+    }
+  }
+
+  .section-description {
+    color: rgba(220, 220, 220, 1);
+    font-size: 16px;
+    margin: 0 0 15px 4px;
+  }
+}
+
+@media(max-width: 900px) {
+  .profile-section {
+    padding-bottom: 150px;
+
+    .section-title {
+      font-size: 36px;
+    }
+  }
+
+  #banner {
+    padding-bottom: 90px;
+  }
+}
+
+@media(max-width: 750px) {
+  .profile-section {
+    padding-bottom: 120px;
+
+    .section-title {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .section-description {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+  }
+
+  #banner {
+    padding-bottom: 70px;
+  }
+}
+
+.inline-anchor {
+  color: rgba(100, 255, 95, 1);
+  text-decoration: none;
+
+  &:hover .hover-underline {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      right: 0;
+      border-bottom: 1px solid;
+      content: "";
+    }
+
+    &.closer-underline::after {
+      bottom: 0;
+    }
+  }
+
+  &:active {
+    color: rgba(0, 255, 0, 1);
+  }
+}

@@ -1,0 +1,123 @@
+.carousel {
+  position: relative;
+
+  ol.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    z-index: 8;
+    padding: 0;
+    margin: 10px 0;
+
+    li {
+      position: relative;
+      bottom: 0;
+      flex: 0 1 auto;
+      background-color: rgba(255, 255, 255, .5);
+      height: 23px; // 10px border 2 times, plus 3px for the 'true' height of the element
+      width: 30px;
+      background-clip: padding-box; // Background-color only applied to the 'padding-box'
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      margin-right: 3px;
+      margin-left: 3px;
+      transition: border 0.1s linear;
+      cursor: pointer;
+
+      &.active, &:hover {
+        background-color: #fff;
+      }
+
+      &.active {
+        border-top: 8px solid transparent;
+        border-bottom: 12px solid transparent;
+      }
+    }
+  }
+
+  .carousel-inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 5px;
+    overflow: hidden;
+
+    .carousel-item {
+      position: absolute;
+      top: 0;
+      display: block;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      margin: 0;
+      transition: transform 0.25s linear;
+
+      img {
+        display: block;
+        height: 100%;
+        width: 100%;
+        border-style: none;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        color: white;
+        font-size: 16px;
+        font-weight: 400;
+        text-shadow: 0 0 5px black;
+        background: rgba(0, 0, 0, 0.65);
+        z-index: 5;
+        line-height: 1.2;
+        padding: 15px 15% 45px;
+
+        span {
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    opacity: .5;
+    width: 15%;
+    cursor: pointer;
+
+    &.dark {
+      color: black;
+    }
+
+    &.light {
+      color: white;
+    }
+
+    &:hover {
+      text-decoration: none;
+      opacity: .9;
+      outline: 0;
+    }
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+}
