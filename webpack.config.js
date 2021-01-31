@@ -40,8 +40,9 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin.loader, // 3. Inject styles into DOM
-          "css-loader", // 2. Turns CSS into CommonJS
+          MiniCssExtractPlugin.loader, // 4. Inject styles into DOM
+          "css-loader", // 3. Turns CSS into CommonJS
+          "postcss-loader", // 2. Add vendor prefixes to CSS rules
           "sass-loader" // 1. Turns Sass into CSS
         ]
       },
