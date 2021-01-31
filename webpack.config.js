@@ -38,6 +38,16 @@ module.exports = {
         use: ["html-loader"],
       },
       {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env"]
+          }
+        }
+      },
+      {
         test: /\.scss$/i,
         use: [
           MiniCssExtractPlugin.loader, // 4. Inject styles into DOM
