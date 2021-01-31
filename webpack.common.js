@@ -6,13 +6,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
-  mode: "development",
   entry: "./src/javascript/index.js",
-  output: {
-    filename: "main.[contenthash].js",
-    path: path.resolve(__dirname, "build"),
-    publicPath: "./"
-  },
   optimization: {
     minimizer: [
       new OptimizeCssAssetsPlugin(),
