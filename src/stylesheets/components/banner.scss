@@ -20,10 +20,11 @@
   }
 
   .banner-image {
+    // Relative path beginning at build/main.js
     // Vendor prefixes 'background-image'
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), to(black)), url("../../images/background/keyboard.png");
-    background-image: -o-linear-gradient(top, transparent 45%, black 100%), url("../../images/background/keyboard.png");
-    background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../images/background/keyboard.png");
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(45%, transparent), to(black)), url("../../src/images/background/keyboard.png");
+    background-image: -o-linear-gradient(top, transparent 45%, black 100%), url("../../src/images/background/keyboard.png");
+    background-image: linear-gradient(to bottom, transparent 45%, black 100%), url("../../src/images/background/keyboard.png");
 
     background-position: center;
     background-repeat: no-repeat;

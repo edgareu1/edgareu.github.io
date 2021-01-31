@@ -1,6 +1,9 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
@@ -8,13 +11,25 @@ module.exports = {
   output: {
     filename: "main.[contenthash].js",
     path: path.resolve(__dirname, "build"),
-    publicPath: './'
+    publicPath: "./"
+  },
+  optimization: {
+    minimizer: [
+      new OptimizeCssAssetsPlugin(),
+      new TerserPlugin()
+    ]
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: "./src/index.html"
+      template: "./src/index.html",
+      minify: {
+        collapseWhitespace: true,
+        removeAttributeQuotes: true,
+        removeComments: true
+      }
     }),
-    new CleanWebpackPlugin()
+    new MiniCssExtractPlugin({ filename: "[name].[contenthash].css" })
   ],
   module: {
     rules: [
@@ -25,7 +40,7 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [
-          "style-loader", // 3. Inject styles into DOM
+          MiniCssExtractPlugin.loader, // 3. Inject styles into DOM
           "css-loader", // 2. Turns CSS into CommonJS
           "sass-loader" // 1. Turns Sass into CSS
         ]
