@@ -1,4 +1,4 @@
-import { updateDimensionsCanvas } from './update-dimensions-canvas.js'
+import { updateDimensionsCanvas } from "./update-dimensions-canvas.js";
 
 // Function that will create the background running technology words animation
 function backgroundWordsAnimation() {
@@ -10,9 +10,35 @@ function backgroundWordsAnimation() {
   //   helperArray:     Array to help the vertical positioning of the words
   //   techAttr:        Array that stores the Tech objects
   //   rAF:             Store the animation
-  const canvasElement = document.getElementById('tech-canvas'),
-    canvasContainer = document.getElementById('profile-container'),
-    techList = { 'Ruby': 24, 'Rails': 24, 'JavaScript': 24, 'HTML': 24, 'CSS': 24, 'API': 18, 'AJAX': 18, 'Sass': 16, 'Git': 16, 'GitHub': 14, 'SQL': 14, 'OOP': 14, 'MVC': 14, 'REST': 14, 'PostgreSQL': 12, 'JSON': 12, 'REGEX': 12, 'jQuery': 12, 'Bootstrap': 12, 'Stripe': 10, 'React': 10, 'Node.js': 10, 'Heroku': 10, 'Canvas': 6, 'SVG': 6 },
+  const canvasElement = document.getElementById("tech-canvas"),
+    canvasContainer = document.getElementById("profile-container"),
+    techList = {
+      Ruby: 24,
+      Rails: 24,
+      JavaScript: 24,
+      HTML: 24,
+      CSS: 24,
+      API: 18,
+      AJAX: 18,
+      React: 16,
+      "Node.js": 16,
+      Sass: 16,
+      Git: 16,
+      GitHub: 14,
+      SQL: 14,
+      OOP: 14,
+      MVC: 14,
+      REST: 14,
+      PostgreSQL: 12,
+      JSON: 12,
+      REGEX: 12,
+      jQuery: 12,
+      Bootstrap: 12,
+      Stripe: 10,
+      Heroku: 10,
+      Canvas: 6,
+      SVG: 6,
+    },
     numTech = objLength(techList),
     helperArray = randomArray(numTech);
   let techAttr = [],
@@ -30,8 +56,8 @@ function backgroundWordsAnimation() {
     //   canvasHeight:      Canvas element height
     //   sliceHeight:       Slice of the canvas height for each word
     //   currentArrayIndex: Current index on the 'helperArray'
-    const canvas = canvasElement.getContext('2d'),
-      toggleButton = document.querySelector('.switch'),
+    const canvas = canvasElement.getContext("2d"),
+      toggleButton = document.querySelector(".switch"),
       toogleContainer = toggleButton.parentElement;
     let canvasWidth,
       canvasHeight,
@@ -62,20 +88,20 @@ function backgroundWordsAnimation() {
     animateCanvas();
 
     // If the User clicks on the toggle button, stop/resume the animation
-    toggleButton.addEventListener('click', () => {
-      if (toogleContainer.classList.contains('on')) {
-        toogleContainer.classList.remove('on');
+    toggleButton.addEventListener("click", () => {
+      if (toogleContainer.classList.contains("on")) {
+        toogleContainer.classList.remove("on");
         cancelAnimationFrame(rAF);
         canvas.clearRect(0, 0, canvasWidth, canvasHeight);
       } else {
-        toogleContainer.classList.add('on');
+        toogleContainer.classList.add("on");
         animateCanvas();
       }
     });
 
     // If the User resizes his device window, update the canvas dimensions, the
     // canvas sizing variables and the vertical position of the words
-    window.addEventListener('resize', () => {
+    window.addEventListener("resize", () => {
       updateDimensionsCanvas(canvasElement, canvasContainer);
       resetCanvasVariablesSizing();
       for (let i = 0; i < techAttr.length; i++) {
@@ -90,15 +116,17 @@ function backgroundWordsAnimation() {
 
       // For each of the techologies...
       for (let i = 0; i < techAttr.length; i++) {
-        if (currentArrayIndex === numTech) { currentArrayIndex = 0; }
+        if (currentArrayIndex === numTech) {
+          currentArrayIndex = 0;
+        }
         // Display it in the canvas
-        canvas.font = techAttr[i].font + 'px arial';
+        canvas.font = techAttr[i].font + "px arial";
         canvas.fillText(techAttr[i].text, techAttr[i].x, techAttr[i].y);
         techAttr[i].width = canvas.measureText(techAttr[i].text).width;
         canvas.stroke();
         // Update it's attributes to simulate it moving in the next animation
         if (techAttr[i].x > canvasWidth) {
-          techAttr[i].x = - techAttr[i].width;
+          techAttr[i].x = -techAttr[i].width;
           techAttr[i].posY = helperArray[currentArrayIndex];
           techAttr[i].y = helperArray[currentArrayIndex] * sliceHeight;
           currentArrayIndex++;
@@ -124,7 +152,9 @@ function backgroundWordsAnimation() {
 // Function that returns the length of an object
 function objLength(obj) {
   let size = 0;
-  for (let i in obj) { size++; }
+  for (let i in obj) {
+    size++;
+  }
   return size;
 }
 
@@ -132,9 +162,9 @@ function objLength(obj) {
 // From 1 to 'num'
 function randomArray(num) {
   return Array.from({ length: num }, (a, b) => b + 1)
-    .map(a => [Math.random(), a])
+    .map((a) => [Math.random(), a])
     .sort((a, b) => a[0] - b[0])
-    .map(a => a[1]);
+    .map((a) => a[1]);
 }
 
-export { backgroundWordsAnimation }
+export { backgroundWordsAnimation };

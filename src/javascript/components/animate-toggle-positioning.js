@@ -6,13 +6,13 @@ function animateTogglePositioning() {
   //   toogleContainer: Container of the toggle
   //   banner:          Navbar element
   //   main:            Main element
-  const toogleContainer = document.querySelector('.animation-toggle-container'),
-    banner = document.querySelector('#banner'),
-    main = document.querySelector('main');
+  const toogleContainer = document.querySelector(".animation-toggle-container"),
+    banner = document.querySelector("#banner"),
+    main = document.querySelector("main");
 
   updateTogglePosition();
 
-  document.addEventListener('scroll', () => {
+  document.addEventListener("scroll", () => {
     updateTogglePosition();
   });
 
@@ -25,17 +25,23 @@ function animateTogglePositioning() {
   // The 40 in the calculation refers to the 20px (distance of the content from
   // the banner) plus 20px (distance from the bottom of the post-fixed class)
   function updateTogglePosition() {
-    if (window.innerHeight + window.scrollY > banner.offsetHeight + main.offsetHeight) {
-      toogleContainer.classList.remove('pos-fixed', 'top');
-      toogleContainer.classList.add('pos-abs', 'bottom');
-    } else if (window.innerHeight + window.scrollY > banner.offsetHeight + toogleContainer.offsetHeight + 40) {
-      toogleContainer.classList.remove('pos-abs', 'bottom', 'top');
-      toogleContainer.classList.add('pos-fixed');
+    if (
+      window.innerHeight + window.scrollY >
+      banner.offsetHeight + main.offsetHeight
+    ) {
+      toogleContainer.classList.remove("pos-fixed", "top");
+      toogleContainer.classList.add("pos-abs", "bottom");
+    } else if (
+      window.innerHeight + window.scrollY >
+      banner.offsetHeight + toogleContainer.offsetHeight + 40
+    ) {
+      toogleContainer.classList.remove("pos-abs", "bottom", "top");
+      toogleContainer.classList.add("pos-fixed");
     } else {
-      toogleContainer.classList.remove('pos-fixed', 'bottom');
-      toogleContainer.classList.add('pos-abs', 'top');
+      toogleContainer.classList.remove("pos-fixed", "bottom");
+      toogleContainer.classList.add("pos-abs", "top");
     }
   }
 }
 
-export { animateTogglePositioning }
+export { animateTogglePositioning };
