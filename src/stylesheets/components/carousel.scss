@@ -17,7 +17,7 @@
       position: relative;
       bottom: 0;
       flex: 0 1 auto;
-      background-color: rgba(255, 255, 255, .5);
+      background-color: rgba(255, 255, 255, 0.5);
       height: 23px; // 10px border 2 times, plus 3px for the 'true' height of the element
       width: 30px;
       background-clip: padding-box; // Background-color only applied to the 'padding-box'
@@ -28,7 +28,8 @@
       transition: border 0.1s linear;
       cursor: pointer;
 
-      &.active, &:hover {
+      &.active,
+      &:hover {
         background-color: #fff;
       }
 
@@ -85,7 +86,8 @@
     }
   }
 
-  .carousel-control-prev, .carousel-control-next {
+  .carousel-control-prev,
+  .carousel-control-next {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -94,7 +96,7 @@
     justify-content: center;
     text-align: center;
     font-size: 30px;
-    opacity: .5;
+    opacity: 0.5;
     width: 15%;
     cursor: pointer;
 
@@ -108,7 +110,7 @@
 
     &:hover {
       text-decoration: none;
-      opacity: .9;
+      opacity: 0.9;
       outline: 0;
     }
   }

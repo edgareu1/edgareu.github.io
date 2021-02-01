@@ -16,7 +16,7 @@
 
     .sentence-container {
       // Animation in the modal.scss file
-      animation: zoomOut .5s forwards;
+      animation: zoomOut 0.5s forwards;
     }
   }
 
@@ -29,7 +29,8 @@
     margin: 0;
 
     .letter {
-      animation-name: opacityCycle;
+      // Animation in the modal.scss file
+      animation-name: increaseOpacity;
       animation-duration: 2.5s;
       animation-iteration-count: infinite;
       animation-direction: normal;
@@ -113,9 +114,4 @@
       animation-delay: 2.1s;
     }
   }
-}
-
-@keyframes opacityCycle {
-  from { opacity: 0; }
-  to { opacity: 1; }
 }

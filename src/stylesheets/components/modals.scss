@@ -7,7 +7,7 @@ body.modal-active {
   top: 0;
   left: 0;
   display: none;
-  background:rgba(0, 0, 0, .85);
+  background: rgba(0, 0, 0, 0.85);
   z-index: 20;
   height: 100%;
   width: 100%;
@@ -17,14 +17,14 @@ body.modal-active {
     animation: increaseOpacity 0.5s forwards;
 
     .modal {
-      animation: zoomIn .5s forwards;
+      animation: zoomIn 0.5s forwards;
     }
 
     &.modal-close {
       animation: decreaseOpacity 0.5s forwards;
 
       .modal {
-        animation: zoomOut .5s forwards;
+        animation: zoomOut 0.5s forwards;
       }
     }
   }
@@ -50,21 +50,41 @@ body.modal-active {
 }
 
 @keyframes increaseOpacity {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes decreaseOpacity {
-  from { opacity: 1; }
-  to   { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0); }
-  to   { transform: scale(1); }
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes zoomOut {
-  from { transform: scale(1); }
-  to   { transform: scale(0); }
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
 }

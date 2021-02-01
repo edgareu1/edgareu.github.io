@@ -11,7 +11,7 @@
   font-family: Helvetica, arial;
   background: black;
   min-height: 243px;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   border-radius: 3px;
   margin: 0 auto;
   height: fit-content;
@@ -59,7 +59,8 @@
     text-align: center;
     padding: 5px 0 0;
 
-    text.wday, text.month {
+    text.wday,
+    text.month {
       fill: #aaa;
       font-size: 10px;
     }
@@ -123,7 +124,7 @@
     font-family: monospace;
 
     a {
-      color: #1D75AB;
+      color: #1d75ab;
       text-decoration: none;
     }
   }
@@ -139,7 +140,8 @@
     }
   }
 
-  .left.text-muted a:hover, .monospace a:hover {
+  .left.text-muted a:hover,
+  .monospace a:hover {
     text-decoration: underline;
   }
 

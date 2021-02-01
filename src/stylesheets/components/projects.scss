@@ -31,7 +31,9 @@
     }
   }
 
-  .carousel, .single-img, .project-description {
+  .carousel,
+  .single-img,
+  .project-description {
     height: 100%;
     width: 50%;
   }
@@ -50,7 +52,9 @@
         font-size: 0; // To remove the whitespace between the inline children elements
         font-weight: 400;
 
-        &.text, &.parenthesis, time {
+        &.text,
+        &.parenthesis,
+        time {
           font-size: 20px;
         }
 
@@ -76,7 +80,8 @@
       margin: 6px 0 0;
     }
 
-    p, li {
+    p,
+    li {
       text-align: justify;
       color: gainsboro;
       font-size: 14px;
@@ -103,7 +108,7 @@
   }
 }
 
-@media(max-width: 950px) {
+@media (max-width: 950px) {
   #projects .section-container {
     .project-description {
       padding: 8px 12px 8px 16px;
@@ -112,7 +117,9 @@
         font-size: 26px;
 
         span {
-          &.text, &.parenthesis, time {
+          &.text,
+          &.parenthesis,
+          time {
             font-size: 16px;
           }
         }
@@ -128,7 +135,8 @@
         margin: 4px 0 0;
       }
 
-      p, li {
+      p,
+      li {
         font-size: 12px;
       }
 
@@ -147,14 +155,16 @@
   }
 }
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   #projects .section-container {
     .project-description {
       header > h3 {
         font-size: 24px;
 
         span {
-          &.text, &.parenthesis, time {
+          &.text,
+          &.parenthesis,
+          time {
             font-size: 14px;
           }
         }
@@ -170,7 +180,8 @@
         margin: 2px 0 0;
       }
 
-      p, li {
+      p,
+      li {
         font-size: 11px;
       }
 
