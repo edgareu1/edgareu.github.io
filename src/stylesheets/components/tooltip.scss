@@ -5,7 +5,7 @@
   white-space: nowrap;
   color: #959da5;
   font-size: 12px;
-  background: rgba(0, 0, 0, .85);
+  background: rgba(0, 0, 0, 0.85);
   padding: 10px;
   border-radius: 3px;
   z-index: 99999;
@@ -27,7 +27,7 @@
     width: 5px;
     box-sizing: border-box;
     border: 5px solid transparent;
-    border-top-color: rgba(0, 0, 0, .85);
+    border-top-color: rgba(0, 0, 0, 0.85);
     margin: 0 0 0 -5px;
     content: " ";
   }

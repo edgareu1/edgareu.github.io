@@ -7,7 +7,8 @@
     padding-top: 2px;
   }
 
-  .skills-header, .skills-content {
+  .skills-header,
+  .skills-content {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -16,7 +17,8 @@
     margin: 0;
   }
 
-  .skills-header-container, .skills-content {
+  .skills-header-container,
+  .skills-content {
     background: rgba(20, 20, 22, 0.9);
   }
 
@@ -104,7 +106,7 @@
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   #skills .section-container {
     &.section-grid {
       column-gap: calc(2.5px + 2.5%);

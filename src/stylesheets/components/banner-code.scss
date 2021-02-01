@@ -46,6 +46,11 @@
 }
 
 @keyframes blink-caret {
-  from, to { border-color: white }
-  50%      { border-color: transparent }
+  0% {
+    border-color: white;
+  }
+
+  50% {
+    border-color: transparent;
+  }
 }

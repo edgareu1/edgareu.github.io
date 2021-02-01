@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,7 +17,6 @@ body {
   text-align: left;
   color: white;
   background-color: black;
-  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -27,7 +28,18 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+body,
+code {
+  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: inherit;
   font-family: inherit;
   font-weight: 500;
@@ -57,7 +69,7 @@ button {
   background: transparent;
   font-family: inherit;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
 
   &:focus {
     outline: none;
@@ -72,15 +84,12 @@ abbr[title] {
   text-decoration: inherit;
 }
 
-code {
-  font-family: "Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
-}
-
 #profile-container {
   position: relative;
   width: 100%;
 
-  canvas, #profile-content {
+  canvas,
+  #profile-content {
     position: absolute;
   }
 
@@ -138,7 +147,7 @@ code {
   }
 }
 
-@media(max-width: 900px) {
+@media (max-width: 900px) {
   .profile-section {
     padding-bottom: 150px;
 
@@ -152,7 +161,7 @@ code {
   }
 }
 
-@media(max-width: 750px) {
+@media (max-width: 750px) {
   .profile-section {
     padding-bottom: 120px;
 
