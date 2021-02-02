@@ -23,6 +23,7 @@
   </head>
 
   <body class="modal-active">
+    <!-- Page loading container -->
     <div id="page-loading">
       <div class="loading-container">
         <p class="sentence-container">
@@ -51,30 +52,38 @@
       </div>
     </div>
 
+    <!-- Page content -->
     <div id="page-content" style="display: none">
       <!-- Navbar -->
       <nav>
         <a href="#banner" class="btn-nav page-scroll">Edgar</a>
-
         <div class="nav-content">
           <ul class="nav-links">
             <li class="nav-link">
-              <a href="#skills" class="nav-link btn-nav page-scroll">Skills</a>
-            </li>
-
-            <li class="nav-link">
-              <a href="#projects" class="nav-link btn-nav page-scroll"
-                >Projects</a
+              <a
+                href="#skills"
+                class="nav-link btn-nav page-scroll"
               >
+                Skills
+              </a>
             </li>
-
             <li class="nav-link">
-              <a href="#contacts" class="nav-link btn-nav page-scroll"
-                >Contacts</a
+              <a
+                href="#projects"
+                class="nav-link btn-nav page-scroll"
               >
+                Projects
+              </a>
+            </li>
+            <li class="nav-link">
+              <a
+                href="#contacts"
+                class="nav-link btn-nav page-scroll"
+              >
+                Contacts
+              </a>
             </li>
           </ul>
-
           <button type="button" class="nav-show nav-show-more">
             <i class="nav-show fas fa-bars"></i>
           </button>
@@ -83,10 +92,9 @@
 
       <!-- Banner -->
       <section id="banner">
-        <!-- Image in a separate 'div' in order for its 'opacity' property to not affect any of the
-        other banner children elements -->
+        <!-- Image in a separate 'div' in order for its 'opacity' property to
+          not affect any of the other banner children elements -->
         <div class="banner-image"></div>
-
         <div class="banner-content">
           <div class="banner-text">
             <header>
@@ -95,18 +103,15 @@
                 I'm Edgar,<br />
                 a web developer.
               </h1>
-
               <p>
                 My path began in finance, but in 2020 I decided to change my
                 life and learn how to code.
               </p>
             </header>
-
             <button type="button" class="btn-light">
               CONTRIBUTION ACTIVITY
             </button>
           </div>
-
           <div class="banner-code-container scrollable-gray"></div>
         </div>
       </section>
@@ -120,6 +125,7 @@
         <div id="profile-content">
           <!-- Main Content -->
           <main>
+            <!-- Background animation switch -->
             <div class="animation-toggle-container pos-abs">
               <span>Animation</span>
               <div class="switch-container on">
@@ -136,12 +142,10 @@
                 <header>
                   <h2 class="section-title">Technological Skills</h2>
                 </header>
-
                 <p class="section-description">
                   My skill set is currently focused on Ruby on Rails and
                   JavaScript
                 </p>
-
                 <div class="section-grid">
                   <div class="skills-header-container col-1 row-1">
                     <div class="skills-header langs">
@@ -153,11 +157,15 @@
 
                   <ul class="skills-content langs col-1 row-2">
                     <li>Ruby</li>
-                    <li>JavaScript <abbr title="ECMAScript 6">ES6</abbr></li>
+                    <li>
+                      JavaScript <abbr title="ECMAScript 6">ES6</abbr>
+                    </li>
                     <li>
                       <abbr title="HyperText Markup Language">HTML</abbr> 5
                     </li>
-                    <li><abbr title="Cascading Style Sheets">CSS</abbr> 3</li>
+                    <li>
+                      <abbr title="Cascading Style Sheets">CSS</abbr> 3
+                    </li>
                   </ul>
 
                   <div class="skills-header-container col-2 row-1">
@@ -185,30 +193,40 @@
 
                   <ul class="skills-content tools col-3 row-2">
                     <li>
-                      <abbr title="Structured Query Language">SQL</abbr>
+                      <abbr title="Structured Query Language">
+                        SQL
+                      </abbr>
                       Databases
                     </li>
                     <li>
-                      <abbr title="Application Programming Interface">API</abbr>
+                      <abbr title="Application Programming Interface">
+                        API
+                      </abbr>
                     </li>
                     <li>
-                      <abbr title="Asynchronous JavaScript And XML">AJAX</abbr>
+                      <abbr title="Asynchronous JavaScript And XML">
+                        AJAX
+                      </abbr>
                     </li>
                     <li>Git/GitHub</li>
                     <li>
-                      <abbr title="Syntactically Awesome Style Sheets"
-                        >Sass</abbr
-                      >
+                      <abbr title="Syntactically Awesome Style Sheets">
+                        Sass
+                      </abbr>
                     </li>
                     <li>
-                      <abbr title="Object Oriented Programming">OOP</abbr>
+                      <abbr title="Object Oriented Programming">
+                        OOP
+                      </abbr>
                     </li>
-                    <li><abbr title="Model View Controller">MVC</abbr></li>
                     <li>
-                      <abbr title="Representational State Transfer">REST</abbr>
+                      <abbr title="Model View Controller">
+                        MVC
+                      </abbr>
                     </li>
                     <li>Unit Testing</li>
                     <li>Bootstrap</li>
+                    <li>Webpack</li>
                     <li>Heroku</li>
                     <li>Stripe</li>
                   </ul>
@@ -222,7 +240,6 @@
                 <header>
                   <h2 class="section-title">Personal Projects</h2>
                 </header>
-
                 <p class="section-description">
                   For the complete list of my projects, please check my
                   <a
@@ -230,13 +247,16 @@
                     target="blank"
                     title="GitHub profile - Source code repository"
                     class="inline-anchor"
-                    ><span class="hover-underline">GitHub profile</span></a
                   >
+                    <span class="hover-underline">GitHub profile</span>
+                  </a>
                 </p>
 
                 <!-- Hook -->
                 <article class="project-content" id="hook">
                   <div class="project-positioning">
+
+                    <!-- Hook Project Carousel -->
                     <div id="carousel-hook" class="carousel">
                       <ol class="carousel-indicators">
                         <li
@@ -251,86 +271,71 @@
                         <li data-target="carousel-hook" data-slide-to="5"></li>
                         <li data-target="carousel-hook" data-slide-to="6"></li>
                       </ol>
-
                       <div class="carousel-inner">
                         <figure class="carousel-item active" data-slide="0">
                           <img
                             src="images/projects/hook/home-page.png"
                             alt="Hook project home page"
                           />
-
                           <figcaption class="carousel-caption">
                             Home page
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="1">
                           <img
                             src="images/projects/hook/prediction-page.png"
                             alt="Hook project prediction page"
                           />
-
                           <figcaption class="carousel-caption">
                             Prediction page
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="2">
                           <img
                             src="images/projects/hook/logs-index.png"
                             alt="Hook project Logs#index page"
                           />
-
                           <figcaption class="carousel-caption">
                             Logs<span>#</span>index
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="3">
                           <img
                             src="images/projects/hook/logs-show.png"
                             alt="Hook project Logs#show page"
                           />
-
                           <figcaption class="carousel-caption">
                             Logs<span>#</span>show
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="4">
                           <img
                             src="images/projects/hook/locations-index.png"
                             alt="Hook project Locations#index page"
                           />
-
                           <figcaption class="carousel-caption">
                             Locations<span>#</span>index
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="5">
                           <img
                             src="images/projects/hook/locations-show.png"
                             alt="Hook project Locations#show page"
                           />
-
                           <figcaption class="carousel-caption">
                             Locations<span>#</span>show
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="6">
                           <img
                             src="images/projects/hook/fish-index.png"
                             alt="Hook project Fish#index page"
                           />
-
                           <figcaption class="carousel-caption">
                             Fish<span>#</span>index
                           </figcaption>
                         </figure>
                       </div>
-
                       <div
                         class="carousel-control-prev light"
                         data-target="carousel-hook"
@@ -338,7 +343,6 @@
                       >
                         <i class="fas fa-angle-left"></i>
                       </div>
-
                       <div
                         class="carousel-control-next light"
                         data-target="carousel-hook"
@@ -348,6 +352,7 @@
                       </div>
                     </div>
 
+                    <!-- Hook Project Content -->
                     <div class="project-description scrollable-gray">
                       <header>
                         <h3>
@@ -361,14 +366,12 @@
                           </span>
                         </h3>
                       </header>
-
                       <h4>Summary</h4>
                       <p>
                         A web platform for fisherman to record their fishing
                         trips and to get predictions on the best fishing
                         locations available
                       </p>
-
                       <h4>Main features</h4>
                       <ul>
                         <li>
@@ -377,35 +380,37 @@
                         </li>
                         <li>
                           Integrated location and weather
-                          <abbr title="Application Programming Interfaces"
-                            >APIs</abbr
-                          >
+                          <abbr title="Application Programming Interfaces">
+                            APIs
+                          </abbr>
                         </li>
                         <li>
                           Built a
-                          <abbr title="Representational State Transfer"
-                            >REST</abbr
-                          >
-                          <abbr title="Application Programming Interface"
-                            >API</abbr
-                          >
+                          <abbr title="Representational State Transfer">
+                            REST
+                          </abbr>
+                          <abbr title="Application Programming Interface">
+                            API
+                          </abbr>
                         </li>
                       </ul>
-
                       <h4>Technologies</h4>
                       <p>
                         Ruby on Rails, JavaScript,
                         <abbr title="HyperText Markup Language">HTML</abbr>,
                         <abbr title="Cascading Style Sheets">CSS</abbr>,
                         PostgreSQL,
-                        <abbr title="Application Programming Interface"
-                          >API</abbr
-                        >
+                        <abbr title="Application Programming Interface">
+                          API
+                        </abbr>
                         (integration and building),
-                        <abbr title="Asynchronous JavaScript And XML">AJAX</abbr
-                        >, Machine Learning
+                        <abbr title="Asynchronous JavaScript And XML">
+                          AJAX
+                        </abbr>
+                        , Machine Learning
                       </p>
 
+                      <!-- Hook Project Links -->
                       <div class="anchors-container">
                         <a
                           href="https://www.hookeu.com"
@@ -417,7 +422,6 @@
                           <i class="fas fa-desktop"></i>
                           <span class="hover-underline">Website</span>
                         </a>
-
                         <a
                           href="https://github.com/edgareu1/rails-hook"
                           target="_blank"
@@ -425,7 +429,9 @@
                           class="inline-anchor"
                         >
                           <i class="fab fa-github"></i>
-                          <span class="hover-underline">GitHub repository</span>
+                          <span class="hover-underline">
+                            GitHub repository
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -435,6 +441,7 @@
                 <!-- Artisan -->
                 <article class="project-content" id="artisan">
                   <div class="project-positioning">
+                    <!-- Artisan Project Carousel -->
                     <div id="carousel-artisan" class="carousel">
                       <ol class="carousel-indicators">
                         <li
@@ -451,42 +458,35 @@
                           data-slide-to="2"
                         ></li>
                       </ol>
-
                       <div class="carousel-inner">
                         <figure class="carousel-item active" data-slide="0">
                           <img
                             src="images/projects/artisan/home-page.png"
                             alt="Artisan project home page"
                           />
-
                           <figcaption class="carousel-caption">
                             Home page
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="1">
                           <img
                             src="images/projects/artisan/products-show.png"
                             alt="Artisan project Products#show page"
                           />
-
                           <figcaption class="carousel-caption">
                             Products<span>#</span>show
                           </figcaption>
                         </figure>
-
                         <figure class="carousel-item" data-slide="2">
                           <img
                             src="images/projects/artisan/orders-index.png"
                             alt="Artisan project Orders#index page"
                           />
-
                           <figcaption class="carousel-caption">
                             Orders<span>#</span>index
                           </figcaption>
                         </figure>
                       </div>
-
                       <div
                         class="carousel-control-prev dark"
                         data-target="carousel-artisan"
@@ -494,7 +494,6 @@
                       >
                         <i class="fas fa-angle-left"></i>
                       </div>
-
                       <div
                         class="carousel-control-next dark"
                         data-target="carousel-artisan"
@@ -504,6 +503,7 @@
                       </div>
                     </div>
 
+                    <!-- Artisan Project Content -->
                     <div class="project-description scrollable-gray">
                       <header>
                         <h3>
@@ -517,32 +517,36 @@
                           </span>
                         </h3>
                       </header>
-
                       <h4>Summary</h4>
                       <p>An online marketplace for craftwork</p>
-
                       <h4>Main features</h4>
                       <ul>
                         <li>
                           Integrated the Stripe's payment processing
-                          <abbr title="Application Programming Interface"
-                            >API</abbr
-                          >
+                          <abbr title="Application Programming Interface">
+                            API
+                          </abbr>
                         </li>
-                        <li>Simulated orders delivery using Background Jobs</li>
-                        <li>Created a custom autocomplete search bar</li>
+                        <li>
+                          Simulated orders delivery using Background Jobs
+                        </li>
+                        <li>
+                          Created a custom autocomplete search bar
+                        </li>
                       </ul>
-
                       <h4>Technologies</h4>
                       <p>
                         Ruby on Rails, JavaScript,
                         <abbr title="HyperText Markup Language">HTML</abbr>,
                         <abbr title="Cascading Style Sheets">CSS</abbr>,
                         PostgreSQL,
-                        <abbr title="Asynchronous JavaScript And XML">AJAX</abbr
-                        >, Stripe, Background Jobs
+                        <abbr title="Asynchronous JavaScript And XML">
+                          AJAX
+                        </abbr>
+                        , Stripe
                       </p>
 
+                      <!-- Artisan Project Links -->
                       <div class="anchors-container">
                         <a
                           href="https://github.com/JulieMariano/Artisan"
@@ -551,7 +555,9 @@
                           class="inline-anchor"
                         >
                           <i class="fab fa-github"></i>
-                          <span class="hover-underline">GitHub repository</span>
+                          <span class="hover-underline">
+                            GitHub repository
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -561,12 +567,14 @@
                 <!-- Portfolio -->
                 <article class="project-content" id="portfolio">
                   <div class="project-positioning">
+                    <!-- Portfolio Project Image -->
                     <img
                       src="./images/projects/portfolio/intro.png"
                       alt="Portfolio project welcoming page"
                       class="single-img"
                     />
 
+                    <!-- Portfolio Project Content -->
                     <div class="project-description scrollable-gray">
                       <header>
                         <h3>
@@ -578,30 +586,33 @@
                           </span>
                         </h3>
                       </header>
-
                       <h4>Summary</h4>
                       <p>
                         My online portfolio (this one), created from scratch
                         without any external dependencies (apart from Webpack)
                       </p>
-
                       <h4>Main features</h4>
                       <ul>
-                        <li>Implemented Webpack to bundle production files</li>
+                        <li>
+                          Implemented Webpack to bundle production files
+                        </li>
                         <li>
                           Created the code typing and the background words
                           animations
                         </li>
-                        <li>Created the GitHub contributions calendar</li>
+                        <li>
+                          Created the GitHub contributions calendar
+                        </li>
                       </ul>
-
                       <h4>Technologies</h4>
                       <p>
                         JavaScript,
                         <abbr title="HyperText Markup Language">HTML</abbr>,
-                        <abbr title="Cascading Style Sheets">CSS</abbr>, Webpack
+                        <abbr title="Cascading Style Sheets">CSS</abbr>,
+                        Webpack
                       </p>
 
+                      <!-- Portfolio Project Links -->
                       <div class="anchors-container">
                         <a
                           href="https://github.com/edgareu1/edgareu1.github.io"
@@ -610,7 +621,9 @@
                           class="inline-anchor"
                         >
                           <i class="fab fa-github"></i>
-                          <span class="hover-underline">GitHub repository</span>
+                          <span class="hover-underline">
+                            GitHub repository
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -620,12 +633,14 @@
                 <!-- Trip Finder -->
                 <article class="project-content" id="trip">
                   <div class="project-positioning">
+                    <!-- Trip Finder Project Image -->
                     <img
                       src="./images/projects/trip-finder/coming-soon.png"
                       alt="A light bulb with the text 'Coming soon'"
                       class="single-img"
                     />
 
+                    <!-- Trip Finder Project Content -->
                     <div class="project-description scrollable-gray">
                       <header>
                         <h3>
@@ -639,28 +654,26 @@
                           </span>
                         </h3>
                       </header>
-
                       <h4>Summary</h4>
                       <p>
                         A web platform that fetches data from airline and
                         housing websites in order to find the best travel
                         packages available
                       </p>
-
                       <h4>Context</h4>
-                      <p>Still in development...</p>
-
+                      <p>Work in progress...</p>
                       <h4>Technologies</h4>
                       <p>
                         Ruby on Rails, React,
                         <abbr title="HyperText Markup Language">HTML</abbr>,
                         <abbr title="Cascading Style Sheets">CSS</abbr>,
-                        <abbr title="Application Programming Interface"
-                          >API</abbr
-                        >
+                        <abbr title="Application Programming Interface">
+                          API
+                        </abbr>
                         (integration), Web Scraping
                       </p>
 
+                      <!-- Trip Finder Project Links -->
                       <div class="anchors-container">
                         <a
                           href="https://github.com/edgareu1/rails-trip-finder"
@@ -669,7 +682,9 @@
                           class="inline-anchor"
                         >
                           <i class="fab fa-github"></i>
-                          <span class="hover-underline">GitHub repository</span>
+                          <span class="hover-underline">
+                            GitHub repository
+                          </span>
                         </a>
                       </div>
                     </div>
@@ -684,23 +699,29 @@
                 <header>
                   <h2 class="section-title">Wanna get in touch?</h2>
                 </header>
-
                 <p class="section-description">
                   Fill out the form below or use
                   <a
                     href="mailto:edgar.eu1@hotmail.com"
                     title="Send email to edgar.eu1@hotmail.com"
                     class="inline-anchor"
-                    ><span class="hover-underline">this email</span></a
                   >
+                    <span class="hover-underline">this email</span>
+                  </a>
                 </p>
 
+                <!-- Contact form -->
                 <form
                   action="https://formspree.io/f/mdopbzqy"
                   method="POST"
                   id="contact-form"
                 >
-                  <input type="text" name="name" placeholder="Name" required />
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                  />
                   <input
                     type="email"
                     name="_replyto"
@@ -725,7 +746,6 @@
             <a href="#banner" class="page-scroll">
               <i class="fas fa-angle-double-up"></i>
             </a>
-
             <ul class="contact-links">
               <li class="social-link">
                 <a
@@ -736,7 +756,6 @@
                   <img src="./images/logos/linkedin.png" alt="LinkedIn logo" />
                 </a>
               </li>
-
               <li class="social-link">
                 <a
                   href="https://github.com/edgareu1"
@@ -746,7 +765,6 @@
                   <img src="./images/logos/github.png" alt="GitHub logo" />
                 </a>
               </li>
-
               <li class="social-link">
                 <a
                   href="https://www.codewars.com/users/edgareu"
@@ -756,7 +774,6 @@
                   <img src="./images/logos/codewars.png" alt="CodeWars logo" />
                 </a>
               </li>
-
               <li class="resume-link">
                 <!-- Relative path beginning at build/index.html -->
                 <a href="./resume.pdf" target="_blank" class="btn-light">
@@ -764,7 +781,6 @@
                 </a>
               </li>
             </ul>
-
             <p class="footer-copyrights">
               Edgar Marques <i class="far fa-copyright"></i> 2020
             </p>
@@ -776,9 +792,9 @@
       <div class="modal-container">
         <div class="modal" id="modal-git">
           <h2>GitHub Contributions</h2>
-
           <div class="calendar">
             <div class="no-content">
+              <!-- Display a loading icon while the content to loads -->
               <i class="fas fa-spinner fa-spin"></i>
             </div>
           </div>
