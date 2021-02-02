@@ -1,142 +1,113 @@
 #skills .section-container {
-  .section-grid {
-    display: grid;
-    grid-template-columns: 2fr 2fr 3fr;
-    grid-gap: 0;
-    column-gap: calc(5px + 2.5%);
+  .skills-content {
+    display: flex;
     padding-top: 2px;
   }
 
-  .skills-header,
-  .skills-content {
+  .skills-column {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-  }
-
-  .skills-header-container,
-  .skills-content {
+    color: rgba(235, 235, 235, 1);
     background: rgba(20, 20, 22, 0.9);
-  }
+    padding: 30px 10px 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 0 rgba(100, 100, 100, 0.5),
+      -1px -1px 3px 0 rgba(100, 100, 100, 0.25);
 
-  .skills-header-container {
-    height: 100%;
-    width: 100%;
-    padding: 0 15px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    box-shadow: 1px 0 2px 0 rgba(100, 100, 100, 0.5),
-      -1px -1px 2px 0 rgba(100, 100, 100, 0.25);
+    &.frameworks,
+    &.langs {
+      flex: 2;
+    }
 
-    .skills-header {
-      text-align: center;
-      height: 100%;
-      width: 100%;
-      padding: 30px 5px 20px;
-      border-bottom: 1px solid rgba(100, 100, 100, 0.8);
+    &.frameworks {
+      margin: 0 calc(5px + 2.5%);
+    }
 
-      i {
-        color: rgba(70, 140, 255, 1);
-        font-size: 50px;
-        text-shadow: 1px 1px 8px rgba(35, 70, 150, 0.8);
-      }
+    &.tools {
+      flex: 3;
+    }
 
-      h3 {
-        color: white;
-        font-size: 26px;
-        margin-top: 25px;
-      }
+    &.tools .skills-list {
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr;
+    }
 
-      p {
-        color: rgba(235, 235, 235, 1);
-        font-size: 14px;
-        line-height: 170%;
-        margin: 20px 0 0;
-      }
+    &:not(.tools) .skills-list li {
+      height: 22.5%;
     }
   }
 
-  .skills-content {
+  .skills-header {
+    text-align: center;
+    width: 100%;
+    padding: 0 10px 20px;
+    border-bottom: 1px solid rgba(100, 100, 100, 0.8);
+
+    i {
+      color: rgba(70, 140, 255, 1);
+      font-size: 50px;
+      text-shadow: 1px 1px 8px rgba(35, 70, 150, 0.8);
+    }
+
+    h3 {
+      color: white;
+      font-size: 26px;
+      margin-top: 25px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 170%;
+      margin: 20px 0 0;
+    }
+  }
+
+  .skills-list {
+    flex-grow: 1;
     list-style: none;
-    color: rgba(235, 235, 235, 1);
     font-size: 18px;
     width: 100%;
-    padding: 25px 10px;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    box-shadow: 1px 1px 2px 0 rgba(100, 100, 100, 0.5),
-      -1px 1px 2px 0 rgba(100, 100, 100, 0.25);
+    padding: 25px 0;
+    margin: 0;
 
     li {
       text-align: center;
       padding: 4px 5px;
     }
-
-    &.tools {
-      display: inline-grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &:not(.tools) li {
-      height: 22.5%;
-    }
-  }
-
-  .col-1 {
-    grid-column: 1;
-  }
-
-  .col-2 {
-    grid-column: 2;
-  }
-
-  .col-3 {
-    grid-column: 3;
-  }
-
-  .row-1 {
-    grid-row: 1;
-  }
-
-  .row-2 {
-    grid-row: 2;
   }
 }
 
 @media (max-width: 900px) {
   #skills .section-container {
-    &.section-grid {
-      column-gap: calc(2.5px + 2.5%);
-    }
+    .skills-column {
+      padding: 25px 8px 0;
 
-    .skills-header-container {
-      padding: 0 10px;
-
-      .skills-header {
-        padding: 25px 5px 15px;
-
-        i {
-          font-size: 45px;
-        }
-
-        h3 {
-          font-size: 22px;
-          margin-top: 20px;
-        }
-
-        p {
-          font-size: 11px;
-          margin: 14px 0 0;
-        }
+      &.frameworks {
+        margin: 0 calc(2.5px + 2.5%);
       }
     }
 
-    .skills-content {
+    .skills-header {
+      padding: 0 7px 15px;
+
+      i {
+        font-size: 45px;
+      }
+
+      h3 {
+        font-size: 22px;
+        margin-top: 20px;
+      }
+
+      p {
+        font-size: 11px;
+        margin: 14px 0 0;
+      }
+    }
+
+    .skills-list {
       font-size: 14px;
-      padding: 18px 8px;
+      padding: 18px 0;
 
       li {
         padding: 3px 4px;
