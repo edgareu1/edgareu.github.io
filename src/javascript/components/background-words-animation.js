@@ -34,6 +34,7 @@ function backgroundWordsAnimation() {
       REGEX: 12,
       jQuery: 12,
       Bootstrap: 12,
+      Webpack: 10,
       Stripe: 10,
       Heroku: 10,
       Canvas: 6,

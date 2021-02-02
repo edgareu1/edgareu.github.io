@@ -1,4 +1,5 @@
 import { backgroundWordsAnimation } from "./background-words-animation.js";
+import { animateSkillColumnsHeight } from "./animate-skill-columns-height.js";
 import { typeBannerCode } from "./type-banner-code.js";
 
 // Function that creates a loading animation while the page loads and,
@@ -44,6 +45,7 @@ function loadingPageAnimation() {
       // Begin the page animations
       typeBannerCode();
       backgroundWordsAnimation();
+      animateSkillColumnsHeight();
     }, 350);
   }
 }
