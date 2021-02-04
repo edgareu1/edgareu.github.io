@@ -46,20 +46,17 @@ function createGitCalendar() {
     .then((response) => {
       calendarHelper.innerHTML = response;
       // Select the relevant element
-      calendarHelper = calendarHelper.querySelector(".js-yearly-contributions");
-      // Remove the unnecessary elements
-      calendarHelper.querySelector("h2").remove();
-      calendarHelper.querySelector("#user-activity-overview").remove();
+      calendarHelper = calendarHelper.querySelector(".graph-before-activity-overview");
       // Personalize the 'more details' anchor content
-      const modeDetails = `For more details please check my
+      const moreDetails = `For more details please check my
         <a href="https://github.com/edgareu1"
           target="blank" title="GitHub profile - Source code repository"
           class="inline-anchor">
           <span class="hover-underline closer-underline">GitHub profile</span>
         </a>`;
       calendarHelper.querySelector(
-        ".contrib-footer .float-left"
-      ).innerHTML = modeDetails;
+        ".width-full .float-left"
+      ).innerHTML = moreDetails;
 
       // If the calendar did not load, try it again
       if (calendarHelper.querySelector("include-fragment")) {
@@ -118,16 +115,16 @@ function createGitCalendar() {
     // Variables:
     //   calendarDays:    Day elements on the calendar
     //   dayCount:        Number of contributions in the day
-    //   dayColor:        Color to give the day element
+    //   dayLevel:        Level to give the day element
     //   dayCountSum:     Sum of the contributions made in the year
     //   activeDays:      Number of days contributions were made
     //   streakDays:      Number of days in the current streak
     //   inStreak:        Boolean to identify if the current streak still goes
     //   dateStreakBegin: Date of when the current streak begins
     //   dateStreakEnd:   Date of when the current streak ends
-    const calendarDays = calendarHelper.querySelectorAll("rect.day");
+    const calendarDays = calendarHelper.querySelectorAll("rect[data-date]");
     let dayCount,
-      dayColor,
+      dayLevel,
       dayCountSum = 0,
       activeDays = 0,
       streakDays = 0,
@@ -144,20 +141,20 @@ function createGitCalendar() {
         dayCountSum += dayCount;
         activeDays++;
       }
-      // Choose the color of the day
+      // Choose the level of the day
       if (dayCount === 0) {
-        dayColor = "var(--color-calendar-graph-day-bg)";
+        dayLevel = "0";
       } else if (dayCount <= 8) {
-        dayColor = "var(--color-calendar-graph-day-L1-bg)";
+        dayLevel = "1";
       } else if (dayCount <= 16) {
-        dayColor = "var(--color-calendar-graph-day-L2-bg)";
+        dayLevel = "2";
       } else if (dayCount <= 24) {
-        dayColor = "var(--color-calendar-graph-day-L3-bg)";
+        dayLevel = "3";
       } else {
-        dayColor = "var(--color-calendar-graph-day-L4-bg)";
+        dayLevel = "4";
       }
-      // Add the color to the calendar day
-      calendarDays[i].setAttribute("fill", dayColor);
+      // Add the level to the calendar day
+      calendarDays[i].setAttribute("data-level", dayLevel);
       // If not in a streak, skip the quantification of the streak variables
       if (!inStreak) {
         continue;
@@ -226,9 +223,9 @@ function createGitCalendar() {
     const calendarCol = document.createElement("div");
 
     // Add the relevant classes to the column
-    calendarCol.classList = "contrib-column table-column";
+    calendarCol.classList = "contrib-table-column";
     if (firstColumn) {
-      calendarCol.classList.add("contrib-column-first");
+      calendarCol.classList.add("first-column");
     }
     // Add the relevant content
     calendarCol.innerHTML = `<span class="text-muted">${first}</span>
@@ -244,7 +241,7 @@ function createGitCalendar() {
     //   tooltip:      Create an element to hold the tooltip
     //   calendarDays: List of the days to which add the tooltip
     const tooltip = document.createElement("div"),
-      calendarDays = document.querySelectorAll("rect.day");
+      calendarDays = document.querySelectorAll("rect[data-date]");
 
     tooltip.classList.add("day-tooltip");
     // Add the tooltip to the DOM
