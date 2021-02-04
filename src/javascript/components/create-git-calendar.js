@@ -46,20 +46,17 @@ function createGitCalendar() {
     .then((response) => {
       calendarHelper.innerHTML = response;
       // Select the relevant element
-      calendarHelper = calendarHelper.querySelector(".js-yearly-contributions");
-      // Remove the unnecessary elements
-      calendarHelper.querySelector("h2").remove();
-      calendarHelper.querySelector("#user-activity-overview").remove();
+      calendarHelper = calendarHelper.querySelector(".graph-before-activity-overview");
       // Personalize the 'more details' anchor content
-      const modeDetails = `For more details please check my
+      const moreDetails = `For more details please check my
         <a href="https://github.com/edgareu1"
           target="blank" title="GitHub profile - Source code repository"
           class="inline-anchor">
           <span class="hover-underline closer-underline">GitHub profile</span>
         </a>`;
       calendarHelper.querySelector(
-        ".contrib-footer .float-left"
-      ).innerHTML = modeDetails;
+        ".width-full .float-left"
+      ).innerHTML = moreDetails;
 
       // If the calendar did not load, try it again
       if (calendarHelper.querySelector("include-fragment")) {
@@ -125,7 +122,7 @@ function createGitCalendar() {
     //   inStreak:        Boolean to identify if the current streak still goes
     //   dateStreakBegin: Date of when the current streak begins
     //   dateStreakEnd:   Date of when the current streak ends
-    const calendarDays = calendarHelper.querySelectorAll("rect.day");
+    const calendarDays = calendarHelper.querySelectorAll("rect[data-date]");
     let dayCount,
       dayColor,
       dayCountSum = 0,
@@ -244,7 +241,7 @@ function createGitCalendar() {
     //   tooltip:      Create an element to hold the tooltip
     //   calendarDays: List of the days to which add the tooltip
     const tooltip = document.createElement("div"),
-      calendarDays = document.querySelectorAll("rect.day");
+      calendarDays = document.querySelectorAll("rect[data-date]");
 
     tooltip.classList.add("day-tooltip");
     // Add the tooltip to the DOM
