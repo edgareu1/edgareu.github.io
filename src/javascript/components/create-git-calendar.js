@@ -115,7 +115,7 @@ function createGitCalendar() {
     // Variables:
     //   calendarDays:    Day elements on the calendar
     //   dayCount:        Number of contributions in the day
-    //   dayColor:        Color to give the day element
+    //   dayLevel:        Level to give the day element
     //   dayCountSum:     Sum of the contributions made in the year
     //   activeDays:      Number of days contributions were made
     //   streakDays:      Number of days in the current streak
@@ -124,7 +124,7 @@ function createGitCalendar() {
     //   dateStreakEnd:   Date of when the current streak ends
     const calendarDays = calendarHelper.querySelectorAll("rect[data-date]");
     let dayCount,
-      dayColor,
+      dayLevel,
       dayCountSum = 0,
       activeDays = 0,
       streakDays = 0,
@@ -141,20 +141,20 @@ function createGitCalendar() {
         dayCountSum += dayCount;
         activeDays++;
       }
-      // Choose the color of the day
+      // Choose the level of the day
       if (dayCount === 0) {
-        dayColor = "var(--color-calendar-graph-day-bg)";
+        dayLevel = "0";
       } else if (dayCount <= 8) {
-        dayColor = "var(--color-calendar-graph-day-L1-bg)";
+        dayLevel = "1";
       } else if (dayCount <= 16) {
-        dayColor = "var(--color-calendar-graph-day-L2-bg)";
+        dayLevel = "2";
       } else if (dayCount <= 24) {
-        dayColor = "var(--color-calendar-graph-day-L3-bg)";
+        dayLevel = "3";
       } else {
-        dayColor = "var(--color-calendar-graph-day-L4-bg)";
+        dayLevel = "4";
       }
-      // Add the color to the calendar day
-      calendarDays[i].setAttribute("fill", dayColor);
+      // Add the level to the calendar day
+      calendarDays[i].setAttribute("data-level", dayLevel);
       // If not in a streak, skip the quantification of the streak variables
       if (!inStreak) {
         continue;
@@ -223,9 +223,9 @@ function createGitCalendar() {
     const calendarCol = document.createElement("div");
 
     // Add the relevant classes to the column
-    calendarCol.classList = "contrib-column table-column";
+    calendarCol.classList = "contrib-table-column";
     if (firstColumn) {
-      calendarCol.classList.add("contrib-column-first");
+      calendarCol.classList.add("first-column");
     }
     // Add the relevant content
     calendarCol.innerHTML = `<span class="text-muted">${first}</span>
