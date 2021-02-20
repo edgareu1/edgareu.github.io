@@ -1,117 +1,48 @@
-#skills .section-container {
-  .skills-content {
-    display: flex;
-    padding-top: 2px;
+#skills table.skills-content {
+  color: rgba(220, 220, 220, 1);
+  font-size: 24px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
+  width: 100%;
+  border-spacing: 8px 10px;
+
+  th {
+    font-size: 20px;
+    font-weight: 400;
+    height: 40px;
+    line-height: 1;
   }
 
-  .skills-column {
+  .table-header {
     display: flex;
-    flex-direction: column;
-    color: rgba(235, 235, 235, 1);
-    background: rgba(10, 10, 10, 0.9);
-    padding: 30px 10px 0;
-    border-radius: 5px;
-    box-shadow: 1px 1px 3px 0 rgba(65, 65, 65, 0.5),
-      -1px -1px 3px 0 rgba(65, 65, 65, 0.25);
-
-    &.frameworks,
-    &.langs {
-      flex: 2;
-    }
-
-    &.frameworks {
-      margin: 0 calc(5px + 2.5%);
-    }
-
-    &.tools {
-      flex: 3;
-    }
-
-    &.tools .skills-list {
-      display: inline-grid;
-      grid-template-columns: 1fr 1fr;
-    }
-
-    &:not(.tools) .skills-list li {
-      height: 22.5%;
-    }
+    justify-content: center;
   }
 
-  .skills-header {
+  .side-circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  td {
     text-align: center;
-    width: 100%;
-    padding: 0 10px 20px;
-    border-bottom: 1px solid rgba(100, 100, 100, 0.8);
-
-    i {
-      color: rgba(70, 140, 255, 1);
-      font-size: 50px;
-      text-shadow: 1px 1px 8px rgba(35, 70, 150, 0.8);
-    }
-
-    h3 {
-      color: white;
-      font-size: 26px;
-      margin-top: 25px;
-    }
-
-    p {
-      font-size: 14px;
-      line-height: 170%;
-      margin: 20px 0 0;
-    }
+    height: 75px;
+    width: 25%;
+    border-radius: 8px;
   }
 
-  .skills-list {
-    flex-grow: 1;
-    list-style: none;
-    font-size: 18px;
-    width: 100%;
-    padding: 25px 0;
-    margin: 0;
-
-    li {
-      text-align: center;
-      padding: 4px 5px;
-    }
+  .lang {
+    background: rgba(10, 0, 0, 0.8);
+    border: 2px solid rgba(255, 0, 0, 0.6);
   }
-}
 
-@media (max-width: 900px) {
-  #skills .section-container {
-    .skills-column {
-      padding: 25px 8px 0;
+  .frame {
+    background: rgba(0, 0, 10, 0.8);
+    border: 2px solid rgba(50, 150, 255, 0.6);
+  }
 
-      &.frameworks {
-        margin: 0 calc(2.5px + 2.5%);
-      }
-    }
-
-    .skills-header {
-      padding: 0 7px 15px;
-
-      i {
-        font-size: 45px;
-      }
-
-      h3 {
-        font-size: 22px;
-        margin-top: 20px;
-      }
-
-      p {
-        font-size: 11px;
-        margin: 14px 0 0;
-      }
-    }
-
-    .skills-list {
-      font-size: 14px;
-      padding: 18px 0;
-
-      li {
-        padding: 3px 4px;
-      }
-    }
+  .tool {
+    background: rgba(0, 10, 0, 0.8);
+    border: 2px solid rgba(100, 255, 100, 0.6);
   }
 }
