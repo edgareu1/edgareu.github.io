@@ -44,7 +44,7 @@ function loadingPageAnimation() {
       // Begin the page animations
       typeBannerCode();
       backgroundWordsAnimation();
-    }, 350);
+    }, 500);
   }
 }
 
