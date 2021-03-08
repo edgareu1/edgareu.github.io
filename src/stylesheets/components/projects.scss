@@ -46,33 +46,11 @@
 
     header > h3 {
       font-size: 32px;
-
-      span {
-        color: gainsboro;
-        font-size: 0; // To remove the whitespace between the inline children elements
-        font-weight: 400;
-
-        &.text,
-        &.parenthesis,
-        time {
-          font-size: 20px;
-        }
-
-        &.parenthesis {
-          &.open {
-            margin-right: 2px;
-          }
-
-          &.close {
-            margin-left: 2px;
-          }
-        }
-      }
     }
 
     h4 {
       font-size: 20px;
-      margin: 20px 0 5px;
+      margin: 18px 0 5px;
     }
 
     ul {
@@ -115,14 +93,6 @@
 
       header > h3 {
         font-size: 26px;
-
-        span {
-          &.text,
-          &.parenthesis,
-          time {
-            font-size: 16px;
-          }
-        }
       }
 
       h4 {
@@ -160,14 +130,6 @@
     .project-description {
       header > h3 {
         font-size: 24px;
-
-        span {
-          &.text,
-          &.parenthesis,
-          time {
-            font-size: 14px;
-          }
-        }
       }
 
       h4 {
