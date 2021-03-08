@@ -44,7 +44,7 @@ function typeBannerCode() {
       "<k>Edgar decided to change his life and learn how to code!</k>",
       "<c><s2>edgar</s><s1>.</s><s5>beginCodingBootcamp</s><s1>( )</s></c>",
       '<c><s2>edgar</s><s1>.</s><s5>addSkills</s><s1>(</s><s6>"Ruby on Rails"</s><s1>, </s><s6>"JavaScript"</s><s1>, </s><s6>"HTML"</s><s1>, </s><s6>"CSS"</s><s1>)</s></c>',
-      '<c><s2>edgar</s><s1>.</s><s5>createProjects</s><s1>(</s><s6>"Artisan"</s><s1>, </s><s6>"Hook"</s><s1>)</s></c>',
+      '<c><s2>edgar</s><s1>.</s><s5>createProjects</s><s1>(</s><s6>"Craftwork Ecommerce"</s><s1>, </s><s6>"Fishing Forecast App"</s><s1>)</s></c>',
       "<c><s2>edgar</s><s1>.</s><s5>completeCodingBootcamp</s><s1>( )</s></c>",
       "<k>Edgar completed the bootcamp having built several minor apps and 2 major ones!</k>",
       "<c><s2>edgar</s><s1>.</s><s5>farewell</s><s1>( )</s></c>",
