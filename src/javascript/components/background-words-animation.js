@@ -58,8 +58,8 @@ function backgroundWordsAnimation() {
     //   sliceHeight:       Slice of the canvas height for each word
     //   currentArrayIndex: Current index on the 'helperArray'
     const canvas = canvasElement.getContext("2d"),
-      toggleButton = document.querySelector(".switch"),
-      toogleContainer = toggleButton.parentElement;
+      toogleContainer = document.querySelector(".animation-toggle-container"),
+      toggleButton = toogleContainer.querySelector(".switch");
     let canvasWidth,
       canvasHeight,
       sliceHeight,
@@ -90,12 +90,12 @@ function backgroundWordsAnimation() {
 
     // If the User clicks on the toggle button, stop/resume the animation
     toggleButton.addEventListener("click", () => {
-      if (toogleContainer.classList.contains("on")) {
-        toogleContainer.classList.remove("on");
+      if (toogleContainer.classList.contains("switch-on")) {
+        toogleContainer.classList.remove("switch-on");
         cancelAnimationFrame(rAF);
         canvas.clearRect(0, 0, canvasWidth, canvasHeight);
       } else {
-        toogleContainer.classList.add("on");
+        toogleContainer.classList.add("switch-on");
         animateCanvas();
       }
     });
