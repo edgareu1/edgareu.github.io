@@ -1,7 +1,7 @@
 import { updateDimensionsCanvas } from "./update-dimensions-canvas.js";
 
 // Function that will create the background running technology words animation
-function backgroundWordsAnimation() {
+function animateBackground() {
   // Variables:
   //   canvasElement:   Canvas element to fill
   //   canvasContainer: Canvas container
@@ -168,4 +168,4 @@ function randomArray(num) {
     .map((a) => a[1]);
 }
 
-export { backgroundWordsAnimation };
+export { animateBackground };

@@ -1,5 +1,5 @@
 // Function that creates the code typing animation on the app banner
-function typeBannerCode() {
+function animateBannerCode() {
   // Variables:
   //   codeContainer:  Container for the code to display
   //   codeContent:    Simplified HTML code to display
@@ -154,4 +154,4 @@ function typeBannerCode() {
   }
 }
 
-export { typeBannerCode };
+export { animateBannerCode };
