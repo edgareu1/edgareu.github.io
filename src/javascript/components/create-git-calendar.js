@@ -188,20 +188,20 @@ function createGitCalendar() {
 
     // Create and append into the DOM the first 'contribution-stats' column
     createContribContent({
-      first: "Contributions in the last year",
+      first: "Last Year Contributions",
       second: `${dayCountSum} total`,
       third: calendarDatePeriod,
       firstColumn: true,
     });
     // Create and append into the DOM the second 'contribution-stats' column
     createContribContent({
-      first: "Average daily contributions",
+      first: "Average Daily Contributions",
       second: Number.parseFloat(dayCountSum / activeDays).toFixed(1),
       third: calendarDatePeriod,
     });
     // Create and append into the DOM the third 'contribution-stats' column
     createContribContent({
-      first: "Current streak",
+      first: "Current Streak",
       second: `${streakDays} days`,
       third: `${dateFullString(dateStreakBegin)} - ${dateFullString(
         dateStreakEnd
