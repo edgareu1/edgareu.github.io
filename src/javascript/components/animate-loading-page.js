@@ -1,9 +1,9 @@
-import { backgroundWordsAnimation } from "./background-words-animation.js";
-import { typeBannerCode } from "./type-banner-code.js";
+import { animateBackground } from "./animate-background.js";
+import { animateBannerCode } from "./animate-banner-code.js";
 
 // Function that creates a loading animation while the page loads and,
 // after loading, prepares the page content
-function loadingPageAnimation() {
+function animateLoadingPage() {
   // Variables:
   //   loadingScreen: Container for the loading animation
   //   pageContent:   Page content
@@ -42,10 +42,10 @@ function loadingPageAnimation() {
       document.body.removeChild(loadingScreen);
       document.body.classList.remove("modal-active");
       // Begin the page animations
-      typeBannerCode();
-      backgroundWordsAnimation();
+      animateBannerCode();
+      animateBackground();
     }, 500);
   }
 }
 
-export { loadingPageAnimation };
+export { animateLoadingPage };
